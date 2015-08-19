@@ -1,0 +1,114 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.PrincipalHeader{
+	height:675px;
+	background:#333 url(../img/bg5.jpg) repeat-x;
+	background-position:center;	
+	background-attachment: fixed;
+  	text-align:center;
+  	margin-top: 
+}
+	.PrincipalHeader-top{
+		padding-top:17%;
+		line-height:0;
+		color:#FDE;
+	}
+		.PrincipalHeader-top .slogan{
+			font-size:1.8em;
+			line-height:1.2;
+		}
+
+			.PrincipalHeader-top-tittle h1{
+				font-size:5em;
+			}
+			.PrincipalHeader-top-tittle span{
+				font-size:2em;
+			}
+
+.img-modulo{
+	margin:0;
+	padding:0 !important;	
+}
+.img_contenido{
+	height:100%;
+	width:100%;
+}
+.container{
+	width: 100% !important;
+}
+.mod{
+	position: relative;
+	float: left;
+	overflow: hidden;
+}
+.mod:hover .info-image{
+	display:block;
+	
+}
+.info-image{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	background-color:rgba(19,176,19,0.7);
+	-webkit-transition: background-color 0.2s ease 0.2s;
+	transition: background-color 0.2s ease 0.2s;
+	
+	
+	overflow: hidden;
+	padding: 0px 6%;
+	display:none;
+	z-index:10;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#50000000,endColorstr=#50000000);	
+}
+.mod:hover .info-image{
+	display:block;
+	
+}
+.center-vertically{
+    margin-top:40%;
+    white-space: normal;
+    }
