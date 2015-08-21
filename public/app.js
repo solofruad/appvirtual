@@ -67,7 +67,7 @@ var ContentPrincipal = (function (_React$Component) {
 		_classCallCheck(this, ContentPrincipal);
 
 		_get(Object.getPrototypeOf(ContentPrincipal.prototype), 'constructor', this).call(this, props);
-		this.state = { contenido: [] };
+		this.state = { headers: [], modulos: [] };
 	}
 
 	_createClass(ContentPrincipal, [{
@@ -75,19 +75,22 @@ var ContentPrincipal = (function (_React$Component) {
 		value: function componentWillMount() {
 			var _this = this;
 
-			_jquery2['default'].get('/dir', function (contenido) {
-				_this.setState({ contenido: contenido });
+			_jquery2['default'].get('/dirhead', function (contenido) {
+				_this.setState({ headers: contenido });
+			});
+			_jquery2['default'].get('/dirmod', function (modulos) {
+				_this.setState({ modulos: modulos });
 			});
 		}
 	}, {
 		key: 'render',
 		value: function render() {
-			if (this.state.contenido.length) {
+			if (this.state.headers.length) {
 				return _react2['default'].createElement(
 					'div',
 					null,
-					_react2['default'].createElement(_Header2['default'], { contenido: this.state.contenido }),
-					_react2['default'].createElement(_Modulos2['default'], null)
+					_react2['default'].createElement(_Header2['default'], { headers: this.state.headers }),
+					_react2['default'].createElement(_Modulos2['default'], { modulos: this.state.modulos })
 				);
 			} else {
 				return _react2['default'].createElement(
@@ -145,7 +148,7 @@ var Header = (function (_React$Component) {
 			return _react2["default"].createElement(
 				"div",
 				{ className: "PrincipalHeader" },
-				this.props.contenido.map(function (content) {
+				this.props.headers.map(function (content) {
 					if (content.id == 1) {
 						return _react2["default"].createElement(
 							"div",

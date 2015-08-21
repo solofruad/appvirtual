@@ -14,10 +14,16 @@ const app = express();
 app.use('/public', express.static(__dirname+ '/public'));
 
 
-app.get('/dir', (req, res) => {
+app.get('/dirhead', (req, res) => {
   dbapi.contenido.find((contenido) => {
     res.json(contenido);
-  })
+  });
+});
+
+app.get('/dirmod', (req, res) => {
+	dbapi.modulos.find((modulos) => {
+  		res.json(modulos);
+  	});
 });
 
 app.get('/',(req,res) => {

@@ -10,18 +10,21 @@ import $ from 'jquery';
 export default class ContentPrincipal extends React.Component {
 	constructor(props){
 		super(props);
-		this.state = { contenido: []};
+		this.state = { headers: [], modulos: [] };
 	}
 	componentWillMount(){
-		$.get('/dir', (contenido) => {
-      	this.setState({ contenido: contenido });
-    });
+		$.get('/dirhead', (contenido) => {
+      		this.setState({ headers:  contenido});      	
+    	});
+    	$.get('/dirmod', (modulos) => {
+      		this.setState({ modulos:  modulos});      	
+    	});
 	}
 	render(){
-		if (this.state.contenido.length){
+		if (this.state.headers.length){
 			return <div>
-				<Header contenido={this.state.contenido} />
-				<Modulos />
+				<Header headers={this.state.headers} />
+				<Modulos modulos={this.state.modulos} />
 			</div>	
 		}
 		else {
