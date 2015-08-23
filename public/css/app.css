@@ -71,7 +71,7 @@ table {
 	margin:0;
 	padding:0 !important;	
 }
-.img_contenido{
+.img_contenido, .img-modulo{
 	height:100%;
 	width:100%;
 }
@@ -112,3 +112,119 @@ table {
     margin-top:40%;
     white-space: normal;
     }
+
+.bm1{
+	background-color:#1BCE7C;
+	
+}
+.bm2{
+	background-color:#FFE5EE;
+}
+.bm3{
+	background-color:#3E9995;
+}
+.bm4{
+	background-color:#EEFFED;
+}
+.bm5{
+	background-color:#BAFFCF;
+}
+.bm6{
+	background-color:#B4CECB	;
+}
+.bm7{
+	background-color:#376368;
+}
+
+.box-contacto-container{
+	padding-top:25% !important;
+}
+.box-contacto, .box-contacto2{
+	padding-top:66%;
+	line-height:1.5;
+	text-align: center;
+}
+.box-contacto3{
+	line-height:1.5;	
+	text-align: center !important;
+	text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+.box-contacto p{
+	font-size:42px;
+}
+.box-contacto2 p, .box-contacto3 p{
+	font-size:30px;
+}
+.box-contacto-header{
+	letter-spacing:0.3em;
+}
+
+.box-line{
+	font-size:17.5px;
+}
+
+.box-circle{	
+	border:solid 2px black;
+	-moz-border-radius:50%;
+	-webkit-border-radius:50%;
+	border-radius:50%;
+	margin-left:40%;
+	font-size:12px;
+	text-align:center;
+	padding:1.5em;
+}
+
+.circle-text {
+	width:12%;
+	margin-left:44%;
+}
+
+.circle-text2 {
+	width:20%;
+	margin-left:38%;
+}
+
+
+.circle-text:after, .circle-text2:after {
+	content: "";
+	display: block;
+	width: 110%;
+	height:0;
+	border:solid 2px black;
+	padding-bottom: 100%;
+	-moz-border-radius: 50%; 
+	-webkit-border-radius: 50%; 
+	border-radius: 50%;
+
+}
+.circle-text div , .circle-text2 div{
+float:left;
+width:100%;
+padding-top:50%;
+padding-left:10%;
+line-height:1em;
+margin-top:-0.5em;
+text-align:center;
+color:black;
+font-size:0.8em;
+}
+
+.box-mod{	
+	height:337px;
+}
+
+.site-wrapper3 {	
+  background: #333 url(../img/bg2_1.jpg) repeat-x;
+  background-position: center;
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+  color:black;
+}
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
