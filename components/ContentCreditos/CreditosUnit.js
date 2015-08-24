@@ -17,7 +17,7 @@ export default class CreditosUnit extends React.Component {
 			result = <Col xs={6} sm={6} md={3} lg={3} className={css}>
 				 <div className="box-contacto-container">
 					<small className="box-contacto-header">{this.props.rol}</small><br />
-					<div className="box-line">_______________________</div>
+					<div className="box-line">____________________</div>
 					<p>{this.props.nombre}</p>
 					<small>{this.props.informacion}</small>						
 				</div>

@@ -17,6 +17,11 @@ import {CollapsibleNav} from 'react-bootstrap'
 import {NavItemLink} from 'react-router-bootstrap';
 import {MenuItemLink} from 'react-router-bootstrap';
 
+import {OverlayTrigger} from 'react-bootstrap';
+import {Popover} from 'react-bootstrap';
+
+import Contacto from './Contacto';
+
 
 export default class Menu extends React.Component {
 	constructor(props){
@@ -39,7 +44,15 @@ export default class Menu extends React.Component {
 			      </Nav>
 			      <Nav navbar right>
 			        <NavItemLink to="Creditos" params={{ someparam: 'hello' }}>Créditos</NavItemLink>
-			        <NavItemLink to="Modulo2" params={{ someparam: 'hello' }}>Contacto</NavItemLink>
+			        <OverlayTrigger trigger='click' rootClose placement='bottom' 
+			        	overlay={
+			        		<Popover bsSize='large'>
+			        			<Contacto />
+			        		</Popover>
+			        	}
+			        >
+			        	<NavItem to="Modulo2" params={{ someparam: 'hello' }}>Contacto</NavItem>
+			        </OverlayTrigger>
 			      </Nav>
 			    </CollapsibleNav>		    
 	  		</Navbar>	  	
