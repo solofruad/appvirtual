@@ -34,8 +34,8 @@ export default class Menu extends React.Component {
 			      <Nav navbar>
 			        <NavItemLink to="Inicio" params={{ someparam: 'hello' }}>Inicio</NavItemLink>		        
 			        <DropdownButton title='Modulos'>
-			          <MenuItemLink to="Creditos" params={{ someparam: 'hello' }}>Modulo 1</MenuItemLink>
-			          <MenuItemLink to="Modulo2" params={{ someparam: 'hello' }}>Modulo 2</MenuItemLink>
+			          <MenuItemLink to="Modulo1" params={{ someparam: 'hello' }} id="mod1">Modulo 1</MenuItemLink>
+			          <MenuItemLink to="Modulo1" params={{ someparam: 'hello' }}>Modulo 2</MenuItemLink>
 			          <MenuItemLink to="Creditos" params={{ someparam: 'hello' }}>Modulo 3</MenuItemLink>
 			          <MenuItem divider />
 			          <MenuItemLink to="Creditos" params={{ someparam: 'hello' }}>Simulación 1</MenuItemLink>
@@ -57,6 +57,6 @@ export default class Menu extends React.Component {
 			    </CollapsibleNav>		    
 	  		</Navbar>	  	
 	  		<RouteHandler />
-	  	</div>
+	  	</div>	  	
 	}
 }

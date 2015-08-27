@@ -1,5 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 	<meta charset="UTF-8">
 	
@@ -9,16 +10,40 @@
     <link rel="icon" href="public/favicon.ico">
 
     <title>CTVirtual</title>
-	<link rel="stylesheet" type="text/css" href="public/css/app.css">	
+	<link rel="stylesheet" type="text/css" href="public/css/app.css">
+	<link rel="stylesheet" type="text/css" href="public/css/font-awesome.min.css">	
 	<link rel="stylesheet" type="text/css" href="public/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="public/css/jquery.panorama.css" media="screen" />
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+	<script type="text/javascript" src="public/js/jquery.panorama.js"></script>	
+	<script>    
+		$(document).ready(function(){
+			$("img.advancedpanorama").panorama({
+		        auto_start: 0,
+				start_position: 850,
+				viewport_width: screen.width,
+				speed: 15000        
+		    });
+		});			
+    </script>
+	<script type="text/javascript" src="public/js/cvi_text_lib.js"></script>
+	<script type="text/javascript" src="public/js/jquery.advanced-panorama.js"></script>
+	<script type="text/javascript" src="public/js/jquery.flipv.js"></script>	
 
 	<script src="public/js/ie-emulation-modes-warning.js"></script>
+	<style  type="text/css">
+				
+ 
+	</style>
 </head>
 <body>	
 	<section id="nav-container"></section>
-	<section id="container"></section>
-                      
-    <script src="public/app.js"></script> 
+	<section id="container">
+	
+	</section>
+    <script src="public/app.js"></script>
+    
 </body>
 </html>
 

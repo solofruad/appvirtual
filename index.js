@@ -31,6 +31,11 @@ app.get('/dircred', (req, res) => {
   		res.json(creditos);
   	});
 });
+app.get('/dirmod1', (req, res) => {
+  dbapi.modulo1.find((modulo1) => {
+      res.json(modulo1);
+    });
+});
 
 app.get('/',(req,res) => {
 	res.sendFile(__dirname+'/index.html');
