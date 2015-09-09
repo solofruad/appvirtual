@@ -27,23 +27,24 @@ export default class Menu extends React.Component {
 	constructor(props){
 		super(props);
 	}
+
 	render(){
 		return <div>
 			<Navbar fixedTop brand='CTVirtual' toggleNavKey={0}>
 			    <CollapsibleNav eventKey={0}> {/* This is the eventKey referenced */}
 			      <Nav navbar>
-			        <NavItemLink to="Inicio" params={{ someparam: 'hello' }}>Inicio</NavItemLink>		        
+			        <NavItemLink to="Inicio" params={{ src: 'hello' }}>Inicio</NavItemLink>		        
 			        <DropdownButton title='Modulos'>
-			          <MenuItemLink to="Modulo1" params={{ someparam: 'hello' }} id="mod1">Modulo 1</MenuItemLink>
-			          <MenuItemLink to="Modulo1" params={{ someparam: 'hello' }}>Modulo 2</MenuItemLink>
-			          <MenuItemLink to="Creditos" params={{ someparam: 'hello' }}>Modulo 3</MenuItemLink>
+			          <MenuItemLink to="Modulo1" params={{ src: 1 }} className="reloadModulo">Modulo 1</MenuItemLink>
+			          <MenuItemLink to="Modulo1" params={{ src: 2 }} className="reloadModulo">Modulo 2</MenuItemLink>
+			          <MenuItemLink to="Creditos" params={{ src: 'hello' }}>Modulo 3</MenuItemLink>
 			          <MenuItem divider />
-			          <MenuItemLink to="Creditos" params={{ someparam: 'hello' }}>Simulación 1</MenuItemLink>
-			          <MenuItemLink to="Creditos" params={{ someparam: 'hello' }}>Simulación 2</MenuItemLink>
+			          <MenuItemLink to="Creditos" params={{ src: 'hello' }}>Simulación 1</MenuItemLink>
+			          <MenuItemLink to="Creditos" params={{ src: 'hello' }}>Simulación 2</MenuItemLink>
 			        </DropdownButton>
 			      </Nav>
 			      <Nav navbar right>
-			        <NavItemLink to="Creditos" params={{ someparam: 'hello' }}>Créditos</NavItemLink>
+			        <NavItemLink to="Creditos" params={{ src: 'hello' }}>Créditos</NavItemLink>
 			        <OverlayTrigger trigger='click' rootClose placement='bottom' 
 			        	overlay={
 			        		<Popover bsSize='large'>
@@ -51,7 +52,7 @@ export default class Menu extends React.Component {
 			        		</Popover>
 			        	}
 			        >
-			        	<NavItem to="Modulo2" params={{ someparam: 'hello' }}>Contacto</NavItem>
+			        	<NavItem to="Modulo2" params={{ src: 'hello' }}>Contacto</NavItem>
 			        </OverlayTrigger>
 			      </Nav>
 			    </CollapsibleNav>		    

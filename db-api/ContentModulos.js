@@ -3,7 +3,7 @@ export default[
 		modulo: 1,		
 		titulo: 'Modulo 1. Conociendo el laboratorio',
 		descripcion: 'Paseo Virtual. Encontramos secciones de entrada y salida, lavado y esterilización, cuarto de vidriería y reactivos.',
-		url: '/'		
+		url: '#/modulo1/1'		
 	},
 	{
 		modulo: 2,

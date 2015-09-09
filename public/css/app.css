@@ -72,7 +72,7 @@ table {
 	padding:0 !important;	
 }
 .img_contenido, .img-modulo{
-	height:100%;
+	/*height:100%;*/
 	width:100%;
 }
 .container{

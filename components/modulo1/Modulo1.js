@@ -3,21 +3,25 @@
  */
 
 import React from 'react';
+import $ from 'jquery';
+import {Link} from 'react-router';
 
 export default class Modulo1 extends React.Component {
 	constructor(props){
 		super(props);	
-	}
-	render(){		
-		return <div>
+	}	
+				
+	render(){	
+		
+		return <div>			
 			<img src="public/img/modulo1/1.jpg" className="advancedpanorama" useMap="testmap" alt="Laboratorio de Biotecnología" />
 			<map id="testmap" name="testmap"> 
-				<area shape="rect" coords="3150,80,3330,380" href="" alt="Sala de Microbiologia" /> 
-				<area shape="rect" coords="2590,80,2780,380" href="" alt="Sala de Siembra"  /> 
-				<area shape="rect" coords="1980,114,2170,380" href="" alt="Sala de Crecimiento" /> 
-				<area shape="rect" coords="1420,80,1550,380" href="" alt="Aula de clase" /> 
-				<area shape="rect" coords="1110,80,1240,380" href="" alt="Sala de Preparación de Medios" /> 
-				<area shape="rect" coords="380,80,840,380" href="" alt="Sala de Vidreria y Reactivos"/> 
+				<area shape="rect" coords="2990,80,3180,380" href='javascript:document.location.replace("/#/modulo1/2");document.location.reload();' id="relo" alt="Sala de Microbiologia"></area>
+				<area shape="rect" coords="2470,80,2660,380" href="" alt="Sala de Siembra"  /> 
+				<area shape="rect" coords="1875,114,2065,380" href="" alt="Sala de Crecimiento" /> 
+				<area shape="rect" coords="1355,80,1480,380" href="" alt="Aula de clase" /> 
+				<area shape="rect" coords="1050,80,1190,380" href="" alt="Sala de Preparación de Medios" /> 
+				<area shape="rect" coords="380,80,880,380" href='javascript:document.location.replace("/#/modulo1/3");document.location.reload();' alt="Sala de Vidreria y Reactivos"/> 
 			</map>
 		</div>	
 	}

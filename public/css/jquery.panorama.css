@@ -8,8 +8,8 @@
 		padding: 10px 10px 10px 10px;
 		border-radius: 3px;
 		font-size: 18px;
-    font-family: Drawing with markers,Arial;
-    src:url(font/Drawing with markers.ttf);		
+    	font-family: Drawing with markers,Arial;
+    	src:url(font/Drawing with markers.ttf);		
     	color: white;
     	line-height: 20px;
 	}
@@ -40,7 +40,7 @@
     background-color:#c2d9ae;
 }
 .advancedpanorama{
-	 width:4800px; 
+	 width:4000px; 
 	 height:550px;
 	 margin-top: 50px !important;
 }
