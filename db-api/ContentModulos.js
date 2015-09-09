@@ -19,7 +19,7 @@ export default[
 	},
 	{
 		modulo: 4,
-		titulo: 'Modulo 4. Preparación de Medios',
+		titulo: 'Modulo 4. Preparación de Stocks',
 		descripcion: 'Elaboración de Medios.',
 		url: '/'		
 	},
