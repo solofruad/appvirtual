@@ -11,10 +11,10 @@ export default class AulaClase extends React.Component {
 	render(){		
 		return <div>
 			<img src="public/img/modulo1/5.jpg" className="advancedpanorama" useMap="testmap" alt="Laboratorio de Biotecnología" />			
-			<map id="testmap" name="testmap"> 
-				<area shape="rect" coords="2343,72,2440,380" href="lavado-y-destilacion.html" alt="Area de Lavado y destilacion" /> 
-				<area shape="rect" coords="2730,72,2830,380" href="index.html" alt="Corredor" /> 
-				<area shape="rect" coords="2000,72,2100,380" href="ivernadero.html" alt="Ivernadero" /> 					
+			<map id="testmap" name="testmap"> 								
+				<area shape="rect" coords="2830,130,3010,480" href='javascript:document.location.replace("/#/modulo1/7");document.location.reload();' alt="Ivernadero" /> 					
+				<area shape="rect" coords="3300,130,3560,480" href='javascript:document.location.replace("/#/modulo1/6");document.location.reload();' alt="Area de Lavado y destilacion" /> 
+				<area shape="rect" coords="3890,130,4030,480" href='javascript:document.location.replace("/#/modulo1/1");document.location.reload();' alt="Corredor" /> 
 			</map>
 		</div>	
 	}

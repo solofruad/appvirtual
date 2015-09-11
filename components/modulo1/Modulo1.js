@@ -19,8 +19,8 @@ export default class Modulo1 extends React.Component {
 				<area shape="rect" coords="2990,80,3180,380" href='javascript:document.location.replace("/#/modulo1/2");document.location.reload();' id="relo" alt="Sala de Microbiologia"></area>
 				<area shape="rect" coords="2470,80,2660,380" href="" alt="Sala de Siembra"  /> 
 				<area shape="rect" coords="1875,114,2065,380" href="" alt="Sala de Crecimiento" /> 
-				<area shape="rect" coords="1355,80,1480,380" href="" alt="Aula de clase" /> 
-				<area shape="rect" coords="1050,80,1190,380" href="" alt="Sala de Preparación de Medios" /> 
+				<area shape="rect" coords="1355,80,1480,380" href='javascript:document.location.replace("/#/modulo1/5");document.location.reload();' alt="Aula de clase" /> 
+				<area shape="rect" coords="1050,80,1190,380" href='javascript:document.location.replace("/#/modulo1/4");document.location.reload();' alt="Sala de Preparación de Medios" /> 
 				<area shape="rect" coords="380,80,880,380" href='javascript:document.location.replace("/#/modulo1/3");document.location.reload();' alt="Sala de Vidreria y Reactivos"/> 
 			</map>
 		</div>	

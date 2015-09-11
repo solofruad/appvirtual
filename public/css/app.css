@@ -26,6 +26,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	font-family: 'Source Sans Pro', sans-serif !important;
 }
 ol, ul {
 	list-style: none;
@@ -42,6 +43,28 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+button {
+	border: 0px;
+	padding: 8px 10px;
+	margin: 5px 0px !important;
+	border-radius: 1px;
+
+	cursor: pointer !important;
+	color: #fff !important;
+	background: #7aa76d;
+	font-size: 15px !important;
+
+	outline: none;
+
+	-webkit-transition: 0.15s background ease;
+	   -moz-transition: 0.15s background ease;
+	    -ms-transition: 0.15s background ease;
+	     -o-transition: 0.15s background ease;
+	        transition: 0.15s background ease;
+}
+	button:hover {
+		background: #91cd85;
+	}
 .PrincipalHeader{
 	height:675px;
 	background:#333 url(../img/bg5.jpg) repeat-x;
@@ -244,8 +267,21 @@ font-size:0.8em;
 	width: 15%;
 	height: 15%;
 	margin-right: 5%;
+	margin-top: 0 !important;
 }
 
 .contacto-ubicacion, .contacto-telefono{
 	display: flex;
+}
+
+.boton-info{
+	margin-left: 4% !important;
+	margin-top: 3% !important;
+	width: 130px;	
+}
+.txt-green{
+	color: #7aa76d;
+}
+.txt-parrafo{
+	text-align: justify;
 }

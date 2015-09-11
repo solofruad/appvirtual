@@ -42,7 +42,7 @@
 			
 			panoramaContainer = $(this).parent();
 			panoramaContainer.css('height', elemHeight+'px').css('overflow', 'hidden').wrap("<div class='panorama-viewport'></div>").parent().css('width',settings.viewport_width+'px')
-				.append("<div class='panorama-control'><a href='#' class='panorama-control-left'><<</a> <a href='#' class='panorama-control-pause'>O</a> <a href='#' class='panorama-control-right'>>></a> </div>");
+				.append("<div class='panorama-control'><a href='#' class='panorama-control-left'><i class='fa fa-arrow-left'></i></a> <a href='#' class='panorama-control-pause'><i class='fa fa-pause'></i></a> <a href='#' class='panorama-control-right'><i class='fa fa-arrow-right'></i></a> </div>");
 			
 			panoramaViewport = panoramaContainer.parent();
 
