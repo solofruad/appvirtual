@@ -22,38 +22,44 @@ export default class Modulo1Content extends React.Component {
 	render(){								
 		if(this.props.params.src=="1"){
 			return <div id="page">
-				<Modulo1 />		
-				<ModalInfo />				
+				<Modulo1 />			
+				<ModalInfo view="index"/>			
 			</div>						
 		}
 		if(this.props.params.src=="2"){
 			return <div id="page">
 				<Microbiologia />						
+				<ModalInfo view="microbiologia"/>			
 			</div>						
 		}
 		if(this.props.params.src=="3"){
 			return <div id="page">
-				<VidreriaReactivos />						
+				<VidreriaReactivos />	
+				<ModalInfo view="vidrieria-reactivos"/>								
 			</div>						
 		}
 		if(this.props.params.src=="4"){
 			return <div id="page">
-				<PreparacionMedios />						
+				<PreparacionMedios />
+				<ModalInfo view="preparacion-medios"/>						
 			</div>						
 		}
 		if(this.props.params.src=="5"){
 			return <div id="page">
-				<AulaClase />						
+				<AulaClase />			
+				<ModalInfo view="aula-clase"/>
 			</div>						
 		}
 		if(this.props.params.src=="6"){
 			return <div id="page">
-				<LavadoDestilacion />						
+				<LavadoDestilacion />	
+				<ModalInfo view="lavado-destilacion"/>								
 			</div>						
 		}
 		if(this.props.params.src=="7"){
 			return <div id="page">
-				<Ivernadero />						
+				<Ivernadero />			
+				<ModalInfo view="ivernadero"/>			
 			</div>						
 		}
 	}

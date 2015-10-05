@@ -1055,70 +1055,587 @@ var ModalInfo = (function (_React$Component) {
 	}, {
 		key: 'render',
 		value: function render() {
-			return _react2['default'].createElement(
-				'div',
-				null,
-				_react2['default'].createElement(
-					'button',
-					{ className: 'boton-info', onClick: this.open.bind(this) },
-					'Información de la Sala  ',
-					_react2['default'].createElement('i', { className: 'fa fa-info-circle' })
-				),
-				_react2['default'].createElement(
-					_reactBootstrap.Modal,
-					{ show: this.state.showModal, onHide: this.close.bind(this) },
+			if (this.props.view == "index") {
+				return _react2['default'].createElement(
+					'div',
+					null,
 					_react2['default'].createElement(
-						_reactBootstrap.Modal.Header,
-						{ closeButton: true },
-						_react2['default'].createElement(
-							_reactBootstrap.Modal.Title,
-							null,
-							'CTVirtual'
-						)
+						'button',
+						{ className: 'boton-info', onClick: this.open.bind(this) },
+						'Información de la Sala  ',
+						_react2['default'].createElement('i', { className: 'fa fa-info-circle' })
 					),
 					_react2['default'].createElement(
-						_reactBootstrap.Modal.Body,
-						null,
+						_reactBootstrap.Modal,
+						{ show: this.state.showModal, onHide: this.close.bind(this) },
 						_react2['default'].createElement(
-							'h2',
-							null,
-							'Hola, ',
+							_reactBootstrap.Modal.Header,
+							{ closeButton: true },
 							_react2['default'].createElement(
-								'span',
-								{ className: 'txt-green' },
-								'Bienvenido!'
+								_reactBootstrap.Modal.Title,
+								null,
+								'CTVirtual'
 							)
 						),
-						_react2['default'].createElement('br', null),
-						_react2['default'].createElement('br', null),
 						_react2['default'].createElement(
-							'h4',
+							_reactBootstrap.Modal.Body,
 							null,
-							'En el laboratorio se desarrollan procedimientos de cultivo in vitro.'
-						),
-						_react2['default'].createElement('br', null),
-						_react2['default'].createElement(
-							'p',
-							{ className: 'txt-parrafo' },
-							'Posee diferentes secciones para el control sanitario y el manejo de material vegetal. Las secciones de entrada y salida, lavado y estirilización cuarto de vidrieria y reactivos, cuarto de preparación de medios, cuarto de siembra y de crecimiento. ',
 							_react2['default'].createElement(
-								_reactBootstrap.Label,
-								{ bsStyle: 'success' },
-								'Comienza ahora!'
+								'h2',
+								null,
+								'Hola, ',
+								_react2['default'].createElement(
+									'span',
+									{ className: 'txt-green' },
+									'Bienvenido!'
+								)
+							),
+							_react2['default'].createElement('br', null),
+							_react2['default'].createElement('br', null),
+							_react2['default'].createElement(
+								'h4',
+								null,
+								'En el laboratorio se desarrollan procedimientos de cultivo in vitro.'
+							),
+							_react2['default'].createElement('br', null),
+							_react2['default'].createElement(
+								'p',
+								{ className: 'txt-parrafo' },
+								'Posee diferentes secciones para el control sanitario y el manejo de material vegetal. Las secciones de entrada y salida, lavado y estirilización cuarto de vidrieria y reactivos, cuarto de preparación de medios, cuarto de siembra y de crecimiento. ',
+								_react2['default'].createElement(
+									_reactBootstrap.Label,
+									{ bsStyle: 'success' },
+									'Comienza ahora!'
+								)
+							)
+						),
+						_react2['default'].createElement(
+							_reactBootstrap.Modal.Footer,
+							null,
+							_react2['default'].createElement(
+								'button',
+								{ onClick: this.close.bind() },
+								'Cerrar'
 							)
 						)
+					)
+				);
+			}
+			if (this.props.view == "microbiologia") {
+				return _react2['default'].createElement(
+					'div',
+					null,
+					_react2['default'].createElement(
+						'button',
+						{ className: 'boton-info', onClick: this.open.bind(this) },
+						'Información de la Sala  ',
+						_react2['default'].createElement('i', { className: 'fa fa-info-circle' })
 					),
 					_react2['default'].createElement(
-						_reactBootstrap.Modal.Footer,
+						_reactBootstrap.Modal,
+						{ show: this.state.showModal, onHide: this.close.bind(this), bsSize: 'lg' },
+						_react2['default'].createElement(
+							_reactBootstrap.Modal.Header,
+							{ closeButton: true },
+							_react2['default'].createElement(
+								_reactBootstrap.Modal.Title,
+								null,
+								'CTVirtual ',
+								_react2['default'].createElement(
+									_reactBootstrap.Label,
+									{ bsStyle: 'success' },
+									'SALÓN DE BIOLOGÍA MOLECULAR'
+								)
+							)
+						),
+						_react2['default'].createElement(
+							_reactBootstrap.Modal.Body,
+							null,
+							_react2['default'].createElement(
+								_reactBootstrap.Row,
+								null,
+								_react2['default'].createElement(
+									_reactBootstrap.Col,
+									{ xs: 6, sm: 6, md: 6, lg: 6 },
+									_react2['default'].createElement(
+										'p',
+										{ className: 'txt-parrafo' },
+										'En el cuarto de biología molecular se realiza la caracterización de los organismos vivos a nivel molecular, ejemplo: Detección de proteínas alergéicas en nuestros alimentos, establecimiento del origen genético de productos para el consumo a través de las trazas de sus ADN (denominación de origen).'
+									),
+									_react2['default'].createElement(
+										'h5',
+										null,
+										_react2['default'].createElement(
+											'b',
+											null,
+											'Plancha calentadora-agitadora'
+										)
+									),
+									_react2['default'].createElement(
+										'p',
+										{ className: 'txt-parrafo' },
+										'Se usa para hervir el agua y agitarla. Es el caso del stock de micronutrientes #5 al baño maría o en la dilución al Phytagel con agua hirviendo y su posterior agitación para que la sustancia se homogenice.'
+									),
+									_react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo1/maquina_1.jpg', alt: 'Sala de siembra' })
+								),
+								_react2['default'].createElement(
+									_reactBootstrap.Col,
+									{ xs: 6, sm: 6, md: 6, lg: 6 },
+									_react2['default'].createElement(
+										'p',
+										{ className: 'txt-parrafo' },
+										'Para el funcionamiento de la plancha se coloca un aluminio y se enciende; si se necesita que mande el pulso electro magnético para agitar se mueve la perilla. Si no se cuenta con calentadora-agitadora se usa una estufa eléctrica.'
+									),
+									_react2['default'].createElement(
+										'h5',
+										null,
+										_react2['default'].createElement(
+											'b',
+											null,
+											'Micropipeta'
+										)
+									),
+									_react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo1/maquina_6.jpg', alt: 'Sala de siembra' }),
+									_react2['default'].createElement(
+										'p',
+										{ className: 'txt-parrafo' },
+										'Las medidas en micras como en el caso de la aplicación de reguladores de crecimiento se utiliza la micropitpeta. Este instrumento permite medir en mircolitos () la cantidad de sustancia que se necesita para la aplicación en medio de cultivo de manera precisa y reduciendo el gasto del producto en uso.'
+									)
+								)
+							)
+						),
+						_react2['default'].createElement(
+							_reactBootstrap.Modal.Footer,
+							null,
+							_react2['default'].createElement(
+								'button',
+								{ onClick: this.close.bind() },
+								'Cerrar'
+							)
+						)
+					)
+				);
+			}
+			if (this.props.view == "vidrieria-reactivos") {
+				return _react2['default'].createElement(
+					'div',
+					null,
+					_react2['default'].createElement(
+						'button',
+						{ className: 'boton-info', onClick: this.open.bind(this) },
+						'Información de la Sala  ',
+						_react2['default'].createElement('i', { className: 'fa fa-info-circle' })
+					),
+					_react2['default'].createElement(
+						_reactBootstrap.Modal,
+						{ show: this.state.showModal, onHide: this.close.bind(this) },
+						_react2['default'].createElement(
+							_reactBootstrap.Modal.Header,
+							{ closeButton: true },
+							_react2['default'].createElement(
+								_reactBootstrap.Modal.Title,
+								null,
+								'CTVirtual ',
+								_react2['default'].createElement(
+									_reactBootstrap.Label,
+									{ bsStyle: 'success' },
+									'CUARTO DE VIDRERIA Y REACTIVOS'
+								)
+							)
+						),
+						_react2['default'].createElement(
+							_reactBootstrap.Modal.Body,
+							null,
+							_react2['default'].createElement(
+								_reactBootstrap.Row,
+								null,
+								_react2['default'].createElement(
+									_reactBootstrap.Col,
+									{ xs: 12, sm: 12, md: 5, lg: 5 },
+									_react2['default'].createElement(
+										'p',
+										{ className: 'txt-parrafo' },
+										'Esta sección posee dos espacios donde van los reactivos. El primero es para los productos sintéticos que necesitan refrigeración y el segundo que no, ya que van en la estantería. Los stocks que se realizan para la preparación de los medios de cultivo o éstps ultimos despues del autoclavado y sellado, se guardan en la nevera'
+									),
+									_react2['default'].createElement(
+										'p',
+										{ className: 'txt-parrafo' },
+										'Por lo anterior que la vidriería y los otros utensilios se designa unos estantes que tienen:'
+									)
+								),
+								_react2['default'].createElement(
+									_reactBootstrap.Col,
+									{ xs: 12, sm: 12, md: 7, lg: 7 },
+									_react2['default'].createElement(
+										'ul',
+										null,
+										_react2['default'].createElement(
+											'li',
+											null,
+											_react2['default'].createElement('i', { className: 'fa fa-check' }),
+											'Los frascos y tubos de ensayos donde se vierte el medio de cultivo'
+										),
+										_react2['default'].createElement(
+											'li',
+											null,
+											_react2['default'].createElement('i', { className: 'fa fa-check' }),
+											'Tapas'
+										),
+										_react2['default'].createElement(
+											'li',
+											null,
+											_react2['default'].createElement('i', { className: 'fa fa-check' }),
+											'Pipetas milimetradas de uno (1) a diez (10)'
+										),
+										_react2['default'].createElement(
+											'li',
+											null,
+											_react2['default'].createElement('i', { className: 'fa fa-check' }),
+											'Bombas o peras extractoras'
+										),
+										_react2['default'].createElement(
+											'li',
+											null,
+											_react2['default'].createElement('i', { className: 'fa fa-check' }),
+											'Erlenmeyers, bakers y balones aforados de 100 ml a 3000 ml'
+										),
+										_react2['default'].createElement(
+											'li',
+											null,
+											_react2['default'].createElement('i', { className: 'fa fa-check' }),
+											'Cajas petri'
+										),
+										_react2['default'].createElement(
+											'li',
+											null,
+											_react2['default'].createElement('i', { className: 'fa fa-check' }),
+											'Probetas de 100 ml'
+										),
+										_react2['default'].createElement(
+											'li',
+											null,
+											_react2['default'].createElement('i', { className: 'fa fa-check' }),
+											'Barra agitadora'
+										),
+										_react2['default'].createElement(
+											'li',
+											null,
+											_react2['default'].createElement('i', { className: 'fa fa-check' }),
+											'Minicucharas o palas para aplicar los reactivos'
+										),
+										_react2['default'].createElement(
+											'li',
+											null,
+											_react2['default'].createElement('i', { className: 'fa fa-check' }),
+											'Papel aluminio'
+										),
+										_react2['default'].createElement(
+											'li',
+											null,
+											_react2['default'].createElement('i', { className: 'fa fa-check' }),
+											'Papel Kraf'
+										),
+										_react2['default'].createElement(
+											'li',
+											null,
+											_react2['default'].createElement('i', { className: 'fa fa-check' }),
+											'Vinipel'
+										),
+										_react2['default'].createElement(
+											'li',
+											null,
+											_react2['default'].createElement('i', { className: 'fa fa-check' }),
+											'Pinzas largas'
+										),
+										_react2['default'].createElement(
+											'li',
+											null,
+											_react2['default'].createElement('i', { className: 'fa fa-check' }),
+											'Mango de bisturí'
+										),
+										_react2['default'].createElement(
+											'li',
+											null,
+											_react2['default'].createElement('i', { className: 'fa fa-check' }),
+											'Cuchilla'
+										)
+									)
+								)
+							)
+						),
+						_react2['default'].createElement(
+							_reactBootstrap.Modal.Footer,
+							null,
+							_react2['default'].createElement(
+								'button',
+								{ onClick: this.close.bind() },
+								'Cerrar'
+							)
+						)
+					)
+				);
+			}
+			if (this.props.view == "preparacion-medios") {
+				return _react2['default'].createElement(
+					'div',
+					null,
+					_react2['default'].createElement(
+						'button',
+						{ className: 'boton-info', onClick: this.open.bind(this) },
+						'Información de la Sala  ',
+						_react2['default'].createElement('i', { className: 'fa fa-info-circle' })
+					),
+					_react2['default'].createElement(
+						_reactBootstrap.Modal,
+						{ show: this.state.showModal, onHide: this.close.bind(this) },
+						_react2['default'].createElement(
+							_reactBootstrap.Modal.Header,
+							{ closeButton: true },
+							_react2['default'].createElement(
+								_reactBootstrap.Modal.Title,
+								null,
+								'CTVirtual ',
+								_react2['default'].createElement(
+									_reactBootstrap.Label,
+									{ bsStyle: 'success' },
+									'CUARTO DE PREPARACIÓN DE MEDIOS'
+								)
+							)
+						),
+						_react2['default'].createElement(
+							_reactBootstrap.Modal.Body,
+							null,
+							_react2['default'].createElement(
+								_reactBootstrap.Row,
+								null,
+								_react2['default'].createElement(
+									_reactBootstrap.Col,
+									{ xs: 12, sm: 12, md: 12, lg: 12 },
+									_react2['default'].createElement(
+										'h2',
+										null,
+										'Preparación de medios de cultivo',
+										_react2['default'].createElement('span', { className: 'txt-green' })
+									),
+									_react2['default'].createElement('br', null),
+									_react2['default'].createElement(
+										'p',
+										{ className: 'txt-parrafo' },
+										'Esta sección debe contar con varios equipos que permitan la preparación y el adecuación de los medios de cultivo.'
+									)
+								)
+							),
+							_react2['default'].createElement(
+								_reactBootstrap.Row,
+								null,
+								_react2['default'].createElement(
+									_reactBootstrap.Col,
+									{ xs: 6, sm: 6, md: 6, lg: 6 },
+									_react2['default'].createElement('img', { src: 'public/img/modulo1/maquina_9.jpg', className: 'img-modal-show' })
+								),
+								_react2['default'].createElement(
+									_reactBootstrap.Col,
+									{ xs: 6, sm: 6, md: 6, lg: 6 },
+									_react2['default'].createElement('img', { src: 'public/img/modulo1/maquina_3.jpg', className: 'img-modal-show' })
+								)
+							)
+						),
+						_react2['default'].createElement(
+							_reactBootstrap.Modal.Footer,
+							null,
+							_react2['default'].createElement(
+								'button',
+								{ onClick: this.close.bind() },
+								'Cerrar'
+							)
+						)
+					)
+				);
+			}
+			if (this.props.view == "aula-clase") {
+				return _react2['default'].createElement(
+					'div',
+					null,
+					_react2['default'].createElement(
+						'div',
 						null,
 						_react2['default'].createElement(
 							'button',
-							{ onClick: this.close.bind() },
-							'Cerrar'
+							{ className: 'boton-info', onClick: this.open.bind(this) },
+							'Información de la Sala  ',
+							_react2['default'].createElement('i', { className: 'fa fa-info-circle' })
+						),
+						_react2['default'].createElement(
+							'a',
+							{ className: 'pull-right btn-app', href: 'javascript:document.location.replace("/#/modulo1/1");document.location.reload();' },
+							_react2['default'].createElement('i', { className: 'fa fa-arrow-circle-o-left' })
+						)
+					),
+					_react2['default'].createElement(
+						_reactBootstrap.Modal,
+						{ show: this.state.showModal, onHide: this.close.bind(this) },
+						_react2['default'].createElement(
+							_reactBootstrap.Modal.Header,
+							{ closeButton: true },
+							_react2['default'].createElement(
+								_reactBootstrap.Modal.Title,
+								null,
+								'CTVirtual ',
+								_react2['default'].createElement(
+									_reactBootstrap.Label,
+									{ bsStyle: 'success' },
+									'AULA DE CLASE'
+								)
+							)
+						),
+						_react2['default'].createElement(
+							_reactBootstrap.Modal.Body,
+							null,
+							_react2['default'].createElement(
+								'h2',
+								null,
+								'Aula de Clase'
+							),
+							_react2['default'].createElement('br', null),
+							_react2['default'].createElement(
+								'p',
+								{ className: 'txt-parrafo' },
+								'Aula de practica y colaboración en las tareas docentes y roles básicos y fundamentales.'
+							),
+							_react2['default'].createElement(
+								'p',
+								{ className: 'txt-parrafo' },
+								'Esta sala se usa para prácticas, desarrollo y presentaciones de largo periodo. Es un espacio que aporta información esencial para el desarrollo posterior y actividades eficaces dentro de las otras áreas.'
+							)
+						),
+						_react2['default'].createElement(
+							_reactBootstrap.Modal.Footer,
+							null,
+							_react2['default'].createElement(
+								'button',
+								{ onClick: this.close.bind() },
+								'Cerrar'
+							)
 						)
 					)
-				)
-			);
+				);
+			}
+			if (this.props.view == "lavado-destilacion") {
+				return _react2['default'].createElement(
+					'div',
+					null,
+					_react2['default'].createElement(
+						'button',
+						{ className: 'boton-info', onClick: this.open.bind(this) },
+						'Información de la Sala  ',
+						_react2['default'].createElement('i', { className: 'fa fa-info-circle' })
+					),
+					_react2['default'].createElement(
+						_reactBootstrap.Modal,
+						{ show: this.state.showModal, onHide: this.close.bind(this) },
+						_react2['default'].createElement(
+							_reactBootstrap.Modal.Header,
+							{ closeButton: true },
+							_react2['default'].createElement(
+								_reactBootstrap.Modal.Title,
+								null,
+								'CTVirtual ',
+								_react2['default'].createElement(
+									_reactBootstrap.Label,
+									{ bsStyle: 'success' },
+									'Lavado, destilación y estirilización'
+								)
+							)
+						),
+						_react2['default'].createElement(
+							_reactBootstrap.Modal.Body,
+							null,
+							_react2['default'].createElement(
+								'h2',
+								null,
+								'Aula de lavado, destilación y estirilización'
+							),
+							_react2['default'].createElement(
+								'p',
+								{ className: 'txt-parrafo' },
+								'El proceso de producción de vitroplantas genera materiales que necesitan un lavado especial con productos que limpien grasas y permita remover la mugre (DEXTRAN).'
+							)
+						),
+						_react2['default'].createElement(
+							_reactBootstrap.Modal.Footer,
+							null,
+							_react2['default'].createElement(
+								'button',
+								{ onClick: this.close.bind() },
+								'Cerrar'
+							)
+						)
+					)
+				);
+			}
+			if (this.props.view == "ivernadero") {
+				return _react2['default'].createElement(
+					'div',
+					null,
+					_react2['default'].createElement(
+						'button',
+						{ className: 'boton-info', onClick: this.open.bind(this) },
+						'Información de la Sala  ',
+						_react2['default'].createElement('i', { className: 'fa fa-info-circle' })
+					),
+					_react2['default'].createElement(
+						_reactBootstrap.Modal,
+						{ show: this.state.showModal, onHide: this.close.bind(this) },
+						_react2['default'].createElement(
+							_reactBootstrap.Modal.Header,
+							{ closeButton: true },
+							_react2['default'].createElement(
+								_reactBootstrap.Modal.Title,
+								null,
+								'CTVirtual ',
+								_react2['default'].createElement(
+									_reactBootstrap.Label,
+									{ bsStyle: 'success' },
+									'IVERNADERO'
+								)
+							)
+						),
+						_react2['default'].createElement(
+							_reactBootstrap.Modal.Body,
+							null,
+							_react2['default'].createElement(
+								'h2',
+								null,
+								'IVERNADERO'
+							),
+							_react2['default'].createElement(
+								'p',
+								{ className: 'txt-parrafo' },
+								'Las plantas que se traen de campo, las plantas madres o donadoras, de las que se va a cortar el explante, se debe contar con un ivernadero, debidamente habilitado.'
+							),
+							_react2['default'].createElement(
+								'p',
+								{ className: 'txt-parrafo' },
+								'Cuando las plantas se han seleccionado, se empiezan a cortar los tejidos en los que se encuentran los meristemos apicales del tallo y se pasan a cultivo in vitro. Dichas plantas deben tener un manejo nutricional especial para su buen desarrollo.'
+							),
+							_react2['default'].createElement(
+								'p',
+								{ className: 'txt-parrafo' },
+								'Además, cuando las plantas salen de su etapa in vitro pasan al ivernadero para que nuevamente se puedan adaptar a las condiciones ambientales que la van a rodear durante su crecimiento y producción en campo.'
+							)
+						),
+						_react2['default'].createElement(
+							_reactBootstrap.Modal.Footer,
+							null,
+							_react2['default'].createElement(
+								'button',
+								{ onClick: this.close.bind() },
+								'Cerrar'
+							)
+						)
+					)
+				);
+			}
 		}
 	}]);
 
@@ -1180,8 +1697,8 @@ var Modulo1 = (function (_React$Component) {
 					'map',
 					{ id: 'testmap', name: 'testmap' },
 					_react2['default'].createElement('area', { shape: 'rect', coords: '2990,80,3180,380', href: 'javascript:document.location.replace("/#/modulo1/2");document.location.reload();', id: 'relo', alt: 'Sala de Microbiologia' }),
-					_react2['default'].createElement('area', { shape: 'rect', coords: '2470,80,2660,380', href: '', alt: 'Sala de Siembra' }),
-					_react2['default'].createElement('area', { shape: 'rect', coords: '1875,114,2065,380', href: '', alt: 'Sala de Crecimiento' }),
+					_react2['default'].createElement('area', { shape: 'rect', coords: '2470,80,2660,380', id: 'area-sala-siembra', href: 'javascript:openFirstDialog();', alt: 'Sala de Siembra' }),
+					_react2['default'].createElement('area', { shape: 'rect', coords: '1875,114,2065,380', href: 'javascript:openSecondDialog();', alt: 'Sala de Crecimiento' }),
 					_react2['default'].createElement('area', { shape: 'rect', coords: '1355,80,1480,380', href: 'javascript:document.location.replace("/#/modulo1/5");document.location.reload();', alt: 'Aula de clase' }),
 					_react2['default'].createElement('area', { shape: 'rect', coords: '1050,80,1190,380', href: 'javascript:document.location.replace("/#/modulo1/4");document.location.reload();', alt: 'Sala de Preparación de Medios' }),
 					_react2['default'].createElement('area', { shape: 'rect', coords: '380,80,880,380', href: 'javascript:document.location.replace("/#/modulo1/3");document.location.reload();', alt: 'Sala de Vidreria y Reactivos' })
@@ -1274,49 +1791,55 @@ var Modulo1Content = (function (_React$Component) {
 					'div',
 					{ id: 'page' },
 					_react2['default'].createElement(_Modulo12['default'], null),
-					_react2['default'].createElement(_ModalModalInfo2['default'], null)
+					_react2['default'].createElement(_ModalModalInfo2['default'], { view: 'index' })
 				);
 			}
 			if (this.props.params.src == "2") {
 				return _react2['default'].createElement(
 					'div',
 					{ id: 'page' },
-					_react2['default'].createElement(_Microbiologia2['default'], null)
+					_react2['default'].createElement(_Microbiologia2['default'], null),
+					_react2['default'].createElement(_ModalModalInfo2['default'], { view: 'microbiologia' })
 				);
 			}
 			if (this.props.params.src == "3") {
 				return _react2['default'].createElement(
 					'div',
 					{ id: 'page' },
-					_react2['default'].createElement(_VidreriaReactivos2['default'], null)
+					_react2['default'].createElement(_VidreriaReactivos2['default'], null),
+					_react2['default'].createElement(_ModalModalInfo2['default'], { view: 'vidrieria-reactivos' })
 				);
 			}
 			if (this.props.params.src == "4") {
 				return _react2['default'].createElement(
 					'div',
 					{ id: 'page' },
-					_react2['default'].createElement(_PreparacionMedios2['default'], null)
+					_react2['default'].createElement(_PreparacionMedios2['default'], null),
+					_react2['default'].createElement(_ModalModalInfo2['default'], { view: 'preparacion-medios' })
 				);
 			}
 			if (this.props.params.src == "5") {
 				return _react2['default'].createElement(
 					'div',
 					{ id: 'page' },
-					_react2['default'].createElement(_AulaClase2['default'], null)
+					_react2['default'].createElement(_AulaClase2['default'], null),
+					_react2['default'].createElement(_ModalModalInfo2['default'], { view: 'aula-clase' })
 				);
 			}
 			if (this.props.params.src == "6") {
 				return _react2['default'].createElement(
 					'div',
 					{ id: 'page' },
-					_react2['default'].createElement(_LavadoDestilacion2['default'], null)
+					_react2['default'].createElement(_LavadoDestilacion2['default'], null),
+					_react2['default'].createElement(_ModalModalInfo2['default'], { view: 'lavado-destilacion' })
 				);
 			}
 			if (this.props.params.src == "7") {
 				return _react2['default'].createElement(
 					'div',
 					{ id: 'page' },
-					_react2['default'].createElement(_Ivernadero2['default'], null)
+					_react2['default'].createElement(_Ivernadero2['default'], null),
+					_react2['default'].createElement(_ModalModalInfo2['default'], { view: 'ivernadero' })
 				);
 			}
 		}
@@ -1373,7 +1896,7 @@ var PreparacionMedios = (function (_React$Component) {
 					"map",
 					{ id: "testmap", name: "testmap" },
 					_react2["default"].createElement("area", { shape: "rect", coords: "1910,250,2040,390", href: "javascript:openEstereoDialog();", alt: "ESTÉREO MICROSCOPIO" }),
-					_react2["default"].createElement("area", { shape: "rect", coords: "2120,250,2245,390", href: "javascript:openAsasDialog();", alt: "ESTERILIZADOR DE ASAS" }),
+					_react2["default"].createElement("area", { shape: "rect", coords: "2290,250,2400,390", href: "javascript:openAsasDialog();", alt: "ESTERILIZADOR DE ASAS" }),
 					_react2["default"].createElement("area", { shape: "rect", coords: "350,120,550,420", href: "javascript:document.location.replace(\"/#/modulo1/1\");document.location.reload();", alt: "Sala 4" })
 				)
 			);
