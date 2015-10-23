@@ -8,7 +8,7 @@ import {Modal} from 'react-bootstrap';
 import {Col} from 'react-bootstrap';
 import {Row} from 'react-bootstrap';
 
-export default class ModalInfo extends React.Component {
+export default class Modal extends React.Component {
 	constructor(props){
 		super(props);	
 		this.state = { showModal: false};
@@ -28,7 +28,7 @@ export default class ModalInfo extends React.Component {
 	render(){
 		if(this.props.view=="index"){
 			return <div>
-				<button	className="boton-info" onClick={this.open.bind(this)}>
+				<button	className="boton-info"onClick={this.open.bind(this)}>
 		          Información de la Sala &nbsp;<i className="fa fa-info-circle"></i>
 		        </button>
 		        <Modal show={this.state.showModal} onHide={this.close.bind(this)}>

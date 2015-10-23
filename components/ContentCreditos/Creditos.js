@@ -13,7 +13,7 @@ export default class Creditos extends React.Component {
 	}
 	render(){
 		return <Grid>
-			<Row>
+			<Row className="contentPrincipal">
 				{
 					this.props.creditos.map((content) => {
 						return <CreditosUnit 

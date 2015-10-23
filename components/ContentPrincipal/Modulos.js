@@ -14,7 +14,7 @@ export default class Modulos extends React.Component {
 	}
 	render(){
 		return <Grid>		
-			<Row>
+			<Row className="contentPrincipal">
 				{
 				this.props.modulos.map((content) => {									
 					return <ModulosUnit  

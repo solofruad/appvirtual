@@ -71,7 +71,7 @@ button {
 	background-position:center;	
 	background-attachment: fixed;
   	text-align:center;
-  	margin-top: 
+  	margin-bottom: -50px;
 }
 	.PrincipalHeader-top{
 		padding-top:17%;
@@ -319,4 +319,7 @@ font-size:0.8em;
 .modal-title{
 	color: #7aa76d;
 	font-weight: 800;
+}
+.contentPrincipal{
+	margin-top: 50px;
 }

@@ -202,7 +202,7 @@ var Creditos = (function (_React$Component) {
 				null,
 				_react2['default'].createElement(
 					_reactBootstrap.Row,
-					null,
+					{ className: 'contentPrincipal' },
 					this.props.creditos.map(function (content) {
 						return _react2['default'].createElement(_CreditosUnit2['default'], {
 							id: content.id,
@@ -696,7 +696,7 @@ var Modulos = (function (_React$Component) {
 				null,
 				_react2['default'].createElement(
 					_reactBootstrap.Row,
-					null,
+					{ className: 'contentPrincipal' },
 					this.props.modulos.map(function (content) {
 						return _react2['default'].createElement(_ModulosUnit2['default'], {
 							key: content.modulo,

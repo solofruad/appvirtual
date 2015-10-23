@@ -1,5 +1,6 @@
 /**
  * Modules Dependencies
+ * https://github.com/tryolabs/react-examples/tree/master/modal
  */
 
 import React from 'react';
