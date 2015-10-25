@@ -6,7 +6,6 @@ import React from 'react';
 import {Row} from 'react-bootstrap';
 import {Col} from 'react-bootstrap';
 
-
 export default class ModulosUnit extends React.Component {
 	constructor(props){
 		super(props);
@@ -23,12 +22,9 @@ export default class ModulosUnit extends React.Component {
 							<div className="center-vertically">
 								<h3>{this.props.titulo}</h3>
 								<p>{this.props.descripcion}</p>
-								<button	className="boton-info" onClick={this.onClick.bind(this)}>
-		        				  Información de la Sala &nbsp;<i className="fa fa-info-circle"></i>
-		        				</button>
 							</div>
-						</div>				
+						</div>
 					</a>
-			</Col>			
+			</Col>
 	}
 }
