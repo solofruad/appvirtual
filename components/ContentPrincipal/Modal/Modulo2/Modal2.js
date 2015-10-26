@@ -16,7 +16,7 @@ export default class Modal2 extends React.Component {
 		this.props.onHide.call(null,'modulo2/2')
 	}
 	render(){
-			return	<Modal {...this.props}>
+			return	<Modal {...this.props} bsSize="large">
       <Modal.Header closeButton>
         <Modal.Title>CTVirtual <Label bsStyle='success'>SALÓN DE BIOLOGÍA MOLECULAR</Label></Modal.Title>
       </Modal.Header>

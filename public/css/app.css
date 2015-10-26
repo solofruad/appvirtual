@@ -8,8 +8,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -20,7 +20,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -68,7 +68,7 @@ button {
 .PrincipalHeader{
 	height:675px;
 	background:#333 url(../img/bg5.jpg) repeat-x;
-	background-position:center;	
+	background-position:center;
 	background-attachment: fixed;
   	text-align:center;
   	margin-bottom: -50px;
@@ -92,7 +92,7 @@ button {
 
 .img-modulo{
 	margin:0;
-	padding:0 !important;	
+	padding:0 !important;
 }
 .img_contenido, .img-modulo{
 	/*height:100%;*/
@@ -108,7 +108,7 @@ button {
 }
 .mod:hover .info-image{
 	display:block;
-	
+
 }
 .info-image{
 	position: absolute;
@@ -119,17 +119,16 @@ button {
 	background-color:rgba(19,176,19,0.7);
 	-webkit-transition: background-color 0.2s ease 0.2s;
 	transition: background-color 0.2s ease 0.2s;
-	
-	
+	color:#e7e7e7;
 	overflow: hidden;
 	padding: 0px 6%;
 	display:none;
 	z-index:10;
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#50000000,endColorstr=#50000000);	
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#50000000,endColorstr=#50000000);
 }
 .mod:hover .info-image{
 	display:block;
-	
+
 }
 .center-vertically{
     margin-top:40%;
@@ -138,7 +137,7 @@ button {
 
 .bm1{
 	background-color:#1BCE7C;
-	
+
 }
 .bm2{
 	background-color:#FFE5EE;
@@ -159,7 +158,7 @@ button {
 	background-color:#376368;
 }
 .bm8{
-	background-color:#EEFFED;			
+	background-color:#EEFFED;
 }
 
 .box-contacto-container{
@@ -171,7 +170,7 @@ button {
 	text-align: center;
 }
 .box-contacto3{
-	line-height:1.5;	
+	line-height:1.5;
 	text-align: center !important;
 	text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
 }
@@ -189,7 +188,7 @@ button {
 	font-size:17.5px;
 }
 
-.box-circle{	
+.box-circle{
 	border:solid 2px black;
 	-moz-border-radius:50%;
 	-webkit-border-radius:50%;
@@ -218,8 +217,8 @@ button {
 	height:0;
 	border:solid 2px black;
 	padding-bottom: 100%;
-	-moz-border-radius: 50%; 
-	-webkit-border-radius: 50%; 
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
 	border-radius: 50%;
 
 }
@@ -235,11 +234,11 @@ color:black;
 font-size:0.8em;
 }
 
-.box-mod{	
+.box-mod{
 	height:337px;
 }
 
-.site-wrapper3 {	
+.site-wrapper3 {
   background: #333 url(../img/bg2_1.jpg) repeat-x;
   background-position: center;
   display: table;
@@ -274,15 +273,15 @@ font-size:0.8em;
 	display: flex;
 }
 
-.boton-info{	
-	margin-left: 6% !important;		
-	margin-top: 3% !important;		
-	width: 130px;	
+.boton-info{
+	margin-left: 6% !important;
+	margin-top: 3% !important;
+	width: 130px;
 }
 .btn-app{
 	margin-top: 3%;
 	margin-right: 3%;
-	font-size: 4em !important;	
+	font-size: 4em !important;
 	color:#7aa76d;
 }
 	.btn-app:hover{
@@ -303,18 +302,18 @@ font-size:0.8em;
 	font-size: 1.5em;
 	border-radius: 0;
 }
-.img-modal-show{	
+.img-modal-show{
 	width: 90%;
 	position: relative;
 	text-align: center;
 }
-.img-modal-show2{	
-	height: 90%;	
+.img-modal-show2{
+	height: 90%;
 	position: relative;
 }
-.img-modal-show3{	
+.img-modal-show3{
 	width: 99%;
-	position: relative;	
+	position: relative;
 }
 .modal-title{
 	color: #7aa76d;
@@ -322,4 +321,19 @@ font-size:0.8em;
 }
 .contentPrincipal{
 	margin-top: 50px;
+}
+.tabla-modal{
+	width: 100%;
+}
+.modal{
+    display: block !important; /* I added this to see the modal, you don't need this */
+}
+
+/* Important part */
+.modal-dialog{
+    overflow-y: initial !important
+}
+.modal-body{
+    height: 70%;
+    overflow-y: auto;
 }
