@@ -7,6 +7,7 @@ import {Label} from 'react-bootstrap';
 import {Modal} from 'react-bootstrap';
 import {Col} from 'react-bootstrap';
 import {Row} from 'react-bootstrap';
+import {Table} from 'react-bootstrap';
 
 export default class Modal2 extends React.Component {
 	constructor(props){
@@ -18,21 +19,74 @@ export default class Modal2 extends React.Component {
 	render(){
 			return	<Modal {...this.props} bsSize="large">
       <Modal.Header closeButton>
-        <Modal.Title>CTVirtual <Label bsStyle='success'>SALÓN DE BIOLOGÍA MOLECULAR</Label></Modal.Title>
+        <Modal.Title><h4><Label bsStyle='success'>Elaboración</Label> Macronutrientes</h4></Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <Row>
-          <Col xs={6} sm={6} md={6} lg={6}>
-            <p className="txt-parrafo">En el cuarto de biología molecular se realiza la caracterización de los organismos vivos a nivel molecular, ejemplo: Detección de proteínas alergéicas en nuestros alimentos, establecimiento del origen genético de productos para el consumo a través de las trazas de sus ADN (denominación de origen).</p>
-            <h5><b>Plancha calentadora-agitadora</b></h5>
-            <p className="txt-parrafo">Se usa para hervir el agua y agitarla. Es el caso del stock de micronutrientes #5 al baño maría o en la dilución al Phytagel con agua hirviendo y su posterior agitación para que la sustancia se homogenice.</p>
-                <img className="img-modal-show" src="public/img/modulo1/maquina_1.jpg" alt="Sala de siembra"/>
+          <Col xs={12} sm={12} md={12} lg={12}>
+            <h5><b>Elaboración de stocks 1 y 2</b></h5>
+            <p className="txt-parrafo">Los macronutrientes son los elementos que necesita la planta en mayor concentración. Estos se caracterizan en primarios (N, P y K) y secundarios (S, Ca y Mg); el C, H y O los obtiene del agua y del aire y fuente de carbono. Los nutrientes que necesita la planta, en mayor cantidad, son brindados por el stock 1 y 2 preparados a 50x y 333x respectivamente.</p>
           </Col>
-          <Col xs={6} sm={6} md={6} lg={6}>
-            <p className="txt-parrafo">Para el funcionamiento de la plancha se coloca un aluminio y se enciende; si se necesita que mande el pulso electro magnético para agitar se mueve la perilla. Si no se cuenta con calentadora-agitadora se usa una estufa eléctrica.</p>
-            <h5><b>Micropipeta</b></h5>
-                <img className="img-modal-show" src="public/img/modulo1/maquina_6.jpg" alt="Sala de siembra"/>
-            <p className="txt-parrafo">Las medidas en micras como en el caso de la aplicación de reguladores de crecimiento se utiliza la micropitpeta. Este instrumento permite medir en mircolitos () la cantidad de sustancia que se necesita para la aplicación en medio de cultivo de manera precisa y reduciendo el gasto del producto en uso.</p>
+        </Row>
+        <Row>
+          <Col xs={12} sm={12} md={6} lg={6}>            
+            <Table responsive striped bordered condensed hover>
+              <thead>
+                <tr>
+                  <th colSpan="4"><center>Macronutrientes de stock 1</center></th>
+                </tr>
+                <tr>
+                  <th><b>NÚMERO STOCK</b></th>
+                  <th><b>COMPUESTO</b></th>
+                  <th><b>CANTIDAD (gr)</b></th>
+                  <th><b>AGUA DESTILADA</b></th>
+                </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                    <td rowSpan="4">1</td>
+                    <td>NO<sub>3</sub>NH<sub>4</sub></td>
+                    <td>8,25</td>
+                    <td rowSpan="4">100 ml</td>
+                  </tr>
+                  <tr>                    
+                    <td>KNO<sub>3</sub></td>
+                    <td>9,5</td>
+                  </tr>
+                  <tr>
+                    <td>MgS0<sub>4</sub>.7H<sub>2</sub>O</td>
+                    <td>0,902</td>                    
+                  </tr>
+                  <tr>
+                    <td>KH<sub>2</sub>PO<sub>4</sub></td>
+                    <td>0,85</td>                    
+                  </tr>
+              </tbody>
+            </Table>
+            <Table responsive striped bordered condensed hover>
+              <thead>
+                <tr>
+                  <th colSpan="4"><center>Macronutrientes de stock 2</center></th>
+                </tr>
+                <tr>
+                  <th><b>NÚMERO STOCK</b></th>
+                  <th><b>COMPUESTO</b></th>
+                  <th><b>CANTIDAD (gr)</b></th>
+                  <th><b>AGUA DESTILADA</b></th>
+                </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                    <td>2</td>
+                    <td>CaCl<sub>2</sub>.H<sub>2</sub>O</td>
+                    <td>1,6854</td>
+                    <td>15 ml</td>
+                  </tr>                  
+              </tbody>
+            </Table>         
+          </Col>
+          <Col xs={12} sm={12} md={6} lg={6}>   
+            <br /><center><img className="img-modal-show" src="public/img/modulo1/maquina_6.jpg" alt="Sala de siembra"/></center><br /><br />            
           </Col>
         </Row>
       </Modal.Body>

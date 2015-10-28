@@ -7,6 +7,7 @@ import {Label} from 'react-bootstrap';
 import {Modal} from 'react-bootstrap';
 import {Col} from 'react-bootstrap';
 import {Row} from 'react-bootstrap';
+import {Table} from 'react-bootstrap';
 
 export default class Modal3 extends React.Component {
 	constructor(props){
@@ -16,41 +17,116 @@ export default class Modal3 extends React.Component {
 		this.props.onHide.call(null,'modulo2/3')
 	}
 	render(){
-			return	<Modal {...this.props}>
+			return <Modal {...this.props} bsSize="large">
       <Modal.Header closeButton>
-        <Modal.Title>CTVirtual <Label bsStyle='success'>CUARTO DE VIDRERIA Y REACTIVOS</Label></Modal.Title>
+        <Modal.Title><h4><Label bsStyle='success'>Elaboración</Label> Micronutrientes</h4></Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <Row>
-          <Col xs={12} sm={12} md={5} lg={5}>
-            <p className="txt-parrafo">Esta sección posee dos espacios donde van los reactivos. El primero es para los productos sintéticos que necesitan refrigeración y el segundo que no, ya que van en la estantería. Los stocks que se realizan para la preparación de los medios de cultivo o éstps ultimos despues del autoclavado y sellado, se guardan en la nevera</p>
-            <p className="txt-parrafo">Por lo anterior que la vidriería y los otros utensilios se designa unos estantes que tienen:</p>
+          <Col xs={12} sm={12} md={12} lg={12}>
+            <h5><b>Elaboración de stocks 3, 4 y 5</b></h5>
+            <p className="txt-parrafo">Los micronutrientes son elementos que la planta requiere en menor cantidad. Estos son el Boro (B), Manganeso (Mn), Zinc (Zn), Cobre (Cu), Cobalto (Co), Molibdato (Mo), Cloro (Cl), Yodo (I) e Hierro (Fe).</p>
+            <p className="txt-parrafo">Los micronutrientes que se aplican al medio de cultivo están divididos en 3 stocks. El stock 3, 4 y 5 y sus concentraciones se van aumentar a 1000X, 1000X y 200X, respectivamente. El stock 5 se aplica el NaEDTA en 10 ml de agua destilada. Luego en un Baker se aplica 15ml de agua destilada se pone al baño maría y se aplica el FeSO4. Terminadas de preparar, las sustancias se mezclan y se llevan a un volumen de 25mL. Se debe cubrir con papel aluminio.</p>
           </Col>
-          <Col xs={12} sm={12} md={7} lg={7}>
-            <ul>
-              <li><i className="fa fa-check"></i>Los frascos y tubos de ensayos donde se vierte el medio de cultivo</li>
-              <li><i className="fa fa-check"></i>Tapas</li>
-              <li><i className="fa fa-check"></i>Pipetas milimetradas de uno (1) a diez (10)</li>
-              <li><i className="fa fa-check"></i>Bombas o peras extractoras</li>
-              <li><i className="fa fa-check"></i>Erlenmeyers, bakers y balones aforados de 100 ml a 3000 ml</li>
-              <li><i className="fa fa-check"></i>Cajas petri</li>
-              <li><i className="fa fa-check"></i>Probetas de 100 ml</li>
-              <li><i className="fa fa-check"></i>Barra agitadora</li>
-              <li><i className="fa fa-check"></i>Minicucharas o palas para aplicar los reactivos</li>
-              <li><i className="fa fa-check"></i>Papel aluminio</li>
-              <li><i className="fa fa-check"></i>Papel Kraf</li>
-              <li><i className="fa fa-check"></i>Vinipel</li>
-              <li><i className="fa fa-check"></i>Pinzas largas</li>
-              <li><i className="fa fa-check"></i>Mango de bisturí</li>
-              <li><i className="fa fa-check"></i>Cuchilla</li>
-            </ul>
+        </Row>
+        <Row>
+          <Col xs={12} sm={12} md={6} lg={6}>            
+            <Table responsive striped bordered condensed hover>
+              <thead>
+                <tr>
+                  <th colSpan="4"><center>Macronutrientes de stock 3</center></th>
+                </tr>
+                <tr>
+                  <th><b>NÚMERO STOCK</b></th>
+                  <th><b>COMPUESTO</b></th>
+                  <th><b>CANTIDAD (gr)</b></th>
+                  <th><b>AGUA DESTILADA</b></th>
+                </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                    <td rowSpan="6">3</td>
+                    <td>H<sub>3</sub>BO<sub>3</sub></td>
+                    <td>0,031</td>
+                    <td rowSpan="6">1 ml</td>
+                  </tr>
+                  <tr>                    
+                    <td>MnSO<sub>4</sub>.H<sub>2</sub>O</td>
+                    <td>0,0845</td>
+                  </tr>
+                  <tr>
+                    <td>CuSO<sub>4</sub>.5H<sub>2</sub>O</td>
+                    <td>0,000125</td>                    
+                  </tr>
+                  <tr>
+                    <td>NaMoO<sub>4</sub>.2H<sub>2</sub>O</td>
+                    <td>0,00125</td>                    
+                  </tr>
+                  <tr>
+                    <td>ZnSO<sub>4</sub>.7H<sub>2</sub>O</td>
+                    <td>0,043</td>                    
+                  </tr>
+                  <tr>
+                    <td>CoCl<sub>2</sub>.5H<sub>2</sub>O</td>
+                    <td>0,000125</td>                    
+                  </tr>
+              </tbody>
+            </Table>          
+          </Col>
+          <Col xs={12} sm={12} md={6} lg={6}>   
+            <Table responsive striped bordered condensed hover>
+              <thead>
+                <tr>
+                  <th colSpan="4"><center>Macronutrientes de stock 4</center></th>
+                </tr>
+                <tr>
+                  <th><b>NÚMERO STOCK</b></th>
+                  <th><b>COMPUESTO</b></th>
+                  <th><b>CANTIDAD (gr)</b></th>
+                  <th><b>AGUA DESTILADA</b></th>
+                </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                    <td>4</td>
+                    <td>KI</td>
+                    <td>0,004</td>
+                    <td>1 ml</td>
+                  </tr>                  
+              </tbody>
+            </Table>         
+            <Table responsive striped bordered condensed hover>
+              <thead>
+                <tr>
+                  <th colSpan="4"><center>Macronutrientes de stock 5</center></th>
+                </tr>
+                <tr>
+                  <th><b>NÚMERO STOCK</b></th>
+                  <th><b>COMPUESTO</b></th>
+                  <th><b>CANTIDAD (gr)</b></th>
+                  <th><b>AGUA DESTILADA</b></th>
+                </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                    <td rowSpan="2">5</td>
+                    <td>NaEDTA</td>
+                    <td>0,18625</td>
+                    <td rowSpan="2">25 ml</td>
+                  </tr>                  
+                  <tr>                    
+                    <td>FeSO<sub>4</sub></td>
+                    <td>0,13925</td>                    
+                  </tr>     
+              </tbody>
+            </Table>
           </Col>
         </Row>
       </Modal.Body>
       <Modal.Footer>
         <button onClick={this.onClose.bind(this)}>Cerrar</button>
       </Modal.Footer>
-			</Modal>
+      </Modal>
 	}
 
 }
