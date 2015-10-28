@@ -7,6 +7,7 @@ import {Label} from 'react-bootstrap';
 import {Modal} from 'react-bootstrap';
 import {Col} from 'react-bootstrap';
 import {Row} from 'react-bootstrap';
+import {Table} from 'react-bootstrap';
 
 export default class Modal5 extends React.Component {
 	constructor(props){
@@ -18,17 +19,48 @@ export default class Modal5 extends React.Component {
 	render(){
 			return	<Modal {...this.props}>
       <Modal.Header closeButton>
-        <Modal.Title>CTVirtual <Label bsStyle='success'>AULA DE CLASE</Label></Modal.Title>
+        <Modal.Title><h4><Label bsStyle='success'>Elaboración</Label> Fuente de carbono</h4></Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <h2>Aula de Clase</h2>
-        <br />
-        <p className="txt-parrafo">Aula de practica y colaboración en las tareas docentes y roles básicos y fundamentales.</p>
-        <p className="txt-parrafo">Esta sala se usa para prácticas, desarrollo y presentaciones de largo periodo. Es un espacio que aporta información esencial para el desarrollo posterior y actividades eficaces dentro de las otras áreas.</p>
+        <Row>
+          <Col xs={12} sm={12} md={12} lg={12}>
+            <h5><b>Fuente de carbono de stock 7</b></h5>
+            <p className="txt-parrafo">Las fuentes de carbono le brindan a los tejidos vegetales energía y regulación osmótica. El Mio-inositol es una de las más utilizadas. Generalmente se prepara el stock 7 a una concentración de 50X, aunque se recomienda hacer aplicación directa.</p>
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={12} sm={12} md={7} lg={7}>
+						<Table responsive striped bordered condensed hover>
+							<thead>
+								<tr>
+									<th colSpan="4"><center>Macronutrientes de stock 7</center></th>
+								</tr>
+								<tr>
+									<th><b>NÚMERO STOCK</b></th>
+									<th><b>COMPUESTO</b></th>
+									<th><b>CANTIDAD (gr)</b></th>
+									<th><b>AGUA DESTILADA</b></th>
+								</tr>
+							</thead>
+							<tbody>
+									<tr>
+										<td>7</td>
+										<td>MIO-INOSITOL</td>
+										<td>0,5</td>
+										<td>100 ml</td>
+									</tr>
+							</tbody>
+						</Table>
+          </Col>
+          <Col xs={12} sm={12} md={5} lg={5}>
+            <img className="img-modal-show" src="public/img/modulo1/maquina_6.jpg" alt="Sala de siembra"/>
+          </Col>
+        </Row>
       </Modal.Body>
       <Modal.Footer>
         <button onClick={this.onClose.bind(this)}>Cerrar</button>
       </Modal.Footer>
 			</Modal>
 	}
+
 }

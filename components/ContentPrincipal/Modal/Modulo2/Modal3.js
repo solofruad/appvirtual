@@ -30,11 +30,11 @@ export default class Modal3 extends React.Component {
           </Col>
         </Row>
         <Row>
-          <Col xs={12} sm={12} md={6} lg={6}>            
+          <Col xs={12} sm={12} md={6} lg={6}>
             <Table responsive striped bordered condensed hover>
               <thead>
                 <tr>
-                  <th colSpan="4"><center>Macronutrientes de stock 3</center></th>
+                  <th colSpan="4"><center>Micronutrientes de stock 3</center></th>
                 </tr>
                 <tr>
                   <th><b>NÚMERO STOCK</b></th>
@@ -50,34 +50,34 @@ export default class Modal3 extends React.Component {
                     <td>0,031</td>
                     <td rowSpan="6">1 ml</td>
                   </tr>
-                  <tr>                    
+                  <tr>
                     <td>MnSO<sub>4</sub>.H<sub>2</sub>O</td>
                     <td>0,0845</td>
                   </tr>
                   <tr>
                     <td>CuSO<sub>4</sub>.5H<sub>2</sub>O</td>
-                    <td>0,000125</td>                    
+                    <td>0,000125</td>
                   </tr>
                   <tr>
                     <td>NaMoO<sub>4</sub>.2H<sub>2</sub>O</td>
-                    <td>0,00125</td>                    
+                    <td>0,00125</td>
                   </tr>
                   <tr>
                     <td>ZnSO<sub>4</sub>.7H<sub>2</sub>O</td>
-                    <td>0,043</td>                    
+                    <td>0,043</td>
                   </tr>
                   <tr>
                     <td>CoCl<sub>2</sub>.5H<sub>2</sub>O</td>
-                    <td>0,000125</td>                    
+                    <td>0,000125</td>
                   </tr>
               </tbody>
-            </Table>          
+            </Table>
           </Col>
-          <Col xs={12} sm={12} md={6} lg={6}>   
+          <Col xs={12} sm={12} md={6} lg={6}>
             <Table responsive striped bordered condensed hover>
               <thead>
                 <tr>
-                  <th colSpan="4"><center>Macronutrientes de stock 4</center></th>
+                  <th colSpan="4"><center>Micronutrientes de stock 4</center></th>
                 </tr>
                 <tr>
                   <th><b>NÚMERO STOCK</b></th>
@@ -92,13 +92,13 @@ export default class Modal3 extends React.Component {
                     <td>KI</td>
                     <td>0,004</td>
                     <td>1 ml</td>
-                  </tr>                  
+                  </tr>
               </tbody>
-            </Table>         
+            </Table>
             <Table responsive striped bordered condensed hover>
               <thead>
                 <tr>
-                  <th colSpan="4"><center>Macronutrientes de stock 5</center></th>
+                  <th colSpan="4"><center>Micronutrientes de stock 5</center></th>
                 </tr>
                 <tr>
                   <th><b>NÚMERO STOCK</b></th>
@@ -113,11 +113,11 @@ export default class Modal3 extends React.Component {
                     <td>NaEDTA</td>
                     <td>0,18625</td>
                     <td rowSpan="2">25 ml</td>
-                  </tr>                  
-                  <tr>                    
+                  </tr>
+                  <tr>
                     <td>FeSO<sub>4</sub></td>
-                    <td>0,13925</td>                    
-                  </tr>     
+                    <td>0,13925</td>
+                  </tr>
               </tbody>
             </Table>
           </Col>

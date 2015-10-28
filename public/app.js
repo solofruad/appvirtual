@@ -1,4 +1,96 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+// shim for using process in browser
+
+var process = module.exports = {};
+var queue = [];
+var draining = false;
+var currentQueue;
+var queueIndex = -1;
+
+function cleanUpNextTick() {
+    draining = false;
+    if (currentQueue.length) {
+        queue = currentQueue.concat(queue);
+    } else {
+        queueIndex = -1;
+    }
+    if (queue.length) {
+        drainQueue();
+    }
+}
+
+function drainQueue() {
+    if (draining) {
+        return;
+    }
+    var timeout = setTimeout(cleanUpNextTick);
+    draining = true;
+
+    var len = queue.length;
+    while(len) {
+        currentQueue = queue;
+        queue = [];
+        while (++queueIndex < len) {
+            currentQueue[queueIndex].run();
+        }
+        queueIndex = -1;
+        len = queue.length;
+    }
+    currentQueue = null;
+    draining = false;
+    clearTimeout(timeout);
+}
+
+process.nextTick = function (fun) {
+    var args = new Array(arguments.length - 1);
+    if (arguments.length > 1) {
+        for (var i = 1; i < arguments.length; i++) {
+            args[i - 1] = arguments[i];
+        }
+    }
+    queue.push(new Item(fun, args));
+    if (queue.length === 1 && !draining) {
+        setTimeout(drainQueue, 0);
+    }
+};
+
+// v8 likes predictible objects
+function Item(fun, array) {
+    this.fun = fun;
+    this.array = array;
+}
+Item.prototype.run = function () {
+    this.fun.apply(null, this.array);
+};
+process.title = 'browser';
+process.browser = true;
+process.env = {};
+process.argv = [];
+process.version = ''; // empty string to avoid regexp issues
+process.versions = {};
+
+function noop() {}
+
+process.on = noop;
+process.addListener = noop;
+process.once = noop;
+process.off = noop;
+process.removeListener = noop;
+process.removeAllListeners = noop;
+process.emit = noop;
+
+process.binding = function (name) {
+    throw new Error('process.binding is not supported');
+};
+
+// TODO(shtylman)
+process.cwd = function () { return '/' };
+process.chdir = function (dir) {
+    throw new Error('process.chdir is not supported');
+};
+process.umask = function() { return 0; };
+
+},{}],2:[function(require,module,exports){
 /*
 * Module dependecies
 */
@@ -77,7 +169,7 @@ _reactRouter2['default'].run(routes, _reactRouter2['default'].HashLocation, func
 
 //https://rackt.github.io/react-router/#Redirect
 
-},{"./components/ContentCreditos/ContentCreditos":2,"./components/ContentPrincipal/ContentPrincipal":5,"./components/ContentPrincipal/Modulo2":17,"./components/Inicio":20,"./components/modulo1/Modulo1":26,"./components/modulo1/Modulo1Content":27,"./components/nav/Menu":31,"jquery":33,"react":379,"react-router":210}],2:[function(require,module,exports){
+},{"./components/ContentCreditos/ContentCreditos":3,"./components/ContentPrincipal/ContentPrincipal":6,"./components/ContentPrincipal/Modulo2":18,"./components/Inicio":21,"./components/modulo1/Modulo1":27,"./components/modulo1/Modulo1Content":28,"./components/nav/Menu":32,"jquery":33,"react":379,"react-router":210}],3:[function(require,module,exports){
 /**
  * Modules Dependencies
  */
@@ -154,7 +246,7 @@ var ContentCreditos = (function (_React$Component) {
 exports['default'] = ContentCreditos;
 module.exports = exports['default'];
 
-},{"./Creditos":3,"jquery":33,"react":379}],3:[function(require,module,exports){
+},{"./Creditos":4,"jquery":33,"react":379}],4:[function(require,module,exports){
 /**
  * Modules Dependencies
  */
@@ -222,7 +314,7 @@ var Creditos = (function (_React$Component) {
 exports['default'] = Creditos;
 module.exports = exports['default'];
 
-},{"./CreditosUnit":4,"react":379,"react-bootstrap":102}],4:[function(require,module,exports){
+},{"./CreditosUnit":5,"react":379,"react-bootstrap":102}],5:[function(require,module,exports){
 /**
  * Modules Dependencies
  */
@@ -387,7 +479,7 @@ var CreditosUnit = (function (_React$Component) {
 exports['default'] = CreditosUnit;
 module.exports = exports['default'];
 
-},{"react":379,"react-bootstrap":102}],5:[function(require,module,exports){
+},{"react":379,"react-bootstrap":102}],6:[function(require,module,exports){
 /**
  * Modules Dependencies
  */
@@ -472,7 +564,7 @@ var ContentPrincipal = (function (_React$Component) {
 exports['default'] = ContentPrincipal;
 module.exports = exports['default'];
 
-},{"./Header":6,"./Modulos":18,"jquery":33,"react":379}],6:[function(require,module,exports){
+},{"./Header":7,"./Modulos":19,"jquery":33,"react":379}],7:[function(require,module,exports){
 /**
  * Modules Dependencies
  */
@@ -567,7 +659,7 @@ var Header = (function (_React$Component) {
 exports["default"] = Header;
 module.exports = exports["default"];
 
-},{"react":379}],7:[function(require,module,exports){
+},{"react":379}],8:[function(require,module,exports){
 /**
  * Modules Dependencies
  */
@@ -736,7 +828,7 @@ var Modal1 = (function (_React$Component) {
 exports['default'] = Modal1;
 module.exports = exports['default'];
 
-},{"react":379,"react-bootstrap":102}],8:[function(require,module,exports){
+},{"react":379,"react-bootstrap":102}],9:[function(require,module,exports){
 /**
  * Modules Dependencies
  */
@@ -1139,7 +1231,7 @@ var Modal2 = (function (_React$Component) {
 exports['default'] = Modal2;
 module.exports = exports['default'];
 
-},{"react":379,"react-bootstrap":102}],9:[function(require,module,exports){
+},{"react":379,"react-bootstrap":102}],10:[function(require,module,exports){
 /**
  * Modules Dependencies
  */
@@ -1257,7 +1349,7 @@ var Modal3 = (function (_React$Component) {
                       _react2['default'].createElement(
                         'center',
                         null,
-                        'Macronutrientes de stock 3'
+                        'Micronutrientes de stock 3'
                       )
                     )
                   ),
@@ -1491,7 +1583,7 @@ var Modal3 = (function (_React$Component) {
                       _react2['default'].createElement(
                         'center',
                         null,
-                        'Macronutrientes de stock 4'
+                        'Micronutrientes de stock 4'
                       )
                     )
                   ),
@@ -1580,7 +1672,7 @@ var Modal3 = (function (_React$Component) {
                       _react2['default'].createElement(
                         'center',
                         null,
-                        'Macronutrientes de stock 5'
+                        'Micronutrientes de stock 5'
                       )
                     )
                   ),
@@ -1695,7 +1787,7 @@ var Modal3 = (function (_React$Component) {
 exports['default'] = Modal3;
 module.exports = exports['default'];
 
-},{"react":379,"react-bootstrap":102}],10:[function(require,module,exports){
+},{"react":379,"react-bootstrap":102}],11:[function(require,module,exports){
 /**
  * Modules Dependencies
  */
@@ -1703,7 +1795,7 @@ module.exports = exports['default'];
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
-  value: true
+	value: true
 });
 
 var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
@@ -1723,97 +1815,195 @@ var _react2 = _interopRequireDefault(_react);
 var _reactBootstrap = require('react-bootstrap');
 
 var Modal4 = (function (_React$Component) {
-  _inherits(Modal4, _React$Component);
+	_inherits(Modal4, _React$Component);
 
-  function Modal4(props) {
-    _classCallCheck(this, Modal4);
+	function Modal4(props) {
+		_classCallCheck(this, Modal4);
 
-    _get(Object.getPrototypeOf(Modal4.prototype), 'constructor', this).call(this, props);
-  }
+		_get(Object.getPrototypeOf(Modal4.prototype), 'constructor', this).call(this, props);
+	}
 
-  _createClass(Modal4, [{
-    key: 'onClose',
-    value: function onClose(ev) {
-      this.props.onHide.call(null, 'modulo2/4');
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      return _react2['default'].createElement(
-        _reactBootstrap.Modal,
-        this.props,
-        _react2['default'].createElement(
-          _reactBootstrap.Modal.Header,
-          { closeButton: true },
-          _react2['default'].createElement(
-            _reactBootstrap.Modal.Title,
-            null,
-            'CTVirtual ',
-            _react2['default'].createElement(
-              _reactBootstrap.Label,
-              { bsStyle: 'success' },
-              'CUARTO DE PREPARACIÓN DE MEDIOS'
-            )
-          )
-        ),
-        _react2['default'].createElement(
-          _reactBootstrap.Modal.Body,
-          null,
-          _react2['default'].createElement(
-            _reactBootstrap.Row,
-            null,
-            _react2['default'].createElement(
-              _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 12, lg: 12 },
-              _react2['default'].createElement(
-                'h2',
-                null,
-                'Preparación de medios de cultivo',
-                _react2['default'].createElement('span', { className: 'txt-green' })
-              ),
-              _react2['default'].createElement('br', null),
-              _react2['default'].createElement(
-                'p',
-                { className: 'txt-parrafo' },
-                'Esta sección debe contar con varios equipos que permitan la preparación y el adecuación de los medios de cultivo.'
-              )
-            )
-          ),
-          _react2['default'].createElement(
-            _reactBootstrap.Row,
-            null,
-            _react2['default'].createElement(
-              _reactBootstrap.Col,
-              { xs: 6, sm: 6, md: 6, lg: 6 },
-              _react2['default'].createElement('img', { src: 'public/img/modulo1/maquina_9.jpg', className: 'img-modal-show' })
-            ),
-            _react2['default'].createElement(
-              _reactBootstrap.Col,
-              { xs: 6, sm: 6, md: 6, lg: 6 },
-              _react2['default'].createElement('img', { src: 'public/img/modulo1/maquina_3.jpg', className: 'img-modal-show' })
-            )
-          )
-        ),
-        _react2['default'].createElement(
-          _reactBootstrap.Modal.Footer,
-          null,
-          _react2['default'].createElement(
-            'button',
-            { onClick: this.onClose.bind(this) },
-            'Cerrar'
-          )
-        )
-      );
-    }
-  }]);
+	_createClass(Modal4, [{
+		key: 'onClose',
+		value: function onClose(ev) {
+			this.props.onHide.call(null, 'modulo2/4');
+		}
+	}, {
+		key: 'render',
+		value: function render() {
+			return _react2['default'].createElement(
+				_reactBootstrap.Modal,
+				this.props,
+				_react2['default'].createElement(
+					_reactBootstrap.Modal.Header,
+					{ closeButton: true },
+					_react2['default'].createElement(
+						_reactBootstrap.Modal.Title,
+						null,
+						_react2['default'].createElement(
+							'h4',
+							null,
+							_react2['default'].createElement(
+								_reactBootstrap.Label,
+								{ bsStyle: 'success' },
+								'Elaboración'
+							),
+							' Vitaminas'
+						)
+					)
+				),
+				_react2['default'].createElement(
+					_reactBootstrap.Modal.Body,
+					null,
+					_react2['default'].createElement(
+						_reactBootstrap.Row,
+						null,
+						_react2['default'].createElement(
+							_reactBootstrap.Col,
+							{ xs: 12, sm: 12, md: 12, lg: 12 },
+							_react2['default'].createElement(
+								'h5',
+								null,
+								_react2['default'].createElement(
+									'b',
+									null,
+									'Elaboración de stocks 6'
+								)
+							),
+							_react2['default'].createElement(
+								'p',
+								{ className: 'txt-parrafo' },
+								'Generalmente, en el cultivo de tejidos se usa vitaminas del complejo B, principalmente necesita de la vitamina B1 o Tiamina. Designado aquí como stock 6. Éste se puede preparar a una concentración de 50X.'
+							)
+						)
+					),
+					_react2['default'].createElement(
+						_reactBootstrap.Row,
+						null,
+						_react2['default'].createElement(
+							_reactBootstrap.Col,
+							{ xs: 12, sm: 12, md: 12, lg: 12 },
+							_react2['default'].createElement(
+								_reactBootstrap.Table,
+								{ responsive: true, striped: true, bordered: true, condensed: true, hover: true },
+								_react2['default'].createElement(
+									'thead',
+									null,
+									_react2['default'].createElement(
+										'tr',
+										null,
+										_react2['default'].createElement(
+											'th',
+											{ colSpan: '4' },
+											_react2['default'].createElement(
+												'center',
+												null,
+												'Vitamina B1 de Stock 6'
+											)
+										)
+									),
+									_react2['default'].createElement(
+										'tr',
+										null,
+										_react2['default'].createElement(
+											'th',
+											null,
+											_react2['default'].createElement(
+												'b',
+												null,
+												'NÚMERO STOCK'
+											)
+										),
+										_react2['default'].createElement(
+											'th',
+											null,
+											_react2['default'].createElement(
+												'b',
+												null,
+												'COMPUESTO'
+											)
+										),
+										_react2['default'].createElement(
+											'th',
+											null,
+											_react2['default'].createElement(
+												'b',
+												null,
+												'CANTIDAD (gr)'
+											)
+										),
+										_react2['default'].createElement(
+											'th',
+											null,
+											_react2['default'].createElement(
+												'b',
+												null,
+												'AGUA DESTILADA'
+											)
+										)
+									)
+								),
+								_react2['default'].createElement(
+									'tbody',
+									null,
+									_react2['default'].createElement(
+										'tr',
+										null,
+										_react2['default'].createElement(
+											'td',
+											null,
+											'6'
+										),
+										_react2['default'].createElement(
+											'td',
+											null,
+											'Vitamina B1'
+										),
+										_react2['default'].createElement(
+											'td',
+											null,
+											'0,0005'
+										),
+										_react2['default'].createElement(
+											'td',
+											null,
+											'100 ml'
+										)
+									)
+								)
+							)
+						)
+					),
+					_react2['default'].createElement(
+						_reactBootstrap.Row,
+						null,
+						_react2['default'].createElement(
+							_reactBootstrap.Col,
+							{ xs: 12, sm: 12, md: 12, lg: 12 },
+							_react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo1/maquina_6.jpg', alt: 'Sala de siembra' })
+						)
+					)
+				),
+				_react2['default'].createElement(
+					_reactBootstrap.Modal.Footer,
+					null,
+					_react2['default'].createElement(
+						'button',
+						{ onClick: this.onClose.bind(this) },
+						'Cerrar'
+					)
+				)
+			);
+		}
+	}]);
 
-  return Modal4;
+	return Modal4;
 })(_react2['default'].Component);
 
 exports['default'] = Modal4;
 module.exports = exports['default'];
 
-},{"react":379,"react-bootstrap":102}],11:[function(require,module,exports){
+},{"react":379,"react-bootstrap":102}],12:[function(require,module,exports){
 /**
  * Modules Dependencies
  */
@@ -1821,7 +2011,7 @@ module.exports = exports['default'];
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
-  value: true
+	value: true
 });
 
 var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
@@ -1841,79 +2031,191 @@ var _react2 = _interopRequireDefault(_react);
 var _reactBootstrap = require('react-bootstrap');
 
 var Modal5 = (function (_React$Component) {
-  _inherits(Modal5, _React$Component);
+	_inherits(Modal5, _React$Component);
 
-  function Modal5(props) {
-    _classCallCheck(this, Modal5);
+	function Modal5(props) {
+		_classCallCheck(this, Modal5);
 
-    _get(Object.getPrototypeOf(Modal5.prototype), 'constructor', this).call(this, props);
-  }
+		_get(Object.getPrototypeOf(Modal5.prototype), 'constructor', this).call(this, props);
+	}
 
-  _createClass(Modal5, [{
-    key: 'onClose',
-    value: function onClose(ev) {
-      this.props.onHide.call(null, 'modulo2/5');
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      return _react2['default'].createElement(
-        _reactBootstrap.Modal,
-        this.props,
-        _react2['default'].createElement(
-          _reactBootstrap.Modal.Header,
-          { closeButton: true },
-          _react2['default'].createElement(
-            _reactBootstrap.Modal.Title,
-            null,
-            'CTVirtual ',
-            _react2['default'].createElement(
-              _reactBootstrap.Label,
-              { bsStyle: 'success' },
-              'AULA DE CLASE'
-            )
-          )
-        ),
-        _react2['default'].createElement(
-          _reactBootstrap.Modal.Body,
-          null,
-          _react2['default'].createElement(
-            'h2',
-            null,
-            'Aula de Clase'
-          ),
-          _react2['default'].createElement('br', null),
-          _react2['default'].createElement(
-            'p',
-            { className: 'txt-parrafo' },
-            'Aula de practica y colaboración en las tareas docentes y roles básicos y fundamentales.'
-          ),
-          _react2['default'].createElement(
-            'p',
-            { className: 'txt-parrafo' },
-            'Esta sala se usa para prácticas, desarrollo y presentaciones de largo periodo. Es un espacio que aporta información esencial para el desarrollo posterior y actividades eficaces dentro de las otras áreas.'
-          )
-        ),
-        _react2['default'].createElement(
-          _reactBootstrap.Modal.Footer,
-          null,
-          _react2['default'].createElement(
-            'button',
-            { onClick: this.onClose.bind(this) },
-            'Cerrar'
-          )
-        )
-      );
-    }
-  }]);
+	_createClass(Modal5, [{
+		key: 'onClose',
+		value: function onClose(ev) {
+			this.props.onHide.call(null, 'modulo2/5');
+		}
+	}, {
+		key: 'render',
+		value: function render() {
+			return _react2['default'].createElement(
+				_reactBootstrap.Modal,
+				this.props,
+				_react2['default'].createElement(
+					_reactBootstrap.Modal.Header,
+					{ closeButton: true },
+					_react2['default'].createElement(
+						_reactBootstrap.Modal.Title,
+						null,
+						_react2['default'].createElement(
+							'h4',
+							null,
+							_react2['default'].createElement(
+								_reactBootstrap.Label,
+								{ bsStyle: 'success' },
+								'Elaboración'
+							),
+							' Fuente de carbono'
+						)
+					)
+				),
+				_react2['default'].createElement(
+					_reactBootstrap.Modal.Body,
+					null,
+					_react2['default'].createElement(
+						_reactBootstrap.Row,
+						null,
+						_react2['default'].createElement(
+							_reactBootstrap.Col,
+							{ xs: 12, sm: 12, md: 12, lg: 12 },
+							_react2['default'].createElement(
+								'h5',
+								null,
+								_react2['default'].createElement(
+									'b',
+									null,
+									'Fuente de carbono de stock 7'
+								)
+							),
+							_react2['default'].createElement(
+								'p',
+								{ className: 'txt-parrafo' },
+								'Las fuentes de carbono le brindan a los tejidos vegetales energía y regulación osmótica. El Mio-inositol es una de las más utilizadas. Generalmente se prepara el stock 7 a una concentración de 50X, aunque se recomienda hacer aplicación directa.'
+							)
+						)
+					),
+					_react2['default'].createElement(
+						_reactBootstrap.Row,
+						null,
+						_react2['default'].createElement(
+							_reactBootstrap.Col,
+							{ xs: 12, sm: 12, md: 7, lg: 7 },
+							_react2['default'].createElement(
+								_reactBootstrap.Table,
+								{ responsive: true, striped: true, bordered: true, condensed: true, hover: true },
+								_react2['default'].createElement(
+									'thead',
+									null,
+									_react2['default'].createElement(
+										'tr',
+										null,
+										_react2['default'].createElement(
+											'th',
+											{ colSpan: '4' },
+											_react2['default'].createElement(
+												'center',
+												null,
+												'Macronutrientes de stock 7'
+											)
+										)
+									),
+									_react2['default'].createElement(
+										'tr',
+										null,
+										_react2['default'].createElement(
+											'th',
+											null,
+											_react2['default'].createElement(
+												'b',
+												null,
+												'NÚMERO STOCK'
+											)
+										),
+										_react2['default'].createElement(
+											'th',
+											null,
+											_react2['default'].createElement(
+												'b',
+												null,
+												'COMPUESTO'
+											)
+										),
+										_react2['default'].createElement(
+											'th',
+											null,
+											_react2['default'].createElement(
+												'b',
+												null,
+												'CANTIDAD (gr)'
+											)
+										),
+										_react2['default'].createElement(
+											'th',
+											null,
+											_react2['default'].createElement(
+												'b',
+												null,
+												'AGUA DESTILADA'
+											)
+										)
+									)
+								),
+								_react2['default'].createElement(
+									'tbody',
+									null,
+									_react2['default'].createElement(
+										'tr',
+										null,
+										_react2['default'].createElement(
+											'td',
+											null,
+											'7'
+										),
+										_react2['default'].createElement(
+											'td',
+											null,
+											'MIO-INOSITOL'
+										),
+										_react2['default'].createElement(
+											'td',
+											null,
+											'0,5'
+										),
+										_react2['default'].createElement(
+											'td',
+											null,
+											'100 ml'
+										)
+									)
+								)
+							)
+						),
+						_react2['default'].createElement(
+							_reactBootstrap.Col,
+							{ xs: 12, sm: 12, md: 5, lg: 5 },
+							_react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo1/maquina_6.jpg', alt: 'Sala de siembra' })
+						)
+					)
+				),
+				_react2['default'].createElement(
+					_reactBootstrap.Modal.Footer,
+					null,
+					_react2['default'].createElement(
+						'button',
+						{ onClick: this.onClose.bind(this) },
+						'Cerrar'
+					)
+				)
+			);
+		}
+	}]);
 
-  return Modal5;
+	return Modal5;
 })(_react2['default'].Component);
 
 exports['default'] = Modal5;
 module.exports = exports['default'];
 
-},{"react":379,"react-bootstrap":102}],12:[function(require,module,exports){
+},{"react":379,"react-bootstrap":102}],13:[function(require,module,exports){
 /**
  * Modules Dependencies
  */
@@ -1923,6 +2225,8 @@ module.exports = exports['default'];
 Object.defineProperty(exports, '__esModule', {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
@@ -1959,18 +2263,22 @@ var Modal6 = (function (_React$Component) {
     value: function render() {
       return _react2['default'].createElement(
         _reactBootstrap.Modal,
-        this.props,
+        _extends({}, this.props, { bsSize: 'large' }),
         _react2['default'].createElement(
           _reactBootstrap.Modal.Header,
           { closeButton: true },
           _react2['default'].createElement(
             _reactBootstrap.Modal.Title,
             null,
-            'CTVirtual ',
             _react2['default'].createElement(
-              _reactBootstrap.Label,
-              { bsStyle: 'success' },
-              'Lavado, destilación y estirilización'
+              'h4',
+              null,
+              _react2['default'].createElement(
+                _reactBootstrap.Label,
+                { bsStyle: 'success' },
+                'Elaboración'
+              ),
+              ' Fitohormonas'
             )
           )
         ),
@@ -1978,14 +2286,310 @@ var Modal6 = (function (_React$Component) {
           _reactBootstrap.Modal.Body,
           null,
           _react2['default'].createElement(
-            'h2',
+            _reactBootstrap.Row,
             null,
-            'Aula de lavado, destilación y estirilización'
+            _react2['default'].createElement(
+              _reactBootstrap.Col,
+              { xs: 12, sm: 12, md: 12, lg: 12 },
+              _react2['default'].createElement(
+                'h5',
+                null,
+                _react2['default'].createElement(
+                  'b',
+                  null,
+                  'Elaboración de stocks 8, 9 y 10'
+                )
+              ),
+              _react2['default'].createElement(
+                'p',
+                { className: 'txt-parrafo' },
+                'Las fitohormonas o reguladores de crecimiento son compuestos que permiten potenciar el crecimiento y diferenciación de los tejidos vegetales. Las plantas utilizan naturalmente, las auxinas, responsables del crecimiento de los tejidos, formación de callo, desarrollo de primordios foliares y enraizamiento; las citoquininas, favorecen la división celular; y Giberilinas, permiten el crecimiento, rompimiento de la latencia del embrión que involucran el transporte de nutrientes y yemas axilares y apicales para iniciar la floración.'
+              ),
+              _react2['default'].createElement(
+                'p',
+                { className: 'txt-parrafo' },
+                'Los organismos vegetales necesitan para su normal desarrollo fitohormonas, de tal manera que en el cultivo in vitro se aplican sintéticas para impulsar el desarrollo de los explantes. Las más utilizadas son el ANA (ácido naftalenacético), BAP (bencyl  amino purina) y AG3 (ácido giberélico) que corresponde al stock 8, 9 y 10, respectivamente.'
+              )
+            )
           ),
           _react2['default'].createElement(
-            'p',
-            { className: 'txt-parrafo' },
-            'El proceso de producción de vitroplantas genera materiales que necesitan un lavado especial con productos que limpien grasas y permita remover la mugre (DEXTRAN).'
+            _reactBootstrap.Row,
+            null,
+            _react2['default'].createElement(
+              _reactBootstrap.Col,
+              { xs: 12, sm: 12, md: 6, lg: 6 },
+              _react2['default'].createElement(
+                _reactBootstrap.Table,
+                { responsive: true, striped: true, bordered: true, condensed: true, hover: true },
+                _react2['default'].createElement(
+                  'thead',
+                  null,
+                  _react2['default'].createElement(
+                    'tr',
+                    null,
+                    _react2['default'].createElement(
+                      'th',
+                      { colSpan: '4' },
+                      _react2['default'].createElement(
+                        'center',
+                        null,
+                        'Ácido Naftalenacético de Stock 8.'
+                      )
+                    )
+                  ),
+                  _react2['default'].createElement(
+                    'tr',
+                    null,
+                    _react2['default'].createElement(
+                      'th',
+                      null,
+                      _react2['default'].createElement(
+                        'b',
+                        null,
+                        'NÚMERO STOCK'
+                      )
+                    ),
+                    _react2['default'].createElement(
+                      'th',
+                      null,
+                      _react2['default'].createElement(
+                        'b',
+                        null,
+                        'COMPUESTO'
+                      )
+                    ),
+                    _react2['default'].createElement(
+                      'th',
+                      null,
+                      _react2['default'].createElement(
+                        'b',
+                        null,
+                        'CANTIDAD (gr)'
+                      )
+                    ),
+                    _react2['default'].createElement(
+                      'th',
+                      null,
+                      _react2['default'].createElement(
+                        'b',
+                        null,
+                        'AGUA DESTILADA'
+                      )
+                    )
+                  )
+                ),
+                _react2['default'].createElement(
+                  'tbody',
+                  null,
+                  _react2['default'].createElement(
+                    'tr',
+                    null,
+                    _react2['default'].createElement(
+                      'td',
+                      null,
+                      '8'
+                    ),
+                    _react2['default'].createElement(
+                      'td',
+                      null,
+                      'ANA'
+                    ),
+                    _react2['default'].createElement(
+                      'td',
+                      null,
+                      '0,1'
+                    ),
+                    _react2['default'].createElement(
+                      'td',
+                      null,
+                      '100 ml'
+                    )
+                  )
+                )
+              )
+            ),
+            _react2['default'].createElement(
+              _reactBootstrap.Col,
+              { xs: 12, sm: 12, md: 6, lg: 6 },
+              _react2['default'].createElement(
+                _reactBootstrap.Table,
+                { responsive: true, striped: true, bordered: true, condensed: true, hover: true },
+                _react2['default'].createElement(
+                  'thead',
+                  null,
+                  _react2['default'].createElement(
+                    'tr',
+                    null,
+                    _react2['default'].createElement(
+                      'th',
+                      { colSpan: '4' },
+                      _react2['default'].createElement(
+                        'center',
+                        null,
+                        'Bencyl Amino Purina de stock 9.'
+                      )
+                    )
+                  ),
+                  _react2['default'].createElement(
+                    'tr',
+                    null,
+                    _react2['default'].createElement(
+                      'th',
+                      null,
+                      _react2['default'].createElement(
+                        'b',
+                        null,
+                        'NÚMERO STOCK'
+                      )
+                    ),
+                    _react2['default'].createElement(
+                      'th',
+                      null,
+                      _react2['default'].createElement(
+                        'b',
+                        null,
+                        'COMPUESTO'
+                      )
+                    ),
+                    _react2['default'].createElement(
+                      'th',
+                      null,
+                      _react2['default'].createElement(
+                        'b',
+                        null,
+                        'CANTIDAD (gr)'
+                      )
+                    ),
+                    _react2['default'].createElement(
+                      'th',
+                      null,
+                      _react2['default'].createElement(
+                        'b',
+                        null,
+                        'AGUA DESTILADA'
+                      )
+                    )
+                  )
+                ),
+                _react2['default'].createElement(
+                  'tbody',
+                  null,
+                  _react2['default'].createElement(
+                    'tr',
+                    null,
+                    _react2['default'].createElement(
+                      'td',
+                      null,
+                      '9'
+                    ),
+                    _react2['default'].createElement(
+                      'td',
+                      null,
+                      'BAP'
+                    ),
+                    _react2['default'].createElement(
+                      'td',
+                      null,
+                      '0,1'
+                    ),
+                    _react2['default'].createElement(
+                      'td',
+                      null,
+                      '100 ml'
+                    )
+                  )
+                )
+              ),
+              _react2['default'].createElement(
+                _reactBootstrap.Table,
+                { responsive: true, striped: true, bordered: true, condensed: true, hover: true },
+                _react2['default'].createElement(
+                  'thead',
+                  null,
+                  _react2['default'].createElement(
+                    'tr',
+                    null,
+                    _react2['default'].createElement(
+                      'th',
+                      { colSpan: '4' },
+                      _react2['default'].createElement(
+                        'center',
+                        null,
+                        'Ácido giberélico de stock 10'
+                      )
+                    )
+                  ),
+                  _react2['default'].createElement(
+                    'tr',
+                    null,
+                    _react2['default'].createElement(
+                      'th',
+                      null,
+                      _react2['default'].createElement(
+                        'b',
+                        null,
+                        'NÚMERO STOCK'
+                      )
+                    ),
+                    _react2['default'].createElement(
+                      'th',
+                      null,
+                      _react2['default'].createElement(
+                        'b',
+                        null,
+                        'COMPUESTO'
+                      )
+                    ),
+                    _react2['default'].createElement(
+                      'th',
+                      null,
+                      _react2['default'].createElement(
+                        'b',
+                        null,
+                        'CANTIDAD (gr)'
+                      )
+                    ),
+                    _react2['default'].createElement(
+                      'th',
+                      null,
+                      _react2['default'].createElement(
+                        'b',
+                        null,
+                        'AGUA DESTILADA'
+                      )
+                    )
+                  )
+                ),
+                _react2['default'].createElement(
+                  'tbody',
+                  null,
+                  _react2['default'].createElement(
+                    'tr',
+                    null,
+                    _react2['default'].createElement(
+                      'td',
+                      null,
+                      '10'
+                    ),
+                    _react2['default'].createElement(
+                      'td',
+                      null,
+                      'AG'
+                    ),
+                    _react2['default'].createElement(
+                      'td',
+                      null,
+                      '0,1'
+                    ),
+                    _react2['default'].createElement(
+                      'td',
+                      null,
+                      '100 ml'
+                    )
+                  )
+                )
+              )
+            )
           )
         ),
         _react2['default'].createElement(
@@ -2007,7 +2611,7 @@ var Modal6 = (function (_React$Component) {
 exports['default'] = Modal6;
 module.exports = exports['default'];
 
-},{"react":379,"react-bootstrap":102}],13:[function(require,module,exports){
+},{"react":379,"react-bootstrap":102}],14:[function(require,module,exports){
 /**
  * Modules Dependencies
  */
@@ -2060,11 +2664,15 @@ var Modal7 = (function (_React$Component) {
           _react2['default'].createElement(
             _reactBootstrap.Modal.Title,
             null,
-            'CTVirtual ',
             _react2['default'].createElement(
-              _reactBootstrap.Label,
-              { bsStyle: 'success' },
-              'IVERNADERO'
+              'h4',
+              null,
+              _react2['default'].createElement(
+                _reactBootstrap.Label,
+                { bsStyle: 'success' },
+                'Elaboración'
+              ),
+              ' Sustancias Orgánicas'
             )
           )
         ),
@@ -2072,24 +2680,9 @@ var Modal7 = (function (_React$Component) {
           _reactBootstrap.Modal.Body,
           null,
           _react2['default'].createElement(
-            'h2',
-            null,
-            'IVERNADERO'
-          ),
-          _react2['default'].createElement(
             'p',
             { className: 'txt-parrafo' },
-            'Las plantas que se traen de campo, las plantas madres o donadoras, de las que se va a cortar el explante, se debe contar con un ivernadero, debidamente habilitado.'
-          ),
-          _react2['default'].createElement(
-            'p',
-            { className: 'txt-parrafo' },
-            'Cuando las plantas se han seleccionado, se empiezan a cortar los tejidos en los que se encuentran los meristemos apicales del tallo y se pasan a cultivo in vitro. Dichas plantas deben tener un manejo nutricional especial para su buen desarrollo.'
-          ),
-          _react2['default'].createElement(
-            'p',
-            { className: 'txt-parrafo' },
-            'Además, cuando las plantas salen de su etapa in vitro pasan al ivernadero para que nuevamente se puedan adaptar a las condiciones ambientales que la van a rodear durante su crecimiento y producción en campo.'
+            'Las sustancias orgánicas son compuestos no sintéticos que se toma de otros vegetales para suplementar el medio de cultivo y disminuir el gasto de sales de MS. En cultivo in vitro  se utilizan bastantes; no obstante el que presenta mejor resultado es el cotiledón líquido, que se usa del agua de coco. Permite reducir costos en la compra de reactivos y favorecer el desarrollo de la planta, pues contiene los micro y macro nutrientes, vitaminas entre otros componentes, también contiene reguladores de crecimiento.'
           )
         ),
         _react2['default'].createElement(
@@ -2111,7 +2704,7 @@ var Modal7 = (function (_React$Component) {
 exports['default'] = Modal7;
 module.exports = exports['default'];
 
-},{"react":379,"react-bootstrap":102}],14:[function(require,module,exports){
+},{"react":379,"react-bootstrap":102}],15:[function(require,module,exports){
 /**
  * Modules Dependencies
  */
@@ -2215,7 +2808,7 @@ var Modal8 = (function (_React$Component) {
 exports['default'] = Modal8;
 module.exports = exports['default'];
 
-},{"react":379,"react-bootstrap":102}],15:[function(require,module,exports){
+},{"react":379,"react-bootstrap":102}],16:[function(require,module,exports){
 /**
  * Modules Dependencies
  */
@@ -2803,7 +3396,7 @@ var ModalMS = (function (_React$Component) {
 exports['default'] = ModalMS;
 module.exports = exports['default'];
 
-},{"react":379,"react-bootstrap":102}],16:[function(require,module,exports){
+},{"react":379,"react-bootstrap":102}],17:[function(require,module,exports){
 /**
  * Modules Dependencies
  */
@@ -3452,7 +4045,7 @@ var ModalStock = (function (_React$Component) {
 exports['default'] = ModalStock;
 module.exports = exports['default'];
 
-},{"react":379,"react-bootstrap":102}],17:[function(require,module,exports){
+},{"react":379,"react-bootstrap":102}],18:[function(require,module,exports){
 /**
  * Modules Dependencies
  * https://github.com/tryolabs/react-examples/tree/master/modal
@@ -3647,7 +4240,7 @@ var Modulo2 = (function (_React$Component) {
 exports['default'] = Modulo2;
 module.exports = exports['default'];
 
-},{"./Header":6,"./Modal/Modulo2/Modal1":7,"./Modal/Modulo2/Modal2":8,"./Modal/Modulo2/Modal3":9,"./Modal/Modulo2/Modal4":10,"./Modal/Modulo2/Modal5":11,"./Modal/Modulo2/Modal6":12,"./Modal/Modulo2/Modal7":13,"./Modal/Modulo2/Modal8":14,"./Modal/Modulo2/ModalMs":15,"./Modal/Modulo2/ModalStock":16,"./Modulos":18,"jquery":33,"react":379,"react-bootstrap":102}],18:[function(require,module,exports){
+},{"./Header":7,"./Modal/Modulo2/Modal1":8,"./Modal/Modulo2/Modal2":9,"./Modal/Modulo2/Modal3":10,"./Modal/Modulo2/Modal4":11,"./Modal/Modulo2/Modal5":12,"./Modal/Modulo2/Modal6":13,"./Modal/Modulo2/Modal7":14,"./Modal/Modulo2/Modal8":15,"./Modal/Modulo2/ModalMs":16,"./Modal/Modulo2/ModalStock":17,"./Modulos":19,"jquery":33,"react":379,"react-bootstrap":102}],19:[function(require,module,exports){
 /**
  * Modules Dependencies
  */
@@ -3718,7 +4311,7 @@ var Modulos = (function (_React$Component) {
 exports['default'] = Modulos;
 module.exports = exports['default'];
 
-},{"./ModulosUnit":19,"react":379,"react-bootstrap":102}],19:[function(require,module,exports){
+},{"./ModulosUnit":20,"react":379,"react-bootstrap":102}],20:[function(require,module,exports){
 /**
  * Modules Dependencies
  */
@@ -3799,7 +4392,7 @@ var ModulosUnit = (function (_React$Component) {
 exports['default'] = ModulosUnit;
 module.exports = exports['default'];
 
-},{"react":379,"react-bootstrap":102}],20:[function(require,module,exports){
+},{"react":379,"react-bootstrap":102}],21:[function(require,module,exports){
 /**
  * Modules Dependencies
  */
@@ -3859,7 +4452,7 @@ var Inicio = (function (_React$Component) {
 exports['default'] = Inicio;
 module.exports = exports['default'];
 
-},{"./ContentPrincipal/ContentPrincipal":5,"./nav/Menu":31,"react":379}],21:[function(require,module,exports){
+},{"./ContentPrincipal/ContentPrincipal":6,"./nav/Menu":32,"react":379}],22:[function(require,module,exports){
 /**
  * Modules Dependencies
  */
@@ -3917,7 +4510,7 @@ var AulaClase = (function (_React$Component) {
 exports["default"] = AulaClase;
 module.exports = exports["default"];
 
-},{"react":379}],22:[function(require,module,exports){
+},{"react":379}],23:[function(require,module,exports){
 /**
  * Modules Dependencies
  */
@@ -3974,7 +4567,7 @@ var Ivernadero = (function (_React$Component) {
 exports["default"] = Ivernadero;
 module.exports = exports["default"];
 
-},{"react":379}],23:[function(require,module,exports){
+},{"react":379}],24:[function(require,module,exports){
 /**
  * Modules Dependencies
  */
@@ -4033,7 +4626,7 @@ var LavadoDestilacion = (function (_React$Component) {
 exports["default"] = LavadoDestilacion;
 module.exports = exports["default"];
 
-},{"react":379}],24:[function(require,module,exports){
+},{"react":379}],25:[function(require,module,exports){
 /**
  * Modules Dependencies
  */
@@ -4091,7 +4684,7 @@ var Microbiologia = (function (_React$Component) {
 exports["default"] = Microbiologia;
 module.exports = exports["default"];
 
-},{"react":379}],25:[function(require,module,exports){
+},{"react":379}],26:[function(require,module,exports){
 /**
  * Modules Dependencies
  */
@@ -4738,7 +5331,7 @@ var ModalInfo = (function (_React$Component) {
 exports['default'] = ModalInfo;
 module.exports = exports['default'];
 
-},{"react":379,"react-bootstrap":102}],26:[function(require,module,exports){
+},{"react":379,"react-bootstrap":102}],27:[function(require,module,exports){
 /**
  * Modules Dependencies
  */
@@ -4806,7 +5399,7 @@ var Modulo1 = (function (_React$Component) {
 exports['default'] = Modulo1;
 module.exports = exports['default'];
 
-},{"jquery":33,"react":379,"react-router":210}],27:[function(require,module,exports){
+},{"jquery":33,"react":379,"react-router":210}],28:[function(require,module,exports){
 /**
 * Modules Dependencies
 */
@@ -4944,7 +5537,7 @@ var Modulo1Content = (function (_React$Component) {
 exports['default'] = Modulo1Content;
 module.exports = exports['default'];
 
-},{"./AulaClase":21,"./Ivernadero":22,"./LavadoDestilacion":23,"./Microbiologia":24,"./Modal/ModalInfo":25,"./Modulo1":26,"./PreparacionMedios":28,"./VidreriaReactivos":29,"jquery":33,"react":379}],28:[function(require,module,exports){
+},{"./AulaClase":22,"./Ivernadero":23,"./LavadoDestilacion":24,"./Microbiologia":25,"./Modal/ModalInfo":26,"./Modulo1":27,"./PreparacionMedios":29,"./VidreriaReactivos":30,"jquery":33,"react":379}],29:[function(require,module,exports){
 /**
  * Modules Dependencies
  */
@@ -5002,7 +5595,7 @@ var PreparacionMedios = (function (_React$Component) {
 exports["default"] = PreparacionMedios;
 module.exports = exports["default"];
 
-},{"react":379}],29:[function(require,module,exports){
+},{"react":379}],30:[function(require,module,exports){
 /**
  * Modules Dependencies
  */
@@ -5061,7 +5654,7 @@ var VidreriaReactivos = (function (_React$Component) {
 exports["default"] = VidreriaReactivos;
 module.exports = exports["default"];
 
-},{"react":379}],30:[function(require,module,exports){
+},{"react":379}],31:[function(require,module,exports){
 /**
  * Modules Dependencies
  */
@@ -5169,7 +5762,7 @@ var Menu = (function (_React$Component) {
 exports["default"] = Menu;
 module.exports = exports["default"];
 
-},{"react":379}],31:[function(require,module,exports){
+},{"react":379}],32:[function(require,module,exports){
 /**
  * Modules Dependencies
  */
@@ -5308,99 +5901,7 @@ exports['default'] = Menu;
 module.exports = exports['default'];
 /* This is the eventKey referenced */
 
-},{"./Contacto":30,"react":379,"react-bootstrap":102,"react-router":210,"react-router-bootstrap":185}],32:[function(require,module,exports){
-// shim for using process in browser
-
-var process = module.exports = {};
-var queue = [];
-var draining = false;
-var currentQueue;
-var queueIndex = -1;
-
-function cleanUpNextTick() {
-    draining = false;
-    if (currentQueue.length) {
-        queue = currentQueue.concat(queue);
-    } else {
-        queueIndex = -1;
-    }
-    if (queue.length) {
-        drainQueue();
-    }
-}
-
-function drainQueue() {
-    if (draining) {
-        return;
-    }
-    var timeout = setTimeout(cleanUpNextTick);
-    draining = true;
-
-    var len = queue.length;
-    while(len) {
-        currentQueue = queue;
-        queue = [];
-        while (++queueIndex < len) {
-            currentQueue[queueIndex].run();
-        }
-        queueIndex = -1;
-        len = queue.length;
-    }
-    currentQueue = null;
-    draining = false;
-    clearTimeout(timeout);
-}
-
-process.nextTick = function (fun) {
-    var args = new Array(arguments.length - 1);
-    if (arguments.length > 1) {
-        for (var i = 1; i < arguments.length; i++) {
-            args[i - 1] = arguments[i];
-        }
-    }
-    queue.push(new Item(fun, args));
-    if (queue.length === 1 && !draining) {
-        setTimeout(drainQueue, 0);
-    }
-};
-
-// v8 likes predictible objects
-function Item(fun, array) {
-    this.fun = fun;
-    this.array = array;
-}
-Item.prototype.run = function () {
-    this.fun.apply(null, this.array);
-};
-process.title = 'browser';
-process.browser = true;
-process.env = {};
-process.argv = [];
-process.version = ''; // empty string to avoid regexp issues
-process.versions = {};
-
-function noop() {}
-
-process.on = noop;
-process.addListener = noop;
-process.once = noop;
-process.off = noop;
-process.removeListener = noop;
-process.removeAllListeners = noop;
-process.emit = noop;
-
-process.binding = function (name) {
-    throw new Error('process.binding is not supported');
-};
-
-// TODO(shtylman)
-process.cwd = function () { return '/' };
-process.chdir = function (dir) {
-    throw new Error('process.chdir is not supported');
-};
-process.umask = function() { return 0; };
-
-},{}],33:[function(require,module,exports){
+},{"./Contacto":31,"react":379,"react-bootstrap":102,"react-router":210,"react-router-bootstrap":185}],33:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v2.1.4
  * http://jquery.com/
@@ -27693,7 +28194,7 @@ function createRouter(options) {
 
 module.exports = createRouter;
 }).call(this,require('_process'))
-},{"./Cancellation":186,"./History":187,"./Match":188,"./PathUtils":190,"./PropTypes":191,"./Redirect":192,"./Route":193,"./ScrollHistory":194,"./Transition":196,"./actions/LocationActions":197,"./behaviors/ImitateBrowserBehavior":198,"./createRoutesFromReactChildren":208,"./isReactChildren":211,"./locations/HashLocation":212,"./locations/HistoryLocation":213,"./locations/RefreshLocation":214,"./locations/StaticLocation":215,"./supportsHistory":218,"_process":32,"react":379,"react/lib/ExecutionEnvironment":244,"react/lib/invariant":359,"react/lib/warning":378}],208:[function(require,module,exports){
+},{"./Cancellation":186,"./History":187,"./Match":188,"./PathUtils":190,"./PropTypes":191,"./Redirect":192,"./Route":193,"./ScrollHistory":194,"./Transition":196,"./actions/LocationActions":197,"./behaviors/ImitateBrowserBehavior":198,"./createRoutesFromReactChildren":208,"./isReactChildren":211,"./locations/HashLocation":212,"./locations/HistoryLocation":213,"./locations/RefreshLocation":214,"./locations/StaticLocation":215,"./supportsHistory":218,"_process":1,"react":379,"react/lib/ExecutionEnvironment":244,"react/lib/invariant":359,"react/lib/warning":378}],208:[function(require,module,exports){
 /* jshint -W084 */
 'use strict';
 
@@ -29557,7 +30058,7 @@ var CSSPropertyOperations = {
 module.exports = CSSPropertyOperations;
 
 }).call(this,require('_process'))
-},{"./CSSProperty":227,"./ExecutionEnvironment":244,"./camelizeStyleName":332,"./dangerousStyleValue":337,"./hyphenateStyleName":357,"./memoizeStringOnly":367,"./warning":378,"_process":32}],229:[function(require,module,exports){
+},{"./CSSProperty":227,"./ExecutionEnvironment":244,"./camelizeStyleName":332,"./dangerousStyleValue":337,"./hyphenateStyleName":357,"./memoizeStringOnly":367,"./warning":378,"_process":1}],229:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -29657,7 +30158,7 @@ PooledClass.addPoolingTo(CallbackQueue);
 module.exports = CallbackQueue;
 
 }).call(this,require('_process'))
-},{"./Object.assign":250,"./PooledClass":251,"./invariant":359,"_process":32}],230:[function(require,module,exports){
+},{"./Object.assign":250,"./PooledClass":251,"./invariant":359,"_process":1}],230:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -30202,7 +30703,7 @@ var DOMChildrenOperations = {
 module.exports = DOMChildrenOperations;
 
 }).call(this,require('_process'))
-},{"./Danger":235,"./ReactMultiChildUpdateTypes":296,"./invariant":359,"./setTextContent":373,"_process":32}],233:[function(require,module,exports){
+},{"./Danger":235,"./ReactMultiChildUpdateTypes":296,"./invariant":359,"./setTextContent":373,"_process":1}],233:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -30501,7 +31002,7 @@ var DOMProperty = {
 module.exports = DOMProperty;
 
 }).call(this,require('_process'))
-},{"./invariant":359,"_process":32}],234:[function(require,module,exports){
+},{"./invariant":359,"_process":1}],234:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -30693,7 +31194,7 @@ var DOMPropertyOperations = {
 module.exports = DOMPropertyOperations;
 
 }).call(this,require('_process'))
-},{"./DOMProperty":233,"./quoteAttributeValueForBrowser":371,"./warning":378,"_process":32}],235:[function(require,module,exports){
+},{"./DOMProperty":233,"./quoteAttributeValueForBrowser":371,"./warning":378,"_process":1}],235:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -30880,7 +31381,7 @@ var Danger = {
 module.exports = Danger;
 
 }).call(this,require('_process'))
-},{"./ExecutionEnvironment":244,"./createNodesFromMarkup":336,"./emptyFunction":338,"./getMarkupWrap":351,"./invariant":359,"_process":32}],236:[function(require,module,exports){
+},{"./ExecutionEnvironment":244,"./createNodesFromMarkup":336,"./emptyFunction":338,"./getMarkupWrap":351,"./invariant":359,"_process":1}],236:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -31221,7 +31722,7 @@ var EventListener = {
 module.exports = EventListener;
 
 }).call(this,require('_process'))
-},{"./emptyFunction":338,"_process":32}],240:[function(require,module,exports){
+},{"./emptyFunction":338,"_process":1}],240:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -31499,7 +32000,7 @@ var EventPluginHub = {
 module.exports = EventPluginHub;
 
 }).call(this,require('_process'))
-},{"./EventPluginRegistry":241,"./EventPluginUtils":242,"./accumulateInto":329,"./forEachAccumulated":344,"./invariant":359,"_process":32}],241:[function(require,module,exports){
+},{"./EventPluginRegistry":241,"./EventPluginUtils":242,"./accumulateInto":329,"./forEachAccumulated":344,"./invariant":359,"_process":1}],241:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -31779,7 +32280,7 @@ var EventPluginRegistry = {
 module.exports = EventPluginRegistry;
 
 }).call(this,require('_process'))
-},{"./invariant":359,"_process":32}],242:[function(require,module,exports){
+},{"./invariant":359,"_process":1}],242:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -32000,7 +32501,7 @@ var EventPluginUtils = {
 module.exports = EventPluginUtils;
 
 }).call(this,require('_process'))
-},{"./EventConstants":238,"./invariant":359,"_process":32}],243:[function(require,module,exports){
+},{"./EventConstants":238,"./invariant":359,"_process":1}],243:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -32142,7 +32643,7 @@ var EventPropagators = {
 module.exports = EventPropagators;
 
 }).call(this,require('_process'))
-},{"./EventConstants":238,"./EventPluginHub":240,"./accumulateInto":329,"./forEachAccumulated":344,"_process":32}],244:[function(require,module,exports){
+},{"./EventConstants":238,"./EventPluginHub":240,"./accumulateInto":329,"./forEachAccumulated":344,"_process":1}],244:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -32644,7 +33145,7 @@ var LinkedValueUtils = {
 module.exports = LinkedValueUtils;
 
 }).call(this,require('_process'))
-},{"./ReactPropTypes":302,"./invariant":359,"_process":32}],248:[function(require,module,exports){
+},{"./ReactPropTypes":302,"./invariant":359,"_process":1}],248:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -32701,7 +33202,7 @@ var LocalEventTrapMixin = {
 module.exports = LocalEventTrapMixin;
 
 }).call(this,require('_process'))
-},{"./ReactBrowserEventEmitter":254,"./accumulateInto":329,"./forEachAccumulated":344,"./invariant":359,"_process":32}],249:[function(require,module,exports){
+},{"./ReactBrowserEventEmitter":254,"./accumulateInto":329,"./forEachAccumulated":344,"./invariant":359,"_process":1}],249:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -32924,7 +33425,7 @@ var PooledClass = {
 module.exports = PooledClass;
 
 }).call(this,require('_process'))
-},{"./invariant":359,"_process":32}],252:[function(require,module,exports){
+},{"./invariant":359,"_process":1}],252:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -33076,7 +33577,7 @@ React.version = '0.13.3';
 module.exports = React;
 
 }).call(this,require('_process'))
-},{"./EventPluginUtils":242,"./ExecutionEnvironment":244,"./Object.assign":250,"./ReactChildren":256,"./ReactClass":257,"./ReactComponent":258,"./ReactContext":262,"./ReactCurrentOwner":263,"./ReactDOM":264,"./ReactDOMTextComponent":275,"./ReactDefaultInjection":278,"./ReactElement":281,"./ReactElementValidator":282,"./ReactInstanceHandles":290,"./ReactMount":294,"./ReactPerf":299,"./ReactPropTypes":302,"./ReactReconciler":305,"./ReactServerRendering":308,"./findDOMNode":341,"./onlyChild":368,"_process":32}],253:[function(require,module,exports){
+},{"./EventPluginUtils":242,"./ExecutionEnvironment":244,"./Object.assign":250,"./ReactChildren":256,"./ReactClass":257,"./ReactComponent":258,"./ReactContext":262,"./ReactCurrentOwner":263,"./ReactDOM":264,"./ReactDOMTextComponent":275,"./ReactDefaultInjection":278,"./ReactElement":281,"./ReactElementValidator":282,"./ReactInstanceHandles":290,"./ReactMount":294,"./ReactPerf":299,"./ReactPropTypes":302,"./ReactReconciler":305,"./ReactServerRendering":308,"./findDOMNode":341,"./onlyChild":368,"_process":1}],253:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -33740,7 +34241,7 @@ var ReactChildren = {
 module.exports = ReactChildren;
 
 }).call(this,require('_process'))
-},{"./PooledClass":251,"./ReactFragment":287,"./traverseAllChildren":377,"./warning":378,"_process":32}],257:[function(require,module,exports){
+},{"./PooledClass":251,"./ReactFragment":287,"./traverseAllChildren":377,"./warning":378,"_process":1}],257:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -34686,7 +35187,7 @@ var ReactClass = {
 module.exports = ReactClass;
 
 }).call(this,require('_process'))
-},{"./Object.assign":250,"./ReactComponent":258,"./ReactCurrentOwner":263,"./ReactElement":281,"./ReactErrorUtils":284,"./ReactInstanceMap":291,"./ReactLifeCycle":292,"./ReactPropTypeLocationNames":300,"./ReactPropTypeLocations":301,"./ReactUpdateQueue":310,"./invariant":359,"./keyMirror":364,"./keyOf":365,"./warning":378,"_process":32}],258:[function(require,module,exports){
+},{"./Object.assign":250,"./ReactComponent":258,"./ReactCurrentOwner":263,"./ReactElement":281,"./ReactErrorUtils":284,"./ReactInstanceMap":291,"./ReactLifeCycle":292,"./ReactPropTypeLocationNames":300,"./ReactPropTypeLocations":301,"./ReactUpdateQueue":310,"./invariant":359,"./keyMirror":364,"./keyOf":365,"./warning":378,"_process":1}],258:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -34840,7 +35341,7 @@ if ("production" !== process.env.NODE_ENV) {
 module.exports = ReactComponent;
 
 }).call(this,require('_process'))
-},{"./ReactUpdateQueue":310,"./invariant":359,"./warning":378,"_process":32}],259:[function(require,module,exports){
+},{"./ReactUpdateQueue":310,"./invariant":359,"./warning":378,"_process":1}],259:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -34948,7 +35449,7 @@ var ReactComponentEnvironment = {
 module.exports = ReactComponentEnvironment;
 
 }).call(this,require('_process'))
-},{"./invariant":359,"_process":32}],261:[function(require,module,exports){
+},{"./invariant":359,"_process":1}],261:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -35861,7 +36362,7 @@ var ReactCompositeComponent = {
 module.exports = ReactCompositeComponent;
 
 }).call(this,require('_process'))
-},{"./Object.assign":250,"./ReactComponentEnvironment":260,"./ReactContext":262,"./ReactCurrentOwner":263,"./ReactElement":281,"./ReactElementValidator":282,"./ReactInstanceMap":291,"./ReactLifeCycle":292,"./ReactNativeComponent":297,"./ReactPerf":299,"./ReactPropTypeLocationNames":300,"./ReactPropTypeLocations":301,"./ReactReconciler":305,"./ReactUpdates":311,"./emptyObject":339,"./invariant":359,"./shouldUpdateReactComponent":375,"./warning":378,"_process":32}],262:[function(require,module,exports){
+},{"./Object.assign":250,"./ReactComponentEnvironment":260,"./ReactContext":262,"./ReactCurrentOwner":263,"./ReactElement":281,"./ReactElementValidator":282,"./ReactInstanceMap":291,"./ReactLifeCycle":292,"./ReactNativeComponent":297,"./ReactPerf":299,"./ReactPropTypeLocationNames":300,"./ReactPropTypeLocations":301,"./ReactReconciler":305,"./ReactUpdates":311,"./emptyObject":339,"./invariant":359,"./shouldUpdateReactComponent":375,"./warning":378,"_process":1}],262:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -35939,7 +36440,7 @@ var ReactContext = {
 module.exports = ReactContext;
 
 }).call(this,require('_process'))
-},{"./Object.assign":250,"./emptyObject":339,"./warning":378,"_process":32}],263:[function(require,module,exports){
+},{"./Object.assign":250,"./emptyObject":339,"./warning":378,"_process":1}],263:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -36152,7 +36653,7 @@ var ReactDOM = mapObject({
 module.exports = ReactDOM;
 
 }).call(this,require('_process'))
-},{"./ReactElement":281,"./ReactElementValidator":282,"./mapObject":366,"_process":32}],265:[function(require,module,exports){
+},{"./ReactElement":281,"./ReactElementValidator":282,"./mapObject":366,"_process":1}],265:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -36726,7 +37227,7 @@ ReactDOMComponent.injection = {
 module.exports = ReactDOMComponent;
 
 }).call(this,require('_process'))
-},{"./CSSPropertyOperations":228,"./DOMProperty":233,"./DOMPropertyOperations":234,"./Object.assign":250,"./ReactBrowserEventEmitter":254,"./ReactComponentBrowserEnvironment":259,"./ReactMount":294,"./ReactMultiChild":295,"./ReactPerf":299,"./escapeTextContentForBrowser":340,"./invariant":359,"./isEventSupported":360,"./keyOf":365,"./warning":378,"_process":32}],267:[function(require,module,exports){
+},{"./CSSPropertyOperations":228,"./DOMProperty":233,"./DOMPropertyOperations":234,"./Object.assign":250,"./ReactBrowserEventEmitter":254,"./ReactComponentBrowserEnvironment":259,"./ReactMount":294,"./ReactMultiChild":295,"./ReactPerf":299,"./escapeTextContentForBrowser":340,"./invariant":359,"./isEventSupported":360,"./keyOf":365,"./warning":378,"_process":1}],267:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -36943,7 +37444,7 @@ ReactPerf.measureMethods(ReactDOMIDOperations, 'ReactDOMIDOperations', {
 module.exports = ReactDOMIDOperations;
 
 }).call(this,require('_process'))
-},{"./CSSPropertyOperations":228,"./DOMChildrenOperations":232,"./DOMPropertyOperations":234,"./ReactMount":294,"./ReactPerf":299,"./invariant":359,"./setInnerHTML":372,"_process":32}],269:[function(require,module,exports){
+},{"./CSSPropertyOperations":228,"./DOMChildrenOperations":232,"./DOMPropertyOperations":234,"./ReactMount":294,"./ReactPerf":299,"./invariant":359,"./setInnerHTML":372,"_process":1}],269:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -37211,7 +37712,7 @@ var ReactDOMInput = ReactClass.createClass({
 module.exports = ReactDOMInput;
 
 }).call(this,require('_process'))
-},{"./AutoFocusMixin":225,"./DOMPropertyOperations":234,"./LinkedValueUtils":247,"./Object.assign":250,"./ReactBrowserComponentMixin":253,"./ReactClass":257,"./ReactElement":281,"./ReactMount":294,"./ReactUpdates":311,"./invariant":359,"_process":32}],272:[function(require,module,exports){
+},{"./AutoFocusMixin":225,"./DOMPropertyOperations":234,"./LinkedValueUtils":247,"./Object.assign":250,"./ReactBrowserComponentMixin":253,"./ReactClass":257,"./ReactElement":281,"./ReactMount":294,"./ReactUpdates":311,"./invariant":359,"_process":1}],272:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -37263,7 +37764,7 @@ var ReactDOMOption = ReactClass.createClass({
 module.exports = ReactDOMOption;
 
 }).call(this,require('_process'))
-},{"./ReactBrowserComponentMixin":253,"./ReactClass":257,"./ReactElement":281,"./warning":378,"_process":32}],273:[function(require,module,exports){
+},{"./ReactBrowserComponentMixin":253,"./ReactClass":257,"./ReactElement":281,"./warning":378,"_process":1}],273:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -37911,7 +38412,7 @@ var ReactDOMTextarea = ReactClass.createClass({
 module.exports = ReactDOMTextarea;
 
 }).call(this,require('_process'))
-},{"./AutoFocusMixin":225,"./DOMPropertyOperations":234,"./LinkedValueUtils":247,"./Object.assign":250,"./ReactBrowserComponentMixin":253,"./ReactClass":257,"./ReactElement":281,"./ReactUpdates":311,"./invariant":359,"./warning":378,"_process":32}],277:[function(require,module,exports){
+},{"./AutoFocusMixin":225,"./DOMPropertyOperations":234,"./LinkedValueUtils":247,"./Object.assign":250,"./ReactBrowserComponentMixin":253,"./ReactClass":257,"./ReactElement":281,"./ReactUpdates":311,"./invariant":359,"./warning":378,"_process":1}],277:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -38143,7 +38644,7 @@ module.exports = {
 };
 
 }).call(this,require('_process'))
-},{"./BeforeInputEventPlugin":226,"./ChangeEventPlugin":230,"./ClientReactRootIndex":231,"./DefaultEventPluginOrder":236,"./EnterLeaveEventPlugin":237,"./ExecutionEnvironment":244,"./HTMLDOMPropertyConfig":246,"./MobileSafariClickEventPlugin":249,"./ReactBrowserComponentMixin":253,"./ReactClass":257,"./ReactComponentBrowserEnvironment":259,"./ReactDOMButton":265,"./ReactDOMComponent":266,"./ReactDOMForm":267,"./ReactDOMIDOperations":268,"./ReactDOMIframe":269,"./ReactDOMImg":270,"./ReactDOMInput":271,"./ReactDOMOption":272,"./ReactDOMSelect":273,"./ReactDOMTextComponent":275,"./ReactDOMTextarea":276,"./ReactDefaultBatchingStrategy":277,"./ReactDefaultPerf":279,"./ReactElement":281,"./ReactEventListener":286,"./ReactInjection":288,"./ReactInstanceHandles":290,"./ReactMount":294,"./ReactReconcileTransaction":304,"./SVGDOMPropertyConfig":312,"./SelectEventPlugin":313,"./ServerReactRootIndex":314,"./SimpleEventPlugin":315,"./createFullPageComponent":335,"_process":32}],279:[function(require,module,exports){
+},{"./BeforeInputEventPlugin":226,"./ChangeEventPlugin":230,"./ClientReactRootIndex":231,"./DefaultEventPluginOrder":236,"./EnterLeaveEventPlugin":237,"./ExecutionEnvironment":244,"./HTMLDOMPropertyConfig":246,"./MobileSafariClickEventPlugin":249,"./ReactBrowserComponentMixin":253,"./ReactClass":257,"./ReactComponentBrowserEnvironment":259,"./ReactDOMButton":265,"./ReactDOMComponent":266,"./ReactDOMForm":267,"./ReactDOMIDOperations":268,"./ReactDOMIframe":269,"./ReactDOMImg":270,"./ReactDOMInput":271,"./ReactDOMOption":272,"./ReactDOMSelect":273,"./ReactDOMTextComponent":275,"./ReactDOMTextarea":276,"./ReactDefaultBatchingStrategy":277,"./ReactDefaultPerf":279,"./ReactElement":281,"./ReactEventListener":286,"./ReactInjection":288,"./ReactInstanceHandles":290,"./ReactMount":294,"./ReactReconcileTransaction":304,"./SVGDOMPropertyConfig":312,"./SelectEventPlugin":313,"./ServerReactRootIndex":314,"./SimpleEventPlugin":315,"./createFullPageComponent":335,"_process":1}],279:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -38923,7 +39424,7 @@ ReactElement.isValidElement = function(object) {
 module.exports = ReactElement;
 
 }).call(this,require('_process'))
-},{"./Object.assign":250,"./ReactContext":262,"./ReactCurrentOwner":263,"./warning":378,"_process":32}],282:[function(require,module,exports){
+},{"./Object.assign":250,"./ReactContext":262,"./ReactCurrentOwner":263,"./warning":378,"_process":1}],282:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -39388,7 +39889,7 @@ var ReactElementValidator = {
 module.exports = ReactElementValidator;
 
 }).call(this,require('_process'))
-},{"./ReactCurrentOwner":263,"./ReactElement":281,"./ReactFragment":287,"./ReactNativeComponent":297,"./ReactPropTypeLocationNames":300,"./ReactPropTypeLocations":301,"./getIteratorFn":350,"./invariant":359,"./warning":378,"_process":32}],283:[function(require,module,exports){
+},{"./ReactCurrentOwner":263,"./ReactElement":281,"./ReactFragment":287,"./ReactNativeComponent":297,"./ReactPropTypeLocationNames":300,"./ReactPropTypeLocations":301,"./getIteratorFn":350,"./invariant":359,"./warning":378,"_process":1}],283:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -39483,7 +39984,7 @@ var ReactEmptyComponent = {
 module.exports = ReactEmptyComponent;
 
 }).call(this,require('_process'))
-},{"./ReactElement":281,"./ReactInstanceMap":291,"./invariant":359,"_process":32}],284:[function(require,module,exports){
+},{"./ReactElement":281,"./ReactInstanceMap":291,"./invariant":359,"_process":1}],284:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -39933,7 +40434,7 @@ var ReactFragment = {
 module.exports = ReactFragment;
 
 }).call(this,require('_process'))
-},{"./ReactElement":281,"./warning":378,"_process":32}],288:[function(require,module,exports){
+},{"./ReactElement":281,"./warning":378,"_process":1}],288:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -40446,7 +40947,7 @@ var ReactInstanceHandles = {
 module.exports = ReactInstanceHandles;
 
 }).call(this,require('_process'))
-},{"./ReactRootIndex":307,"./invariant":359,"_process":32}],291:[function(require,module,exports){
+},{"./ReactRootIndex":307,"./invariant":359,"_process":1}],291:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -41471,7 +41972,7 @@ ReactPerf.measureMethods(ReactMount, 'ReactMount', {
 module.exports = ReactMount;
 
 }).call(this,require('_process'))
-},{"./DOMProperty":233,"./ReactBrowserEventEmitter":254,"./ReactCurrentOwner":263,"./ReactElement":281,"./ReactElementValidator":282,"./ReactEmptyComponent":283,"./ReactInstanceHandles":290,"./ReactInstanceMap":291,"./ReactMarkupChecksum":293,"./ReactPerf":299,"./ReactReconciler":305,"./ReactUpdateQueue":310,"./ReactUpdates":311,"./containsNode":333,"./emptyObject":339,"./getReactRootElementInContainer":353,"./instantiateReactComponent":358,"./invariant":359,"./setInnerHTML":372,"./shouldUpdateReactComponent":375,"./warning":378,"_process":32}],295:[function(require,module,exports){
+},{"./DOMProperty":233,"./ReactBrowserEventEmitter":254,"./ReactCurrentOwner":263,"./ReactElement":281,"./ReactElementValidator":282,"./ReactEmptyComponent":283,"./ReactInstanceHandles":290,"./ReactInstanceMap":291,"./ReactMarkupChecksum":293,"./ReactPerf":299,"./ReactReconciler":305,"./ReactUpdateQueue":310,"./ReactUpdates":311,"./containsNode":333,"./emptyObject":339,"./getReactRootElementInContainer":353,"./instantiateReactComponent":358,"./invariant":359,"./setInnerHTML":372,"./shouldUpdateReactComponent":375,"./warning":378,"_process":1}],295:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -42041,7 +42542,7 @@ var ReactNativeComponent = {
 module.exports = ReactNativeComponent;
 
 }).call(this,require('_process'))
-},{"./Object.assign":250,"./invariant":359,"_process":32}],298:[function(require,module,exports){
+},{"./Object.assign":250,"./invariant":359,"_process":1}],298:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -42153,7 +42654,7 @@ var ReactOwner = {
 module.exports = ReactOwner;
 
 }).call(this,require('_process'))
-},{"./invariant":359,"_process":32}],299:[function(require,module,exports){
+},{"./invariant":359,"_process":1}],299:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -42257,7 +42758,7 @@ function _noMeasure(objName, fnName, func) {
 module.exports = ReactPerf;
 
 }).call(this,require('_process'))
-},{"_process":32}],300:[function(require,module,exports){
+},{"_process":1}],300:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -42285,7 +42786,7 @@ if ("production" !== process.env.NODE_ENV) {
 module.exports = ReactPropTypeLocationNames;
 
 }).call(this,require('_process'))
-},{"_process":32}],301:[function(require,module,exports){
+},{"_process":1}],301:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -43014,7 +43515,7 @@ var ReactReconciler = {
 module.exports = ReactReconciler;
 
 }).call(this,require('_process'))
-},{"./ReactElementValidator":282,"./ReactRef":306,"_process":32}],306:[function(require,module,exports){
+},{"./ReactElementValidator":282,"./ReactRef":306,"_process":1}],306:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -43198,7 +43699,7 @@ module.exports = {
 };
 
 }).call(this,require('_process'))
-},{"./ReactElement":281,"./ReactInstanceHandles":290,"./ReactMarkupChecksum":293,"./ReactServerRenderingTransaction":309,"./emptyObject":339,"./instantiateReactComponent":358,"./invariant":359,"_process":32}],309:[function(require,module,exports){
+},{"./ReactElement":281,"./ReactInstanceHandles":290,"./ReactMarkupChecksum":293,"./ReactServerRenderingTransaction":309,"./emptyObject":339,"./instantiateReactComponent":358,"./invariant":359,"_process":1}],309:[function(require,module,exports){
 /**
  * Copyright 2014-2015, Facebook, Inc.
  * All rights reserved.
@@ -43610,7 +44111,7 @@ var ReactUpdateQueue = {
 module.exports = ReactUpdateQueue;
 
 }).call(this,require('_process'))
-},{"./Object.assign":250,"./ReactCurrentOwner":263,"./ReactElement":281,"./ReactInstanceMap":291,"./ReactLifeCycle":292,"./ReactUpdates":311,"./invariant":359,"./warning":378,"_process":32}],311:[function(require,module,exports){
+},{"./Object.assign":250,"./ReactCurrentOwner":263,"./ReactElement":281,"./ReactInstanceMap":291,"./ReactLifeCycle":292,"./ReactUpdates":311,"./invariant":359,"./warning":378,"_process":1}],311:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -43892,7 +44393,7 @@ var ReactUpdates = {
 module.exports = ReactUpdates;
 
 }).call(this,require('_process'))
-},{"./CallbackQueue":229,"./Object.assign":250,"./PooledClass":251,"./ReactCurrentOwner":263,"./ReactPerf":299,"./ReactReconciler":305,"./Transaction":327,"./invariant":359,"./warning":378,"_process":32}],312:[function(require,module,exports){
+},{"./CallbackQueue":229,"./Object.assign":250,"./PooledClass":251,"./ReactCurrentOwner":263,"./ReactPerf":299,"./ReactReconciler":305,"./Transaction":327,"./invariant":359,"./warning":378,"_process":1}],312:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -44640,7 +45141,7 @@ var SimpleEventPlugin = {
 module.exports = SimpleEventPlugin;
 
 }).call(this,require('_process'))
-},{"./EventConstants":238,"./EventPluginUtils":242,"./EventPropagators":243,"./SyntheticClipboardEvent":316,"./SyntheticDragEvent":318,"./SyntheticEvent":319,"./SyntheticFocusEvent":320,"./SyntheticKeyboardEvent":322,"./SyntheticMouseEvent":323,"./SyntheticTouchEvent":324,"./SyntheticUIEvent":325,"./SyntheticWheelEvent":326,"./getEventCharCode":346,"./invariant":359,"./keyOf":365,"./warning":378,"_process":32}],316:[function(require,module,exports){
+},{"./EventConstants":238,"./EventPluginUtils":242,"./EventPropagators":243,"./SyntheticClipboardEvent":316,"./SyntheticDragEvent":318,"./SyntheticEvent":319,"./SyntheticFocusEvent":320,"./SyntheticKeyboardEvent":322,"./SyntheticMouseEvent":323,"./SyntheticTouchEvent":324,"./SyntheticUIEvent":325,"./SyntheticWheelEvent":326,"./getEventCharCode":346,"./invariant":359,"./keyOf":365,"./warning":378,"_process":1}],316:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -45600,7 +46101,7 @@ var Transaction = {
 module.exports = Transaction;
 
 }).call(this,require('_process'))
-},{"./invariant":359,"_process":32}],328:[function(require,module,exports){
+},{"./invariant":359,"_process":1}],328:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -45695,7 +46196,7 @@ function accumulateInto(current, next) {
 module.exports = accumulateInto;
 
 }).call(this,require('_process'))
-},{"./invariant":359,"_process":32}],330:[function(require,module,exports){
+},{"./invariant":359,"_process":1}],330:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -45995,7 +46496,7 @@ function createFullPageComponent(tag) {
 module.exports = createFullPageComponent;
 
 }).call(this,require('_process'))
-},{"./ReactClass":257,"./ReactElement":281,"./invariant":359,"_process":32}],336:[function(require,module,exports){
+},{"./ReactClass":257,"./ReactElement":281,"./invariant":359,"_process":1}],336:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -46085,7 +46586,7 @@ function createNodesFromMarkup(markup, handleScript) {
 module.exports = createNodesFromMarkup;
 
 }).call(this,require('_process'))
-},{"./ExecutionEnvironment":244,"./createArrayFromMixed":334,"./getMarkupWrap":351,"./invariant":359,"_process":32}],337:[function(require,module,exports){
+},{"./ExecutionEnvironment":244,"./createArrayFromMixed":334,"./getMarkupWrap":351,"./invariant":359,"_process":1}],337:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -46201,7 +46702,7 @@ if ("production" !== process.env.NODE_ENV) {
 module.exports = emptyObject;
 
 }).call(this,require('_process'))
-},{"_process":32}],340:[function(require,module,exports){
+},{"_process":1}],340:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -46314,7 +46815,7 @@ function findDOMNode(componentOrElement) {
 module.exports = findDOMNode;
 
 }).call(this,require('_process'))
-},{"./ReactCurrentOwner":263,"./ReactInstanceMap":291,"./ReactMount":294,"./invariant":359,"./isNode":361,"./warning":378,"_process":32}],342:[function(require,module,exports){
+},{"./ReactCurrentOwner":263,"./ReactInstanceMap":291,"./ReactMount":294,"./invariant":359,"./isNode":361,"./warning":378,"_process":1}],342:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -46372,7 +46873,7 @@ function flattenChildren(children) {
 module.exports = flattenChildren;
 
 }).call(this,require('_process'))
-},{"./traverseAllChildren":377,"./warning":378,"_process":32}],343:[function(require,module,exports){
+},{"./traverseAllChildren":377,"./warning":378,"_process":1}],343:[function(require,module,exports){
 /**
  * Copyright 2014-2015, Facebook, Inc.
  * All rights reserved.
@@ -46859,7 +47360,7 @@ function getMarkupWrap(nodeName) {
 module.exports = getMarkupWrap;
 
 }).call(this,require('_process'))
-},{"./ExecutionEnvironment":244,"./invariant":359,"_process":32}],352:[function(require,module,exports){
+},{"./ExecutionEnvironment":244,"./invariant":359,"_process":1}],352:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -47258,7 +47759,7 @@ function instantiateReactComponent(node, parentCompositeType) {
 module.exports = instantiateReactComponent;
 
 }).call(this,require('_process'))
-},{"./Object.assign":250,"./ReactCompositeComponent":261,"./ReactEmptyComponent":283,"./ReactNativeComponent":297,"./invariant":359,"./warning":378,"_process":32}],359:[function(require,module,exports){
+},{"./Object.assign":250,"./ReactCompositeComponent":261,"./ReactEmptyComponent":283,"./ReactNativeComponent":297,"./invariant":359,"./warning":378,"_process":1}],359:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -47315,7 +47816,7 @@ var invariant = function(condition, format, a, b, c, d, e, f) {
 module.exports = invariant;
 
 }).call(this,require('_process'))
-},{"_process":32}],360:[function(require,module,exports){
+},{"_process":1}],360:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -47530,7 +48031,7 @@ var keyMirror = function(obj) {
 module.exports = keyMirror;
 
 }).call(this,require('_process'))
-},{"./invariant":359,"_process":32}],365:[function(require,module,exports){
+},{"./invariant":359,"_process":1}],365:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -47692,7 +48193,7 @@ function onlyChild(children) {
 module.exports = onlyChild;
 
 }).call(this,require('_process'))
-},{"./ReactElement":281,"./invariant":359,"_process":32}],369:[function(require,module,exports){
+},{"./ReactElement":281,"./invariant":359,"_process":1}],369:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -48055,7 +48556,7 @@ function shouldUpdateReactComponent(prevElement, nextElement) {
 module.exports = shouldUpdateReactComponent;
 
 }).call(this,require('_process'))
-},{"./warning":378,"_process":32}],376:[function(require,module,exports){
+},{"./warning":378,"_process":1}],376:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -48127,7 +48628,7 @@ function toArray(obj) {
 module.exports = toArray;
 
 }).call(this,require('_process'))
-},{"./invariant":359,"_process":32}],377:[function(require,module,exports){
+},{"./invariant":359,"_process":1}],377:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -48380,7 +48881,7 @@ function traverseAllChildren(children, callback, traverseContext) {
 module.exports = traverseAllChildren;
 
 }).call(this,require('_process'))
-},{"./ReactElement":281,"./ReactFragment":287,"./ReactInstanceHandles":290,"./getIteratorFn":350,"./invariant":359,"./warning":378,"_process":32}],378:[function(require,module,exports){
+},{"./ReactElement":281,"./ReactFragment":287,"./ReactInstanceHandles":290,"./getIteratorFn":350,"./invariant":359,"./warning":378,"_process":1}],378:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -48443,7 +48944,7 @@ if ("production" !== process.env.NODE_ENV) {
 module.exports = warning;
 
 }).call(this,require('_process'))
-},{"./emptyFunction":338,"_process":32}],379:[function(require,module,exports){
+},{"./emptyFunction":338,"_process":1}],379:[function(require,module,exports){
 module.exports = require('./lib/React');
 
-},{"./lib/React":252}]},{},[1]);
+},{"./lib/React":252}]},{},[2]);

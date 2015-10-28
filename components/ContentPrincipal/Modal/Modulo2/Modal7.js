@@ -18,13 +18,10 @@ export default class Modal7 extends React.Component {
 	render(){
 			return	<Modal {...this.props}>
       <Modal.Header closeButton>
-        <Modal.Title>CTVirtual <Label bsStyle='success'>IVERNADERO</Label></Modal.Title>
+        <Modal.Title><h4><Label bsStyle='success'>Elaboración</Label> Sustancias Orgánicas</h4></Modal.Title>
       </Modal.Header>
-      <Modal.Body>
-        <h2>IVERNADERO</h2>
-        <p className="txt-parrafo">Las plantas que se traen de campo, las plantas madres o donadoras, de las que se va a cortar el explante, se debe contar con un ivernadero, debidamente habilitado.</p>
-        <p className="txt-parrafo">Cuando las plantas se han seleccionado, se empiezan a cortar los tejidos en los que se encuentran los meristemos apicales del tallo y se pasan a cultivo in vitro. Dichas plantas deben tener un manejo nutricional especial para su buen desarrollo.</p>
-        <p className="txt-parrafo">Además, cuando las plantas salen de su etapa in vitro pasan al ivernadero para que nuevamente se puedan adaptar a las condiciones ambientales que la van a rodear durante su crecimiento y producción en campo.</p>
+      <Modal.Body>        
+        <p className="txt-parrafo">Las sustancias orgánicas son compuestos no sintéticos que se toma de otros vegetales para suplementar el medio de cultivo y disminuir el gasto de sales de MS. En cultivo in vitro  se utilizan bastantes; no obstante el que presenta mejor resultado es el cotiledón líquido, que se usa del agua de coco. Permite reducir costos en la compra de reactivos y favorecer el desarrollo de la planta, pues contiene los micro y macro nutrientes, vitaminas entre otros componentes, también contiene reguladores de crecimiento.</p>
       </Modal.Body>
       <Modal.Footer>
         <button onClick={this.onClose.bind(this)}>Cerrar</button>

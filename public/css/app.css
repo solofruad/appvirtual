@@ -334,6 +334,6 @@ font-size:0.8em;
     overflow-y: initial !important
 }
 .modal-body{
-    height: 70%;
+    max-height: 30em;
     overflow-y: auto;
 }
