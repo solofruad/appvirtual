@@ -32,6 +32,12 @@ app.get('/dirmod2', (req, res) => {
     });
 });
 
+app.get('/dirmod3', (req, res) => {
+  dbapi.modulo3.find((modulo3) => {
+      res.json(modulo3);
+    });
+});
+
 app.get('/dircred', (req, res) => {
 	dbapi.creditos.find((creditos) => {
   		res.json(creditos);

@@ -293,6 +293,9 @@ font-size:0.8em;
 .txt-parrafo{
 	text-align: justify;
 }
+.txt-grande{
+	font-size: 2em !important;
+}
 .cont-modal-show{
 	position: absolute;
 }

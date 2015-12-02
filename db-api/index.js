@@ -7,6 +7,7 @@ import modulos from './ContentModulos';
 import creditos from './ContentCreditos';
 import modulo1 from './ContentModulo1';
 import modulo2 from './ContentModulo2';
+import modulo3 from './ContentModulo3';
 
 export default {
   contenido: {
@@ -39,6 +40,13 @@ export default {
     find: function(callback) {
       setTimeout(() => {
         callback(modulo2);
+      }, 3000);
+    }
+  },
+  modulo3: {
+    find: function(callback) {
+      setTimeout(() => {
+        callback(modulo3);
       }, 3000);
     }
   }

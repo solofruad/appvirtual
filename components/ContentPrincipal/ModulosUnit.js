@@ -15,7 +15,15 @@ export default class ModulosUnit extends React.Component {
 	}
 	render(){
 		var urlImg = `public/img/${this.props.modulo}.png`;
-		return <Col xs={6} sm={6} md={3} lg={3} className="img-modulo">
+		if(this.props.titulo==""){
+			return <Col xs={6} sm={6} md={3} lg={3} className="img-modulo">
+					<a href={this.props.url} className="mod" onClick={this.onClick.bind(this)}>
+						<img src={urlImg} alt={this.props.titulo} className="img_contenido" />						
+					</a>
+			</Col>
+		}		
+		else{
+			return <Col xs={6} sm={6} md={3} lg={3} className="img-modulo">
 					<a href={this.props.url} className="mod" onClick={this.onClick.bind(this)}>
 						<img src={urlImg} alt={this.props.titulo} className="img_contenido" />
 						<div className="info-image">
@@ -26,5 +34,6 @@ export default class ModulosUnit extends React.Component {
 						</div>
 					</a>
 			</Col>
+		}
 	}
 }
