@@ -14,7 +14,7 @@ export default class Modal1 extends React.Component {
 		super(props);
 	}
 	onClose(ev){
-		this.props.onHide.call(null,'modulo4/1')
+		this.props.onHide.call(null,'modulo3/1')
 	}
 	render(){
 	let mod=1;
