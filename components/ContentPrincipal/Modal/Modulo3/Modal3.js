@@ -24,8 +24,8 @@ export default class Modal3 extends React.Component {
       <Modal.Body>
         <Row>
           <Col xs={12} sm={12} md={12} lg={12}>
-            <h3>Componentes del medio de cultivo</b></h3>
-            <p className="txt-parrafo">La composición del medio de cultivo está definida por los requerimientos de los explantes:</p>            
+            <h3><b>Componentes del medio de cultivo</b></h3>
+            <p className="txt-parrafo">La composición del medio de cultivo está definida por los requerimientos de los explantes:</p>
           </Col>
         </Row>
         <Row>
@@ -34,31 +34,15 @@ export default class Modal3 extends React.Component {
           </Col>
           <Col xs={8} sm={8} md={4} lg={4}>
             <img className="img-modal-show" src="public/img/modulo3/medio.jpg" alt="Medio de cultivo"/>
-          </Col>        
+          </Col>
         </Row>
         <Row>
           <Col xs={8} sm={8} md={4} lg={4}>
-            
+
           </Col>
           <Col xs={8} sm={8} md={8} lg={8}>
 
-          </Col>        
-        </Row>
-        <Row>
-          <Col xs={8} sm={8} md={8} lg={8}>
-
           </Col>
-          <Col xs={8} sm={8} md={4} lg={4}>
-            <img className="img-modal-show" src="public/img/modulo3/medio.jpg" alt="Medio de cultivo"/>
-          </Col>        
-        </Row>
-        <Row>
-          <Col xs={8} sm={8} md={4} lg={4}>
-            
-          </Col>
-          <Col xs={8} sm={8} md={8} lg={8}>
-
-          </Col>        
         </Row>
         <Row>
           <Col xs={8} sm={8} md={8} lg={8}>
@@ -66,15 +50,15 @@ export default class Modal3 extends React.Component {
           </Col>
           <Col xs={8} sm={8} md={4} lg={4}>
             <img className="img-modal-show" src="public/img/modulo3/medio.jpg" alt="Medio de cultivo"/>
-          </Col>        
+          </Col>
         </Row>
         <Row>
           <Col xs={8} sm={8} md={4} lg={4}>
-            
+
           </Col>
           <Col xs={8} sm={8} md={8} lg={8}>
 
-          </Col>        
+          </Col>
         </Row>
         <Row>
           <Col xs={8} sm={8} md={8} lg={8}>
@@ -82,8 +66,24 @@ export default class Modal3 extends React.Component {
           </Col>
           <Col xs={8} sm={8} md={4} lg={4}>
             <img className="img-modal-show" src="public/img/modulo3/medio.jpg" alt="Medio de cultivo"/>
-          </Col>        
-        </Row>        
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={8} sm={8} md={4} lg={4}>
+
+          </Col>
+          <Col xs={8} sm={8} md={8} lg={8}>
+
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={8} sm={8} md={8} lg={8}>
+
+          </Col>
+          <Col xs={8} sm={8} md={4} lg={4}>
+            <img className="img-modal-show" src="public/img/modulo3/medio.jpg" alt="Medio de cultivo"/>
+          </Col>
+        </Row>
       </Modal.Body>
       <Modal.Footer>
         <button onClick={this.onClose.bind(this)}>Cerrar</button>

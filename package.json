@@ -4,7 +4,7 @@
   "description": "Laboratorio Virtual de Cultivo de Tejidos Vegetales - Universidad de los llanos",
   "autor": "Desarrollador: Néstor Suat - Documentador: David Grandas",
   "dependencies": {
-    "'react-bootstrap'": "^0.24.3",
+    "react-bootstrap": "^0.24.3",
     "babel": "^5.8.21",
     "babelify": "^6.1.3",
     "browserify": "^11.0.1",

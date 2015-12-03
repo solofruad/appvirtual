@@ -4328,7 +4328,7 @@ var Modal3 = (function (_React$Component) {
                 { bsStyle: 'success' },
                 'Elaboración'
               ),
-              ' Micronutrientes'
+              ' Componentes del medio de cultivo'
             )
           )
         ),
@@ -4342,463 +4342,77 @@ var Modal3 = (function (_React$Component) {
               _reactBootstrap.Col,
               { xs: 12, sm: 12, md: 12, lg: 12 },
               _react2['default'].createElement(
-                'h5',
+                'h3',
                 null,
                 _react2['default'].createElement(
                   'b',
                   null,
-                  'Elaboración de stocks 3, 4 y 5'
+                  'Componentes del medio de cultivo'
                 )
               ),
               _react2['default'].createElement(
                 'p',
                 { className: 'txt-parrafo' },
-                'Los micronutrientes son elementos que la planta requiere en menor cantidad. Estos son el Boro (B), Manganeso (Mn), Zinc (Zn), Cobre (Cu), Cobalto (Co), Molibdato (Mo), Cloro (Cl), Yodo (I) e Hierro (Fe).'
-              ),
-              _react2['default'].createElement(
-                'p',
-                { className: 'txt-parrafo' },
-                'Los micronutrientes que se aplican al medio de cultivo están divididos en 3 stocks. El stock 3, 4 y 5 y sus concentraciones se van aumentar a 1000X, 1000X y 200X, respectivamente. El stock 5 se aplica el NaEDTA en 10 ml de agua destilada. Luego en un Baker se aplica 15ml de agua destilada se pone al baño maría y se aplica el FeSO4. Terminadas de preparar, las sustancias se mezclan y se llevan a un volumen de 25mL. Se debe cubrir con papel aluminio.'
+                'La composición del medio de cultivo está definida por los requerimientos de los explantes:'
               )
             )
           ),
           _react2['default'].createElement(
             _reactBootstrap.Row,
             null,
+            _react2['default'].createElement(_reactBootstrap.Col, { xs: 8, sm: 8, md: 8, lg: 8 }),
             _react2['default'].createElement(
               _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 6, lg: 6 },
-              _react2['default'].createElement(
-                _reactBootstrap.Table,
-                { responsive: true, striped: true, bordered: true, condensed: true, hover: true },
-                _react2['default'].createElement(
-                  'thead',
-                  null,
-                  _react2['default'].createElement(
-                    'tr',
-                    null,
-                    _react2['default'].createElement(
-                      'th',
-                      { colSpan: '4' },
-                      _react2['default'].createElement(
-                        'center',
-                        null,
-                        'Micronutrientes de stock 3'
-                      )
-                    )
-                  ),
-                  _react2['default'].createElement(
-                    'tr',
-                    null,
-                    _react2['default'].createElement(
-                      'th',
-                      null,
-                      _react2['default'].createElement(
-                        'b',
-                        null,
-                        'NÚMERO STOCK'
-                      )
-                    ),
-                    _react2['default'].createElement(
-                      'th',
-                      null,
-                      _react2['default'].createElement(
-                        'b',
-                        null,
-                        'COMPUESTO'
-                      )
-                    ),
-                    _react2['default'].createElement(
-                      'th',
-                      null,
-                      _react2['default'].createElement(
-                        'b',
-                        null,
-                        'CANTIDAD (gr)'
-                      )
-                    ),
-                    _react2['default'].createElement(
-                      'th',
-                      null,
-                      _react2['default'].createElement(
-                        'b',
-                        null,
-                        'AGUA DESTILADA'
-                      )
-                    )
-                  )
-                ),
-                _react2['default'].createElement(
-                  'tbody',
-                  null,
-                  _react2['default'].createElement(
-                    'tr',
-                    null,
-                    _react2['default'].createElement(
-                      'td',
-                      { rowSpan: '6' },
-                      '3'
-                    ),
-                    _react2['default'].createElement(
-                      'td',
-                      null,
-                      'H',
-                      _react2['default'].createElement(
-                        'sub',
-                        null,
-                        '3'
-                      ),
-                      'BO',
-                      _react2['default'].createElement(
-                        'sub',
-                        null,
-                        '3'
-                      )
-                    ),
-                    _react2['default'].createElement(
-                      'td',
-                      null,
-                      '0,031'
-                    ),
-                    _react2['default'].createElement(
-                      'td',
-                      { rowSpan: '6' },
-                      '1 ml'
-                    )
-                  ),
-                  _react2['default'].createElement(
-                    'tr',
-                    null,
-                    _react2['default'].createElement(
-                      'td',
-                      null,
-                      'MnSO',
-                      _react2['default'].createElement(
-                        'sub',
-                        null,
-                        '4'
-                      ),
-                      '.H',
-                      _react2['default'].createElement(
-                        'sub',
-                        null,
-                        '2'
-                      ),
-                      'O'
-                    ),
-                    _react2['default'].createElement(
-                      'td',
-                      null,
-                      '0,0845'
-                    )
-                  ),
-                  _react2['default'].createElement(
-                    'tr',
-                    null,
-                    _react2['default'].createElement(
-                      'td',
-                      null,
-                      'CuSO',
-                      _react2['default'].createElement(
-                        'sub',
-                        null,
-                        '4'
-                      ),
-                      '.5H',
-                      _react2['default'].createElement(
-                        'sub',
-                        null,
-                        '2'
-                      ),
-                      'O'
-                    ),
-                    _react2['default'].createElement(
-                      'td',
-                      null,
-                      '0,000125'
-                    )
-                  ),
-                  _react2['default'].createElement(
-                    'tr',
-                    null,
-                    _react2['default'].createElement(
-                      'td',
-                      null,
-                      'NaMoO',
-                      _react2['default'].createElement(
-                        'sub',
-                        null,
-                        '4'
-                      ),
-                      '.2H',
-                      _react2['default'].createElement(
-                        'sub',
-                        null,
-                        '2'
-                      ),
-                      'O'
-                    ),
-                    _react2['default'].createElement(
-                      'td',
-                      null,
-                      '0,00125'
-                    )
-                  ),
-                  _react2['default'].createElement(
-                    'tr',
-                    null,
-                    _react2['default'].createElement(
-                      'td',
-                      null,
-                      'ZnSO',
-                      _react2['default'].createElement(
-                        'sub',
-                        null,
-                        '4'
-                      ),
-                      '.7H',
-                      _react2['default'].createElement(
-                        'sub',
-                        null,
-                        '2'
-                      ),
-                      'O'
-                    ),
-                    _react2['default'].createElement(
-                      'td',
-                      null,
-                      '0,043'
-                    )
-                  ),
-                  _react2['default'].createElement(
-                    'tr',
-                    null,
-                    _react2['default'].createElement(
-                      'td',
-                      null,
-                      'CoCl',
-                      _react2['default'].createElement(
-                        'sub',
-                        null,
-                        '2'
-                      ),
-                      '.5H',
-                      _react2['default'].createElement(
-                        'sub',
-                        null,
-                        '2'
-                      ),
-                      'O'
-                    ),
-                    _react2['default'].createElement(
-                      'td',
-                      null,
-                      '0,000125'
-                    )
-                  )
-                )
-              )
-            ),
+              { xs: 8, sm: 8, md: 4, lg: 4 },
+              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo3/medio.jpg', alt: 'Medio de cultivo' })
+            )
+          ),
+          _react2['default'].createElement(
+            _reactBootstrap.Row,
+            null,
+            _react2['default'].createElement(_reactBootstrap.Col, { xs: 8, sm: 8, md: 4, lg: 4 }),
+            _react2['default'].createElement(_reactBootstrap.Col, { xs: 8, sm: 8, md: 8, lg: 8 })
+          ),
+          _react2['default'].createElement(
+            _reactBootstrap.Row,
+            null,
+            _react2['default'].createElement(_reactBootstrap.Col, { xs: 8, sm: 8, md: 8, lg: 8 }),
             _react2['default'].createElement(
               _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 6, lg: 6 },
-              _react2['default'].createElement(
-                _reactBootstrap.Table,
-                { responsive: true, striped: true, bordered: true, condensed: true, hover: true },
-                _react2['default'].createElement(
-                  'thead',
-                  null,
-                  _react2['default'].createElement(
-                    'tr',
-                    null,
-                    _react2['default'].createElement(
-                      'th',
-                      { colSpan: '4' },
-                      _react2['default'].createElement(
-                        'center',
-                        null,
-                        'Micronutrientes de stock 4'
-                      )
-                    )
-                  ),
-                  _react2['default'].createElement(
-                    'tr',
-                    null,
-                    _react2['default'].createElement(
-                      'th',
-                      null,
-                      _react2['default'].createElement(
-                        'b',
-                        null,
-                        'NÚMERO STOCK'
-                      )
-                    ),
-                    _react2['default'].createElement(
-                      'th',
-                      null,
-                      _react2['default'].createElement(
-                        'b',
-                        null,
-                        'COMPUESTO'
-                      )
-                    ),
-                    _react2['default'].createElement(
-                      'th',
-                      null,
-                      _react2['default'].createElement(
-                        'b',
-                        null,
-                        'CANTIDAD (gr)'
-                      )
-                    ),
-                    _react2['default'].createElement(
-                      'th',
-                      null,
-                      _react2['default'].createElement(
-                        'b',
-                        null,
-                        'AGUA DESTILADA'
-                      )
-                    )
-                  )
-                ),
-                _react2['default'].createElement(
-                  'tbody',
-                  null,
-                  _react2['default'].createElement(
-                    'tr',
-                    null,
-                    _react2['default'].createElement(
-                      'td',
-                      null,
-                      '4'
-                    ),
-                    _react2['default'].createElement(
-                      'td',
-                      null,
-                      'KI'
-                    ),
-                    _react2['default'].createElement(
-                      'td',
-                      null,
-                      '0,004'
-                    ),
-                    _react2['default'].createElement(
-                      'td',
-                      null,
-                      '1 ml'
-                    )
-                  )
-                )
-              ),
-              _react2['default'].createElement(
-                _reactBootstrap.Table,
-                { responsive: true, striped: true, bordered: true, condensed: true, hover: true },
-                _react2['default'].createElement(
-                  'thead',
-                  null,
-                  _react2['default'].createElement(
-                    'tr',
-                    null,
-                    _react2['default'].createElement(
-                      'th',
-                      { colSpan: '4' },
-                      _react2['default'].createElement(
-                        'center',
-                        null,
-                        'Micronutrientes de stock 5'
-                      )
-                    )
-                  ),
-                  _react2['default'].createElement(
-                    'tr',
-                    null,
-                    _react2['default'].createElement(
-                      'th',
-                      null,
-                      _react2['default'].createElement(
-                        'b',
-                        null,
-                        'NÚMERO STOCK'
-                      )
-                    ),
-                    _react2['default'].createElement(
-                      'th',
-                      null,
-                      _react2['default'].createElement(
-                        'b',
-                        null,
-                        'COMPUESTO'
-                      )
-                    ),
-                    _react2['default'].createElement(
-                      'th',
-                      null,
-                      _react2['default'].createElement(
-                        'b',
-                        null,
-                        'CANTIDAD (gr)'
-                      )
-                    ),
-                    _react2['default'].createElement(
-                      'th',
-                      null,
-                      _react2['default'].createElement(
-                        'b',
-                        null,
-                        'AGUA DESTILADA'
-                      )
-                    )
-                  )
-                ),
-                _react2['default'].createElement(
-                  'tbody',
-                  null,
-                  _react2['default'].createElement(
-                    'tr',
-                    null,
-                    _react2['default'].createElement(
-                      'td',
-                      { rowSpan: '2' },
-                      '5'
-                    ),
-                    _react2['default'].createElement(
-                      'td',
-                      null,
-                      'NaEDTA'
-                    ),
-                    _react2['default'].createElement(
-                      'td',
-                      null,
-                      '0,18625'
-                    ),
-                    _react2['default'].createElement(
-                      'td',
-                      { rowSpan: '2' },
-                      '25 ml'
-                    )
-                  ),
-                  _react2['default'].createElement(
-                    'tr',
-                    null,
-                    _react2['default'].createElement(
-                      'td',
-                      null,
-                      'FeSO',
-                      _react2['default'].createElement(
-                        'sub',
-                        null,
-                        '4'
-                      )
-                    ),
-                    _react2['default'].createElement(
-                      'td',
-                      null,
-                      '0,13925'
-                    )
-                  )
-                )
-              )
+              { xs: 8, sm: 8, md: 4, lg: 4 },
+              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo3/medio.jpg', alt: 'Medio de cultivo' })
+            )
+          ),
+          _react2['default'].createElement(
+            _reactBootstrap.Row,
+            null,
+            _react2['default'].createElement(_reactBootstrap.Col, { xs: 8, sm: 8, md: 4, lg: 4 }),
+            _react2['default'].createElement(_reactBootstrap.Col, { xs: 8, sm: 8, md: 8, lg: 8 })
+          ),
+          _react2['default'].createElement(
+            _reactBootstrap.Row,
+            null,
+            _react2['default'].createElement(_reactBootstrap.Col, { xs: 8, sm: 8, md: 8, lg: 8 }),
+            _react2['default'].createElement(
+              _reactBootstrap.Col,
+              { xs: 8, sm: 8, md: 4, lg: 4 },
+              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo3/medio.jpg', alt: 'Medio de cultivo' })
+            )
+          ),
+          _react2['default'].createElement(
+            _reactBootstrap.Row,
+            null,
+            _react2['default'].createElement(_reactBootstrap.Col, { xs: 8, sm: 8, md: 4, lg: 4 }),
+            _react2['default'].createElement(_reactBootstrap.Col, { xs: 8, sm: 8, md: 8, lg: 8 })
+          ),
+          _react2['default'].createElement(
+            _reactBootstrap.Row,
+            null,
+            _react2['default'].createElement(_reactBootstrap.Col, { xs: 8, sm: 8, md: 8, lg: 8 }),
+            _react2['default'].createElement(
+              _reactBootstrap.Col,
+              { xs: 8, sm: 8, md: 4, lg: 4 },
+              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo3/medio.jpg', alt: 'Medio de cultivo' })
             )
           )
         ),
@@ -7079,7 +6693,9 @@ function drainQueue() {
         currentQueue = queue;
         queue = [];
         while (++queueIndex < len) {
-            currentQueue[queueIndex].run();
+            if (currentQueue) {
+                currentQueue[queueIndex].run();
+            }
         }
         queueIndex = -1;
         len = queue.length;
@@ -7131,7 +6747,6 @@ process.binding = function (name) {
     throw new Error('process.binding is not supported');
 };
 
-// TODO(shtylman)
 process.cwd = function () { return '/' };
 process.chdir = function (dir) {
     throw new Error('process.chdir is not supported');
