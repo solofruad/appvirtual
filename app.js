@@ -9,6 +9,7 @@ import Inicio from './components/Inicio';
 import ContentPrincipal from './components/ContentPrincipal/ContentPrincipal';
 import Modulo2 from './components/ContentPrincipal/Modulo2';
 import Modulo3 from './components/ContentPrincipal/Modulo3';
+import Modulo4 from './components/ContentPrincipal/Modulo4';
 import ContentCreditos from './components/ContentCreditos/ContentCreditos';
 import Menu from './components/nav/Menu';
 import Modulo1Content from './components/modulo1/Modulo1Content';
@@ -17,12 +18,13 @@ import Modulo1 from './components/modulo1/Modulo1';
 
 let RouteHandler = Router.RouteHandler;
 
-let routes = <Route handler={Menu} path='/'>		
+let routes = <Route handler={Menu} path='/'>
 		<Route name="Inicio" path="/" handler={ContentPrincipal} />
 		<Route name="Creditos" path="creditos" handler={ContentCreditos} />
-		<Route name="Modulo1" path="modulo1/:src" handler={Modulo1Content} />	
-		<Route name="Modulo2" path="modulo2" handler={Modulo2} />	
-		<Route name="Modulo3" path="modulo3" handler={Modulo3} />	
+		<Route name="Modulo1" path="modulo1/:src" handler={Modulo1Content} />
+		<Route name="Modulo2" path="modulo2" handler={Modulo2} />
+		<Route name="Modulo3" path="modulo3" handler={Modulo3} />
+		<Route name="Modulo4" path="modulo4" handler={Modulo4} />
 		<Redirect from="microbiologia" to="Modulo1" params={{src: 2}} />
 	</Route>
 
@@ -31,16 +33,16 @@ let routes = <Route handler={Menu} path='/'>
 	});
 
 
-$('.reloadModulo').click(function() {		
+$('.reloadModulo').click(function() {
     setTimeout(()=>{
     	location.reload()
     },3000);
 });
-	
-$('#relo').click(function() {		
+
+$('#relo').click(function() {
     setTimeout(()=>{
     	location.reload()
     },3000);
-});		
-                                    
+});
+
 //https://rackt.github.io/react-router/#Redirect

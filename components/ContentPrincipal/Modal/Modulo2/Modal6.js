@@ -19,12 +19,17 @@ export default class Modal6 extends React.Component {
 	render(){
 			return <Modal {...this.props} bsSize="large">
       <Modal.Header closeButton>
-        <Modal.Title><h4><Label bsStyle='success'>Elaboración</Label> Fitohormonas</h4></Modal.Title>
+        <Modal.Title><h4><Label bsStyle='success'>Elaboración</Label></h4></Modal.Title>
       </Modal.Header>
       <Modal.Body>
+				<Row>
+					<Col xs={12} sm={12} md={12} lg={12} className="txt-center">
+						<h1><b>Fitohormonas</b></h1>
+						<span>(Stock 8, 9 y 10)</span><br/>
+					</Col>
+				</Row>
         <Row>
-          <Col xs={12} sm={12} md={12} lg={12}>
-            <h5><b>Elaboración de stocks 8, 9 y 10</b></h5>
+          <Col xs={12} sm={12} md={12} lg={12}>            
             <p className="txt-parrafo">Las fitohormonas o reguladores de crecimiento son compuestos que permiten potenciar el crecimiento y diferenciación de los tejidos vegetales. Las plantas utilizan naturalmente, las auxinas, responsables del crecimiento de los tejidos, formación de callo, desarrollo de primordios foliares y enraizamiento; las citoquininas, favorecen la división celular; y Giberilinas, permiten el crecimiento, rompimiento de la latencia del embrión que involucran el transporte de nutrientes y yemas axilares y apicales para iniciar la floración.</p>
             <p className="txt-parrafo">Los organismos vegetales necesitan para su normal desarrollo fitohormonas, de tal manera que en el cultivo in vitro se aplican sintéticas para impulsar el desarrollo de los explantes. Las más utilizadas son el ANA (ácido naftalenacético), BAP (bencyl  amino purina) y AG3 (ácido giberélico) que corresponde al stock 8, 9 y 10, respectivamente.</p>
           </Col>

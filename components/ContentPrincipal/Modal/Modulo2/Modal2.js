@@ -19,17 +19,22 @@ export default class Modal2 extends React.Component {
 	render(){
 			return	<Modal {...this.props} bsSize="large">
       <Modal.Header closeButton>
-        <Modal.Title><h4><Label bsStyle='success'>Elaboración</Label> Macronutrientes</h4></Modal.Title>
+        <Modal.Title><h4><Label bsStyle='success'>Elaboración</Label></h4></Modal.Title>
       </Modal.Header>
       <Modal.Body>
+				<Row>
+					<Col xs={12} sm={12} md={12} lg={12} className="txt-center">
+						<h1><b>Macronutrientes</b></h1>
+						<span>(Stock 1 y 2)</span><br/>
+					</Col>
+				</Row>
         <Row>
-          <Col xs={12} sm={12} md={12} lg={12}>
-            <h5><b>Elaboración de stocks 1 y 2</b></h5>
+          <Col xs={12} sm={12} md={12} lg={12}>            
             <p className="txt-parrafo">Los macronutrientes son los elementos que necesita la planta en mayor concentración. Estos se caracterizan en primarios (N, P y K) y secundarios (S, Ca y Mg); el C, H y O los obtiene del agua y del aire y fuente de carbono. Los nutrientes que necesita la planta, en mayor cantidad, son brindados por el stock 1 y 2 preparados a 50x y 333x respectivamente.</p>
           </Col>
         </Row>
         <Row>
-          <Col xs={12} sm={12} md={6} lg={6}>            
+          <Col xs={12} sm={12} md={6} lg={6}>
             <Table responsive striped bordered condensed hover>
               <thead>
                 <tr>
@@ -49,17 +54,17 @@ export default class Modal2 extends React.Component {
                     <td>8,25</td>
                     <td rowSpan="4">100 ml</td>
                   </tr>
-                  <tr>                    
+                  <tr>
                     <td>KNO<sub>3</sub></td>
                     <td>9,5</td>
                   </tr>
                   <tr>
                     <td>MgS0<sub>4</sub>.7H<sub>2</sub>O</td>
-                    <td>0,902</td>                    
+                    <td>0,902</td>
                   </tr>
                   <tr>
                     <td>KH<sub>2</sub>PO<sub>4</sub></td>
-                    <td>0,85</td>                    
+                    <td>0,85</td>
                   </tr>
               </tbody>
             </Table>
@@ -81,12 +86,12 @@ export default class Modal2 extends React.Component {
                     <td>CaCl<sub>2</sub>.H<sub>2</sub>O</td>
                     <td>1,6854</td>
                     <td>15 ml</td>
-                  </tr>                  
+                  </tr>
               </tbody>
-            </Table>         
+            </Table>
           </Col>
-          <Col xs={12} sm={12} md={6} lg={6}>   
-            <br /><center><img className="img-modal-show" src="public/img/modulo1/maquina_6.jpg" alt="Sala de siembra"/></center><br /><br />            
+          <Col xs={12} sm={12} md={6} lg={6}>
+            <br /><center><img className="img-modal-show" src="public/img/modulo1/maquina_6.jpg" alt="Sala de siembra"/></center><br /><br />
           </Col>
         </Row>
       </Modal.Body>

@@ -19,12 +19,17 @@ export default class Modal4 extends React.Component {
 	render(){
 			return	<Modal {...this.props}>
       <Modal.Header closeButton>
-        <Modal.Title><h4><Label bsStyle='success'>Elaboración</Label> Vitaminas</h4></Modal.Title>
+        <Modal.Title><h4><Label bsStyle='success'>Elaboración</Label></h4></Modal.Title>
       </Modal.Header>
       <Modal.Body>
+				<Row>
+					<Col xs={12} sm={12} md={12} lg={12} className="txt-center">
+						<h1><b>Vitaminas</b></h1>
+						<span>(Stock 6)</span><br/>
+					</Col>
+				</Row>
         <Row>
-          <Col xs={12} sm={12} md={12} lg={12}>
-            <h5><b>Elaboración de stocks 6</b></h5>
+          <Col xs={12} sm={12} md={12} lg={12}>            
             <p className="txt-parrafo">Generalmente, en el cultivo de tejidos se usa vitaminas del complejo B, principalmente necesita de la vitamina B1 o Tiamina. Designado aquí como stock 6. Éste se puede preparar a una concentración de 50X.</p>
           </Col>
         </Row>

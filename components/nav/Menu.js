@@ -33,11 +33,12 @@ export default class Menu extends React.Component {
 			<Navbar fixedTop brand='CTVirtual' toggleNavKey={0}>
 			    <CollapsibleNav eventKey={0}> {/* This is the eventKey referenced */}
 			      <Nav navbar>
-			        <NavItemLink to="Inicio" params={{ src: 'hello' }}><i className="fa fa-home"></i>&nbsp; Inicio</NavItemLink>		        
+			        <NavItemLink to="Inicio" params={{ src: 'hello' }}><i className="fa fa-home"></i>&nbsp; Inicio</NavItemLink>
 			        <DropdownButton title='Modulos'>
 			          <MenuItemLink to="Modulo1" params={{ src: 1 }} className="reloadModulo">Modulo 1</MenuItemLink>
 			          <MenuItemLink to="Modulo2" params={{ src: 'hello' }}>Modulo 2</MenuItemLink>
 			          <MenuItemLink to="Modulo3" params={{ src: 'hello' }}>Modulo 3</MenuItemLink>
+								<MenuItemLink to="Modulo4" params={{ src: 'hello' }}>Modulo 4</MenuItemLink>
 			          <MenuItem divider />
 			          <MenuItemLink to="Creditos" params={{ src: 'hello' }}>Simulación 1</MenuItemLink>
 			          <MenuItemLink to="Creditos" params={{ src: 'hello' }}>Simulación 2</MenuItemLink>
@@ -45,7 +46,7 @@ export default class Menu extends React.Component {
 			      </Nav>
 			      <Nav navbar right>
 			        <NavItemLink to="Creditos" params={{ src: 'hello' }}><i className="fa fa-users"></i>&nbsp;Créditos</NavItemLink>
-			        <OverlayTrigger trigger='click' rootClose placement='bottom' 
+			        <OverlayTrigger trigger='click' rootClose placement='bottom'
 			        	overlay={
 			        		<Popover bsSize='large'>
 			        			<Contacto />
@@ -55,9 +56,9 @@ export default class Menu extends React.Component {
 			        	<NavItem to="Modulo2" params={{ src: 'hello' }}><i className="fa fa-location-arrow"></i>&nbsp; Contacto</NavItem>
 			        </OverlayTrigger>
 			      </Nav>
-			    </CollapsibleNav>		    
-	  		</Navbar>	  	
+			    </CollapsibleNav>
+	  		</Navbar>
 	  		<RouteHandler />
-	  	</div>	  	
+	  	</div>
 	}
 }

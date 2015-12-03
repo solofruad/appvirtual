@@ -293,8 +293,27 @@ font-size:0.8em;
 .txt-parrafo{
 	text-align: justify;
 }
+.txt-center{
+	text-align: center;
+}
+.txt-center h1{
+	font-size: 3em;
+	font-weight: bold;
+}
+.txt-center p{
+	font-size: 2em;
+	color: #5A5A5A;
+}
 .txt-grande{
 	font-size: 2em !important;
+}
+.line-divider{
+	margin: 5rem 0px;
+}
+.txt-vertical-center{
+	vertical-align: center !important;
+	top:90%;
+	margin-top: 6rem;
 }
 .cont-modal-show{
 	position: absolute;
@@ -337,6 +356,6 @@ font-size:0.8em;
     overflow-y: initial !important
 }
 .modal-body{
-    max-height: 30em;
+    max-height: 40em;
     overflow-y: auto;
 }

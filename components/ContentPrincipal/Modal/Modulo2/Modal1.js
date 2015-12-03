@@ -26,12 +26,16 @@ export default class Modal1 extends React.Component {
 	let mod=1;
 			return	<Modal {...this.props} bsSize="large">
 				<Modal.Header closeButton>
-					<Modal.Title><Label bsStyle='success'>Introducción! </Label>ELABORACIÓN DE STOCKS</Modal.Title>
+					<Modal.Title><Label bsStyle='success'>Introducción! </Label></Modal.Title>
 				</Modal.Header>
 				<Modal.Body>
 				<Row>
+					<Col xs={12} sm={12} md={12} lg={12} className="txt-center">
+						<h1><b>ELABORACIÓN DE STOCKS</b></h1><br/>
+					</Col>
+				</Row>
+				<Row>
 					<Col xs={12} sm={12} md={6} lg={6}>
-						<h5><b>ELABORACIÓN DE STOCKS</b></h5>
 						<p className="txt-parrafo">Las tejidos vegetales in vitro necesitan unas concentraciones de macro y micronutrientes, vitaminas, fuente de carbono entre otros para su crecimiento y diferenciación. Generalmente estas fuentes son sintéticas por lo que son productos industriales, no obstante se puede suplementar con productos orgánicos como el agua de coco.</p>
 						<center>
 							<button	className="boton-info" onClick={this.onClick.bind(this)}>Medio MS &nbsp;<i className="fa fa-info-circle"></i></button>

@@ -19,12 +19,17 @@ export default class Modal5 extends React.Component {
 	render(){
 			return	<Modal {...this.props}>
       <Modal.Header closeButton>
-        <Modal.Title><h4><Label bsStyle='success'>Elaboración</Label> Fuente de carbono</h4></Modal.Title>
+        <Modal.Title><h4><Label bsStyle='success'>Elaboración</Label></h4></Modal.Title>
       </Modal.Header>
       <Modal.Body>
+				<Row>
+					<Col xs={12} sm={12} md={12} lg={12} className="txt-center">
+						<h1><b>Fuente de carbono</b></h1>
+						<span>(Stock 7)</span><br/>
+					</Col>
+				</Row>
         <Row>
-          <Col xs={12} sm={12} md={12} lg={12}>
-            <h5><b>Fuente de carbono de stock 7</b></h5>
+          <Col xs={12} sm={12} md={12} lg={12}>            
             <p className="txt-parrafo">Las fuentes de carbono le brindan a los tejidos vegetales energía y regulación osmótica. El Mio-inositol es una de las más utilizadas. Generalmente se prepara el stock 7 a una concentración de 50X, aunque se recomienda hacer aplicación directa.</p>
           </Col>
         </Row>

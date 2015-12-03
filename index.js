@@ -10,7 +10,7 @@ const port = 3000;
 const app = express();
 
 // Configurar la ruta de archivos estáticos
-// 
+//
 app.use('/public', express.static(__dirname+ '/public'));
 
 
@@ -37,6 +37,11 @@ app.get('/dirmod3', (req, res) => {
       res.json(modulo3);
     });
 });
+app.get('/dirmod4', (req, res) => {
+  dbapi.modulo4.find((modulo4) => {
+      res.json(modulo4);
+    });
+});
 
 app.get('/dircred', (req, res) => {
 	dbapi.creditos.find((creditos) => {
@@ -57,6 +62,3 @@ let server = http.createServer(app).listen(port,() =>{
 		console.log(`El servidor se esta ejecutando por el puerto ${port}`);
 
 });
-
-
-
