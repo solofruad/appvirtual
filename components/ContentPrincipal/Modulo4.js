@@ -12,29 +12,47 @@ import Modal1 from './Modal/Modulo4/Modal1';
 import Modal2 from './Modal/Modulo4/Modal2';
 import Modal3 from './Modal/Modulo4/Modal3';
 import Modal4 from './Modal/Modulo4/Modal4';
+import Modal5 from './Modal/Modulo4/Modal5';
+import Modal6 from './Modal/Modulo4/Modal6';
+import Modal7 from './Modal/Modulo4/Modal7';
+import Modal8 from './Modal/Modulo4/Modal8';
+import Modal9 from './Modal/Modulo4/Modal9';
+import Modal10 from './Modal/Modulo4/Modal10';
 
 export default class Modulo4 extends React.Component {
 	constructor(props){
 		super(props);
-		this.state = { modulos: [], m1show: false, m2show: false, m3show: false, m4show: false};
+		this.state = { modulos: [], m1show: false, m2show: false, m3show: false, m4show: false, m5show: false, m6show: false, m7show: false, m8show: false, m9show: false, m10show: false};
 		this.open = this.open.bind(this);
 		this.close = this.close.bind(this);
 	}
 	getInitialState(){
-		return { m1show: false, m2show: false, m3show: false, m4show: false};
+		return { m1show: false, m2show: false, m3show: false, m4show: false, m5show: false, m6show: false, m7show: false, m8show: false, m9show: false, m10show: false};
 	}
 	open(mod){
-		if(mod=='modulo3/1') { this.setState({m1show: true}); }
-		else if(mod=='modulo3/2') {this.setState({m2show: true});}
-		else if(mod=='modulo3/3') {this.setState({m3show: true});}
-		else if(mod=='modulo3/4') {this.setState({m4show: true});}
+		if(mod=='modulo4/1') { this.setState({m1show: true}); }
+		else if(mod=='modulo4/2') {this.setState({m2show: true});}
+		else if(mod=='modulo4/3') {this.setState({m3show: true});}
+		else if(mod=='modulo4/4') {this.setState({m4show: true});}
+		else if(mod=='modulo4/7') {this.setState({m5show: true});}
+		else if(mod=='modulo4/8') {this.setState({m6show: true});}
+		else if(mod=='modulo4/10') {this.setState({m7show: true});}
+		else if(mod=='modulo4/11') {this.setState({m8show: true});}
+		else if(mod=='modulo4/13') {this.setState({m9show: true});}
+		else if(mod=='modulo4/16') {this.setState({m10show: true});}
 		else {return false;}
 	}
 	close(mod){
-		if(mod=='modulo3/1') {this.setState({m1show: false});}
-		else if(mod=='modulo3/2') {this.setState({m2show: false});}
-		else if(mod=='modulo3/3') {this.setState({m3show: false});}
-		else if(mod=='modulo3/4') {this.setState({m4show: false});}
+		if(mod=='modulo4/1') {this.setState({m1show: false});}
+		else if(mod=='modulo4/2') {this.setState({m2show: false});}
+		else if(mod=='modulo4/3') {this.setState({m3show: false});}
+		else if(mod=='modulo4/4') {this.setState({m4show: false});}
+		else if(mod=='modulo4/7') {this.setState({m5show: false});}
+		else if(mod=='modulo4/8') {this.setState({m6show: false});}
+		else if(mod=='modulo4/10') {this.setState({m7show: false});}
+		else if(mod=='modulo4/11') {this.setState({m8show: false});}
+		else if(mod=='modulo4/13') {this.setState({m9show: false});}
+		else if(mod=='modulo4/16') {this.setState({m10show: false});}
 		else {return false;	}
 	}
 	componentWillMount(){
@@ -50,6 +68,12 @@ export default class Modulo4 extends React.Component {
 				<Modal2 show={this.state.m2show} onHide={this.close} />
 				<Modal3 show={this.state.m3show} onHide={this.close} />
 				<Modal4 show={this.state.m4show} onHide={this.close} />
+				<Modal5 show={this.state.m5show} onHide={this.close}/>
+				<Modal6 show={this.state.m6show} onHide={this.close} />
+				<Modal7 show={this.state.m7show} onHide={this.close} />
+				<Modal8 show={this.state.m8show} onHide={this.close} />
+				<Modal9 show={this.state.m9show} onHide={this.close} />
+				<Modal10 show={this.state.m10show} onHide={this.close} />
 			</div>
 		}
 		else {

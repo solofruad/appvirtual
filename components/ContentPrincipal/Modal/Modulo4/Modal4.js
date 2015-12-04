@@ -14,48 +14,32 @@ export default class Modal4 extends React.Component {
     super(props);
   }
   onClose(ev){
-    this.props.onHide.call(null,'modulo3/4')
+    this.props.onHide.call(null,'modulo4/4')
   }
   render(){
-      return  <Modal {...this.props}>
+      return  <Modal {...this.props} bsSize="large">
       <Modal.Header closeButton>
-        <Modal.Title><h4><Label bsStyle='success'>Elaboración</Label> Vitaminas</h4></Modal.Title>
+        <Modal.Title><h4><Label bsStyle='success'>micropropagaci&oacute;n in vitro</Label></h4></Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <Row>
-          <Col xs={12} sm={12} md={12} lg={12}>
-            <h5><b>Elaboración de stocks 6</b></h5>
-            <p className="txt-parrafo">Generalmente, en el cultivo de tejidos se usa vitaminas del complejo B, principalmente necesita de la vitamina B1 o Tiamina. Designado aquí como stock 6. Éste se puede preparar a una concentración de 50X.</p>
+          <Col xs={12} sm={12} md={12} lg={12} className="txt-center">
+            <h1><b>Preparación de cámara de flujo laminar</b></h1>
+            <p>En la cámara de flujo laminar se realizan las siguientes actividades:</p>
           </Col>
         </Row>
         <Row>
-          <Col xs={12} sm={12} md={12} lg={12}>
-            <Table responsive striped bordered condensed hover>
-              <thead>
-                <tr>
-                  <th colSpan="4"><center>Vitamina B1 de Stock 6</center></th>
-                </tr>
-                <tr>
-                  <th><b>NÚMERO STOCK</b></th>
-                  <th><b>COMPUESTO</b></th>
-                  <th><b>CANTIDAD (gr)</b></th>
-                  <th><b>AGUA DESTILADA</b></th>
-                </tr>
-              </thead>
-              <tbody>
-                  <tr>
-                    <td>6</td>
-                    <td>Vitamina B1</td>
-                    <td>0,0005</td>
-                    <td>100 ml</td>
-                  </tr>
-              </tbody>
-            </Table>
-          </Col>
-        </Row>
-        <Row>
-          <Col xs={12} sm={12} md={12} lg={12}>
-            <img className="img-modal-show" src="public/img/modulo1/maquina_6.jpg" alt="Sala de siembra"/>
+          <Col xs={11} sm={11} md={11} lg={11}>
+            <ol className="lista">
+              <li>Se prende la luz y el flujo</li>
+              <li>La luz ultravioleta durante 20 minutos y se deja en reposo 40 minutos</li>
+              <li>Limpieza de cámara con alcohol de adentro hacia fuera utilizando algodón</li>
+              <li>Se enciende un mechero</li>
+              <li>se limpia con alcohol los medios de cultivo, el estereoscopio</li>
+              <li>Ubica las cajas Petri, mango de bisturí, pinzas y papel Kraf previamente esterilizados</li>
+              <li>La caja Petri se pone en el punto de vista del estereoscopio, el papel kraf debajo de un vaso de vidrio con alcohol al 96%, al mango se le pone la cuchilla y con las pinzas se pone en el interfaz del papel kraf</li>
+              <li>A un lado se pone las SD, las aguas D-E y el material vegetal para micropropagar; todo lo mencionado se ejecuta para la extracción de meristemos. Para microestacas no se incluye estereoscopio, ni SD ni agua D-E.</li>
+            </ol>
           </Col>
         </Row>
       </Modal.Body>

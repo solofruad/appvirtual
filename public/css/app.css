@@ -305,7 +305,19 @@ font-size:0.8em;
 	color: #5A5A5A;
 }
 .txt-grande{
-	font-size: 2em !important;
+	font-size: 3em !important;
+}
+.txt-into{
+	font-size: 1.7rem !important;
+	color: #5A5A5A;
+	font-style: oblique;
+	text-align: center;
+}
+.capitalLetter{
+	font-size: 3rem !important;
+	display: inline-block;
+	float:left;
+	padding: 2px;
 }
 .line-divider{
 	margin: 5rem 0px;
@@ -358,4 +370,57 @@ font-size:0.8em;
 .modal-body{
     max-height: 40em;
     overflow-y: auto;
+}
+
+.lista {
+    counter-reset: li;
+    list-style: none;
+    *list-style: decimal;
+    font: 15px 'trebuchet MS', 'lucida sans';
+    padding: 0;
+    margin-left: 10%;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+
+.lista ol {
+    margin: 0 0 0 2em;
+}
+
+.lista li{
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em 2em;
+    *padding: .4em;
+    margin: .5em 0;
+    background: #ddd;
+    color: #444;
+    text-decoration: none;
+    border-radius: .3em;
+    transition: all .3s ease-out;
+}
+
+.lista li:hover{
+    background: #eee;
+}
+
+.lista li:hover:before{
+    transform: rotate(360deg);
+}
+
+.lista li:before{
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    left: -1.3em;
+    top: 50%;
+    margin-top: -1.3em;
+    background: #87ceeb;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    border: .3em solid #fff;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 2em;
+    transition: all .3s ease-out;
 }

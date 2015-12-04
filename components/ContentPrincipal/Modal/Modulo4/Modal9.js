@@ -9,12 +9,12 @@ import {Col} from 'react-bootstrap';
 import {Row} from 'react-bootstrap';
 
 
-export default class Modal1 extends React.Component {
+export default class Modal9 extends React.Component {
 	constructor(props){
 		super(props);
 	}
 	onClose(ev){
-		this.props.onHide.call(null,'modulo4/1')
+		this.props.onHide.call(null,'modulo4/13')
 	}
 	render(){
 	let mod=1;
@@ -25,18 +25,18 @@ export default class Modal1 extends React.Component {
 				<Modal.Body>
 				<Row>
 					<Col xs={12} sm={12} md={12} lg={12} className="txt-center">
-						<h1><b>MICROPROPAGACIÓN  IN VITRO</b></h1>
-						<span>(Planta donadora, Sustancias de limpieza y desinfectantes, Preparación de cámara de flujo laminar, Meristemos, Extracción, siembra e incubación, Corte de explantes después de protocolo de desinfección, Microestacas, Crecimiento de microestacas, Simulación)</span><br/>
+						<h1><b>PREPARACIÓN DE MEDIOS DE CULTIVO</b></h1><br/>
 					</Col>
-				</Row><br/>
+				</Row>
 				<Row>
-					<Col xs={12} sm={12} md={12} lg={12} className="txt-into">
-						<p><span className="capitalLetter"><i className="fa fa-quote-left"></i></span>El cultivo de tejidos vegetales incluye diferente técnicas de micropropagación in vitro: siembra de meristemos, óvulos, anteras, embriones y tejidos radiculares, caulinares, peciolares, foliares y florales; no obstante,  cuando las vitroplantas se han desarrollado, se puede llevar directamente a la etapa ex vitro o  multiplicar el material obtenido. Por eso para propagación asexual se pueden utilizar los meristemos axilares y apicales, obteniendo de 3 a 5 microestacas.</p>
+					<Col xs={12} sm={12} md={12} lg={12}>
+						<center><p className="txt-parrafo">Las plantas necesitan un soporte para su desarrollo radicular y sostenimiento: nutrientes, vitaminas, fuente de carbono y reguladores de crecimiento para un  efectivo establecimiento <i>in vitro</i>  y para su posterior adaptación <i>ex vitro</i>.  El medio de cultivo debe cumplir requisitos estandarizados para que la producción de vitroplantas no presente ninguna complicación.</p></center>
 					</Col>
 				</Row><br />
 				<Row>
 					<Col xs={12} sm={12} md={12} lg={12}>
 						<p><center>En este capitulo podrás encontrar lo necesario para continuar con el aprendizaje de <span className="txt-green">cultivo de tejidos vegetales</span>, recuerda tienes al final un ejercicio práctico para que interactues y refuerces aún más en la preparación en un laboratorio. </center></p>
+						<center><Label bsStyle='success'>Medios de Cultivo</Label>&nbsp;<Label bsStyle='success'>Componentes del medio de cultivo</Label>&nbsp;<Label bsStyle='success'>Simulación</Label></center>
 					</Col>
 				</Row>
 				</Modal.Body>

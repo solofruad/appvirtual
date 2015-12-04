@@ -14,30 +14,27 @@ export default class Modal2 extends React.Component {
 		super(props);
 	}
 	onClose(ev){
-		this.props.onHide.call(null,'modulo3/2')
+		this.props.onHide.call(null,'modulo4/2')
 	}
 	render(){
 			return	<Modal {...this.props} bsSize="large">
       <Modal.Header closeButton>
-        <Modal.Title><h4><Label bsStyle='success'>Elaboración</Label></h4></Modal.Title>
+        <Modal.Title><h4><Label bsStyle='success'>micropropagaci&oacute;n in vitro</Label></h4></Modal.Title>
       </Modal.Header>
       <Modal.Body>
 				<Row>
 					<Col xs={12} sm={12} md={12} lg={12} className="txt-center">
-						<h1><b>Medio de cultivo</b></h1><br/>
+						<h1><b>Planta donadora</b></h1>
+						<p>De la planta donadora o planta madre es donde se toma el explante.</p>
 					</Col>
 				</Row>
         <Row>
           <Col xs={12} sm={12} md={6} lg={6}>
-            <p className="txt-parrafo">El medio de cultivo da al explante cultivado in vitro los nutrientes, vitaminas, fuente de carbono y sostén para un desarrollo idóneo. Como ya se había mencionando en el capítulo anterior, el medio utilizado está estandarizado con base  en las sales de Murashige y Skoog. Para el crecimiento de meristemos o microestacas, el medio de cultivo es suplementado con reguladores de crecimiento o productos orgánicos.</p>
+            <p className="txt-parrafo">El explante es el tejido vegetal que se corta para empezar el cultivo in vitro. Sin embargo, el material que se cultive, se debe garantizar libre de patógenos y el genotipo de interés (brasilera). Los meristemos apicales son los mejores tejidos  ya que los haces vasculares (xilema y floema) no irrigan directamente el domo meristemático y, por ser los puntos de crecimiento que presentan los niveles más altos de totipotencia  y células indiferenciadas.</p>
+						<p className="txt-parrafo">Antes de hacer la toma de explantes apicales del tallo (se utiliza la variedad brasilera) debe estar  un mínimo un mes en invernadero, bajo condiciones controladas,  libre de agentes patógenos: el llamado estado de cuarentena. También se recomienda extraer  los tejidos de plantas juveniles.</p>
           </Col>
           <Col xs={12} sm={12} md={6} lg={6}>
-            <center><img className="img-modal-show" src="public/img/modulo3/medio.jpg" alt="Medio de cultivo"/></center>
-          </Col>
-        </Row>
-        <Row>
-          <Col xs={12} sm={12} md={12} lg={12}>
-            <p className="txt-parrafo">El uso de los componentes del medio, cuando se realiza el caldo nutritivo, al igual que las condiciones del cuarto de crecimiento, permite el desarrollo de las raíces, tallo, peciolo y hojas.</p>
+            <center><img className="img-modal-show" src="public/img/modulo4/modal2.jpg" alt="Planta donadora"/></center>
           </Col>
         </Row>
       </Modal.Body>

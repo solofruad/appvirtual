@@ -14,93 +14,57 @@ export default class Modal3 extends React.Component {
 		super(props);
 	}
 	onClose(ev){
-		this.props.onHide.call(null,'modulo3/3')
+		this.props.onHide.call(null,'modulo4/3')
 	}
 	render(){
 			return <Modal {...this.props} bsSize="large">
       <Modal.Header closeButton>
-        <Modal.Title><h4><Label bsStyle='success'>Componentes</Label></h4></Modal.Title>
+        <Modal.Title><h4><Label bsStyle='success'>micropropagaci&oacute;n in vitro</Label></h4></Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <Row>
           <Col xs={12} sm={12} md={12} lg={12} className="txt-center">
-            <h1><b>Componentes del medio de cultivo</b></h1>
-            <p>La composición del medio de cultivo está definida por los siguientes requerimientos de los explantes.</p>
+            <h1><b>Sustancias de limpieza y desinfectantes</b></h1>
+            <p>Antes de ir a tomar el explante se debe alistar las sustancias para limpiar y desinfectar el tejido.</p>
           </Col>
         </Row>
-				<hr className="line-divider"></hr>
-        <Row>
-          <Col xs={12} sm={12} md={7} lg={7}>
-						<div className="txt-vertical-center"><h2><b>Agua. </b></h2> <p className="txt-parrafo">El agua que se utiliza en el laboratorio es destilada. No se recomienda el  uso de aguas “duras” por  poseer altas concentraciones de Ca y Mg que pueden desregular el uso de sales de MS cuando se aplican.</p></div>
-          </Col>
-          <Col xs={12} sm={12} md={5} lg={5}>
-            <img className="img-modal-show" src="public/img/modulo3/agua.jpg" alt="Medio de cultivo"/>
-          </Col>
-        </Row>
-				<hr className="line-divider"></hr>
-        <Row>
-          <Col xs={12} sm={12} md={5} lg={5}>
-						<img className="img-modal-show" src="public/img/modulo3/stocks.jpg" alt="Medio de cultivo"/>
-          </Col>
-          <Col xs={12} sm={12} md={7} lg={7}>
-						<div className="txt-vertical-center"><h2><b>Los stocks.</b></h2><p className="txt-parrafo"> Poseen los macronutrientes, micronutrientes y vitaminas (Stocks 1-6). Se usan de acuerdo a la concentración que poseen y la cantidad de medio de cultivo que se va a preparar; y reducir cuando se complementa con sustancias orgánicas.</p></div>
-          </Col>
-        </Row>
-				<hr className="line-divider"></hr>
-        <Row>
-          <Col xs={12} sm={12} md={7} lg={7}>
-						<div className="txt-vertical-center"><h2><b>Fitohormonas.</b></h2><p className="txt-parrafo"> Los reguladores de crecimiento se preparan en los stocks (8-10) para su uso, de acuerdo con el tipo de explante (foto 33);  en algunas ocasiones, en el caso de microestacas, por ejemplo,  pueden ser o no utilizados, con base en criterios científico-técnicos.</p></div>
-          </Col>
-          <Col xs={12} sm={12} md={5} lg={5}>
-            <img className="img-modal-show" src="public/img/modulo3/Fitohormonas.jpg" alt="Medio de cultivo"/>
-          </Col>
-        </Row>
-				<hr className="line-divider"></hr>
-        <Row>
-          <Col xs={12} sm={12} md={5} lg={5}>
-						<img className="img-modal-show" src="public/img/modulo3/carbono.jpg" alt="Medio de cultivo"/>
-          </Col>
-          <Col xs={12} sm={12} md={7} lg={7}>
-						<div className="txt-vertical-center"><h2><b>Fuente de carbono.</b></h2><p className="txt-parrafo"> Por estar cerrado envuelto con cinta vinipel, el frasco de las vitroplantas, entra muy poco CO2. Por tanto, su carencia  se suple con las fuentes de carbono  Mio-inositol y la sacarosa (o azúcar de cocina)</p></div>
-          </Col>
-        </Row>
-				<hr className="line-divider"></hr>
-        <Row>
-          <Col xs={12} sm={12} md={7} lg={7}>
-						<div className="txt-vertical-center"><h2><b>Agente gelificante.</b></h2><p className="txt-parrafo"> Para la consistencia semisólida del medio de cultivo se aplica el agente gelificante phytagel (foto 35), el cual, aparte de endurecerlo, facilita que las raíces de la planta u otros tejidos asimilen los nutrientes requeridos.</p></div>
-          </Col>
-          <Col xs={12} sm={12} md={5} lg={5}>
-            <img className="img-modal-show" src="public/img/modulo3/gelificante.jpg" alt="Medio de cultivo"/>
-          </Col>
-        </Row>
-				<hr className="line-divider"></hr>
-        <Row>
-          <Col xs={12} sm={12} md={5} lg={5}>
-						<img className="img-modal-show" src="public/img/modulo3/carbonactivado.jpg" alt="Medio de cultivo"/>
-          </Col>
-          <Col xs={12} sm={12} md={7} lg={7}>
-						<div className="txt-vertical-center"><h2><b>Carbón activado.</b></h2><p className="txt-parrafo"> Se utiliza principalmente cuando se suplementa el medio de cultivo con sustancias orgánicas, pues tiene un efecto antioxidante y disminuye los niveles de contaminación.</p></div>
-          </Col>
-        </Row>
-				<hr className="line-divider"></hr>
-        <Row>
-          <Col xs={12} sm={12} md={7} lg={7}>
-						<div className="txt-vertical-center"><h2><b>Ajustar el pH.</b></h2><p className="txt-parrafo"> Se necesita un pH  entre 5,7  y 5,8 para que los explantes puedan crecer normalmente. Por tanto, si el pH está más bajo, se aplica la KOH 1N; si está más alto, se aplica HCL 1N.</p></div>
-          </Col>
-          <Col xs={12} sm={12} md={5} lg={5}>
-            <img className="img-modal-show" src="public/img/modulo3/ph.jpg" alt="Medio de cultivo"/>
-          </Col>
-        </Row>
-				<hr className="line-divider"></hr>
 				<Row>
-          <Col xs={12} sm={12} md={5} lg={5}>
-						<img className="img-modal-show" src="public/img/modulo3/organicas.jpg" alt="Medio de cultivo"/>
+          <Col xs={12} sm={12} md={12} lg={12}>
+            <p className="txt-parrafo">Dentro de las sustancias de limpieza esta el uso de jabón que se prepara al 1%. Esto indica que por cada litro se aplica un 1gr de jabón. El jabón se diluye en agua destilada-estéril (D-E). Para la limpieza se prepara la sustancia desinfectante (SD) 1 (Alcohol) y 2 (Hipoclorito) de acuerdo a lo establecido en la siguiente tabla.</p>
           </Col>
-          <Col xs={12} sm={12} md={7} lg={7}>
-            <div className="txt-vertical-center"><h2><b>Sustancias orgánicas.</b></h2><p className="txt-parrafo"> La sustancia orgánica efectiva para suplementar el medio de cultivo MS,  es el agua de coco.</p></div>
+				</Row>
+				<Row>
+          <Col xs={12} sm={12} md={6} lg={6}>
+					<hr className="line-divider"></hr>
+					<Table responsive striped bordered condensed hover>
+						<thead>
+							<tr>
+								<th colSpan="3"><center>Sustancias desinfectantes (Manihot esculenta)</center></th>
+							</tr>
+							<tr>
+								<th><b># Sustancia</b></th>
+								<th><b>Sustancia</b></th>
+								<th><b>Tiempo de exposici&oacute;n</b></th>
+							</tr>
+						</thead>
+						<tbody>
+								<tr>
+									<td>1</td>
+									<td>Alcohol 70%</td>
+									<td>20 segundos</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>Hipoclorito de Sodio 1%</td>
+									<td>5 minutos</td>
+								</tr>
+						</tbody>
+					</Table>
+          </Col>
+					<Col xs={12} sm={12} md={6} lg={6}>
+            <center><img className="img-modal-show" src="public/img/modulo4/modal3.jpg" alt="Planta donadora"/></center>
           </Col>
         </Row>
-				<hr className="line-divider"></hr>
       </Modal.Body>
       <Modal.Footer>
         <button onClick={this.onClose.bind(this)}>Cerrar</button>
