@@ -5683,7 +5683,7 @@ var Modal4 = (function (_React$Component) {
               _react2['default'].createElement(
                 _reactBootstrap.Label,
                 { bsStyle: 'success' },
-                'micropropagación in vitro'
+                'Micropropagación in vitro'
               )
             )
           )
@@ -5755,7 +5755,7 @@ var Modal4 = (function (_React$Component) {
                 _react2['default'].createElement(
                   'li',
                   null,
-                  'la caja Petri se pone en el punto de vista del estereoscopio, el papel kraf debajo de un vaso de vidrio con alcohol al 96%, al mango se le pone la cuchilla y con las pinzas se pone en el interfaz del papel kraf'
+                  'La caja Petri se pone en el punto de vista del estereoscopio, el papel kraf debajo de un vaso de vidrio con alcohol al 96%, al mango se le pone la cuchilla y con las pinzas se pone en el interfaz del papel kraf'
                 ),
                 _react2['default'].createElement(
                   'li',
@@ -5842,7 +5842,7 @@ var Modal5 = (function (_React$Component) {
 						_react2['default'].createElement(
 							_reactBootstrap.Label,
 							{ bsStyle: 'success' },
-							'Introducción! '
+							'Micropropagación in vitro'
 						)
 					)
 				),
@@ -5861,10 +5861,14 @@ var Modal5 = (function (_React$Component) {
 								_react2['default'].createElement(
 									'b',
 									null,
-									'PREPARACIÓN DE MEDIOS DE CULTIVO'
+									'Meristemos'
 								)
 							),
-							_react2['default'].createElement('br', null)
+							_react2['default'].createElement(
+								'p',
+								null,
+								'Los tejidos vegetales, que presentan mayor nivel de totipotencia son los meristemos.'
+							)
 						)
 					),
 					_react2['default'].createElement(
@@ -5879,64 +5883,7 @@ var Modal5 = (function (_React$Component) {
 								_react2['default'].createElement(
 									'p',
 									{ className: 'txt-parrafo' },
-									'Las plantas necesitan un soporte para su desarrollo radicular y sostenimiento: nutrientes, vitaminas, fuente de carbono y reguladores de crecimiento para un  efectivo establecimiento ',
-									_react2['default'].createElement(
-										'i',
-										null,
-										'in vitro'
-									),
-									'  y para su posterior adaptación ',
-									_react2['default'].createElement(
-										'i',
-										null,
-										'ex vitro'
-									),
-									'.  El medio de cultivo debe cumplir requisitos estandarizados para que la producción de vitroplantas no presente ninguna complicación.'
-								)
-							)
-						)
-					),
-					_react2['default'].createElement('br', null),
-					_react2['default'].createElement(
-						_reactBootstrap.Row,
-						null,
-						_react2['default'].createElement(
-							_reactBootstrap.Col,
-							{ xs: 12, sm: 12, md: 12, lg: 12 },
-							_react2['default'].createElement(
-								'p',
-								null,
-								_react2['default'].createElement(
-									'center',
-									null,
-									'En este capitulo podrás encontrar lo necesario para continuar con el aprendizaje de ',
-									_react2['default'].createElement(
-										'span',
-										{ className: 'txt-green' },
-										'cultivo de tejidos vegetales'
-									),
-									', recuerda tienes al final un ejercicio práctico para que interactues y refuerces aún más en la preparación en un laboratorio. '
-								)
-							),
-							_react2['default'].createElement(
-								'center',
-								null,
-								_react2['default'].createElement(
-									_reactBootstrap.Label,
-									{ bsStyle: 'success' },
-									'Medios de Cultivo'
-								),
-								' ',
-								_react2['default'].createElement(
-									_reactBootstrap.Label,
-									{ bsStyle: 'success' },
-									'Componentes del medio de cultivo'
-								),
-								' ',
-								_react2['default'].createElement(
-									_reactBootstrap.Label,
-									{ bsStyle: 'success' },
-									'Simulación'
+									'Los meristemos generalmente se encuentran ubicados en el ápice del tallo, meristemo apical del tallo (MAT),  o, la raíz, meristemo apical de la raíz (MAR). Existen, también, los meristemos axilares (MA) o intercalares (MI), que se encuentran en la posición nodal o entrenudos. Estos tejidos (MAT, MAR y MA) poseen mayor totipotencia, elevadas tasas de división celular (mitosis) por ser puntos de crecimiento e indiferenciación; que fácilmente en un medio de cultivo idóneo pueden generar una nueva planta.'
 								)
 							)
 						)
@@ -6022,7 +5969,7 @@ var Modal6 = (function (_React$Component) {
               _react2['default'].createElement(
                 _reactBootstrap.Label,
                 { bsStyle: 'success' },
-                'Elaboración'
+                'Micropropagación in vitro'
               )
             )
           )
@@ -6042,7 +5989,7 @@ var Modal6 = (function (_React$Component) {
                 _react2['default'].createElement(
                   'b',
                   null,
-                  'Medio de cultivo'
+                  'Extracción, siembra e incubación'
                 )
               ),
               _react2['default'].createElement('br', null)
@@ -6053,33 +6000,108 @@ var Modal6 = (function (_React$Component) {
             null,
             _react2['default'].createElement(
               _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 6, lg: 6 },
+              { xs: 12, sm: 12, md: 7, lg: 7 },
               _react2['default'].createElement(
-                'p',
-                { className: 'txt-parrafo' },
-                'El medio de cultivo da al explante cultivado in vitro los nutrientes, vitaminas, fuente de carbono y sostén para un desarrollo idóneo. Como ya se había mencionando en el capítulo anterior, el medio utilizado está estandarizado con base  en las sales de Murashige y Skoog. Para el crecimiento de meristemos o microestacas, el medio de cultivo es suplementado con reguladores de crecimiento o productos orgánicos.'
+                'div',
+                { className: 'txt-vertical-center' },
+                _react2['default'].createElement(
+                  'p',
+                  { className: 'txt-parrafo cl' },
+                  'De las plantas donadoras se corta los explantes apicales, en este caso los de la porción apical del tallo, donde se encuentra (MAT) y se deja sumergir directamente en 1% de NaOCl y después su lavado por 3 A-D-E.'
+                )
               )
             ),
             _react2['default'].createElement(
               _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 6, lg: 6 },
-              _react2['default'].createElement(
-                'center',
-                null,
-                _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo3/medio.jpg', alt: 'Medio de cultivo' })
-              )
+              { xs: 12, sm: 12, md: 5, lg: 5 },
+              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo4/modal6a.jpg', alt: 'Foto 43' })
             )
           ),
+          _react2['default'].createElement('hr', { className: 'line-divider' }),
           _react2['default'].createElement(
             _reactBootstrap.Row,
             null,
             _react2['default'].createElement(
               _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 12, lg: 12 },
+              { xs: 12, sm: 12, md: 5, lg: 5 },
+              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo4/modal6b.jpg', alt: 'Medio de cultivo' })
+            ),
+            _react2['default'].createElement(
+              _reactBootstrap.Col,
+              { xs: 12, sm: 12, md: 7, lg: 7 },
               _react2['default'].createElement(
-                'p',
-                { className: 'txt-parrafo' },
-                'El uso de los componentes del medio, cuando se realiza el caldo nutritivo, al igual que las condiciones del cuarto de crecimiento, permite el desarrollo de las raíces, tallo, peciolo y hojas.'
+                'div',
+                { className: 'txt-vertical-center' },
+                _react2['default'].createElement(
+                  'p',
+                  { className: 'txt-parrafo cl' },
+                  'Teniendo la cámara lista de acuerdo a lo establecido (Preparación de cámara de flujo laminar) se cortan los  se someten a Protocolo de desinfección:'
+                )
+              ),
+              _react2['default'].createElement(
+                'ol',
+                { className: 'lista2' },
+                _react2['default'].createElement(
+                  'li',
+                  null,
+                  'Limpieza con jabón 1% y seguido lavado de 3 A-D-E'
+                ),
+                _react2['default'].createElement(
+                  'li',
+                  null,
+                  'Dentro de la cámara de flujo laminar se expone los tejidos a SD 1 durante 20 segundos y luego lavado con 3 A-D-E'
+                ),
+                _react2['default'].createElement(
+                  'li',
+                  null,
+                  'Seguido se sumerge en SD 2 durante 5 minutos y después lavado con 3 A-D-E'
+                )
+              )
+            )
+          ),
+          _react2['default'].createElement('hr', { className: 'line-divider' }),
+          _react2['default'].createElement(
+            _reactBootstrap.Row,
+            null,
+            _react2['default'].createElement(
+              _reactBootstrap.Col,
+              { xs: 12, sm: 12, md: 7, lg: 7 },
+              _react2['default'].createElement(
+                'div',
+                { className: 'txt-vertical-center' },
+                _react2['default'].createElement(
+                  'p',
+                  { className: 'txt-parrafo cl' },
+                  'Para sacar el domo meristemático se coloca el explante en la caja de Petri y se disecciona cada uno de los primordios foliares que se encuentran en espiral.'
+                )
+              )
+            ),
+            _react2['default'].createElement(
+              _reactBootstrap.Col,
+              { xs: 12, sm: 12, md: 5, lg: 5 },
+              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo4/modal6c.jpg', alt: 'Foto 43' })
+            )
+          ),
+          _react2['default'].createElement('hr', { className: 'line-divider' }),
+          _react2['default'].createElement(
+            _reactBootstrap.Row,
+            null,
+            _react2['default'].createElement(
+              _reactBootstrap.Col,
+              { xs: 12, sm: 12, md: 5, lg: 5 },
+              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo4/modal6d.jpg', alt: 'Medio de cultivo' })
+            ),
+            _react2['default'].createElement(
+              _reactBootstrap.Col,
+              { xs: 12, sm: 12, md: 7, lg: 7 },
+              _react2['default'].createElement(
+                'div',
+                { className: 'txt-vertical-center' },
+                _react2['default'].createElement(
+                  'p',
+                  { className: 'txt-parrafo cl' },
+                  'Después de extraer el meristemo se procede a sembrarlo en un frasco con el medio de cultivo MS-MB1. Para esto se destapa el tarro, se flamea la tapa, luego se mantiene cerca al mechero encendido el frasco se siembra en barrido con la punta del bisturí. Se flamea la boquilla y la tapa, para luego cerrar el tarro, flamearlo y sellarlo con vinipel. Se etiqueta con la fecha, genotipo y medio de cultivo. Se guarda en una caja a oscuridad durante 4 días en un cuarto a 300C. Terminado este tiempo se saca a intensidad lumínica de 3.000 lux y con un fotoperíodo de 16 horas luz y 8 noche.'
+                )
               )
             )
           )
@@ -6111,7 +6133,7 @@ module.exports = exports['default'];
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
-    value: true
+  value: true
 });
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -6133,340 +6155,108 @@ var _react2 = _interopRequireDefault(_react);
 var _reactBootstrap = require('react-bootstrap');
 
 var Modal7 = (function (_React$Component) {
-    _inherits(Modal7, _React$Component);
+  _inherits(Modal7, _React$Component);
 
-    function Modal7(props) {
-        _classCallCheck(this, Modal7);
+  function Modal7(props) {
+    _classCallCheck(this, Modal7);
 
-        _get(Object.getPrototypeOf(Modal7.prototype), 'constructor', this).call(this, props);
+    _get(Object.getPrototypeOf(Modal7.prototype), 'constructor', this).call(this, props);
+  }
+
+  _createClass(Modal7, [{
+    key: 'onClose',
+    value: function onClose(ev) {
+      this.props.onHide.call(null, 'modulo4/10');
     }
-
-    _createClass(Modal7, [{
-        key: 'onClose',
-        value: function onClose(ev) {
-            this.props.onHide.call(null, 'modulo4/10');
-        }
-    }, {
-        key: 'render',
-        value: function render() {
-            return _react2['default'].createElement(
-                _reactBootstrap.Modal,
-                _extends({}, this.props, { bsSize: 'large' }),
+  }, {
+    key: 'render',
+    value: function render() {
+      return _react2['default'].createElement(
+        _reactBootstrap.Modal,
+        _extends({}, this.props, { bsSize: 'large' }),
+        _react2['default'].createElement(
+          _reactBootstrap.Modal.Header,
+          { closeButton: true },
+          _react2['default'].createElement(
+            _reactBootstrap.Modal.Title,
+            null,
+            _react2['default'].createElement(
+              'h4',
+              null,
+              _react2['default'].createElement(
+                _reactBootstrap.Label,
+                { bsStyle: 'success' },
+                'Micropropagación in vitro'
+              )
+            )
+          )
+        ),
+        _react2['default'].createElement(
+          _reactBootstrap.Modal.Body,
+          null,
+          _react2['default'].createElement(
+            _reactBootstrap.Row,
+            null,
+            _react2['default'].createElement(
+              _reactBootstrap.Col,
+              { xs: 12, sm: 12, md: 12, lg: 12, className: 'txt-center' },
+              _react2['default'].createElement(
+                'h1',
+                null,
                 _react2['default'].createElement(
-                    _reactBootstrap.Modal.Header,
-                    { closeButton: true },
-                    _react2['default'].createElement(
-                        _reactBootstrap.Modal.Title,
-                        null,
-                        _react2['default'].createElement(
-                            'h4',
-                            null,
-                            _react2['default'].createElement(
-                                _reactBootstrap.Label,
-                                { bsStyle: 'success' },
-                                'Componentes'
-                            )
-                        )
-                    )
-                ),
-                _react2['default'].createElement(
-                    _reactBootstrap.Modal.Body,
-                    null,
-                    _react2['default'].createElement(
-                        _reactBootstrap.Row,
-                        null,
-                        _react2['default'].createElement(
-                            _reactBootstrap.Col,
-                            { xs: 12, sm: 12, md: 12, lg: 12, className: 'txt-center' },
-                            _react2['default'].createElement(
-                                'h1',
-                                null,
-                                _react2['default'].createElement(
-                                    'b',
-                                    null,
-                                    'Componentes del medio de cultivo'
-                                )
-                            ),
-                            _react2['default'].createElement(
-                                'p',
-                                null,
-                                'La composición del medio de cultivo está definida por los siguientes requerimientos de los explantes.'
-                            )
-                        )
-                    ),
-                    _react2['default'].createElement('hr', { className: 'line-divider' }),
-                    _react2['default'].createElement(
-                        _reactBootstrap.Row,
-                        null,
-                        _react2['default'].createElement(
-                            _reactBootstrap.Col,
-                            { xs: 12, sm: 12, md: 7, lg: 7 },
-                            _react2['default'].createElement(
-                                'div',
-                                { className: 'txt-vertical-center' },
-                                _react2['default'].createElement(
-                                    'h2',
-                                    null,
-                                    _react2['default'].createElement(
-                                        'b',
-                                        null,
-                                        'Agua. '
-                                    )
-                                ),
-                                ' ',
-                                _react2['default'].createElement(
-                                    'p',
-                                    { className: 'txt-parrafo' },
-                                    'El agua que se utiliza en el laboratorio es destilada. No se recomienda el  uso de aguas “duras” por  poseer altas concentraciones de Ca y Mg que pueden desregular el uso de sales de MS cuando se aplican.'
-                                )
-                            )
-                        ),
-                        _react2['default'].createElement(
-                            _reactBootstrap.Col,
-                            { xs: 12, sm: 12, md: 5, lg: 5 },
-                            _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo3/agua.jpg', alt: 'Medio de cultivo' })
-                        )
-                    ),
-                    _react2['default'].createElement('hr', { className: 'line-divider' }),
-                    _react2['default'].createElement(
-                        _reactBootstrap.Row,
-                        null,
-                        _react2['default'].createElement(
-                            _reactBootstrap.Col,
-                            { xs: 12, sm: 12, md: 5, lg: 5 },
-                            _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo3/stocks.jpg', alt: 'Medio de cultivo' })
-                        ),
-                        _react2['default'].createElement(
-                            _reactBootstrap.Col,
-                            { xs: 12, sm: 12, md: 7, lg: 7 },
-                            _react2['default'].createElement(
-                                'div',
-                                { className: 'txt-vertical-center' },
-                                _react2['default'].createElement(
-                                    'h2',
-                                    null,
-                                    _react2['default'].createElement(
-                                        'b',
-                                        null,
-                                        'Los stocks.'
-                                    )
-                                ),
-                                _react2['default'].createElement(
-                                    'p',
-                                    { className: 'txt-parrafo' },
-                                    ' Poseen los macronutrientes, micronutrientes y vitaminas (Stocks 1-6). Se usan de acuerdo a la concentración que poseen y la cantidad de medio de cultivo que se va a preparar; y reducir cuando se complementa con sustancias orgánicas.'
-                                )
-                            )
-                        )
-                    ),
-                    _react2['default'].createElement('hr', { className: 'line-divider' }),
-                    _react2['default'].createElement(
-                        _reactBootstrap.Row,
-                        null,
-                        _react2['default'].createElement(
-                            _reactBootstrap.Col,
-                            { xs: 12, sm: 12, md: 7, lg: 7 },
-                            _react2['default'].createElement(
-                                'div',
-                                { className: 'txt-vertical-center' },
-                                _react2['default'].createElement(
-                                    'h2',
-                                    null,
-                                    _react2['default'].createElement(
-                                        'b',
-                                        null,
-                                        'Fitohormonas.'
-                                    )
-                                ),
-                                _react2['default'].createElement(
-                                    'p',
-                                    { className: 'txt-parrafo' },
-                                    ' Los reguladores de crecimiento se preparan en los stocks (8-10) para su uso, de acuerdo con el tipo de explante (foto 33);  en algunas ocasiones, en el caso de microestacas, por ejemplo,  pueden ser o no utilizados, con base en criterios científico-técnicos.'
-                                )
-                            )
-                        ),
-                        _react2['default'].createElement(
-                            _reactBootstrap.Col,
-                            { xs: 12, sm: 12, md: 5, lg: 5 },
-                            _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo3/Fitohormonas.jpg', alt: 'Medio de cultivo' })
-                        )
-                    ),
-                    _react2['default'].createElement('hr', { className: 'line-divider' }),
-                    _react2['default'].createElement(
-                        _reactBootstrap.Row,
-                        null,
-                        _react2['default'].createElement(
-                            _reactBootstrap.Col,
-                            { xs: 12, sm: 12, md: 5, lg: 5 },
-                            _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo3/carbono.jpg', alt: 'Medio de cultivo' })
-                        ),
-                        _react2['default'].createElement(
-                            _reactBootstrap.Col,
-                            { xs: 12, sm: 12, md: 7, lg: 7 },
-                            _react2['default'].createElement(
-                                'div',
-                                { className: 'txt-vertical-center' },
-                                _react2['default'].createElement(
-                                    'h2',
-                                    null,
-                                    _react2['default'].createElement(
-                                        'b',
-                                        null,
-                                        'Fuente de carbono.'
-                                    )
-                                ),
-                                _react2['default'].createElement(
-                                    'p',
-                                    { className: 'txt-parrafo' },
-                                    ' Por estar cerrado envuelto con cinta vinipel, el frasco de las vitroplantas, entra muy poco CO2. Por tanto, su carencia  se suple con las fuentes de carbono  Mio-inositol y la sacarosa (o azúcar de cocina)'
-                                )
-                            )
-                        )
-                    ),
-                    _react2['default'].createElement('hr', { className: 'line-divider' }),
-                    _react2['default'].createElement(
-                        _reactBootstrap.Row,
-                        null,
-                        _react2['default'].createElement(
-                            _reactBootstrap.Col,
-                            { xs: 12, sm: 12, md: 7, lg: 7 },
-                            _react2['default'].createElement(
-                                'div',
-                                { className: 'txt-vertical-center' },
-                                _react2['default'].createElement(
-                                    'h2',
-                                    null,
-                                    _react2['default'].createElement(
-                                        'b',
-                                        null,
-                                        'Agente gelificante.'
-                                    )
-                                ),
-                                _react2['default'].createElement(
-                                    'p',
-                                    { className: 'txt-parrafo' },
-                                    ' Para la consistencia semisólida del medio de cultivo se aplica el agente gelificante phytagel (foto 35), el cual, aparte de endurecerlo, facilita que las raíces de la planta u otros tejidos asimilen los nutrientes requeridos.'
-                                )
-                            )
-                        ),
-                        _react2['default'].createElement(
-                            _reactBootstrap.Col,
-                            { xs: 12, sm: 12, md: 5, lg: 5 },
-                            _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo3/gelificante.jpg', alt: 'Medio de cultivo' })
-                        )
-                    ),
-                    _react2['default'].createElement('hr', { className: 'line-divider' }),
-                    _react2['default'].createElement(
-                        _reactBootstrap.Row,
-                        null,
-                        _react2['default'].createElement(
-                            _reactBootstrap.Col,
-                            { xs: 12, sm: 12, md: 5, lg: 5 },
-                            _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo3/carbonactivado.jpg', alt: 'Medio de cultivo' })
-                        ),
-                        _react2['default'].createElement(
-                            _reactBootstrap.Col,
-                            { xs: 12, sm: 12, md: 7, lg: 7 },
-                            _react2['default'].createElement(
-                                'div',
-                                { className: 'txt-vertical-center' },
-                                _react2['default'].createElement(
-                                    'h2',
-                                    null,
-                                    _react2['default'].createElement(
-                                        'b',
-                                        null,
-                                        'Carbón activado.'
-                                    )
-                                ),
-                                _react2['default'].createElement(
-                                    'p',
-                                    { className: 'txt-parrafo' },
-                                    ' Se utiliza principalmente cuando se suplementa el medio de cultivo con sustancias orgánicas, pues tiene un efecto antioxidante y disminuye los niveles de contaminación.'
-                                )
-                            )
-                        )
-                    ),
-                    _react2['default'].createElement('hr', { className: 'line-divider' }),
-                    _react2['default'].createElement(
-                        _reactBootstrap.Row,
-                        null,
-                        _react2['default'].createElement(
-                            _reactBootstrap.Col,
-                            { xs: 12, sm: 12, md: 7, lg: 7 },
-                            _react2['default'].createElement(
-                                'div',
-                                { className: 'txt-vertical-center' },
-                                _react2['default'].createElement(
-                                    'h2',
-                                    null,
-                                    _react2['default'].createElement(
-                                        'b',
-                                        null,
-                                        'Ajustar el pH.'
-                                    )
-                                ),
-                                _react2['default'].createElement(
-                                    'p',
-                                    { className: 'txt-parrafo' },
-                                    ' Se necesita un pH  entre 5,7  y 5,8 para que los explantes puedan crecer normalmente. Por tanto, si el pH está más bajo, se aplica la KOH 1N; si está más alto, se aplica HCL 1N.'
-                                )
-                            )
-                        ),
-                        _react2['default'].createElement(
-                            _reactBootstrap.Col,
-                            { xs: 12, sm: 12, md: 5, lg: 5 },
-                            _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo3/ph.jpg', alt: 'Medio de cultivo' })
-                        )
-                    ),
-                    _react2['default'].createElement('hr', { className: 'line-divider' }),
-                    _react2['default'].createElement(
-                        _reactBootstrap.Row,
-                        null,
-                        _react2['default'].createElement(
-                            _reactBootstrap.Col,
-                            { xs: 12, sm: 12, md: 5, lg: 5 },
-                            _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo3/organicas.jpg', alt: 'Medio de cultivo' })
-                        ),
-                        _react2['default'].createElement(
-                            _reactBootstrap.Col,
-                            { xs: 12, sm: 12, md: 7, lg: 7 },
-                            _react2['default'].createElement(
-                                'div',
-                                { className: 'txt-vertical-center' },
-                                _react2['default'].createElement(
-                                    'h2',
-                                    null,
-                                    _react2['default'].createElement(
-                                        'b',
-                                        null,
-                                        'Sustancias orgánicas.'
-                                    )
-                                ),
-                                _react2['default'].createElement(
-                                    'p',
-                                    { className: 'txt-parrafo' },
-                                    ' La sustancia orgánica efectiva para suplementar el medio de cultivo MS,  es el agua de coco.'
-                                )
-                            )
-                        )
-                    ),
-                    _react2['default'].createElement('hr', { className: 'line-divider' })
-                ),
-                _react2['default'].createElement(
-                    _reactBootstrap.Modal.Footer,
-                    null,
-                    _react2['default'].createElement(
-                        'button',
-                        { onClick: this.onClose.bind(this) },
-                        'Cerrar'
-                    )
+                  'b',
+                  null,
+                  'Microestacas: regeneración de brotes.'
                 )
-            );
-        }
-    }]);
+              ),
+              _react2['default'].createElement(
+                'p',
+                null,
+                'Después de sembrar el tejido meristemático la planta dura dos meses para generar brote (tallo, peciolo y hojas).'
+              )
+            )
+          ),
+          _react2['default'].createElement(
+            _reactBootstrap.Row,
+            null,
+            _react2['default'].createElement(
+              _reactBootstrap.Col,
+              { xs: 12, sm: 12, md: 12, lg: 12 },
+              _react2['default'].createElement(
+                'div',
+                { className: 'txt-vertical-center' },
+                _react2['default'].createElement(
+                  'p',
+                  { className: 'txt-parrafo' },
+                  'El subcultivo se realiza a través de cortes diagonales uninodales a los brotes obtebidos, generando microestacas que se siembran en medio de cultivo MS-MB2 para el desarrollo de raíces, tallo y hojas. Se etiqueta los tarros con el genotipo (Brasilera), fecha y medio de cultivo.'
+                )
+              )
+            )
+          ),
+          _react2['default'].createElement(
+            _reactBootstrap.Row,
+            null,
+            _react2['default'].createElement(
+              _reactBootstrap.Col,
+              { xs: 10, sm: 10, md: 10, lg: 10 },
+              _react2['default'].createElement('img', { className: 'img-modal-show4', src: 'public/img/modulo4/modal7.jpg', alt: 'Medio de cultivo' })
+            )
+          )
+        ),
+        _react2['default'].createElement(
+          _reactBootstrap.Modal.Footer,
+          null,
+          _react2['default'].createElement(
+            'button',
+            { onClick: this.onClose.bind(this) },
+            'Cerrar'
+          )
+        )
+      );
+    }
+  }]);
 
-    return Modal7;
+  return Modal7;
 })(_react2['default'].Component);
 
 exports['default'] = Modal7;

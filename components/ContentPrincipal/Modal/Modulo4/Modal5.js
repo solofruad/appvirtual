@@ -20,25 +20,20 @@ export default class Modal5 extends React.Component {
 	let mod=1;
 			return	<Modal {...this.props}>
 				<Modal.Header closeButton>
-					<Modal.Title><Label bsStyle='success'>Introducción! </Label></Modal.Title>
+					<Modal.Title><Label bsStyle='success'>Micropropagaci&oacute;n in vitro</Label></Modal.Title>
 				</Modal.Header>
 				<Modal.Body>
 				<Row>
 					<Col xs={12} sm={12} md={12} lg={12} className="txt-center">
-						<h1><b>PREPARACIÓN DE MEDIOS DE CULTIVO</b></h1><br/>
+						<h1><b>Meristemos</b></h1>
+						<p>Los tejidos vegetales, que presentan mayor nivel de totipotencia son los meristemos.</p>
 					</Col>
 				</Row>
 				<Row>
 					<Col xs={12} sm={12} md={12} lg={12}>
-						<center><p className="txt-parrafo">Las plantas necesitan un soporte para su desarrollo radicular y sostenimiento: nutrientes, vitaminas, fuente de carbono y reguladores de crecimiento para un  efectivo establecimiento <i>in vitro</i>  y para su posterior adaptación <i>ex vitro</i>.  El medio de cultivo debe cumplir requisitos estandarizados para que la producción de vitroplantas no presente ninguna complicación.</p></center>
+						<center><p className="txt-parrafo">Los meristemos generalmente se encuentran ubicados en el ápice del tallo, meristemo apical del tallo (MAT),  o, la raíz, meristemo apical de la raíz (MAR). Existen, también, los meristemos axilares (MA) o intercalares (MI), que se encuentran en la posición nodal o entrenudos. Estos tejidos (MAT, MAR y MA) poseen mayor totipotencia, elevadas tasas de división celular (mitosis) por ser puntos de crecimiento e indiferenciación; que fácilmente en un medio de cultivo idóneo pueden generar una nueva planta.</p></center>
 					</Col>
-				</Row><br />
-				<Row>
-					<Col xs={12} sm={12} md={12} lg={12}>
-						<p><center>En este capitulo podrás encontrar lo necesario para continuar con el aprendizaje de <span className="txt-green">cultivo de tejidos vegetales</span>, recuerda tienes al final un ejercicio práctico para que interactues y refuerces aún más en la preparación en un laboratorio. </center></p>
-						<center><Label bsStyle='success'>Medios de Cultivo</Label>&nbsp;<Label bsStyle='success'>Componentes del medio de cultivo</Label>&nbsp;<Label bsStyle='success'>Simulación</Label></center>
-					</Col>
-				</Row>
+				</Row>				
 				</Modal.Body>
 				<Modal.Footer>
 					<button onClick={this.onClose.bind(this)}>Cerrar</button>

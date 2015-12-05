@@ -37,14 +37,14 @@ export default[
 	},
 	{
 		modulo: "modulo4/7",
-		titulo: 'Componentes del medio de cultivo.',
-		descripcion: 'La composición del medio de cultivo está definida por los requerimientos de los explantes...',
+		titulo: 'Meristemos.',
+		descripcion: 'Los tejidos vegetales, que presentan mayor nivel de totipotencia son los meristemos. Se le denomina “domo” o “cúpula” meristemática.',
 		url: 'javascript:void(0)',
 	},
 	{
 		modulo: "modulo4/8",
-		titulo: 'Meristemos',
-		descripcion: 'Los tejidos vegetales, que presentan mayor nivel de totipotencia son los meristemos. Se le denomina “domo” o “cúpula” meristemática.',
+		titulo: 'Extracción, siembra e incubación',
+		descripcion: 'De las plantas donadoras se corta los explantes apicales, en este caso los de la porción apical del tallo, donde se encuentra (MAT) y se deja sumergir directamente en 1% de NaOCl...',
 		url: 'javascript:void(0)',
 	},
 	{
@@ -55,14 +55,14 @@ export default[
 	},
 	{
 		modulo: "modulo4/10",
-		titulo: 'Extracción, siembra e incubación',
-		descripcion: 'De las plantas donadoras se corta los explantes apicales, en este caso los de la porción apical del tallo, donde se encuentra (MAT) y se deja sumergir directamente en 1% de NaOCl...',
+		titulo: 'Microestacas: regeneración de brotes.',
+		descripcion: 'Después de sembrar el tejido meristemático la planta dura dos meses para generar brote (tallo, peciolo y hojas).',
 		url: 'javascript:void(0)'
 	},
 	{
 		modulo: "modulo4/11",
-		titulo: 'Corte de explantes después de protocolo de desinfección.',
-		descripcion: 'Para sacar el domo meristemático se coloca el explante en la caja de Petri y se disecciona cada uno de los primordios foliares que se encuentran en espiral...',
+		titulo: 'Crecimiento de microestacas',
+		descripcion: '',
 		url: 'javascript:void(0)'
 	},
 	{
@@ -73,8 +73,8 @@ export default[
 	},
 	{
 		modulo: "modulo4/13",
-		titulo: 'Microestacas: regeneración de brotes',
-		descripcion: 'Después de sembrar el tejido meristemático la planta dura dos meses para generar brote (tallo, peciolo y hojas).',
+		titulo: 'Propagación masiva por microestacas',
+		descripcion: '',
 		url: 'javascript:void(0)',
 	},
 	{
