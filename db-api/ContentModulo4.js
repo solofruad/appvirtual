@@ -49,20 +49,20 @@ export default[
 	},
 	{
 		modulo: "modulo4/9",
-		titulo: '',
-		descripcion: '',
-		url: 'javascript:void(0)'
-	},
-	{
-		modulo: "modulo4/10",
 		titulo: 'Microestacas: regeneración de brotes.',
 		descripcion: 'Después de sembrar el tejido meristemático la planta dura dos meses para generar brote (tallo, peciolo y hojas).',
 		url: 'javascript:void(0)'
 	},
 	{
-		modulo: "modulo4/11",
+		modulo: "modulo4/10",
 		titulo: 'Crecimiento de microestacas',
-		descripcion: '',
+		descripcion: 'Los tarros se llevan a cuarto de crecimiento que presenta las siguientes características: temperatura de 300C, Luminosidad...',
+		url: 'javascript:void(0)'
+	},
+	{
+		modulo: "modulo4/11",
+		titulo: 'Propagación masiva por microestacas',
+		descripcion: 'Las apicales se siembra aparte pues su crecimiento es más rápido. Se utilizan el MS-MB3 que no contiene ningún regulador de crecimiento.',
 		url: 'javascript:void(0)'
 	},
 	{
@@ -70,29 +70,5 @@ export default[
 		titulo: '',
 		descripcion: '',
 		url: 'javascript:void(0)'
-	},
-	{
-		modulo: "modulo4/13",
-		titulo: 'Propagación masiva por microestacas',
-		descripcion: '',
-		url: 'javascript:void(0)',
-	},
-	{
-		modulo: "modulo4/14",
-		titulo: '',
-		descripcion: '',
-		url: 'javascript:void(0)',
-	},
-	{
-		modulo: "modulo4/15",
-		titulo: '',
-		descripcion: '',
-		url: 'javascript:void(0)',
-	},
-	{
-		modulo: "modulo4/16",
-		titulo: '¡Preparate!. Práctica de laboratorio',
-		descripcion: 'Ejercicio práctico para que recuerdes las composiciones de los stocks.',
-		url: 'javascript:void(0)',
 	}
 ];

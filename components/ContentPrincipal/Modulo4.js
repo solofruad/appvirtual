@@ -17,17 +17,16 @@ import Modal6 from './Modal/Modulo4/Modal6';
 import Modal7 from './Modal/Modulo4/Modal7';
 import Modal8 from './Modal/Modulo4/Modal8';
 import Modal9 from './Modal/Modulo4/Modal9';
-import Modal10 from './Modal/Modulo4/Modal10';
 
 export default class Modulo4 extends React.Component {
 	constructor(props){
 		super(props);
-		this.state = { modulos: [], m1show: false, m2show: false, m3show: false, m4show: false, m5show: false, m6show: false, m7show: false, m8show: false, m9show: false, m10show: false};
+		this.state = { modulos: [], m1show: false, m2show: false, m3show: false, m4show: false, m5show: false, m6show: false, m7show: false, m8show: false, m9show: false};
 		this.open = this.open.bind(this);
 		this.close = this.close.bind(this);
 	}
 	getInitialState(){
-		return { m1show: false, m2show: false, m3show: false, m4show: false, m5show: false, m6show: false, m7show: false, m8show: false, m9show: false, m10show: false};
+		return { m1show: false, m2show: false, m3show: false, m4show: false, m5show: false, m6show: false, m7show: false, m8show: false, m9show: false};
 	}
 	open(mod){
 		if(mod=='modulo4/1') { this.setState({m1show: true}); }
@@ -36,10 +35,9 @@ export default class Modulo4 extends React.Component {
 		else if(mod=='modulo4/4') {this.setState({m4show: true});}
 		else if(mod=='modulo4/7') {this.setState({m5show: true});}
 		else if(mod=='modulo4/8') {this.setState({m6show: true});}
-		else if(mod=='modulo4/10') {this.setState({m7show: true});}
-		else if(mod=='modulo4/11') {this.setState({m8show: true});}
-		else if(mod=='modulo4/13') {this.setState({m9show: true});}
-		else if(mod=='modulo4/16') {this.setState({m10show: true});}
+		else if(mod=='modulo4/9') {this.setState({m7show: true});}
+		else if(mod=='modulo4/10') {this.setState({m8show: true});}
+		else if(mod=='modulo4/11') {this.setState({m9show: true});}
 		else {return false;}
 	}
 	close(mod){
@@ -49,10 +47,9 @@ export default class Modulo4 extends React.Component {
 		else if(mod=='modulo4/4') {this.setState({m4show: false});}
 		else if(mod=='modulo4/7') {this.setState({m5show: false});}
 		else if(mod=='modulo4/8') {this.setState({m6show: false});}
-		else if(mod=='modulo4/10') {this.setState({m7show: false});}
-		else if(mod=='modulo4/11') {this.setState({m8show: false});}
-		else if(mod=='modulo4/13') {this.setState({m9show: false});}
-		else if(mod=='modulo4/16') {this.setState({m10show: false});}
+		else if(mod=='modulo4/9') {this.setState({m7show: false});}
+		else if(mod=='modulo4/10') {this.setState({m8show: false});}
+		else if(mod=='modulo4/11') {this.setState({m9show: false});}
 		else {return false;	}
 	}
 	componentWillMount(){
@@ -73,7 +70,6 @@ export default class Modulo4 extends React.Component {
 				<Modal7 show={this.state.m7show} onHide={this.close} />
 				<Modal8 show={this.state.m8show} onHide={this.close} />
 				<Modal9 show={this.state.m9show} onHide={this.close} />
-				<Modal10 show={this.state.m10show} onHide={this.close} />
 			</div>
 		}
 		else {

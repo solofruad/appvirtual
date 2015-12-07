@@ -14,48 +14,25 @@ export default class Modal8 extends React.Component {
     super(props);
   }
   onClose(ev){
-    this.props.onHide.call(null,'modulo4/11')
+    this.props.onHide.call(null,'modulo4/10')
   }
   render(){
-      return  <Modal {...this.props}>
+      return  <Modal {...this.props} bsSize="large">
       <Modal.Header closeButton>
-        <Modal.Title><h4><Label bsStyle='success'>Elaboración</Label> Vitaminas</h4></Modal.Title>
+        <Modal.Title><h4><Label bsStyle='success'>Micropropagaci&oacute;n in vitro</Label></h4></Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <Row>
-          <Col xs={12} sm={12} md={12} lg={12}>
-            <h5><b>Elaboración de stocks 6</b></h5>
-            <p className="txt-parrafo">Generalmente, en el cultivo de tejidos se usa vitaminas del complejo B, principalmente necesita de la vitamina B1 o Tiamina. Designado aquí como stock 6. Éste se puede preparar a una concentración de 50X.</p>
+          <Col xs={12} sm={12} md={12} lg={12} className="txt-center">
+            <h1><b>Crecimiento de microestacas.</b></h1>
           </Col>
         </Row>
         <Row>
-          <Col xs={12} sm={12} md={12} lg={12}>
-            <Table responsive striped bordered condensed hover>
-              <thead>
-                <tr>
-                  <th colSpan="4"><center>Vitamina B1 de Stock 6</center></th>
-                </tr>
-                <tr>
-                  <th><b>NÚMERO STOCK</b></th>
-                  <th><b>COMPUESTO</b></th>
-                  <th><b>CANTIDAD (gr)</b></th>
-                  <th><b>AGUA DESTILADA</b></th>
-                </tr>
-              </thead>
-              <tbody>
-                  <tr>
-                    <td>6</td>
-                    <td>Vitamina B1</td>
-                    <td>0,0005</td>
-                    <td>100 ml</td>
-                  </tr>
-              </tbody>
-            </Table>
+          <Col xs={12} sm={12} md={6} lg={6}>
+            <img className="img-modal-show" src="public/img/modulo4/modal8.jpg" alt="Microestacas de yuca (M. esculenta) variedad brasilera."/>
           </Col>
-        </Row>
-        <Row>
-          <Col xs={12} sm={12} md={12} lg={12}>
-            <img className="img-modal-show" src="public/img/modulo1/maquina_6.jpg" alt="Sala de siembra"/>
+          <Col xs={12} sm={12} md={6} lg={6}>
+            <p className="txt-parrafo">Los tarros se llevan a cuarto de crecimiento que presenta las siguientes características: temperatura de 300C, Luminosidad de 3.000 lux y un fotoperíodo de 16 horas luz y 8 noches. Para mantener el atmosfera estéril se deja alcohol e hipoclorito en diferentes puntos del cuarto para su volatilización.</p>
           </Col>
         </Row>
       </Modal.Body>
