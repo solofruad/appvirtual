@@ -26,7 +26,7 @@ export default class Modal1 extends React.Component {
 				<Row>
 					<Col xs={12} sm={12} md={12} lg={12} className="txt-center">
 						<h1><b>MICROPROPAGACIÓN  IN VITRO</b></h1>
-						<span>(Planta donadora, Sustancias de limpieza y desinfectantes, Preparación de cámara de flujo laminar, Meristemos, Extracción, siembra e incubación, Corte de explantes después de protocolo de desinfección, Microestacas, Crecimiento de microestacas, Simulación)</span><br/>
+						<span>(Planta donadora, Sustancias de limpieza y desinfectantes, Preparación de cámara de flujo laminar, Meristemos, Extracción, siembra e incubación, Corte de explantes después de protocolo de desinfección, Microestacas, Crecimiento de microestacas)</span><br/>
 					</Col>
 				</Row><br/>
 				<Row>
@@ -36,7 +36,7 @@ export default class Modal1 extends React.Component {
 				</Row><br />
 				<Row>
 					<Col xs={12} sm={12} md={12} lg={12}>
-						<p><center>En este capitulo podrás encontrar lo necesario para continuar con el aprendizaje de <span className="txt-green">cultivo de tejidos vegetales</span>, recuerda tienes al final un ejercicio práctico para que interactues y refuerces aún más en la preparación en un laboratorio. </center></p>
+						<p><center>En este capitulo podrás encontrar lo necesario para continuar con el aprendizaje de <span className="txt-green">cultivo de tejidos vegetales.</span></center></p>
 					</Col>
 				</Row>
 				</Modal.Body>

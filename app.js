@@ -10,6 +10,7 @@ import ContentPrincipal from './components/ContentPrincipal/ContentPrincipal';
 import Modulo2 from './components/ContentPrincipal/Modulo2';
 import Modulo3 from './components/ContentPrincipal/Modulo3';
 import Modulo4 from './components/ContentPrincipal/Modulo4';
+import Modulo5 from './components/ContentPrincipal/Modulo5';
 import ContentCreditos from './components/ContentCreditos/ContentCreditos';
 import Menu from './components/nav/Menu';
 import Modulo1Content from './components/modulo1/Modulo1Content';
@@ -25,6 +26,7 @@ let routes = <Route handler={Menu} path='/'>
 		<Route name="Modulo2" path="modulo2" handler={Modulo2} />
 		<Route name="Modulo3" path="modulo3" handler={Modulo3} />
 		<Route name="Modulo4" path="modulo4" handler={Modulo4} />
+		<Route name="Modulo5" path="modulo5" handler={Modulo5} />
 		<Redirect from="microbiologia" to="Modulo1" params={{src: 2}} />
 	</Route>
 

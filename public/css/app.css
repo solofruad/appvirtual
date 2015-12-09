@@ -327,6 +327,13 @@ font-size:0.8em;
 	top:90%;
 	margin-top: 6rem;
 }
+.title-list-modal{
+	font-size: 2.2rem !important;
+}
+.title-list-modal span{
+	font-size: 2rem !important;
+	color: #9E9A9A;
+}
 .cont-modal-show{
 	position: absolute;
 }
@@ -350,7 +357,7 @@ font-size:0.8em;
 	position: relative;
 }
 .img-modal-show4{
-	width: 100%;
+	width: 90%;
 	position: relative;
 	text-align: center;
 	left: 10%;	
@@ -374,7 +381,7 @@ font-size:0.8em;
     overflow-y: initial !important
 }
 .modal-body{
-    max-height: 40em;
+    max-height: 47.5rem;
     overflow-y: auto;
 }
 

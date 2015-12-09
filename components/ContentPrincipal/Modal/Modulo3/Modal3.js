@@ -52,7 +52,7 @@ export default class Modal3 extends React.Component {
 						<div className="txt-vertical-center"><h2><b>Fitohormonas.</b></h2><p className="txt-parrafo"> Los reguladores de crecimiento se preparan en los stocks (8-10) para su uso, de acuerdo con el tipo de explante (foto 33);  en algunas ocasiones, en el caso de microestacas, por ejemplo,  pueden ser o no utilizados, con base en criterios científico-técnicos.</p></div>
           </Col>
           <Col xs={12} sm={12} md={5} lg={5}>
-            <img className="img-modal-show" src="public/img/modulo3/Fitohormonas.jpg" alt="Medio de cultivo"/>
+            <img className="img-modal-show" src="public/img/modulo3/fitohormonas.jpg" alt="Medio de cultivo"/>
           </Col>
         </Row>
 				<hr className="line-divider"></hr>

@@ -9,6 +9,7 @@ import modulo1 from './ContentModulo1';
 import modulo2 from './ContentModulo2';
 import modulo3 from './ContentModulo3';
 import modulo4 from './ContentModulo4';
+import modulo5 from './ContentModulo5';
 
 export default {
   contenido: {
@@ -55,6 +56,13 @@ export default {
     find: function(callback){
       setTimeout(()=> {
         callback(modulo4);
+      },3000);
+    }
+  },
+  modulo5:{
+    find: function(callback){
+      setTimeout(()=> {
+        callback(modulo5);
       },3000);
     }
   }

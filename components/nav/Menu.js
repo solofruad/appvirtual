@@ -38,7 +38,8 @@ export default class Menu extends React.Component {
 			          <MenuItemLink to="Modulo1" params={{ src: 1 }} className="reloadModulo">Modulo 1</MenuItemLink>
 			          <MenuItemLink to="Modulo2" params={{ src: 'hello' }}>Modulo 2</MenuItemLink>
 			          <MenuItemLink to="Modulo3" params={{ src: 'hello' }}>Modulo 3</MenuItemLink>
-								<MenuItemLink to="Modulo4" params={{ src: 'hello' }}>Modulo 4</MenuItemLink>
+					  <MenuItemLink to="Modulo4" params={{ src: 'hello' }}>Modulo 4</MenuItemLink>
+					  <MenuItemLink to="Modulo5" params={{ src: 'hello' }}>Modulo 5</MenuItemLink>
 			          <MenuItem divider />
 			          <MenuItemLink to="Creditos" params={{ src: 'hello' }}>Simulación 1</MenuItemLink>
 			          <MenuItemLink to="Creditos" params={{ src: 'hello' }}>Simulación 2</MenuItemLink>

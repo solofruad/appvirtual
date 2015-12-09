@@ -30,7 +30,7 @@ export default class Modal7 extends React.Component {
         </Row>
         <Row>
           <Col xs={12} sm={12} md={12} lg={12}>
-						<div className="txt-vertical-center"><p className="txt-parrafo">El subcultivo se realiza a través de cortes diagonales uninodales a los brotes obtebidos, generando microestacas que se siembran en medio de cultivo MS-MB2 para el desarrollo de raíces, tallo y hojas. Se etiqueta los tarros con el genotipo (Brasilera), fecha y medio de cultivo.</p></div>
+						<p className="txt-parrafo">El subcultivo se realiza a través de cortes diagonales uninodales a los brotes obtebidos, generando microestacas que se siembran en medio de cultivo MS-MB2 para el desarrollo de raíces, tallo y hojas. Se etiqueta los tarros con el genotipo (Brasilera), fecha y medio de cultivo.</p>
           </Col>
 				</Row>
 				<Row>
