@@ -22,7 +22,7 @@ export default class Modulos extends React.Component {
 						modulo={content.modulo} 
 						titulo={content.titulo}
 						descripcion={content.descripcion}
-						url={content.url} 
+						url={content.url} 						
 						open={this.props.open}/>						
 				})	
 				}	

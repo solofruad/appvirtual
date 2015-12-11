@@ -6597,7 +6597,7 @@ var Modal2 = (function (_React$Component) {
               _react2['default'].createElement(
                 _reactBootstrap.Label,
                 { bsStyle: 'success' },
-                'Elaboración'
+                'Etapa Ex Vitro'
               )
             )
           )
@@ -6723,8 +6723,27 @@ var Modal2 = (function (_React$Component) {
                 { className: 'txt-vertical-center' },
                 _react2['default'].createElement(
                   'p',
-                  { className: 'txt-parrafo cl' },
-                  'Luego de la anterior, se hace la extracción. Se quita el vinipel y la tapa. Se golpea suavemente la base del tarro y delicadamente se saca la planta del frasco. Utilizando agua, se retirara los residuos del gel. '
+                  { className: 'title-list-modal' },
+                  _react2['default'].createElement(
+                    'b',
+                    null,
+                    'Luego de la anterior, se hace la extracción. '
+                  ),
+                  _react2['default'].createElement(
+                    'span',
+                    null,
+                    'Se quita el vinipel y la tapa.'
+                  )
+                ),
+                _react2['default'].createElement(
+                  'p',
+                  { className: 'txt-into' },
+                  _react2['default'].createElement(
+                    'span',
+                    { className: 'capitalLetter' },
+                    _react2['default'].createElement('i', { className: 'fa fa-chevron-right' })
+                  ),
+                  'Se golpea suavemente la base del tarro y delicadamente se saca la planta del frasco. Utilizando agua, se retirara los residuos del gel. '
                 )
               )
             ),
@@ -6751,8 +6770,17 @@ var Modal2 = (function (_React$Component) {
                 { className: 'txt-vertical-center' },
                 _react2['default'].createElement(
                   'p',
-                  { className: 'txt-parrafo cl' },
-                  'Se lava las raíces con abundante agua, se quita las hojas basales o “bajeras”.'
+                  { className: 'title-list-modal' },
+                  _react2['default'].createElement(
+                    'b',
+                    null,
+                    'Se lava las raíces con abundante agua, '
+                  ),
+                  _react2['default'].createElement(
+                    'span',
+                    null,
+                    'se quita las hojas basales o “bajeras”.'
+                  )
                 )
               )
             )
@@ -6769,8 +6797,17 @@ var Modal2 = (function (_React$Component) {
                 { className: 'txt-vertical-center' },
                 _react2['default'].createElement(
                   'p',
-                  { className: 'txt-parrafo cl' },
-                  'Sembrar en sustrato (1:1 Aserrín y humus solido) esterilizado. También se puede utilizar en la misma proporción cascarilla.'
+                  { className: 'title-list-modal' },
+                  _react2['default'].createElement(
+                    'b',
+                    null,
+                    'Sembrar en sustrato (1:1 Aserrín y humus solido) esterilizado. '
+                  ),
+                  _react2['default'].createElement(
+                    'span',
+                    null,
+                    'También se puede utilizar en la misma proporción cascarilla.'
+                  )
                 )
               )
             ),
@@ -6797,14 +6834,46 @@ var Modal2 = (function (_React$Component) {
                 { className: 'txt-vertical-center' },
                 _react2['default'].createElement(
                   'p',
-                  { className: 'txt-parrafo cl' },
-                  'Poner vaso con perforaciones en la base durante dos semanas para que la planta genere un microclima que le permita regular el intercambio gaseoso, temperatura y luminosidad en menor grado. En la segunda semana se levanta de un lado para dejarlo en diagonal y permitir que aumente un poco la salida y entrada de gases. Se sugiere irrigar 20ml de agua día de por medio y un palo de paleta rotulado con el genotipo de planta y la fecha de transplante'
+                  { className: 'title-list-modal' },
+                  _react2['default'].createElement(
+                    'b',
+                    null,
+                    'Poner vaso con perforaciones en la base durante dos semanas '
+                  ),
+                  _react2['default'].createElement(
+                    'span',
+                    null,
+                    'para que la planta genere un microclima'
+                  )
                 ),
                 _react2['default'].createElement(
                   'p',
-                  { className: 'txt-parrafo cl' },
-                  'Se coloca la planta en radiación solar, durante la primera semana, de 7 am a 10 am y de 2 pm a 5 pm, sin exposición directa al sol (polisombra 50%). En la segunda,  se puede exponer durante todo el día, sin exposición directa al sol (polisombra 50%).'
+                  { className: 'txt-into' },
+                  _react2['default'].createElement(
+                    'span',
+                    { className: 'capitalLetter' },
+                    _react2['default'].createElement('i', { className: 'fa fa-chevron-right' })
+                  ),
+                  'que le permita regular el intercambio gaseoso, temperatura y luminosidad en menor grado.'
                 )
+              )
+            )
+          ),
+          _react2['default'].createElement(
+            _reactBootstrap.Row,
+            null,
+            _react2['default'].createElement(
+              _reactBootstrap.Col,
+              { xs: 12, sm: 12, md: 12, lg: 12 },
+              _react2['default'].createElement(
+                'p',
+                { className: 'txt-parrafo' },
+                'En la segunda semana se levanta de un lado para dejarlo en diagonal y permitir que aumente un poco la salida y entrada de gases. Se sugiere irrigar 20ml de agua día de por medio y un palo de paleta rotulado con el genotipo de planta y la fecha de transplante.'
+              ),
+              _react2['default'].createElement(
+                'p',
+                { className: 'txt-parrafo' },
+                'Se coloca la planta en radiación solar, durante la primera semana, de 7 am a 10 am y de 2 pm a 5 pm, sin exposición directa al sol (polisombra 50%). En la segunda,  se puede exponer durante todo el día, sin exposición directa al sol (polisombra 50%).'
               )
             )
           ),
@@ -6820,8 +6889,27 @@ var Modal2 = (function (_React$Component) {
                 { className: 'txt-vertical-center' },
                 _react2['default'].createElement(
                   'p',
-                  { className: 'txt-parrafo cl' },
-                  'Dos semanas después del transplante se retira el vaso y se mantiene 6 semanas más. Aunque el sustrato contiene nutrientes se recomienda realizar una fertilización edáfica o foliar semanal.'
+                  { className: 'title-list-modal' },
+                  _react2['default'].createElement(
+                    'b',
+                    null,
+                    'Dos semanas después del transplante se retira el vaso '
+                  ),
+                  _react2['default'].createElement(
+                    'span',
+                    null,
+                    'y se mantiene 6 semanas más.'
+                  )
+                ),
+                _react2['default'].createElement(
+                  'p',
+                  { className: 'txt-into' },
+                  _react2['default'].createElement(
+                    'span',
+                    { className: 'capitalLetter' },
+                    _react2['default'].createElement('i', { className: 'fa fa-chevron-right' })
+                  ),
+                  'Aunque el sustrato contiene nutrientes se recomienda realizar una fertilización edáfica o foliar semanal.'
                 )
               )
             ),
@@ -6848,7 +6936,12 @@ var Modal2 = (function (_React$Component) {
                 { className: 'txt-vertical-center' },
                 _react2['default'].createElement(
                   'p',
-                  { className: 'txt-parrafo cl' },
+                  { className: 'txt-into' },
+                  _react2['default'].createElement(
+                    'span',
+                    { className: 'capitalLetter' },
+                    _react2['default'].createElement('i', { className: 'fa fa-chevron-right' })
+                  ),
                   'A la 8 semana, la planta puede salir a campo o, coger otra vía, para aumentar la producción del material a través de miniestacas.'
                 )
               )
@@ -6883,10 +6976,8 @@ module.exports = exports['default'];
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
-    value: true
+  value: true
 });
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
@@ -6905,340 +6996,100 @@ var _react2 = _interopRequireDefault(_react);
 var _reactBootstrap = require('react-bootstrap');
 
 var Modal3 = (function (_React$Component) {
-    _inherits(Modal3, _React$Component);
+  _inherits(Modal3, _React$Component);
 
-    function Modal3(props) {
-        _classCallCheck(this, Modal3);
+  function Modal3(props) {
+    _classCallCheck(this, Modal3);
 
-        _get(Object.getPrototypeOf(Modal3.prototype), 'constructor', this).call(this, props);
+    _get(Object.getPrototypeOf(Modal3.prototype), 'constructor', this).call(this, props);
+  }
+
+  _createClass(Modal3, [{
+    key: 'onClose',
+    value: function onClose(ev) {
+      this.props.onHide.call(null, 'modulo5/4');
     }
-
-    _createClass(Modal3, [{
-        key: 'onClose',
-        value: function onClose(ev) {
-            this.props.onHide.call(null, 'modulo5/4');
-        }
-    }, {
-        key: 'render',
-        value: function render() {
-            return _react2['default'].createElement(
-                _reactBootstrap.Modal,
-                _extends({}, this.props, { bsSize: 'large' }),
+  }, {
+    key: 'render',
+    value: function render() {
+      return _react2['default'].createElement(
+        _reactBootstrap.Modal,
+        this.props,
+        _react2['default'].createElement(
+          _reactBootstrap.Modal.Header,
+          { closeButton: true },
+          _react2['default'].createElement(
+            _reactBootstrap.Modal.Title,
+            null,
+            _react2['default'].createElement(
+              _reactBootstrap.Label,
+              { bsStyle: 'success' },
+              'Etapa Ex Vitro'
+            )
+          )
+        ),
+        _react2['default'].createElement(
+          _reactBootstrap.Modal.Body,
+          null,
+          _react2['default'].createElement(
+            _reactBootstrap.Row,
+            null,
+            _react2['default'].createElement(
+              _reactBootstrap.Col,
+              { xs: 12, sm: 12, md: 12, lg: 12, className: 'txt-center' },
+              _react2['default'].createElement(
+                'h1',
+                null,
                 _react2['default'].createElement(
-                    _reactBootstrap.Modal.Header,
-                    { closeButton: true },
-                    _react2['default'].createElement(
-                        _reactBootstrap.Modal.Title,
-                        null,
-                        _react2['default'].createElement(
-                            'h4',
-                            null,
-                            _react2['default'].createElement(
-                                _reactBootstrap.Label,
-                                { bsStyle: 'success' },
-                                'Componentes'
-                            )
-                        )
-                    )
-                ),
-                _react2['default'].createElement(
-                    _reactBootstrap.Modal.Body,
-                    null,
-                    _react2['default'].createElement(
-                        _reactBootstrap.Row,
-                        null,
-                        _react2['default'].createElement(
-                            _reactBootstrap.Col,
-                            { xs: 12, sm: 12, md: 12, lg: 12, className: 'txt-center' },
-                            _react2['default'].createElement(
-                                'h1',
-                                null,
-                                _react2['default'].createElement(
-                                    'b',
-                                    null,
-                                    'Componentes del medio de cultivo'
-                                )
-                            ),
-                            _react2['default'].createElement(
-                                'p',
-                                null,
-                                'La composición del medio de cultivo está definida por los siguientes requerimientos de los explantes.'
-                            )
-                        )
-                    ),
-                    _react2['default'].createElement('hr', { className: 'line-divider' }),
-                    _react2['default'].createElement(
-                        _reactBootstrap.Row,
-                        null,
-                        _react2['default'].createElement(
-                            _reactBootstrap.Col,
-                            { xs: 12, sm: 12, md: 7, lg: 7 },
-                            _react2['default'].createElement(
-                                'div',
-                                { className: 'txt-vertical-center' },
-                                _react2['default'].createElement(
-                                    'h2',
-                                    null,
-                                    _react2['default'].createElement(
-                                        'b',
-                                        null,
-                                        'Agua. '
-                                    )
-                                ),
-                                ' ',
-                                _react2['default'].createElement(
-                                    'p',
-                                    { className: 'txt-parrafo' },
-                                    'El agua que se utiliza en el laboratorio es destilada. No se recomienda el  uso de aguas “duras” por  poseer altas concentraciones de Ca y Mg que pueden desregular el uso de sales de MS cuando se aplican.'
-                                )
-                            )
-                        ),
-                        _react2['default'].createElement(
-                            _reactBootstrap.Col,
-                            { xs: 12, sm: 12, md: 5, lg: 5 },
-                            _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo3/agua.jpg', alt: 'Medio de cultivo' })
-                        )
-                    ),
-                    _react2['default'].createElement('hr', { className: 'line-divider' }),
-                    _react2['default'].createElement(
-                        _reactBootstrap.Row,
-                        null,
-                        _react2['default'].createElement(
-                            _reactBootstrap.Col,
-                            { xs: 12, sm: 12, md: 5, lg: 5 },
-                            _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo3/stocks.jpg', alt: 'Medio de cultivo' })
-                        ),
-                        _react2['default'].createElement(
-                            _reactBootstrap.Col,
-                            { xs: 12, sm: 12, md: 7, lg: 7 },
-                            _react2['default'].createElement(
-                                'div',
-                                { className: 'txt-vertical-center' },
-                                _react2['default'].createElement(
-                                    'h2',
-                                    null,
-                                    _react2['default'].createElement(
-                                        'b',
-                                        null,
-                                        'Los stocks.'
-                                    )
-                                ),
-                                _react2['default'].createElement(
-                                    'p',
-                                    { className: 'txt-parrafo' },
-                                    ' Poseen los macronutrientes, micronutrientes y vitaminas (Stocks 1-6). Se usan de acuerdo a la concentración que poseen y la cantidad de medio de cultivo que se va a preparar; y reducir cuando se complementa con sustancias orgánicas.'
-                                )
-                            )
-                        )
-                    ),
-                    _react2['default'].createElement('hr', { className: 'line-divider' }),
-                    _react2['default'].createElement(
-                        _reactBootstrap.Row,
-                        null,
-                        _react2['default'].createElement(
-                            _reactBootstrap.Col,
-                            { xs: 12, sm: 12, md: 7, lg: 7 },
-                            _react2['default'].createElement(
-                                'div',
-                                { className: 'txt-vertical-center' },
-                                _react2['default'].createElement(
-                                    'h2',
-                                    null,
-                                    _react2['default'].createElement(
-                                        'b',
-                                        null,
-                                        'Fitohormonas.'
-                                    )
-                                ),
-                                _react2['default'].createElement(
-                                    'p',
-                                    { className: 'txt-parrafo' },
-                                    ' Los reguladores de crecimiento se preparan en los stocks (8-10) para su uso, de acuerdo con el tipo de explante (foto 33);  en algunas ocasiones, en el caso de microestacas, por ejemplo,  pueden ser o no utilizados, con base en criterios científico-técnicos.'
-                                )
-                            )
-                        ),
-                        _react2['default'].createElement(
-                            _reactBootstrap.Col,
-                            { xs: 12, sm: 12, md: 5, lg: 5 },
-                            _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo3/Fitohormonas.jpg', alt: 'Medio de cultivo' })
-                        )
-                    ),
-                    _react2['default'].createElement('hr', { className: 'line-divider' }),
-                    _react2['default'].createElement(
-                        _reactBootstrap.Row,
-                        null,
-                        _react2['default'].createElement(
-                            _reactBootstrap.Col,
-                            { xs: 12, sm: 12, md: 5, lg: 5 },
-                            _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo3/carbono.jpg', alt: 'Medio de cultivo' })
-                        ),
-                        _react2['default'].createElement(
-                            _reactBootstrap.Col,
-                            { xs: 12, sm: 12, md: 7, lg: 7 },
-                            _react2['default'].createElement(
-                                'div',
-                                { className: 'txt-vertical-center' },
-                                _react2['default'].createElement(
-                                    'h2',
-                                    null,
-                                    _react2['default'].createElement(
-                                        'b',
-                                        null,
-                                        'Fuente de carbono.'
-                                    )
-                                ),
-                                _react2['default'].createElement(
-                                    'p',
-                                    { className: 'txt-parrafo' },
-                                    ' Por estar cerrado envuelto con cinta vinipel, el frasco de las vitroplantas, entra muy poco CO2. Por tanto, su carencia  se suple con las fuentes de carbono  Mio-inositol y la sacarosa (o azúcar de cocina)'
-                                )
-                            )
-                        )
-                    ),
-                    _react2['default'].createElement('hr', { className: 'line-divider' }),
-                    _react2['default'].createElement(
-                        _reactBootstrap.Row,
-                        null,
-                        _react2['default'].createElement(
-                            _reactBootstrap.Col,
-                            { xs: 12, sm: 12, md: 7, lg: 7 },
-                            _react2['default'].createElement(
-                                'div',
-                                { className: 'txt-vertical-center' },
-                                _react2['default'].createElement(
-                                    'h2',
-                                    null,
-                                    _react2['default'].createElement(
-                                        'b',
-                                        null,
-                                        'Agente gelificante.'
-                                    )
-                                ),
-                                _react2['default'].createElement(
-                                    'p',
-                                    { className: 'txt-parrafo' },
-                                    ' Para la consistencia semisólida del medio de cultivo se aplica el agente gelificante phytagel (foto 35), el cual, aparte de endurecerlo, facilita que las raíces de la planta u otros tejidos asimilen los nutrientes requeridos.'
-                                )
-                            )
-                        ),
-                        _react2['default'].createElement(
-                            _reactBootstrap.Col,
-                            { xs: 12, sm: 12, md: 5, lg: 5 },
-                            _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo3/gelificante.jpg', alt: 'Medio de cultivo' })
-                        )
-                    ),
-                    _react2['default'].createElement('hr', { className: 'line-divider' }),
-                    _react2['default'].createElement(
-                        _reactBootstrap.Row,
-                        null,
-                        _react2['default'].createElement(
-                            _reactBootstrap.Col,
-                            { xs: 12, sm: 12, md: 5, lg: 5 },
-                            _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo3/carbonactivado.jpg', alt: 'Medio de cultivo' })
-                        ),
-                        _react2['default'].createElement(
-                            _reactBootstrap.Col,
-                            { xs: 12, sm: 12, md: 7, lg: 7 },
-                            _react2['default'].createElement(
-                                'div',
-                                { className: 'txt-vertical-center' },
-                                _react2['default'].createElement(
-                                    'h2',
-                                    null,
-                                    _react2['default'].createElement(
-                                        'b',
-                                        null,
-                                        'Carbón activado.'
-                                    )
-                                ),
-                                _react2['default'].createElement(
-                                    'p',
-                                    { className: 'txt-parrafo' },
-                                    ' Se utiliza principalmente cuando se suplementa el medio de cultivo con sustancias orgánicas, pues tiene un efecto antioxidante y disminuye los niveles de contaminación.'
-                                )
-                            )
-                        )
-                    ),
-                    _react2['default'].createElement('hr', { className: 'line-divider' }),
-                    _react2['default'].createElement(
-                        _reactBootstrap.Row,
-                        null,
-                        _react2['default'].createElement(
-                            _reactBootstrap.Col,
-                            { xs: 12, sm: 12, md: 7, lg: 7 },
-                            _react2['default'].createElement(
-                                'div',
-                                { className: 'txt-vertical-center' },
-                                _react2['default'].createElement(
-                                    'h2',
-                                    null,
-                                    _react2['default'].createElement(
-                                        'b',
-                                        null,
-                                        'Ajustar el pH.'
-                                    )
-                                ),
-                                _react2['default'].createElement(
-                                    'p',
-                                    { className: 'txt-parrafo' },
-                                    ' Se necesita un pH  entre 5,7  y 5,8 para que los explantes puedan crecer normalmente. Por tanto, si el pH está más bajo, se aplica la KOH 1N; si está más alto, se aplica HCL 1N.'
-                                )
-                            )
-                        ),
-                        _react2['default'].createElement(
-                            _reactBootstrap.Col,
-                            { xs: 12, sm: 12, md: 5, lg: 5 },
-                            _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo3/ph.jpg', alt: 'Medio de cultivo' })
-                        )
-                    ),
-                    _react2['default'].createElement('hr', { className: 'line-divider' }),
-                    _react2['default'].createElement(
-                        _reactBootstrap.Row,
-                        null,
-                        _react2['default'].createElement(
-                            _reactBootstrap.Col,
-                            { xs: 12, sm: 12, md: 5, lg: 5 },
-                            _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo3/organicas.jpg', alt: 'Medio de cultivo' })
-                        ),
-                        _react2['default'].createElement(
-                            _reactBootstrap.Col,
-                            { xs: 12, sm: 12, md: 7, lg: 7 },
-                            _react2['default'].createElement(
-                                'div',
-                                { className: 'txt-vertical-center' },
-                                _react2['default'].createElement(
-                                    'h2',
-                                    null,
-                                    _react2['default'].createElement(
-                                        'b',
-                                        null,
-                                        'Sustancias orgánicas.'
-                                    )
-                                ),
-                                _react2['default'].createElement(
-                                    'p',
-                                    { className: 'txt-parrafo' },
-                                    ' La sustancia orgánica efectiva para suplementar el medio de cultivo MS,  es el agua de coco.'
-                                )
-                            )
-                        )
-                    ),
-                    _react2['default'].createElement('hr', { className: 'line-divider' })
-                ),
-                _react2['default'].createElement(
-                    _reactBootstrap.Modal.Footer,
-                    null,
-                    _react2['default'].createElement(
-                        'button',
-                        { onClick: this.onClose.bind(this) },
-                        'Cerrar'
-                    )
+                  'b',
+                  null,
+                  'Propagación por miniestacas'
                 )
-            );
-        }
-    }]);
+              ),
+              _react2['default'].createElement(
+                'p',
+                null,
+                'El número de plantas obtenidas en cultivo de tejidos aumenta significativamente con el uso de la técnica de miniestacas.'
+              )
+            )
+          ),
+          _react2['default'].createElement(
+            _reactBootstrap.Row,
+            null,
+            _react2['default'].createElement(
+              _reactBootstrap.Col,
+              { xs: 12, sm: 12, md: 12, lg: 12 },
+              _react2['default'].createElement(
+                'center',
+                null,
+                _react2['default'].createElement(
+                  'p',
+                  { className: 'txt-parrafo' },
+                  _react2['default'].createElement(
+                    'span',
+                    { className: 'capitalLetter' },
+                    _react2['default'].createElement('i', { className: 'fa fa-angle-double-right' })
+                  ),
+                  'Para este propósito, después de la aclimatación de las vitroplantas se realizan cortes diagonales uninodales. Es aconsejable que la planta no presente total lignificación en el tallo, en busca que la brotación y enraizamiento sea más rápido.'
+                )
+              )
+            )
+          )
+        ),
+        _react2['default'].createElement(
+          _reactBootstrap.Modal.Footer,
+          null,
+          _react2['default'].createElement(
+            'button',
+            { onClick: this.onClose.bind(this) },
+            'Cerrar'
+          )
+        )
+      );
+    }
+  }]);
 
-    return Modal3;
+  return Modal3;
 })(_react2['default'].Component);
 
 exports['default'] = Modal3;
@@ -7254,6 +7105,8 @@ module.exports = exports['default'];
 Object.defineProperty(exports, '__esModule', {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
@@ -7290,7 +7143,7 @@ var Modal4 = (function (_React$Component) {
     value: function render() {
       return _react2['default'].createElement(
         _reactBootstrap.Modal,
-        this.props,
+        _extends({}, this.props, { bsSize: 'large' }),
         _react2['default'].createElement(
           _reactBootstrap.Modal.Header,
           { closeButton: true },
@@ -7303,9 +7156,8 @@ var Modal4 = (function (_React$Component) {
               _react2['default'].createElement(
                 _reactBootstrap.Label,
                 { bsStyle: 'success' },
-                'Elaboración'
-              ),
-              ' Vitaminas'
+                'Etapa Ex Vitro'
+              )
             )
           )
         ),
@@ -7317,129 +7169,142 @@ var Modal4 = (function (_React$Component) {
             null,
             _react2['default'].createElement(
               _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 12, lg: 12 },
+              { xs: 12, sm: 12, md: 12, lg: 12, className: 'txt-center' },
               _react2['default'].createElement(
-                'h5',
+                'h1',
                 null,
                 _react2['default'].createElement(
                   'b',
                   null,
-                  'Elaboración de stocks 6'
+                  'Establecimiento ex vitro'
                 )
               ),
               _react2['default'].createElement(
                 'p',
-                { className: 'txt-parrafo' },
-                'Generalmente, en el cultivo de tejidos se usa vitaminas del complejo B, principalmente necesita de la vitamina B1 o Tiamina. Designado aquí como stock 6. Éste se puede preparar a una concentración de 50X.'
+                null,
+                'La intención de este proceso es que fortalezca la producción de vitroplantas. Las miniestacas presentan ventajas, pues no requieren los cuidados de aclimatación. El siguiente protocolo es para la generación de miniestacas:'
               )
             )
           ),
+          _react2['default'].createElement('hr', { className: 'line-divider' }),
           _react2['default'].createElement(
             _reactBootstrap.Row,
             null,
             _react2['default'].createElement(
               _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 12, lg: 12 },
+              { xs: 12, sm: 12, md: 7, lg: 7 },
               _react2['default'].createElement(
-                _reactBootstrap.Table,
-                { responsive: true, striped: true, bordered: true, condensed: true, hover: true },
+                'div',
+                { className: 'txt-vertical-center' },
                 _react2['default'].createElement(
-                  'thead',
-                  null,
+                  'p',
+                  { className: 'title-list-modal' },
                   _react2['default'].createElement(
-                    'tr',
+                    'b',
                     null,
-                    _react2['default'].createElement(
-                      'th',
-                      { colSpan: '4' },
-                      _react2['default'].createElement(
-                        'center',
-                        null,
-                        'Vitamina B1 de Stock 6'
-                      )
-                    )
+                    'Selección de planta aclimatada: '
                   ),
                   _react2['default'].createElement(
-                    'tr',
+                    'span',
                     null,
-                    _react2['default'].createElement(
-                      'th',
-                      null,
-                      _react2['default'].createElement(
-                        'b',
-                        null,
-                        'NÚMERO STOCK'
-                      )
-                    ),
-                    _react2['default'].createElement(
-                      'th',
-                      null,
-                      _react2['default'].createElement(
-                        'b',
-                        null,
-                        'COMPUESTO'
-                      )
-                    ),
-                    _react2['default'].createElement(
-                      'th',
-                      null,
-                      _react2['default'].createElement(
-                        'b',
-                        null,
-                        'CANTIDAD (gr)'
-                      )
-                    ),
-                    _react2['default'].createElement(
-                      'th',
-                      null,
-                      _react2['default'].createElement(
-                        'b',
-                        null,
-                        'AGUA DESTILADA'
-                      )
-                    )
+                    'debe presentar tallo  más herbáceo que leñoso, generación y desarrollo de tejidos vigorosos, y adecuada fertilización. '
                   )
                 ),
                 _react2['default'].createElement(
-                  'tbody',
-                  null,
+                  'p',
+                  { className: 'txt-into' },
                   _react2['default'].createElement(
-                    'tr',
-                    null,
-                    _react2['default'].createElement(
-                      'td',
-                      null,
-                      '6'
-                    ),
-                    _react2['default'].createElement(
-                      'td',
-                      null,
-                      'Vitamina B1'
-                    ),
-                    _react2['default'].createElement(
-                      'td',
-                      null,
-                      '0,0005'
-                    ),
-                    _react2['default'].createElement(
-                      'td',
-                      null,
-                      '100 ml'
-                    )
-                  )
+                    'span',
+                    { className: 'capitalLetter' },
+                    _react2['default'].createElement('i', { className: 'fa fa-chevron-right' })
+                  ),
+                  'La planta no debe estar infectada o infestada por algún agente patógeno'
                 )
               )
+            ),
+            _react2['default'].createElement(
+              _reactBootstrap.Col,
+              { xs: 12, sm: 12, md: 5, lg: 5 },
+              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo5/modal4a.jpg', alt: 'Planta  (M. esculenta) aclimatada lista para miniestacas.' })
             )
           ),
+          _react2['default'].createElement('hr', { className: 'line-divider' }),
           _react2['default'].createElement(
             _reactBootstrap.Row,
             null,
             _react2['default'].createElement(
               _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 12, lg: 12 },
-              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo1/maquina_6.jpg', alt: 'Sala de siembra' })
+              { xs: 12, sm: 12, md: 5, lg: 5 },
+              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo5/modal4b.jpg', alt: 'Miniestaca  (M. esculenta) sembrada en sustrato.' })
+            ),
+            _react2['default'].createElement(
+              _reactBootstrap.Col,
+              { xs: 12, sm: 12, md: 7, lg: 7 },
+              _react2['default'].createElement(
+                'p',
+                { className: 'title-list-modal' },
+                _react2['default'].createElement(
+                  'b',
+                  null,
+                  'Los cortes uninodales o binodales diagonales se realizan con una cuchilla de bisturí '
+                ),
+                _react2['default'].createElement(
+                  'span',
+                  null,
+                  'desinfestada en NaOCl al 3%.'
+                )
+              ),
+              _react2['default'].createElement(
+                'p',
+                { className: 'txt-into' },
+                _react2['default'].createElement(
+                  'span',
+                  { className: 'capitalLetter' },
+                  _react2['default'].createElement('i', { className: 'fa fa-chevron-right' })
+                ),
+                'Se aplica, enseguida, el  protocolo de desinfección por inmersión: Cal (3%) y fungicida (1%) por 2 minutos. Las miniestacas se siembran en el sustrato que puede ser el mismo utilizado en la etapa ex vitro.'
+              )
             )
-          )
+          ),
+          _react2['default'].createElement('hr', { className: 'line-divider' }),
+          _react2['default'].createElement(
+            _reactBootstrap.Row,
+            null,
+            _react2['default'].createElement(
+              _reactBootstrap.Col,
+              { xs: 12, sm: 12, md: 7, lg: 7 },
+              _react2['default'].createElement(
+                'p',
+                { className: 'title-list-modal' },
+                _react2['default'].createElement(
+                  'b',
+                  null,
+                  'Aproximadamente entre la primera y segunda semana  aparece el primer brote de hojas y, '
+                ),
+                _react2['default'].createElement(
+                  'span',
+                  null,
+                  'su crecimiento tarda entre 7-8 semanas. '
+                )
+              ),
+              _react2['default'].createElement(
+                'p',
+                { className: 'txt-into' },
+                _react2['default'].createElement(
+                  'span',
+                  { className: 'capitalLetter' },
+                  _react2['default'].createElement('i', { className: 'fa fa-chevron-right' })
+                ),
+                'Acá se encuentra lista para ser llevada a campo. No se recomienda realizar de las plantas obtenidas por las miniestacas, nuevamente el procedimiento. Como labores agronómicas se mantiene el riego cada dos días y se realiza la fertilización edáfica o foliar semanal.'
+              )
+            ),
+            _react2['default'].createElement(
+              _reactBootstrap.Col,
+              { xs: 12, sm: 12, md: 5, lg: 5 },
+              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo5/modal4c.jpg', alt: 'Planta  (M. esculenta) generada a través de miniestacas.' })
+            )
+          ),
+          _react2['default'].createElement('hr', { className: 'line-divider' })
         ),
         _react2['default'].createElement(
           _reactBootstrap.Modal.Footer,
@@ -8221,6 +8086,8 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactBootstrap = require('react-bootstrap');
 
+var _reactRouter = require('react-router');
+
 var ModulosUnit = (function (_React$Component) {
 	_inherits(ModulosUnit, _React$Component);
 
@@ -8250,33 +8117,63 @@ var ModulosUnit = (function (_React$Component) {
 					)
 				);
 			} else {
-				return _react2['default'].createElement(
-					_reactBootstrap.Col,
-					{ xs: 6, sm: 6, md: 3, lg: 3, className: 'img-modulo' },
-					_react2['default'].createElement(
-						'a',
-						{ href: this.props.url, className: 'mod', onClick: this.onClick.bind(this) },
-						_react2['default'].createElement('img', { src: urlImg, alt: this.props.titulo, className: 'img_contenido' }),
+				if (this.props.url == "javascript:void(0)") {
+					return _react2['default'].createElement(
+						_reactBootstrap.Col,
+						{ xs: 6, sm: 6, md: 3, lg: 3, className: 'img-modulo' },
 						_react2['default'].createElement(
-							'div',
-							{ className: 'info-image' },
+							'a',
+							{ href: this.props.url, className: 'mod', onClick: this.onClick.bind(this) },
+							_react2['default'].createElement('img', { src: urlImg, alt: this.props.titulo, className: 'img_contenido' }),
 							_react2['default'].createElement(
 								'div',
-								{ className: 'center-vertically' },
+								{ className: 'info-image' },
 								_react2['default'].createElement(
-									'h3',
-									null,
-									this.props.titulo
-								),
-								_react2['default'].createElement(
-									'p',
-									null,
-									this.props.descripcion
+									'div',
+									{ className: 'center-vertically' },
+									_react2['default'].createElement(
+										'h3',
+										null,
+										this.props.titulo
+									),
+									_react2['default'].createElement(
+										'p',
+										null,
+										this.props.descripcion
+									)
 								)
 							)
 						)
-					)
-				);
+					);
+				} else {
+					return _react2['default'].createElement(
+						_reactBootstrap.Col,
+						{ xs: 6, sm: 6, md: 3, lg: 3, className: 'img-modulo' },
+						_react2['default'].createElement(
+							_reactRouter.Link,
+							{ to: this.props.url, params: { src: 1 }, className: 'mod' },
+							_react2['default'].createElement('img', { src: urlImg, alt: this.props.titulo, className: 'img_contenido' }),
+							_react2['default'].createElement(
+								'div',
+								{ className: 'info-image' },
+								_react2['default'].createElement(
+									'div',
+									{ className: 'center-vertically' },
+									_react2['default'].createElement(
+										'h3',
+										null,
+										this.props.titulo
+									),
+									_react2['default'].createElement(
+										'p',
+										null,
+										this.props.descripcion
+									)
+								)
+							)
+						)
+					);
+				}
 			}
 		}
 	}]);
@@ -8287,7 +8184,7 @@ var ModulosUnit = (function (_React$Component) {
 exports['default'] = ModulosUnit;
 module.exports = exports['default'];
 
-},{"react":403,"react-bootstrap":122}],40:[function(require,module,exports){
+},{"react":403,"react-bootstrap":122,"react-router":231}],40:[function(require,module,exports){
 /**
  * Modules Dependencies
  */
