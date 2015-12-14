@@ -3,10 +3,11 @@
 */
 
 import React from 'react';
-import { default as Router, Route } from 'react-router';
-import { Redirect } from 'react-router';
-import Inicio from './components/Inicio';
+import { Router, Route, IndexRoute } from 'react-router';
+import { render } from 'react-dom';
+import createHashHistory from 'history/lib/createHashHistory';
 import ContentPrincipal from './components/ContentPrincipal/ContentPrincipal';
+import Modulo1 from './components/modulo1/Modulo1';
 import Modulo2 from './components/ContentPrincipal/Modulo2';
 import IntoMod2 from './components/ContentPrincipal/IntoMod2';
 import Modulo3 from './components/ContentPrincipal/Modulo3';
@@ -16,25 +17,26 @@ import ContentCreditos from './components/ContentCreditos/ContentCreditos';
 import Menu from './components/nav/Menu';
 import Modulo1Content from './components/modulo1/Modulo1Content';
 import $ from 'jquery';
-import Modulo1 from './components/modulo1/Modulo1';
+
 
 let RouteHandler = Router.RouteHandler;
 
-let routes = <Route handler={Menu} path='/'>
-		<Route name="Inicio" path="/" handler={ContentPrincipal} />
-		<Route name="Creditos" path="creditos" handler={ContentCreditos} />
-		<Route name="Modulo1" path="modulo1/:src" handler={Modulo1Content} />
-		<Route name="IntoMod2" path="intomodulo2/:src" handler={IntoMod2} />
-		<Route name="Modulo2" path="modulo2" handler={Modulo2} />
-		<Route name="Modulo3" path="modulo3" handler={Modulo3} />
-		<Route name="Modulo4" path="modulo4" handler={Modulo4} />
-		<Route name="Modulo5" path="modulo5" handler={Modulo5} />
-		<Redirect from="microbiologia" to="Modulo1" params={{src: 2}} />
+let history = createHashHistory({
+	queryKey: false
+});
+
+let routes = <Route component={Menu} path='/'>
+		<IndexRoute component={ContentPrincipal} />
+		<Route path="creditos" component={ContentCreditos} />
+		<Route path="modulo1/:src" component={Modulo1Content} />
+		<Route path="intomodulo2/:src" component={IntoMod2} />
+		<Route path="modulo2" component={Modulo2} />
+		<Route path="modulo3" component={Modulo3} />
+		<Route path="modulo4" component={Modulo4} />
+		<Route path="modulo5" component={Modulo5} />
 	</Route>
 
-	Router.run(routes, Router.HashLocation, (Root) =>{
-		React.render(<Root />,document.getElementById('container'));
-	});
+render(<Router history={history}>{routes}</Router>, document.getElementById('container'));
 
 
 $('.reloadModulo').click(function() {

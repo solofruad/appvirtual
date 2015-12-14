@@ -69,7 +69,7 @@ var ButtonInput = (function (_InputBase) {
   return ButtonInput;
 })(_InputBase3['default']);
 
-ButtonInput.types = ['button', 'reset', 'submit'];
+ButtonInput.types = _Button2['default'].types;
 
 ButtonInput.defaultProps = {
   type: 'button'
@@ -77,8 +77,8 @@ ButtonInput.defaultProps = {
 
 ButtonInput.propTypes = {
   type: _react2['default'].PropTypes.oneOf(ButtonInput.types),
-  bsStyle: function bsStyle(props) {
-    //defer to Button propTypes of bsStyle
+  bsStyle: function bsStyle() {
+    // defer to Button propTypes of bsStyle
     return null;
   },
   children: _utilsChildrenValueInputValidation2['default'],

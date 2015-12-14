@@ -14,18 +14,16 @@ var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _BootstrapMixin = require('./BootstrapMixin');
+var _utilsBootstrapUtils = require('./utils/bootstrapUtils');
 
-var _BootstrapMixin2 = _interopRequireDefault(_BootstrapMixin);
+var _utilsBootstrapUtils2 = _interopRequireDefault(_utilsBootstrapUtils);
 
-var _utilsCustomPropTypes = require('./utils/CustomPropTypes');
+var _reactPropTypesLibIsRequiredForA11y = require('react-prop-types/lib/isRequiredForA11y');
 
-var _utilsCustomPropTypes2 = _interopRequireDefault(_utilsCustomPropTypes);
+var _reactPropTypesLibIsRequiredForA11y2 = _interopRequireDefault(_reactPropTypesLibIsRequiredForA11y);
 
 var Tooltip = _react2['default'].createClass({
   displayName: 'Tooltip',
-
-  mixins: [_BootstrapMixin2['default']],
 
   propTypes: {
     /**
@@ -33,7 +31,7 @@ var Tooltip = _react2['default'].createClass({
      * @type {string}
      * @required
      */
-    id: _utilsCustomPropTypes2['default'].isRequiredForA11y(_react2['default'].PropTypes.string),
+    id: _reactPropTypesLibIsRequiredForA11y2['default'](_react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.string, _react2['default'].PropTypes.number])),
 
     /**
      * Sets the direction the Tooltip is positioned towards.
@@ -64,6 +62,7 @@ var Tooltip = _react2['default'].createClass({
 
   getDefaultProps: function getDefaultProps() {
     return {
+      bsClass: 'tooltip',
       placement: 'right'
     };
   },
@@ -71,16 +70,13 @@ var Tooltip = _react2['default'].createClass({
   render: function render() {
     var _classes;
 
-    var classes = (_classes = {
-      'tooltip': true
-    }, _classes[this.props.placement] = true, _classes);
+    var classes = (_classes = {}, _classes[_utilsBootstrapUtils2['default'].prefix(this.props)] = true, _classes[this.props.placement] = true, _classes);
 
     var style = _extends({
       'left': this.props.positionLeft,
       'top': this.props.positionTop
     }, this.props.style);
 
-    // eslint-disable-line react/prop-types
     var arrowStyle = {
       'left': this.props.arrowOffsetLeft,
       'top': this.props.arrowOffsetTop
@@ -89,10 +85,10 @@ var Tooltip = _react2['default'].createClass({
     return _react2['default'].createElement(
       'div',
       _extends({ role: 'tooltip' }, this.props, { className: _classnames2['default'](this.props.className, classes), style: style }),
-      _react2['default'].createElement('div', { className: 'tooltip-arrow', style: arrowStyle }),
+      _react2['default'].createElement('div', { className: _utilsBootstrapUtils2['default'].prefix(this.props, 'arrow'), style: arrowStyle }),
       _react2['default'].createElement(
         'div',
-        { className: 'tooltip-inner' },
+        { className: _utilsBootstrapUtils2['default'].prefix(this.props, 'inner') },
         this.props.children
       )
     );
@@ -101,4 +97,3 @@ var Tooltip = _react2['default'].createClass({
 
 exports['default'] = Tooltip;
 module.exports = exports['default'];
-// we don't want to expose the `style` property

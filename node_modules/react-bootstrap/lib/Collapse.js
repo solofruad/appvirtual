@@ -10,17 +10,25 @@ var _interopRequireDefault = require('babel-runtime/helpers/interop-require-defa
 
 exports.__esModule = true;
 
+var _domHelpersStyle = require('dom-helpers/style');
+
+var _domHelpersStyle2 = _interopRequireDefault(_domHelpersStyle);
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Transition = require('./Transition');
+var _classnames = require('classnames');
 
-var _Transition2 = _interopRequireDefault(_Transition);
+var _classnames2 = _interopRequireDefault(_classnames);
 
-var _utilsDomUtils = require('./utils/domUtils');
+var _reactOverlaysLibTransition = require('react-overlays/lib/Transition');
 
-var _utilsDomUtils2 = _interopRequireDefault(_utilsDomUtils);
+var _reactOverlaysLibTransition2 = _interopRequireDefault(_reactOverlaysLibTransition);
+
+var _reactPropTypesLibDeprecated = require('react-prop-types/lib/deprecated');
+
+var _reactPropTypesLibDeprecated2 = _interopRequireDefault(_reactPropTypesLibDeprecated);
 
 var _utilsCreateChainedFunction = require('./utils/createChainedFunction');
 
@@ -43,10 +51,9 @@ var MARGINS = {
 
 function getDimensionValue(dimension, elem) {
   var value = elem['offset' + capitalize(dimension)];
-  var computedStyles = _utilsDomUtils2['default'].getComputedStyles(elem);
   var margins = MARGINS[dimension];
 
-  return value + parseInt(computedStyles[margins[0]], 10) + parseInt(computedStyles[margins[1]], 10);
+  return value + parseInt(_domHelpersStyle2['default'](elem, margins[0]), 10) + parseInt(_domHelpersStyle2['default'](elem, margins[1]), 10);
 }
 
 var Collapse = (function (_React$Component) {
@@ -75,12 +82,12 @@ var Collapse = (function (_React$Component) {
     var exiting = _utilsCreateChainedFunction2['default'](this.onExitingListener, this.props.onExiting);
 
     return _react2['default'].createElement(
-      _Transition2['default'],
+      _reactOverlaysLibTransition2['default'],
       _extends({
         ref: 'transition'
       }, this.props, {
         'aria-expanded': this.props.role ? this.props['in'] : null,
-        className: this._dimension() === 'width' ? 'width' : '',
+        className: _classnames2['default'](this.props.className, { width: this._dimension() === 'width' }),
         exitedClassName: 'collapse',
         exitingClassName: 'collapsing',
         enteredClassName: 'collapse in',
@@ -133,7 +140,7 @@ var Collapse = (function (_React$Component) {
     return typeof this.props.dimension === 'function' ? this.props.dimension() : this.props.dimension;
   };
 
-  //for testing
+  // for testing
 
   Collapse.prototype._getTransitionInstance = function _getTransitionInstance() {
     return this.refs.transition;
@@ -168,7 +175,13 @@ Collapse.propTypes = {
    * finishing callbacks are fired even if the original browser transition end
    * events are canceled
    */
-  duration: _react2['default'].PropTypes.number,
+  timeout: _react2['default'].PropTypes.number,
+
+  /**
+   * duration
+   * @private
+   */
+  duration: _reactPropTypesLibDeprecated2['default'](_react2['default'].PropTypes.number, 'Use `timeout`.'),
 
   /**
    * Callback fired before the component expands
@@ -221,7 +234,7 @@ Collapse.propTypes = {
 
 Collapse.defaultProps = {
   'in': false,
-  duration: 300,
+  timeout: 300,
   unmountOnExit: false,
   transitionAppear: false,
 

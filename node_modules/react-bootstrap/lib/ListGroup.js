@@ -14,6 +14,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _ListGroupItem = require('./ListGroupItem');
+
+var _ListGroupItem2 = _interopRequireDefault(_ListGroupItem);
+
 var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
@@ -38,31 +42,49 @@ var ListGroup = (function (_React$Component) {
       return _react.cloneElement(item, { key: item.key ? item.key : index });
     });
 
-    var childrenAnchors = false;
+    if (this.areCustomChildren(items)) {
+      var Component = this.props.componentClass;
+      return _react2['default'].createElement(
+        Component,
+        _extends({}, this.props, {
+          className: _classnames2['default'](this.props.className, 'list-group') }),
+        items
+      );
+    }
+
+    var shouldRenderDiv = false;
 
     if (!this.props.children) {
-      return this.renderDiv(items);
+      shouldRenderDiv = true;
     } else {
-      _react2['default'].Children.forEach(this.props.children, function (child) {
-        if (_this.isAnchor(child.props)) {
-          childrenAnchors = true;
+      _utilsValidComponentChildren2['default'].forEach(this.props.children, function (child) {
+        if (_this.isAnchorOrButton(child.props)) {
+          shouldRenderDiv = true;
         }
       });
     }
 
-    if (childrenAnchors) {
-      return this.renderDiv(items);
-    } else {
-      return this.renderUL(items);
-    }
+    return shouldRenderDiv ? this.renderDiv(items) : this.renderUL(items);
   };
 
-  ListGroup.prototype.isAnchor = function isAnchor(props) {
+  ListGroup.prototype.isAnchorOrButton = function isAnchorOrButton(props) {
     return props.href || props.onClick;
   };
 
+  ListGroup.prototype.areCustomChildren = function areCustomChildren(children) {
+    var customChildren = false;
+
+    _utilsValidComponentChildren2['default'].forEach(children, function (child) {
+      if (child.type !== _ListGroupItem2['default']) {
+        customChildren = true;
+      }
+    }, this);
+
+    return customChildren;
+  };
+
   ListGroup.prototype.renderUL = function renderUL(items) {
-    var listItems = _utilsValidComponentChildren2['default'].map(items, function (item, index) {
+    var listItems = _utilsValidComponentChildren2['default'].map(items, function (item) {
       return _react.cloneElement(item, { listItem: true });
     });
 
@@ -86,9 +108,19 @@ var ListGroup = (function (_React$Component) {
   return ListGroup;
 })(_react2['default'].Component);
 
+ListGroup.defaultProps = {
+  componentClass: 'div'
+};
+
 ListGroup.propTypes = {
   className: _react2['default'].PropTypes.string,
-  id: _react2['default'].PropTypes.string
+  /**
+   * The element for ListGroup if children are
+   * user-defined custom components.
+   * @type {("ul"|"div")}
+   */
+  componentClass: _react2['default'].PropTypes.oneOf(['ul', 'div']),
+  id: _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.string, _react2['default'].PropTypes.number])
 };
 
 exports['default'] = ListGroup;

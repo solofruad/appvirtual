@@ -9,17 +9,17 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _CustomPropTypes = require('./CustomPropTypes');
+var _reactPropTypesLibSinglePropFrom = require('react-prop-types/lib/singlePropFrom');
 
-var propList = ['children', 'value'];
-var typeList = [_react2['default'].PropTypes.number, _react2['default'].PropTypes.string];
+var _reactPropTypesLibSinglePropFrom2 = _interopRequireDefault(_reactPropTypesLibSinglePropFrom);
 
 function valueValidation(props, propName, componentName) {
-  var error = _CustomPropTypes.singlePropFrom(propList)(props, propName, componentName);
+  var error = _reactPropTypesLibSinglePropFrom2['default']('children', 'value')(props, propName, componentName);
+
   if (!error) {
-    var oneOfType = _react2['default'].PropTypes.oneOfType(typeList);
-    error = oneOfType(props, propName, componentName);
+    error = _react2['default'].PropTypes.node(props, propName, componentName);
   }
+
   return error;
 }
 

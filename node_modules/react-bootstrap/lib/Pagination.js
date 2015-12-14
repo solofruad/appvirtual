@@ -14,17 +14,17 @@ var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _BootstrapMixin = require('./BootstrapMixin');
+var _utilsBootstrapUtils = require('./utils/bootstrapUtils');
 
-var _BootstrapMixin2 = _interopRequireDefault(_BootstrapMixin);
+var _utilsBootstrapUtils2 = _interopRequireDefault(_utilsBootstrapUtils);
 
 var _PaginationButton = require('./PaginationButton');
 
 var _PaginationButton2 = _interopRequireDefault(_PaginationButton);
 
-var _utilsCustomPropTypes = require('./utils/CustomPropTypes');
+var _reactPropTypesLibElementType = require('react-prop-types/lib/elementType');
 
-var _utilsCustomPropTypes2 = _interopRequireDefault(_utilsCustomPropTypes);
+var _reactPropTypesLibElementType2 = _interopRequireDefault(_reactPropTypesLibElementType);
 
 var _SafeAnchor = require('./SafeAnchor');
 
@@ -33,22 +33,40 @@ var _SafeAnchor2 = _interopRequireDefault(_SafeAnchor);
 var Pagination = _react2['default'].createClass({
   displayName: 'Pagination',
 
-  mixins: [_BootstrapMixin2['default']],
-
   propTypes: {
     activePage: _react2['default'].PropTypes.number,
     items: _react2['default'].PropTypes.number,
     maxButtons: _react2['default'].PropTypes.number,
-    ellipsis: _react2['default'].PropTypes.bool,
-    first: _react2['default'].PropTypes.bool,
-    last: _react2['default'].PropTypes.bool,
-    prev: _react2['default'].PropTypes.bool,
-    next: _react2['default'].PropTypes.bool,
+    /**
+     * When `true`, will display the default node value ('...').
+     * Otherwise, will display provided node (when specified).
+     */
+    ellipsis: _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.bool, _react2['default'].PropTypes.node]),
+    /**
+     * When `true`, will display the default node value ('&laquo;').
+     * Otherwise, will display provided node (when specified).
+     */
+    first: _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.bool, _react2['default'].PropTypes.node]),
+    /**
+     * When `true`, will display the default node value ('&raquo;').
+     * Otherwise, will display provided node (when specified).
+     */
+    last: _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.bool, _react2['default'].PropTypes.node]),
+    /**
+     * When `true`, will display the default node value ('&lsaquo;').
+     * Otherwise, will display provided node (when specified).
+     */
+    prev: _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.bool, _react2['default'].PropTypes.node]),
+    /**
+     * When `true`, will display the default node value ('&rsaquo;').
+     * Otherwise, will display provided node (when specified).
+     */
+    next: _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.bool, _react2['default'].PropTypes.node]),
     onSelect: _react2['default'].PropTypes.func,
     /**
      * You can use a custom element for the buttons
      */
-    buttonComponentClass: _utilsCustomPropTypes2['default'].elementType
+    buttonComponentClass: _reactPropTypesLibElementType2['default']
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -80,7 +98,7 @@ var Pagination = _react2['default'].createClass({
     var buttonComponentClass = _props.buttonComponentClass;
 
     if (maxButtons) {
-      var hiddenPagesBefore = activePage - parseInt(maxButtons / 2);
+      var hiddenPagesBefore = activePage - parseInt(maxButtons / 2, 10);
       startPage = hiddenPagesBefore > 1 ? hiddenPagesBefore : 1;
       hasHiddenPagesAfter = startPage + maxButtons <= items;
 
@@ -121,7 +139,7 @@ var Pagination = _react2['default'].createClass({
         _react2['default'].createElement(
           'span',
           { 'aria-label': 'More' },
-          '...'
+          this.props.ellipsis === true ? '...' : this.props.ellipsis
         )
       ));
     }
@@ -145,7 +163,7 @@ var Pagination = _react2['default'].createClass({
       _react2['default'].createElement(
         'span',
         { 'aria-label': 'Previous' },
-        '‹'
+        this.props.prev === true ? '‹' : this.props.prev
       )
     );
   },
@@ -166,7 +184,7 @@ var Pagination = _react2['default'].createClass({
       _react2['default'].createElement(
         'span',
         { 'aria-label': 'Next' },
-        '›'
+        this.props.next === true ? '›' : this.props.next
       )
     );
   },
@@ -187,7 +205,7 @@ var Pagination = _react2['default'].createClass({
       _react2['default'].createElement(
         'span',
         { 'aria-label': 'First' },
-        '«'
+        this.props.first === true ? '«' : this.props.first
       )
     );
   },
@@ -208,7 +226,7 @@ var Pagination = _react2['default'].createClass({
       _react2['default'].createElement(
         'span',
         { 'aria-label': 'Last' },
-        '»'
+        this.props.last === true ? '»' : this.props.last
       )
     );
   },
@@ -217,7 +235,7 @@ var Pagination = _react2['default'].createClass({
     return _react2['default'].createElement(
       'ul',
       _extends({}, this.props, {
-        className: _classnames2['default'](this.props.className, this.getBsClassSet()) }),
+        className: _classnames2['default'](this.props.className, _utilsBootstrapUtils2['default'].getClassSet(this.props)) }),
       this.renderFirst(),
       this.renderPrev(),
       this.renderPageButtons(),
@@ -227,5 +245,5 @@ var Pagination = _react2['default'].createClass({
   }
 });
 
-exports['default'] = Pagination;
+exports['default'] = _utilsBootstrapUtils.bsClass('pagination', Pagination);
 module.exports = exports['default'];

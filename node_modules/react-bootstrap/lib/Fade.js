@@ -14,9 +14,17 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Transition = require('./Transition');
+var _classnames = require('classnames');
 
-var _Transition2 = _interopRequireDefault(_Transition);
+var _classnames2 = _interopRequireDefault(_classnames);
+
+var _reactOverlaysLibTransition = require('react-overlays/lib/Transition');
+
+var _reactOverlaysLibTransition2 = _interopRequireDefault(_reactOverlaysLibTransition);
+
+var _reactPropTypesLibDeprecated = require('react-prop-types/lib/deprecated');
+
+var _reactPropTypesLibDeprecated2 = _interopRequireDefault(_reactPropTypesLibDeprecated);
 
 var Fade = (function (_React$Component) {
   _inherits(Fade, _React$Component);
@@ -31,10 +39,13 @@ var Fade = (function (_React$Component) {
   // TODO: Remove duplication once #977 is resolved.
 
   Fade.prototype.render = function render() {
+    var timeout = this.props.timeout || this.props.duration;
+
     return _react2['default'].createElement(
-      _Transition2['default'],
+      _reactOverlaysLibTransition2['default'],
       _extends({}, this.props, {
-        className: 'fade',
+        timeout: timeout,
+        className: _classnames2['default'](this.props.className, 'fade'),
         enteredClassName: 'in',
         enteringClassName: 'in'
       }),
@@ -67,7 +78,13 @@ Fade.propTypes = {
    * callbacks are fired even if the original browser transition end events are
    * canceled
    */
-  duration: _react2['default'].PropTypes.number,
+  timeout: _react2['default'].PropTypes.number,
+
+  /**
+   * duration
+   * @private
+   */
+  duration: _reactPropTypesLibDeprecated2['default'](_react2['default'].PropTypes.number, 'Use `timeout`.'),
 
   /**
    * Callback fired before the component fades in
@@ -97,7 +114,7 @@ Fade.propTypes = {
 
 Fade.defaultProps = {
   'in': false,
-  duration: 300,
+  timeout: 300,
   unmountOnExit: false,
   transitionAppear: false
 };

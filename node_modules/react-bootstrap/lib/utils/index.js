@@ -16,18 +16,6 @@ var _createChainedFunction3 = _interopRequireDefault(_createChainedFunction2);
 
 exports.createChainedFunction = _createChainedFunction3['default'];
 
-var _CustomPropTypes2 = require('./CustomPropTypes');
-
-var _CustomPropTypes3 = _interopRequireDefault(_CustomPropTypes2);
-
-exports.CustomPropTypes = _CustomPropTypes3['default'];
-
-var _domUtils2 = require('./domUtils');
-
-var _domUtils3 = _interopRequireDefault(_domUtils2);
-
-exports.domUtils = _domUtils3['default'];
-
 var _ValidComponentChildren2 = require('./ValidComponentChildren');
 
 var _ValidComponentChildren3 = _interopRequireDefault(_ValidComponentChildren2);

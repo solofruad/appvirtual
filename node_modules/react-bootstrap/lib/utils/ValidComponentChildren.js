@@ -92,10 +92,52 @@ function hasValidComponent(children) {
   return hasValid;
 }
 
+function find(children, finder) {
+  var child = undefined;
+
+  forEachValidComponents(children, function (c, idx) {
+    if (!child && finder(c, idx, children)) {
+      child = c;
+    }
+  });
+
+  return child;
+}
+
+/**
+ * Finds children that are typically specified as `props.children`,
+ * but only iterates over children that are "valid components".
+ *
+ * The provided forEachFunc(child, index) will be called for each
+ * leaf child with the index reflecting the position relative to "valid components".
+ *
+ * @param {?*} children Children tree container.
+ * @param {function(*, int)} findFunc.
+ * @param {*} findContext Context for findContext.
+ * @returns {array} of children that meet the findFunc return statement
+ */
+function findValidComponents(children, func, context) {
+  var index = 0;
+  var returnChildren = [];
+
+  _react2['default'].Children.forEach(children, function (child) {
+    if (_react2['default'].isValidElement(child)) {
+      if (func.call(context, child, index)) {
+        returnChildren.push(child);
+      }
+      index++;
+    }
+  });
+
+  return returnChildren;
+}
+
 exports['default'] = {
   map: mapValidComponents,
   forEach: forEachValidComponents,
   numberOf: numberOfValidComponents,
+  find: find,
+  findValidComponents: findValidComponents,
   hasValidComponent: hasValidComponent
 };
 module.exports = exports['default'];
