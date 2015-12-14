@@ -24,7 +24,7 @@ export default class Modal4 extends React.Component {
       <Modal.Body>
         <Row>
           <Col xs={12} sm={12} md={12} lg={12} className="txt-center">
-            <h1><b>Establecimiento ex vitro</b></h1>
+            <h1><b>Protocolo para la producción de microestacas.</b></h1>
             <p>La intención de este proceso es que fortalezca la producción de vitroplantas. Las miniestacas presentan ventajas, pues no requieren los cuidados de aclimatación. El siguiente protocolo es para la generación de miniestacas:</p>
           </Col>
         </Row>

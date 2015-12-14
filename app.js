@@ -8,6 +8,7 @@ import { Redirect } from 'react-router';
 import Inicio from './components/Inicio';
 import ContentPrincipal from './components/ContentPrincipal/ContentPrincipal';
 import Modulo2 from './components/ContentPrincipal/Modulo2';
+import IntoMod2 from './components/ContentPrincipal/IntoMod2';
 import Modulo3 from './components/ContentPrincipal/Modulo3';
 import Modulo4 from './components/ContentPrincipal/Modulo4';
 import Modulo5 from './components/ContentPrincipal/Modulo5';
@@ -23,6 +24,7 @@ let routes = <Route handler={Menu} path='/'>
 		<Route name="Inicio" path="/" handler={ContentPrincipal} />
 		<Route name="Creditos" path="creditos" handler={ContentCreditos} />
 		<Route name="Modulo1" path="modulo1/:src" handler={Modulo1Content} />
+		<Route name="IntoMod2" path="intomodulo2/:src" handler={IntoMod2} />
 		<Route name="Modulo2" path="modulo2" handler={Modulo2} />
 		<Route name="Modulo3" path="modulo3" handler={Modulo3} />
 		<Route name="Modulo4" path="modulo4" handler={Modulo4} />

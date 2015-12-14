@@ -10,6 +10,8 @@ import modulo2 from './ContentModulo2';
 import modulo3 from './ContentModulo3';
 import modulo4 from './ContentModulo4';
 import modulo5 from './ContentModulo5';
+import intomod2 from './ContentIntoMod2';
+import intomod3 from './ContentIntoMod3';
 
 export default {
   contenido: {
@@ -38,10 +40,24 @@ export default {
       }, 3000);
     }
   },
+  intomod2: {
+    find: function(callback) {
+      setTimeout(() => {
+        callback(intomod2);
+      }, 3000);
+    }
+  },
   modulo2: {
     find: function(callback) {
       setTimeout(() => {
         callback(modulo2);
+      }, 3000);
+    }
+  },
+  intomod3: {
+    find: function(callback) {
+      setTimeout(() => {
+        callback(intomod3);
       }, 3000);
     }
   },

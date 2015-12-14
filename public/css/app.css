@@ -130,6 +130,64 @@ button {
 	display:block;
 
 }
+.col-into{
+	margin: 0;
+	margin-top: -50px;
+	padding: 0 !important;
+	height: 100%;
+}
+.img_into, .col-into{
+	height: 100%;
+	width: 100%;
+	background-color: #f3ffef;
+}
+.content-into{
+	margin-top: 6.5rem;
+	padding: 5rem;
+	vertical-align: middle;
+}
+.content-into h1{
+	font-size: 4rem;
+	text-align: justify;
+}
+.content-into p{
+	margin-top: 2rem;
+	font-weight: 700;
+	font-size: 1.8rem;
+}
+.link-into{
+	color: #333;
+}
+.link-into p{
+	font-style: italic;
+	font-weight: normal;
+	font-size: 1.2em !important;
+	border-bottom-color: #333;
+	border-bottom-style: solid;
+	border-bottom-width: 3px;
+	width: 40%;
+	padding-bottom: 0.8em;
+	position: absolute;
+  bottom: 5%;
+
+	-webkit-transition: 0.3s width ease-in-out;
+	   -moz-transition: 0.3s width ease-in-out;
+	    -ms-transition: 0.3s width ease-in-out;
+	     -o-transition: 0.3s width ease-in-out;
+	        transition: 0.3s width ease-in-out;
+}
+.link-into:hover{
+	color: #333;
+	text-decoration: none;
+}
+.link-into p:hover{
+	width: 70%;
+	-webkit-transition: 0.3s width ease-in-out;
+	   -moz-transition: 0.3s width ease-in-out;
+	    -ms-transition: 0.3s width ease-in-out;
+	     -o-transition: 0.3s width ease-in-out;
+	        transition: 0.3s width ease-in-out;
+}
 .center-vertically{
     margin-top:40%;
     white-space: normal;
@@ -360,7 +418,7 @@ font-size:0.8em;
 	width: 90%;
 	position: relative;
 	text-align: center;
-	left: 10%;	
+	left: 10%;
 }
 .modal-title{
 	color: #7aa76d;
@@ -504,4 +562,21 @@ p.cl:first-letter
 	margin-right: 5px;
 	padding: 2px;
 	margin-top: 5px;
+}
+.example-enter {
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
 }

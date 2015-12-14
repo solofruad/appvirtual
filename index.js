@@ -26,12 +26,24 @@ app.get('/dirmod', (req, res) => {
   	});
 });
 
+app.get('/dirintomod2', (req, res) => {
+  dbapi.intomod2.find((intomod2) => {
+      res.json(intomod2);
+    });
+});
+
+
 app.get('/dirmod2', (req, res) => {
   dbapi.modulo2.find((modulo2) => {
       res.json(modulo2);
     });
 });
 
+app.get('/dirintomod3', (req, res) => {
+  dbapi.intomod3.find((intomod3) => {
+      res.json(intomod3);
+    });
+});
 app.get('/dirmod3', (req, res) => {
   dbapi.modulo3.find((modulo3) => {
       res.json(modulo3);

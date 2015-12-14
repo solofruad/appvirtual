@@ -1,6 +1,6 @@
 export default[
 	{
-		modulo: 1,		
+		modulo: 1,
 		titulo: 'Modulo 1. Conociendo el laboratorio',
 		descripcion: 'Paseo Virtual. Encontramos secciones de entrada y salida, lavado y esterilización, cuarto de vidriería y reactivos.',
 		url: 'Modulo1'
@@ -9,42 +9,42 @@ export default[
 		modulo: 2,
 		titulo: 'Modulo 2. Preparación de Stocks',
 		descripcion: 'Elaboración de STOCKS para usar como fuente de nutrimento en el medio de cultivo.',
-		url: 'Modulo2'		
+		url: 'IntoMod2'
 	},
 	{
 		modulo: 3,
 		titulo: 'Modulo 3. Preparación de Medios',
 		descripcion: 'Elaboración de Medios.',
-		url: 'Modulo3'			
+		url: 'IntoMod2'
 	},
 	{
 		modulo: 4,
 		titulo: 'Modulo 4. Preparación de Stocks',
 		descripcion: 'Elaboración de Medios.',
-		url: 'Modulo4'		
+		url: 'Modulo4'
 	},
 	{
 		modulo: 5,
 		titulo: 'Modulo 5. Preparación de Medios',
 		descripcion: 'Elaboración de Medios.',
-		url: 'Modulo5'		
+		url: 'Modulo5'
 	},
 	{
 		modulo: 6,
 		titulo: 'Modulo 6. Preparación de Medios',
 		descripcion: 'Elaboración de Medios.',
-		url: 'Inicio'		
+		url: 'Inicio'
 	},
 	{
 		modulo: 7,
 		titulo: 'Modulo 7. Preparación de Medios',
 		descripcion: 'Elaboración de Medios.',
-		url: 'Inicio'		
+		url: 'Inicio'
 	},
 	{
 		modulo: 8,
 		titulo: 'Modulo 8. Preparación de Medios',
 		descripcion: 'Elaboración de Medios.',
-		url: 'Inicio'			
+		url: 'Inicio'
 	}
 ];

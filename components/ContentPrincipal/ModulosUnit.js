@@ -19,10 +19,10 @@ export default class ModulosUnit extends React.Component {
 		if(this.props.titulo==""){
 			return <Col xs={6} sm={6} md={3} lg={3} className="img-modulo">
 					<a href={this.props.url} className="mod" onClick={this.onClick.bind(this)}>
-						<img src={urlImg} alt={this.props.titulo} className="img_contenido" />						
+						<img src={urlImg} alt={this.props.titulo} className="img_contenido" />
 					</a>
 			</Col>
-		}		
+		}
 		else{
 			if(this.props.url=="javascript:void(0)"){
 				return <Col xs={6} sm={6} md={3} lg={3} className="img-modulo">
@@ -33,23 +33,23 @@ export default class ModulosUnit extends React.Component {
 									<h3>{this.props.titulo}</h3>
 									<p>{this.props.descripcion}</p>
 								</div>
-							</div>					
+							</div>
 					</a>
 				</Col>
 			}
 			else{
 				return <Col xs={6} sm={6} md={3} lg={3} className="img-modulo">
-					<Link to={this.props.url} params={{ src: 1 }} className="mod">					
+					<Link to={this.props.url} params={{ src: this.props.modulo }} className="mod">					
 							<img src={urlImg} alt={this.props.titulo} className="img_contenido" />
 							<div className="info-image">
 								<div className="center-vertically">
 									<h3>{this.props.titulo}</h3>
 									<p>{this.props.descripcion}</p>
 								</div>
-							</div>					
+							</div>
 					</Link>
 				</Col>
-			}			
+			}
 		}
 	}
 }
