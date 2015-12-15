@@ -1,7 +1,7 @@
 export default[
 	{
-		id: 1,		
-		titulo: 'Cultivo de Tejidos Vegetales',
+		id: 1,
+		titulo: `Cultivo de Tejidos Vegetales`,
 		descripcion: 'En el laboratorio se desarrollan procedimientos de cultivo in vitro. Conocerás los procedimientos para la preparación de medios de cultivo y los pasos para el resultado final de la plata.'
 	},
 	{

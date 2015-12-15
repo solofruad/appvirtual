@@ -66,7 +66,7 @@ button {
 		background: #91cd85;
 	}
 .PrincipalHeader{
-	height:675px;
+	height:100%;
 	background:#333 url(../img/bg5.jpg) repeat-x;
 	background-position:center;
 	background-attachment: fixed;
@@ -78,22 +78,37 @@ button {
 		padding-top:17%;
 		line-height:0;
 		color: #FDE;
+		width: 90%;		
 		-webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
 	       -moz-animation: fadein 2s; /* Firefox < 16 */
 	        -ms-animation: fadein 2s; /* Internet Explorer */
 	         -o-animation: fadein 2s; /* Opera < 12.1 */
 	            animation: fadein 2s;
+		position: absolute;
+		top: 15%;
+		left: 6%;
 	}
-		.PrincipalHeader-top .slogan{
-			font-size:1.8em;
-			line-height:1.2;
+		.slogan{
+			font-size:2rem;
+			line-height:1.6;
+			margin-top: 30%;
+			color:transparent;
+			-webkit-transition:color 0.2s ease-out 0.2s, -webkit-transform 0.2s ease-out 0.2s;
+			transition:color 0.2s ease-out 0.2s, transform 0.2s ease-out 0.2s;
 		}
 
 			.PrincipalHeader-top-tittle h1{
-				font-size:5em;
+				font-size:5rem;
 			}
 			.PrincipalHeader-top-tittle span{
-				font-size:2em;
+				font-size:2rem;
+				font-weight: bold;
+			}
+			.PrincipalHeader-top-tittle div{
+				height: 2.5rem;
+				border-bottom: 2px solid;
+				width: 30%;
+				margin-left: 35%;
 			}
 			@keyframes fadein {
 			    from { color:transparent; }
@@ -123,9 +138,123 @@ button {
 			    from { opacity: 0; }
 			    to   { opacity: 1; }
 			}
+
+
 .img-modulo{
 	margin:0;
 	padding:0 !important;
+}
+.circulo{
+	margin-top: 5%;
+	border: 2px solid;
+	width: 9.5rem;
+	height: 9.5rem;
+	border-radius: 200px;
+	padding: 0.25rem;
+	color: #FDE;
+	padding-top: 2.7rem;
+	position: absolute;
+	left: 40%;
+	-webkit-animation: traslationY 2s; /* Safari, Chrome and Opera > 12.1 */
+			 -moz-animation: traslationY 2s; /* Firefox < 16 */
+				-ms-animation: traslationY 2s; /* Internet Explorer */
+				 -o-animation: traslationY 2s; /* Opera < 12.1 */
+						animation: traslationY 2s;
+	-webkit-transition: color 0.2s ease-out 0.3s;
+	transition: color 0.2s ease-out 0.3s;
+}
+.circulo a{
+	color: #FDE;
+	-webkit-transition: color 0.3s ease-out 0.4s;
+	transition: color 0.3s ease-out 0.4s;
+
+}
+.circulo:hover, .circulo:hover a{
+	color:#77BA6A;
+	text-decoration: none;
+}
+.circulo:hover + .slogan{
+	display: block;
+	color:#FDE;
+	-webkit-transform: translateY(-15px); /* Safari */
+  	transform:translateY(-15px);
+}
+.slogan:hover{
+	text-decoration: none;
+	display: none;
+	opacity: 1;
+}
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+		.circulo{
+			left: 42%;
+		}
+		.PrincipalHeader-top{
+			top:8%;
+			left: 33%;
+			width: 30%;
+		}
+}
+@media only screen and (max-width: 430px) {
+	.slogan{
+		font-size:1.5rem;
+		margin-top: 40%
+	}
+
+		.PrincipalHeader-top-tittle h1{
+			font-size:3rem;
+		}
+		.PrincipalHeader-top-tittle span{
+			font-size:1.8rem;
+		}
+}
+@keyframes traslationY {
+		from { -webkit-transform: translateY(200%); /* Safari */
+  								 transform:translateY(200%);
+		}
+		to   { -webkit-transform: translateY(0%); /* Safari */
+									 transform:translateY(0%);
+		}
+}
+
+/* Firefox < 16 */
+@-moz-keyframes traslationY {
+	from { -webkit-transform: translateY(200%); /* Safari */
+								 transform:translateY(200%);
+	}
+	to   { -webkit-transform: translateY(0%); /* Safari */
+								 transform:translateY(0%);
+	}
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes traslationY {
+	from { -webkit-transform: translateY(200%); /* Safari */
+								 transform:translateY(200%);
+	}
+	to   { -webkit-transform: translateY(0%); /* Safari */
+								 transform:translateY(0%);
+	}
+}
+
+/* Internet Explorer */
+@-ms-keyframes traslationY {
+	from { -webkit-transform: translateY(200%); /* Safari */
+								 transform:translateY(200%);
+	}
+	to   { -webkit-transform: translateY(0%); /* Safari */
+								 transform:translateY(0%);
+	}
+}
+
+/* Opera < 12.1 */
+@-o-keyframes traslationY {
+	from { -webkit-transform: translateY(200%); /* Safari */
+								 transform:translateY(200%);
+	}
+	to   { -webkit-transform: translateY(0%); /* Safari */
+								 transform:translateY(0%);
+	}
 }
 .img_contenido, .img-modulo{
 	/*height:100%;*/
@@ -156,6 +285,7 @@ button {
 	line-height: 2rem;
 	padding-top: 5%;
 }
+
 .info-image{
 	position: absolute;
 	top: 0px;

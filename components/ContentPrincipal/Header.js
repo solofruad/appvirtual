@@ -10,28 +10,36 @@ export default class Header extends React.Component {
 		super(props);
 	}
 	render(){
-		return <div className="PrincipalHeader">  
-		{ 
+		return <div className="PrincipalHeader">
+		{
 			this.props.headers.map((content) => {
 				if(content.id==1){
 					return <div className="PrincipalHeader-top">
 						<div className="PrincipalHeader-top-tittle">
-							<span>Laboratorio Virtual</span>
+							<span>LABORATORIO VIRTUAL</span>
+							<div></div>
 							<h1>{content.titulo}</h1>
 						</div>
-						<div className="slogan"><br /><br />
+						<br />
+						<div className="circulo">
+							<a href="#modulo">
+								<p>Comenzar</p>
+							</a>
+						</div>
+						<div className="slogan">
 							<lead>{content.descripcion}</lead>
-						</div>    							
-					</div>    		
+						</div>
+
+					</div>
+
 				}
 				else{
 					<p>No se encontro nada</p>
 				}
-				
-			}) 
+
+			})
 
     	}
-    	<br /><a href="#modulo" className="btn btn-lg btn-default nav-scroll">Comenzar</a>	
     	</div>
 	}
 }

@@ -548,19 +548,32 @@ var Header = (function (_React$Component) {
 								_react2["default"].createElement(
 									"span",
 									null,
-									"Laboratorio Virtual"
+									"LABORATORIO VIRTUAL"
 								),
+								_react2["default"].createElement("div", null),
 								_react2["default"].createElement(
 									"h1",
 									null,
 									content.titulo
 								)
 							),
+							_react2["default"].createElement("br", null),
+							_react2["default"].createElement(
+								"div",
+								{ className: "circulo" },
+								_react2["default"].createElement(
+									"a",
+									{ href: "#modulo" },
+									_react2["default"].createElement(
+										"p",
+										null,
+										"Comenzar"
+									)
+								)
+							),
 							_react2["default"].createElement(
 								"div",
 								{ className: "slogan" },
-								_react2["default"].createElement("br", null),
-								_react2["default"].createElement("br", null),
 								_react2["default"].createElement(
 									"lead",
 									null,
@@ -575,13 +588,7 @@ var Header = (function (_React$Component) {
 							"No se encontro nada"
 						);
 					}
-				}),
-				_react2["default"].createElement("br", null),
-				_react2["default"].createElement(
-					"a",
-					{ href: "#modulo", className: "btn btn-lg btn-default nav-scroll" },
-					"Comenzar"
-				)
+				})
 			);
 		}
 	}]);
@@ -36337,8 +36344,48 @@ function addFocusListener(handler) {
 
 module.exports = exports['default'];
 },{}],306:[function(require,module,exports){
-arguments[4][160][0].apply(exports,arguments)
-},{"dup":160}],307:[function(require,module,exports){
+/**
+ * Safe chained function
+ *
+ * Will only create a new function if needed,
+ * otherwise will pass back existing functions or null.
+ *
+ * @param {function} functions to chain
+ * @returns {function|null}
+ */
+'use strict';
+
+exports.__esModule = true;
+function createChainedFunction() {
+  for (var _len = arguments.length, funcs = Array(_len), _key = 0; _key < _len; _key++) {
+    funcs[_key] = arguments[_key];
+  }
+
+  return funcs.filter(function (f) {
+    return f != null;
+  }).reduce(function (acc, f) {
+    if (typeof f !== 'function') {
+      throw new Error('Invalid Argument Type, must only provide functions, undefined, or null.');
+    }
+
+    if (acc === null) {
+      return f;
+    }
+
+    return function chainedFunction() {
+      for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+        args[_key2] = arguments[_key2];
+      }
+
+      acc.apply(this, args);
+      f.apply(this, args);
+    };
+  }, null);
+}
+
+exports['default'] = createChainedFunction;
+module.exports = exports['default'];
+},{}],307:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
