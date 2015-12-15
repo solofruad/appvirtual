@@ -14,21 +14,33 @@ export default class ContentPrincipal extends React.Component {
 	}
 	componentWillMount(){
 		$.get('/dirhead', (contenido) => {
-      		this.setState({ headers:  contenido});      	
+      		this.setState({ headers:  contenido});
     	});
     	$.get('/dirmod', (modulos) => {
-      		this.setState({ modulos:  modulos});      	
+      		this.setState({ modulos:  modulos});
     	});
+	}
+	scrollTo(){
+		$('html,body').animate({
+      scrollTop: $('#contentPrincipal').offset().top
+    }, 1000);
+		return false;
 	}
 	render(){
 		if (this.state.headers.length){
 			return <div>
-				<Header headers={this.state.headers} />
+				<Header headers={this.state.headers} scrollto={this.scrollTo} />
 				<Modulos modulos={this.state.modulos} />
-			</div>	
+			</div>
 		}
 		else {
-			return <div><img src="public/img/load.gif" /></div>
-		}	
+			return <div className="spinner">
+			  <div className="rect1"></div>
+			  <div className="rect2"></div>
+			  <div className="rect3"></div>
+			  <div className="rect4"></div>
+			  <div className="rect5"></div>
+			</div>
+		}
 	}
 }

@@ -28,6 +28,7 @@ let history = createHashHistory({
 let routes = <Route component={Menu} path='/'>
 		<IndexRoute component={ContentPrincipal} />
 		<Route path="creditos" component={ContentCreditos} />
+		<Route path="contentPrincipal" component={ContentPrincipal} />
 		<Route path="modulo1/:src" component={Modulo1Content} />
 		<Route path="modulo/:src" component={IndexMod} />
 		<Route path="modulo2" component={Modulo2} />

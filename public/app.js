@@ -74,6 +74,7 @@ var routes = _react2['default'].createElement(
 				{ component: _componentsNavMenu2['default'], path: '/' },
 				_react2['default'].createElement(_reactRouter.IndexRoute, { component: _componentsContentPrincipalContentPrincipal2['default'] }),
 				_react2['default'].createElement(_reactRouter.Route, { path: 'creditos', component: _componentsContentCreditosContentCreditos2['default'] }),
+				_react2['default'].createElement(_reactRouter.Route, { path: 'contentPrincipal', component: _componentsContentPrincipalContentPrincipal2['default'] }),
 				_react2['default'].createElement(_reactRouter.Route, { path: 'modulo1/:src', component: _componentsModulo1Modulo1Content2['default'] }),
 				_react2['default'].createElement(_reactRouter.Route, { path: 'modulo/:src', component: _componentsContentPrincipalIndexMod2['default'] }),
 				_react2['default'].createElement(_reactRouter.Route, { path: 'modulo2', component: _componentsContentPrincipalModulo22['default'] }),
@@ -166,8 +167,12 @@ var ContentCreditos = (function (_React$Component) {
 			} else {
 				return _react2['default'].createElement(
 					'div',
-					null,
-					_react2['default'].createElement('img', { src: 'public/img/load.gif' })
+					{ className: 'spinner' },
+					_react2['default'].createElement('div', { className: 'rect1' }),
+					_react2['default'].createElement('div', { className: 'rect2' }),
+					_react2['default'].createElement('div', { className: 'rect3' }),
+					_react2['default'].createElement('div', { className: 'rect4' }),
+					_react2['default'].createElement('div', { className: 'rect5' })
 				);
 			}
 		}
@@ -472,20 +477,32 @@ var ContentPrincipal = (function (_React$Component) {
 			});
 		}
 	}, {
+		key: 'scrollTo',
+		value: function scrollTo() {
+			(0, _jquery2['default'])('html,body').animate({
+				scrollTop: (0, _jquery2['default'])('#contentPrincipal').offset().top
+			}, 1000);
+			return false;
+		}
+	}, {
 		key: 'render',
 		value: function render() {
 			if (this.state.headers.length) {
 				return _react2['default'].createElement(
 					'div',
 					null,
-					_react2['default'].createElement(_Header2['default'], { headers: this.state.headers }),
+					_react2['default'].createElement(_Header2['default'], { headers: this.state.headers, scrollto: this.scrollTo }),
 					_react2['default'].createElement(_Modulos2['default'], { modulos: this.state.modulos })
 				);
 			} else {
 				return _react2['default'].createElement(
 					'div',
-					null,
-					_react2['default'].createElement('img', { src: 'public/img/load.gif' })
+					{ className: 'spinner' },
+					_react2['default'].createElement('div', { className: 'rect1' }),
+					_react2['default'].createElement('div', { className: 'rect2' }),
+					_react2['default'].createElement('div', { className: 'rect3' }),
+					_react2['default'].createElement('div', { className: 'rect4' }),
+					_react2['default'].createElement('div', { className: 'rect5' })
 				);
 			}
 		}
@@ -532,8 +549,15 @@ var Header = (function (_React$Component) {
 	}
 
 	_createClass(Header, [{
+		key: "scrollTo",
+		value: function scrollTo(ev) {
+			this.props.scrollto.call(null);
+		}
+	}, {
 		key: "render",
 		value: function render() {
+			var _this = this;
+
 			return _react2["default"].createElement(
 				"div",
 				{ className: "PrincipalHeader" },
@@ -563,7 +587,7 @@ var Header = (function (_React$Component) {
 								{ className: "circulo" },
 								_react2["default"].createElement(
 									"a",
-									{ href: "#modulo" },
+									{ id: "modulos", href: "javascript:void(0)", onClick: _this.scrollTo.bind(_this) },
 									_react2["default"].createElement(
 										"p",
 										null,
@@ -704,8 +728,12 @@ var IndexMod = (function (_React$Component) {
       } else {
         return _react2['default'].createElement(
           'div',
-          null,
-          _react2['default'].createElement('img', { src: 'public/img/load.gif' })
+          { className: 'spinner' },
+          _react2['default'].createElement('div', { className: 'rect1' }),
+          _react2['default'].createElement('div', { className: 'rect2' }),
+          _react2['default'].createElement('div', { className: 'rect3' }),
+          _react2['default'].createElement('div', { className: 'rect4' }),
+          _react2['default'].createElement('div', { className: 'rect5' })
         );
       }
     }
@@ -7798,8 +7826,12 @@ var Modulo2 = (function (_React$Component) {
 			} else {
 				return _react2['default'].createElement(
 					'div',
-					null,
-					_react2['default'].createElement('img', { src: 'public/img/load.gif' })
+					{ className: 'spinner' },
+					_react2['default'].createElement('div', { className: 'rect1' }),
+					_react2['default'].createElement('div', { className: 'rect2' }),
+					_react2['default'].createElement('div', { className: 'rect3' }),
+					_react2['default'].createElement('div', { className: 'rect4' }),
+					_react2['default'].createElement('div', { className: 'rect5' })
 				);
 			}
 		}
@@ -7939,8 +7971,12 @@ var Modulo3 = (function (_React$Component) {
 			} else {
 				return _react2['default'].createElement(
 					'div',
-					null,
-					_react2['default'].createElement('img', { src: 'public/img/load.gif' })
+					{ className: 'spinner' },
+					_react2['default'].createElement('div', { className: 'rect1' }),
+					_react2['default'].createElement('div', { className: 'rect2' }),
+					_react2['default'].createElement('div', { className: 'rect3' }),
+					_react2['default'].createElement('div', { className: 'rect4' }),
+					_react2['default'].createElement('div', { className: 'rect5' })
 				);
 			}
 		}
@@ -8125,8 +8161,12 @@ var Modulo4 = (function (_React$Component) {
 			} else {
 				return _react2['default'].createElement(
 					'div',
-					null,
-					_react2['default'].createElement('img', { src: 'public/img/load.gif' })
+					{ className: 'spinner' },
+					_react2['default'].createElement('div', { className: 'rect1' }),
+					_react2['default'].createElement('div', { className: 'rect2' }),
+					_react2['default'].createElement('div', { className: 'rect3' }),
+					_react2['default'].createElement('div', { className: 'rect4' }),
+					_react2['default'].createElement('div', { className: 'rect5' })
 				);
 			}
 		}
@@ -8266,8 +8306,12 @@ var Modulo5 = (function (_React$Component) {
 			} else {
 				return _react2['default'].createElement(
 					'div',
-					null,
-					_react2['default'].createElement('img', { src: 'public/img/load.gif' })
+					{ className: 'spinner' },
+					_react2['default'].createElement('div', { className: 'rect1' }),
+					_react2['default'].createElement('div', { className: 'rect2' }),
+					_react2['default'].createElement('div', { className: 'rect3' }),
+					_react2['default'].createElement('div', { className: 'rect4' }),
+					_react2['default'].createElement('div', { className: 'rect5' })
 				);
 			}
 		}
@@ -8329,7 +8373,7 @@ var Modulos = (function (_React$Component) {
 				null,
 				_react2['default'].createElement(
 					_reactBootstrap.Row,
-					{ className: 'contentPrincipal' },
+					{ id: 'contentPrincipal', className: 'contentPrincipal' },
 					this.props.modulos.map(function (content) {
 						return _react2['default'].createElement(_ModulosUnit2['default'], {
 							key: content.modulo,
@@ -8446,14 +8490,14 @@ var ModulosUnit = (function (_React$Component) {
 									'div',
 									{ className: 'center-vertically' },
 									_react2['default'].createElement(
-										'h3',
-										null,
-										this.props.titulo
-									),
-									_react2['default'].createElement(
 										'p',
 										null,
 										this.props.descripcion
+									),
+									_react2['default'].createElement(
+										'h3',
+										null,
+										this.props.titulo
 									)
 								)
 							)
@@ -8475,14 +8519,14 @@ var ModulosUnit = (function (_React$Component) {
 									'div',
 									{ className: 'center-vertically' },
 									_react2['default'].createElement(
-										'h3',
-										null,
-										this.props.titulo
-									),
-									_react2['default'].createElement(
 										'p',
 										null,
 										this.props.descripcion
+									),
+									_react2['default'].createElement(
+										'h3',
+										null,
+										this.props.titulo
 									)
 								)
 							)
@@ -9854,7 +9898,9 @@ var Menu = (function (_React$Component) {
 	_createClass(Menu, [{
 		key: 'recargar',
 		value: function recargar() {
-			location.reload();
+			setTimeout(function () {
+				location.reload();
+			}, 3000);
 		}
 	}, {
 		key: 'render',

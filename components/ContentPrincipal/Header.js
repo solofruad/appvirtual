@@ -9,6 +9,9 @@ export default class Header extends React.Component {
 	constructor(props){
 		super(props);
 	}
+	scrollTo(ev){
+		this.props.scrollto.call(null)
+	}
 	render(){
 		return <div className="PrincipalHeader">
 		{
@@ -22,24 +25,20 @@ export default class Header extends React.Component {
 						</div>
 						<br />
 						<div className="circulo">
-							<a href="#modulo">
+							<a id="modulos" href="javascript:void(0)" onClick={this.scrollTo.bind(this)}>
 								<p>Comenzar</p>
 							</a>
 						</div>
 						<div className="slogan">
 							<lead>{content.descripcion}</lead>
 						</div>
-
 					</div>
-
 				}
 				else{
 					<p>No se encontro nada</p>
 				}
-
 			})
-
-    	}
-    	</div>
+  	}
+  	</div>
 	}
 }

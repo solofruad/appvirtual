@@ -13,20 +13,20 @@ export default class Modulos extends React.Component {
 		super(props);
 	}
 	render(){
-		return <Grid>		
-			<Row className="contentPrincipal">
+		return <Grid>
+			<Row id="contentPrincipal" className="contentPrincipal">
 				{
-				this.props.modulos.map((content) => {									
-					return <ModulosUnit  
+				this.props.modulos.map((content) => {
+					return <ModulosUnit
 						key={content.modulo}
-						modulo={content.modulo} 
+						modulo={content.modulo}
 						titulo={content.titulo}
 						descripcion={content.descripcion}
-						url={content.url} 						
-						open={this.props.open}/>						
-				})	
-				}	
-			</Row>							
+						url={content.url}
+						open={this.props.open}/>
+				})
+				}
+			</Row>
 		</Grid>
 	}
 }

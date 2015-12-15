@@ -2,7 +2,7 @@ export default[
 	{
 		modulo: "modulo3/1",
 		titulo: 'Introducción. 	Preparación de Medios de Cultivo.',
-		descripcion: 'Las plantas necesitan un soporte para su desarrollo radicular y sostenimiento: nutrientes, vitaminas, fuente de carbono...',
+		descripcion: 'Las plantas necesitan un soporte para su desarrollo radicular y sostenimiento.',
 		url: 'javascript:void(0)'
 	},
 	{
@@ -32,7 +32,7 @@ export default[
 	{
 		modulo: "modulo3/3",
 		titulo: 'Componentes del medio de cultivo.',
-		descripcion: 'La composición del medio de cultivo está definida por los requerimientos de los explantes...',
+		descripcion: 'La composición del medio de cultivo está definida por los siguientes requerimientos de los explantes',
 		url: 'javascript:void(0)',
 	},
 	{

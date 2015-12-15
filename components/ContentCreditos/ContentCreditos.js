@@ -13,17 +13,23 @@ export default class ContentCreditos extends React.Component {
 	}
 	componentWillMount(){
 		$.get('/dircred', (creditos) => {
-      		this.setState({ creditos:  creditos});      	
+      		this.setState({ creditos:  creditos});
     	});
 	}
 	render(){
 		if (this.state.creditos.length){
 			return <div>
-				<Creditos creditos={this.state.creditos} />				
-			</div>	
+				<Creditos creditos={this.state.creditos} />
+			</div>
 		}
 		else {
-			return <div><img src="public/img/load.gif" /></div>
-		}	
+			return <div className="spinner">
+				<div className="rect1"></div>
+				<div className="rect2"></div>
+				<div className="rect3"></div>
+				<div className="rect4"></div>
+				<div className="rect5"></div>
+			</div>
+		}
 	}
 }

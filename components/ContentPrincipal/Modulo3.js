@@ -27,14 +27,14 @@ export default class Modulo3 extends React.Component {
 		if(mod=='modulo3/1') { this.setState({m1show: true}); }
 		else if(mod=='modulo3/2') {this.setState({m2show: true});}
 		else if(mod=='modulo3/3') {this.setState({m3show: true});}
-		else if(mod=='modulo3/4') {this.setState({m4show: true});}		
+		else if(mod=='modulo3/4') {this.setState({m4show: true});}
 		else {return false;}
 	}
 	close(mod){
 		if(mod=='modulo3/1') {this.setState({m1show: false});}
 		else if(mod=='modulo3/2') {this.setState({m2show: false});}
 		else if(mod=='modulo3/3') {this.setState({m3show: false});}
-		else if(mod=='modulo3/4') {this.setState({m4show: false});}		
+		else if(mod=='modulo3/4') {this.setState({m4show: false});}
 		else {return false;	}
 	}
 	componentWillMount(){
@@ -49,11 +49,17 @@ export default class Modulo3 extends React.Component {
 				<Modal1 show={this.state.m1show} onHide={this.close} open={this.open}/>
 				<Modal2 show={this.state.m2show} onHide={this.close} />
 				<Modal3 show={this.state.m3show} onHide={this.close} />
-				<Modal4 show={this.state.m4show} onHide={this.close} />				
+				<Modal4 show={this.state.m4show} onHide={this.close} />
 			</div>
 		}
 		else {
-			return <div><img src="public/img/load.gif" /></div>
+			return <div className="spinner">
+			  <div className="rect1"></div>
+			  <div className="rect2"></div>
+			  <div className="rect3"></div>
+			  <div className="rect4"></div>
+			  <div className="rect5"></div>
+			</div>
 		}
 	}
 }

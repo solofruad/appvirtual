@@ -8,19 +8,19 @@ export default[
 	{
 		modulo: 2,
 		titulo: 'Modulo 2. Preparación de Stocks',
-		descripcion: 'Elaboración de STOCKS para usar como fuente de nutrimento en el medio de cultivo.',
+		descripcion: 'Elaboración de stocks para usar como fuente de nutrimiento para el medio de cultivo.',
 		url: 'modulo/2'
 	},
 	{
 		modulo: 3,
 		titulo: 'Modulo 3. Preparación de Medios de Cultivo.',
-		descripcion: 'Las plantas necesitan un soporte para su desarrollo radicular y sostenimiento: nutrientes, vitaminas, fuente de carbono y demas compuestos requeridos.',
+		descripcion: 'Las plantas necesitan un soporte para su desarrollo radicular y sostenimiento.',
 		url: 'modulo/3'
 	},
 	{
 		modulo: 4,
 		titulo: 'Modulo 4. MICROPROPAGACIÓN  IN VITRO',
-		descripcion: 'El cultivo de tejidos vegetales incluye diferente técnicas de micropropagación in vitro: siembra de meristemos, óvulos, anteras, embriones y tejidos radiculares.',
+		descripcion: 'El cultivo de tejidos vegetales incluye diferente técnicas de micropropagación in vitro.',
 		url: 'modulo/4'
 	},
 	{

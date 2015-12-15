@@ -48,8 +48,8 @@ export default class ModulosUnit extends React.Component {
 							{ titulo  }
 							<div className="info-image">
 								<div className="center-vertically">
-									<h3>{this.props.titulo}</h3>
 									<p>{this.props.descripcion}</p>
+									<h3>{this.props.titulo}</h3>
 								</div>
 							</div>
 					</a>
@@ -62,8 +62,8 @@ export default class ModulosUnit extends React.Component {
 							{ titulo  }
 							<div className="info-image">
 								<div className="center-vertically">
-									<h3>{this.props.titulo}</h3>
 									<p>{this.props.descripcion}</p>
+									<h3>{this.props.titulo}</h3>
 								</div>
 							</div>
 					</Link>

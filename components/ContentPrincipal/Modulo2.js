@@ -77,7 +77,13 @@ export default class Modulo2 extends React.Component {
 			</div>
 		}
 		else {
-			return <div><img src="public/img/load.gif" /></div>
+			return <div className="spinner">
+			  <div className="rect1"></div>
+			  <div className="rect2"></div>
+			  <div className="rect3"></div>
+			  <div className="rect4"></div>
+			  <div className="rect5"></div>
+			</div>
 		}
 	}
 }

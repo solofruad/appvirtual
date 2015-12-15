@@ -2,13 +2,13 @@ export default[
 	{
 		modulo: "modulo4/1",
 			titulo: 'Introducción. 	MICROPROPAGACIÓN  IN VITRO.',
-		descripcion: 'El cultivo de tejidos vegetales incluye diferente técnicas de micropropagación in vitro: siembra de meristemos, óvulos, anteras, embriones y tejidos radiculares...',
+		descripcion: 'El cultivo de tejidos vegetales incluye diferente técnicas de micropropagación in vitro.',
 		url: 'javascript:void(0)'
 	},
 	{
 		modulo: "modulo4/2",
 		titulo: 'Planta donadora',
-		descripcion: 'De la planta donadora o planta madre es donde se toma el explante. El explante es el tejido vegetal que se corta para empezar el cultivo in vitro. ',
+		descripcion: 'De la planta donadora o planta madre es donde se toma el explante.',
 		url: 'javascript:void(0)'
 	},
 	{
@@ -20,7 +20,7 @@ export default[
 	{
 		modulo: "modulo4/4",
 		titulo: 'Preparación de cámara de flujo laminar',
-		descripcion: 'En la cámara de flujo laminar se realizan las siguientes actividades: a) se prende la luz y el flujo, b) la luz ultravioleta durante 20 minutos y se deja en reposo 40 minutos...',
+		descripcion: 'En la cámara de flujo laminar se realizan las siguientes actividades.',
 		url: 'javascript:void(0)'
 	},
 	{
@@ -38,13 +38,13 @@ export default[
 	{
 		modulo: "modulo4/7",
 		titulo: 'Meristemos.',
-		descripcion: 'Los tejidos vegetales, que presentan mayor nivel de totipotencia son los meristemos. Se le denomina “domo” o “cúpula” meristemática.',
+		descripcion: 'Los tejidos vegetales, que presentan mayor nivel de totipotencia son los meristemos.',
 		url: 'javascript:void(0)',
 	},
 	{
 		modulo: "modulo4/8",
 		titulo: 'Extracción, siembra e incubación',
-		descripcion: 'De las plantas donadoras se corta los explantes apicales, en este caso los de la porción apical del tallo, donde se encuentra (MAT) y se deja sumergir directamente en 1% de NaOCl...',
+		descripcion: 'De las plantas donadoras se corta los explantes apicales, en este caso los de la porción apical del tallo.',
 		url: 'javascript:void(0)',
 	},
 	{
@@ -56,7 +56,7 @@ export default[
 	{
 		modulo: "modulo4/10",
 		titulo: 'Crecimiento de microestacas',
-		descripcion: 'Los tarros se llevan a cuarto de crecimiento que presenta las siguientes características: temperatura de 300C, Luminosidad...',
+		descripcion: 'Los tarros se llevan a cuarto de crecimiento que presenta las siguientes características.',
 		url: 'javascript:void(0)'
 	},
 	{
