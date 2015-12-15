@@ -11,6 +11,6 @@ export default[
     modulo: 2,
 		titulo: 'Preparación de Stocks para la elaboración de Medios de Cultivo.',
 		descripcion: 'Elaboración de Stocks',
-    url: 'Modulo2'
+    url: 'modulo2'
 	}
 ];

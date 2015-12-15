@@ -20,7 +20,9 @@ export default class Menu extends React.Component {
 	constructor(props){
 		super(props);
 	}
-
+	recargar(){
+		    	location.reload();
+	}
 	render(){
 		return (<div>
 			<Navbar fixedTop>
@@ -34,11 +36,11 @@ export default class Menu extends React.Component {
 		      <Nav>
 		        <li eventKey={1}><Link to={`/`} ><i className="fa fa-home"></i>&nbsp; Inicio</Link></li>
 		        <NavDropdown eventKey={2} title='Modulos' id="basic-nav-dropdown">
-		          	<li eventKey={2.1}><Link to={`/modulo1/${1}`} className="reloadModulo">Modulo 1</Link></li>
-			          <li eventKey={2.2}><Link to={`intomodulo2/${2}`}>Modulo 2</Link></li>
-			          <li eventKey={2.3}><Link to={`intomodulo2/${3}`}>Modulo 3</Link></li>
-					  		<li eventKey={2.4}><Link to={`/modulo4`}>Modulo 4</Link></li>
-					  		<li eventKey={2.5}><Link to={`/modulo5`}>Modulo 5</Link></li>
+		          	<li eventKey={2.1} className="reloadModulo"><Link to={`/modulo1/${1}`} onClick={this.recargar}>Modulo 1</Link></li>
+			          <li eventKey={2.2}><Link to={`modulo/${2}`}>Modulo 2</Link></li>
+			          <li eventKey={2.3}><Link to={`modulo/${3}`}>Modulo 3</Link></li>
+					  		<li eventKey={2.4}><Link to={`modulo/${4}`}>Modulo 4</Link></li>
+					  		<li eventKey={2.5}><Link to={`modulo/${5}`}>Modulo 5</Link></li>
 			          <MenuItem divider />
 								<li eventKey={2.6}><Link to={`/creditos`}>Simulación 1</Link></li>
 								<li eventKey={2.7}><Link to={`/creditos`}>Simulación 2</Link></li>

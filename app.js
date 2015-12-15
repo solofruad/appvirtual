@@ -9,7 +9,7 @@ import createHashHistory from 'history/lib/createHashHistory';
 import ContentPrincipal from './components/ContentPrincipal/ContentPrincipal';
 import Modulo1 from './components/modulo1/Modulo1';
 import Modulo2 from './components/ContentPrincipal/Modulo2';
-import IntoMod2 from './components/ContentPrincipal/IntoMod2';
+import IndexMod from './components/ContentPrincipal/IndexMod';
 import Modulo3 from './components/ContentPrincipal/Modulo3';
 import Modulo4 from './components/ContentPrincipal/Modulo4';
 import Modulo5 from './components/ContentPrincipal/Modulo5';
@@ -29,7 +29,7 @@ let routes = <Route component={Menu} path='/'>
 		<IndexRoute component={ContentPrincipal} />
 		<Route path="creditos" component={ContentCreditos} />
 		<Route path="modulo1/:src" component={Modulo1Content} />
-		<Route path="intomodulo2/:src" component={IntoMod2} />
+		<Route path="modulo/:src" component={IndexMod} />
 		<Route path="modulo2" component={Modulo2} />
 		<Route path="modulo3" component={Modulo3} />
 		<Route path="modulo4" component={Modulo4} />

@@ -49,9 +49,19 @@ app.get('/dirmod3', (req, res) => {
       res.json(modulo3);
     });
 });
+app.get('/dirintomod4', (req, res) => {
+  dbapi.intomod4.find((intomod4) => {
+      res.json(intomod4);
+    });
+});
 app.get('/dirmod4', (req, res) => {
   dbapi.modulo4.find((modulo4) => {
       res.json(modulo4);
+    });
+});
+app.get('/dirintomod5', (req, res) => {
+  dbapi.intomod5.find((intomod5) => {
+      res.json(intomod5);
     });
 });
 app.get('/dirmod5', (req, res) => {

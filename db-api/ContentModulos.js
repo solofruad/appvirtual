@@ -9,25 +9,25 @@ export default[
 		modulo: 2,
 		titulo: 'Modulo 2. Preparación de Stocks',
 		descripcion: 'Elaboración de STOCKS para usar como fuente de nutrimento en el medio de cultivo.',
-		url: 'IntoMod2'
+		url: 'modulo/2'
 	},
 	{
 		modulo: 3,
 		titulo: 'Modulo 3. Preparación de Medios',
 		descripcion: 'Elaboración de Medios.',
-		url: 'IntoMod2'
+		url: 'modulo/3'
 	},
 	{
 		modulo: 4,
 		titulo: 'Modulo 4. Preparación de Stocks',
 		descripcion: 'Elaboración de Medios.',
-		url: 'Modulo4'
+		url: 'modulo/4'
 	},
 	{
 		modulo: 5,
 		titulo: 'Modulo 5. Preparación de Medios',
 		descripcion: 'Elaboración de Medios.',
-		url: 'Modulo5'
+		url: 'modulo/5'
 	},
 	{
 		modulo: 6,

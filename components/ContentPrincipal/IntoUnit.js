@@ -23,7 +23,7 @@ export default class IntoUnit extends React.Component {
 						<div className="content-into">
 							<h1>{this.props.titulo}</h1>
 							<p>{this.props.descripcion}</p>
-							<Link to={this.props.url} params={{ src: 1 }} className="link-into">
+							<Link to={`/${this.props.url}`} className="link-into">
 									<p>Comenzar a explorar</p>
 									<div></div>
 							</Link>

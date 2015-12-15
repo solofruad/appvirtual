@@ -11,6 +11,6 @@ export default[
     modulo: 3,
 		titulo: 'Medios de Cultivo para la producción de vitroplantas.',
 		descripcion: 'Preparación de Medios de Cultivo',
-    url: 'Modulo3'
+    url: 'modulo3'
 	}
 ];

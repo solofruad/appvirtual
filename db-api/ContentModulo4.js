@@ -1,7 +1,7 @@
 export default[
 	{
 		modulo: "modulo4/1",
-		titulo: 'Introducción. 	MICROPROPAGACIÓN  IN VITRO.',
+			titulo: 'Introducción. 	MICROPROPAGACIÓN  IN VITRO.',
 		descripcion: 'El cultivo de tejidos vegetales incluye diferente técnicas de micropropagación in vitro: siembra de meristemos, óvulos, anteras, embriones y tejidos radiculares...',
 		url: 'javascript:void(0)'
 	},
