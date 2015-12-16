@@ -8466,11 +8466,7 @@ var ModulosUnit = (function (_React$Component) {
 			} else {
 				var titulo = undefined;
 				if (this.state.isTouch) {
-					titulo = _react2['default'].createElement(
-						'h4',
-						{ className: 'title-modules' },
-						this.props.titulo
-					);
+					titulo = "";
 				} else {
 					titulo = "";
 				}
@@ -8498,7 +8494,8 @@ var ModulosUnit = (function (_React$Component) {
 										'h3',
 										null,
 										this.props.titulo
-									)
+									),
+									_react2['default'].createElement('div', null)
 								)
 							)
 						)
@@ -8527,7 +8524,8 @@ var ModulosUnit = (function (_React$Component) {
 										'h3',
 										null,
 										this.props.titulo
-									)
+									),
+									_react2['default'].createElement('div', null)
 								)
 							)
 						)

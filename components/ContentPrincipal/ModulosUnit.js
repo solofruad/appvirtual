@@ -36,7 +36,7 @@ export default class ModulosUnit extends React.Component {
 		else{
 			let titulo;
 			if(this.state.isTouch){
-				titulo = <h4 className="title-modules">{this.props.titulo}</h4>;
+				titulo = "";
 			}
 			else {
 				titulo = "";
@@ -50,6 +50,7 @@ export default class ModulosUnit extends React.Component {
 								<div className="center-vertically">
 									<p>{this.props.descripcion}</p>
 									<h3>{this.props.titulo}</h3>
+									<div></div>
 								</div>
 							</div>
 					</a>
@@ -64,6 +65,7 @@ export default class ModulosUnit extends React.Component {
 								<div className="center-vertically">
 									<p>{this.props.descripcion}</p>
 									<h3>{this.props.titulo}</h3>
+									<div></div>
 								</div>
 							</div>
 					</Link>
