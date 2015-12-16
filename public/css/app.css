@@ -291,7 +291,6 @@ a#modulos:hover{
 	padding-top: 5%;
 }
 
-<<<<<<< HEAD
 	.info-image{
 		position: absolute;
 		bottom: 0px;
@@ -380,46 +379,6 @@ a#modulos:hover{
 			bottom: 4.5%;
 			left: 20%;
 	}
-=======
-.info-image{
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	bottom: 0px;
-	left: 0px;
-	background-color:rgba(19,176,19,0);
-	text-align: center;
-	color:transparent;
-	overflow: hidden;
-	padding: 0px 6%;
-	display:none;
-	z-index:10;
-	-webkit-transition: background-color 0.1s ease-out 0.1s;
-	transition: background-color 0.1s ease-out 0.1s;
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#50000000,endColorstr=#50000000);
-}
-.info-image:hover{
-	display:block;
-  background-color:rgba(13,130,13,0.6);
-}
-.info-image div{
-	color:transparent;
-	-webkit-transition:color 0.2s ease-out 0.2s, -webkit-transform 0.2s ease-out 0.2s;
-	transition:color 0.2s ease-out 0.2s, transform 0.2s ease-out 0.2s;
-}
-.info-image:hover div{
-	color:#e7e7e7;
-	-webkit-transform: translateY(-15px); /* Safari */
-  	transform:translateY(-15px);
-}
-.info-image div p{
-	margin-top: 0%;
-	font-size: 2.3rem;
-}
-.info-image div h3{
-	font-size: 1.7rem;
-	margin-top: 13%;
->>>>>>> origin/master
 }
 .col-into{
 	margin: 0;
