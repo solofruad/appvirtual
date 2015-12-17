@@ -14,7 +14,7 @@ export default class Modal3 extends React.Component {
 		super(props);
 	}
 	onClose(ev){
-		this.props.onHide.call(null,'modulo3/3')
+		this.props.onHide.call(null,'modulo3/5')
 	}
 	render(){
 			return <Modal {...this.props} bsSize="large">

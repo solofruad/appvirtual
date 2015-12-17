@@ -4416,7 +4416,7 @@ var Modal1 = (function (_React$Component) {
 	_createClass(Modal1, [{
 		key: 'onClose',
 		value: function onClose(ev) {
-			this.props.onHide.call(null, 'modulo3/1');
+			this.props.onHide.call(null, 'modulo3/2');
 		}
 	}, {
 		key: 'render',
@@ -4594,7 +4594,7 @@ var Modal2 = (function (_React$Component) {
   _createClass(Modal2, [{
     key: 'onClose',
     value: function onClose(ev) {
-      this.props.onHide.call(null, 'modulo3/2');
+      this.props.onHide.call(null, 'modulo3/4');
     }
   }, {
     key: 'render',
@@ -4736,7 +4736,7 @@ var Modal3 = (function (_React$Component) {
     _createClass(Modal3, [{
         key: 'onClose',
         value: function onClose(ev) {
-            this.props.onHide.call(null, 'modulo3/3');
+            this.props.onHide.call(null, 'modulo3/5');
         }
     }, {
         key: 'render',
@@ -5103,7 +5103,7 @@ var Modal4 = (function (_React$Component) {
   _createClass(Modal4, [{
     key: 'onClose',
     value: function onClose(ev) {
-      this.props.onHide.call(null, 'modulo3/4');
+      this.props.onHide.call(null, 'modulo3/7');
     }
   }, {
     key: 'render',
@@ -7919,13 +7919,13 @@ var Modulo3 = (function (_React$Component) {
 	}, {
 		key: 'open',
 		value: function open(mod) {
-			if (mod == 'modulo3/1') {
+			if (mod == 'modulo3/2') {
 				this.setState({ m1show: true });
-			} else if (mod == 'modulo3/2') {
-				this.setState({ m2show: true });
-			} else if (mod == 'modulo3/3') {
-				this.setState({ m3show: true });
 			} else if (mod == 'modulo3/4') {
+				this.setState({ m2show: true });
+			} else if (mod == 'modulo3/5') {
+				this.setState({ m3show: true });
+			} else if (mod == 'modulo3/7') {
 				this.setState({ m4show: true });
 			} else {
 				return false;
@@ -7934,13 +7934,13 @@ var Modulo3 = (function (_React$Component) {
 	}, {
 		key: 'close',
 		value: function close(mod) {
-			if (mod == 'modulo3/1') {
+			if (mod == 'modulo3/2') {
 				this.setState({ m1show: false });
-			} else if (mod == 'modulo3/2') {
-				this.setState({ m2show: false });
-			} else if (mod == 'modulo3/3') {
-				this.setState({ m3show: false });
 			} else if (mod == 'modulo3/4') {
+				this.setState({ m2show: false });
+			} else if (mod == 'modulo3/5') {
+				this.setState({ m3show: false });
+			} else if (mod == 'modulo3/7') {
 				this.setState({ m4show: false });
 			} else {
 				return false;
@@ -8471,35 +8471,67 @@ var ModulosUnit = (function (_React$Component) {
 					titulo = "";
 				}
 				if (this.props.url == "javascript:void(0)") {
-					return _react2['default'].createElement(
-						_reactBootstrap.Col,
-						{ xs: 6, sm: 6, md: 3, lg: 3, className: 'img-modulo' },
-						_react2['default'].createElement(
-							'a',
-							{ href: this.props.url, className: 'mod', onClick: this.onClick.bind(this) },
-							_react2['default'].createElement('img', { src: urlImg, alt: this.props.titulo, className: 'img_contenido' }),
-							titulo,
+					if (this.props.modulo == "modulo3/2" || this.props.modulo == "modulo3/4" || this.props.modulo == "modulo3/5" || this.props.modulo == "modulo3/7") {
+						return _react2['default'].createElement(
+							_reactBootstrap.Col,
+							{ xs: 6, sm: 6, md: 3, lg: 3, className: 'img-modulo' },
 							_react2['default'].createElement(
-								'div',
-								{ className: 'info-image' },
+								'a',
+								{ href: this.props.url, className: 'mod', onClick: this.onClick.bind(this) },
+								_react2['default'].createElement('img', { src: urlImg, alt: this.props.titulo, className: 'img_contenido' }),
+								titulo,
 								_react2['default'].createElement(
 									'div',
-									{ className: 'center-vertically' },
+									{ className: 'info-image2' },
 									_react2['default'].createElement(
-										'p',
-										null,
-										this.props.descripcion
-									),
-									_react2['default'].createElement(
-										'h3',
-										null,
-										this.props.titulo
-									),
-									_react2['default'].createElement('div', null)
+										'div',
+										{ className: 'center-vertically' },
+										_react2['default'].createElement(
+											'p',
+											null,
+											this.props.descripcion
+										),
+										_react2['default'].createElement(
+											'h3',
+											null,
+											this.props.titulo
+										),
+										_react2['default'].createElement('div', null)
+									)
 								)
 							)
-						)
-					);
+						);
+					} else {
+						return _react2['default'].createElement(
+							_reactBootstrap.Col,
+							{ xs: 6, sm: 6, md: 3, lg: 3, className: 'img-modulo' },
+							_react2['default'].createElement(
+								'a',
+								{ href: this.props.url, className: 'mod', onClick: this.onClick.bind(this) },
+								_react2['default'].createElement('img', { src: urlImg, alt: this.props.titulo, className: 'img_contenido' }),
+								titulo,
+								_react2['default'].createElement(
+									'div',
+									{ className: 'info-image' },
+									_react2['default'].createElement(
+										'div',
+										{ className: 'center-vertically' },
+										_react2['default'].createElement(
+											'p',
+											null,
+											this.props.descripcion
+										),
+										_react2['default'].createElement(
+											'h3',
+											null,
+											this.props.titulo
+										),
+										_react2['default'].createElement('div', null)
+									)
+								)
+							)
+						);
+					}
 				} else {
 					return _react2['default'].createElement(
 						_reactBootstrap.Col,

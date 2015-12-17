@@ -19,8 +19,8 @@ export default[
 	},
 	{
 		modulo: "modulo5/4",
-		titulo: 'Propagación por miniestacas',
-		descripcion: 'El número de plantas obtenidas en cultivo de tejidos aumenta significativamente con el uso de la técnica de miniestacas. ',
+		titulo: '',
+		descripcion: '',
 		url: 'javascript:void(0)'
 	},
 	{
@@ -37,14 +37,14 @@ export default[
 	},
 	{
 		modulo: "modulo5/7",
-		titulo: 'Protocolo para la producción de microestacas.',
-		descripcion: 'La intención de este proceso es que fortalezca la producción de vitroplantas.',
+		titulo: 'Propagación por miniestacas',
+		descripcion: 'El número de plantas obtenidas en cultivo de tejidos aumenta significativamente con el uso de la técnica de miniestacas. ',
 		url: 'javascript:void(0)',
 	},
 	{
 		modulo: "modulo5/8",
-		titulo: '',
-		descripcion: '',
+		titulo: 'Protocolo para la producción de microestacas.',
+		descripcion: 'La intención de este proceso es que fortalezca la producción de vitroplantas.',
 		url: 'javascript:void(0)',
 	}
 ];

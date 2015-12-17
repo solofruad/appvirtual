@@ -291,7 +291,7 @@ a#modulos:hover{
 	padding-top: 5%;
 }
 
-	.info-image{
+	.info-image, .info-image2{
 		position: absolute;
 		bottom: 0px;
 		background-color:rgba(19,176,19,0.6);
@@ -299,7 +299,7 @@ a#modulos:hover{
 		color:#e7e7e7;
 		overflow: hidden;
 		z-index:10;
-		height: 13%;
+		height: 40%;
 		width: 100%;
 		-webkit-transition: background-color 0.1s ease-out 0.1s,height 0.2s ease-out 0.2s;
 		transition: background-color 0.1s ease-out 0.1s, height 0.2s ease-out 0.2s;
@@ -315,18 +315,18 @@ a#modulos:hover{
 		transition:color 0.2s ease-out 0.2s, transform 0.2s ease-out 0.2s;
 	}
 	.info-image:hover div p{
-		padding: 0px 6%;
 		color:#e7e7e7;
 		-webkit-transform: translateY(-15px); /* Safari */
 	  	transform:translateY(-15px);
 	}
 	.info-image div p{
+		padding: 0px 6%;
 		margin-top: 30%;
-		font-size: 2.5rem;
+		font-size: 1.2rem;
 	}
 	.info-image div h3{
 		position: absolute;
-		bottom: 25%;
+		bottom: 15%;
 		width: 100%;
 		text-align: center;
 		color:#e7e7e7;
@@ -335,49 +335,130 @@ a#modulos:hover{
 		transition:bottom 0.3s ease-out 0.3s;
 	}
 	.info-image:hover div h3{
-		margin-top: 10%;
-		bottom: 25%;
+		margin-top: 20%;
+		bottom: 5%;
 	  color:#e7e7e7;
 	}
 	.info-image div div{
 			border-bottom: 2px solid transparent;
 			width: 0;
 			position: absolute;
-			left:40%;
-			bottom: 24%;
-			-webkit-transition:width 0.3s ease-out 0.3s,border-bottom 0.3s ease-out 0.3s, left 0.3s ease-out 0.3s;
-			transition:width 0.3s ease-out 0.3s,border-bottom 0.3s ease-out 0.3s, left 0.3s ease-out 0.3s;;
-	}
-	.info-image:hover div div{
-			border-bottom: 2px solid #e7e7e7;
-			width: 20rem;
-			bottom: 24%;
-			left: 30%;
-	}
-@media only screen and (max-width: 530px) {
-	.info-image{
-		height: 40%;
-	}
-	.info-image div p{
-		margin-top: 30%;
-		font-size: 1.2rem;
-	}
-	.info-image div h3{
-		bottom: 15%;
-	}
-	.info-image:hover div h3{
-		margin-top: 20%;
-		bottom: 5%;
-	}
-	.info-image div div{
 			left:30%;
 			bottom: 4.5%;
+			-webkit-transition:width 0.3s ease-out 0.3s,border-bottom 0.3s ease-out 0.3s, left 0.3s ease-out 0.3s;
+			transition:width 0.3s ease-out 0.3s,border-bottom 0.3s ease-out 0.3s, left 0.3s ease-out 0.3s;
+
 	}
 	.info-image:hover div div{
 			border-bottom: 2px solid #e7e7e7;
 			width: 10rem;
 			bottom: 4.5%;
+			left: 25%;
+	}
+	.info-image2{
+		position: absolute;
+		bottom: 0px;
+		background-color:rgba(19,176,19,0);
+		text-align: center;
+		color:#e7e7e7;
+		z-index:10;
+		height: 100%;
+		width: 100%;
+		-webkit-transition:background-color 0.3s ease-out 0.3s;
+		transition:background-color 0.3s ease-out 0.3s;
+	}
+	.info-image2:hover{
+		background-color:rgba(19,176,19,0.6);
+	}
+	.info-image2 div p{
+		padding: 0px 6%;
+		margin-top: 30%;
+		font-size: 1.2rem;
+	}
+	.info-image2 div h3{
+		position: absolute;
+		bottom: 15%;
+		width: 100%;
+		text-align: center;
+		color:#e7e7e7;
+		font-size: 1.7rem;
+	}
+	.info-image2 div div{
+			border-bottom: 2px solid #e7e7e7;
+			width: 8rem;
+			position: absolute;
+			left:30%;
+			bottom: 10%;
+			-webkit-transition:width 0.3s ease-out 0.3s, left 0.3s ease-out 0.3s;
+			transition:width 0.3s ease-out 0.3s,left 0.3s ease-out 0.3s;
+
+	}
+	.info-image2:hover div div{
+			width: 15rem;
+			left: 15%;
+	}
+@media only screen and (min-width: 530px) {
+	.info-image{
+		height: 17%;
+	}
+	.info-image div p{
+		margin-top: 30%;
+		font-size: 2.2rem;
+	}
+	.info-image div h3{
+		bottom: 12%;
+	}
+	.info-image:hover div h3{
+		margin-top: 10%;
+		bottom: 20%;
+	}
+	.info-image div div{
+		left:45%;
+		bottom: 18%;
+	}
+	.info-image:hover div div{
+		border-bottom: 2px solid #e7e7e7;
+		width: 20rem;
+		bottom: 18%;
+		left: 20%;
+	}
+	.info-image2 div p{
+		font-size: 2.2rem;
+	}
+	.info-image2 div div{
+			width: 12rem;
+			left:35%;
+			bottom: 13%;
+	}
+	.info-image2:hover div div{
+			width: 20rem;
 			left: 20%;
+	}
+}
+@media only screen and (min-width: 1500px){
+	.info-image{
+		height: 13%;
+	}
+	.info-image div p{
+		margin-top: 30%;
+		font-size: 2.5rem;
+	}
+	.info-image div h3{
+		bottom: 25%;
+	}
+	.info-image:hover div h3{
+		margin-top: 10%;
+		bottom: 25%;
+	}
+	.info-image div div{
+		left:40%;
+		bottom: 24%;
+	}
+	.info-image:hover div div{
+		border-bottom: 2px solid #e7e7e7;
+		width: 20rem;
+		bottom: 24%;
+		left: 30%;
 	}
 }
 .col-into{

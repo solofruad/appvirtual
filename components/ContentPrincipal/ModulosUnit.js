@@ -42,19 +42,36 @@ export default class ModulosUnit extends React.Component {
 				titulo = "";
 			}
 			if(this.props.url=="javascript:void(0)"){
-				return <Col xs={6} sm={6} md={3} lg={3} className="img-modulo">
-					<a href={this.props.url} className="mod" onClick={this.onClick.bind(this)}>
-							<img src={urlImg} alt={this.props.titulo} className="img_contenido" />
-							{ titulo  }
-							<div className="info-image">
-								<div className="center-vertically">
-									<p>{this.props.descripcion}</p>
-									<h3>{this.props.titulo}</h3>
-									<div></div>
+				if(this.props.modulo =="modulo3/2" || this.props.modulo =="modulo3/4" || this.props.modulo =="modulo3/5" || this.props.modulo =="modulo3/7"){
+					return <Col xs={6} sm={6} md={3} lg={3} className="img-modulo">
+						<a href={this.props.url} className="mod" onClick={this.onClick.bind(this)}>
+								<img src={urlImg} alt={this.props.titulo} className="img_contenido" />
+								{ titulo  }
+								<div className="info-image2">
+									<div className="center-vertically">
+										<p>{this.props.descripcion}</p>
+										<h3>{this.props.titulo}</h3>
+										<div></div>
+									</div>
 								</div>
-							</div>
-					</a>
-				</Col>
+						</a>
+					</Col>
+				}
+				else{
+					return <Col xs={6} sm={6} md={3} lg={3} className="img-modulo">
+						<a href={this.props.url} className="mod" onClick={this.onClick.bind(this)}>
+								<img src={urlImg} alt={this.props.titulo} className="img_contenido" />
+								{ titulo  }
+								<div className="info-image">
+									<div className="center-vertically">
+										<p>{this.props.descripcion}</p>
+										<h3>{this.props.titulo}</h3>
+										<div></div>
+									</div>
+								</div>
+						</a>
+					</Col>
+				}
 			}
 			else{
 				return <Col xs={6} sm={6} md={3} lg={3} className="img-modulo">
