@@ -460,6 +460,18 @@ a#modulos:hover{
 		bottom: 24%;
 		left: 30%;
 	}
+	.info-image2 div p{
+		font-size: 2.5rem;
+	}
+	.info-image2 div div{
+			width: 12rem;
+			left:38%;
+			bottom: 13%;
+	}
+	.info-image2:hover div div{
+			width: 28rem;
+			left: 20%;
+	}
 }
 .col-into{
 	margin: 0;
@@ -910,6 +922,41 @@ p.cl:first-letter
 .example-leave.example-leave-active {
   opacity: 0.01;
   transition: opacity 300ms ease-in;
+}
+
+.example-appear {
+  opacity: 0.01;
+}
+
+.example-appear.example-appear-active {
+  opacity: 1;
+  transition: opacity .2s ease-in;
+}
+.container-into {
+    position: relative;
+}
+.container-into > div {
+    position: absolute;
+}
+.switch-enter {
+    opacity: 0.01;
+}
+.switch-enter.switch-enter-active {
+    opacity: 1.0;
+}
+.switch-leave {
+    /* Completely hide the button while it's being animated and before it's removed from the DOM.
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
+    */
+    /* Starting opacity */
+    opacity: 1.0;
+}
+.switch-leave.switch-leave-active {
+    /* Ending opacity:
+    Trigger opacity change so the "transitionend" event will fire, causing React to remove from the DOM. */
+    opacity: 0;
 }
 .spinner {
 	position: absolute;
