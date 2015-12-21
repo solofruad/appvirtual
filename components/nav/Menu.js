@@ -23,7 +23,7 @@ export default class Menu extends React.Component {
 	recargar(){
 		setTimeout(()=>{
     	location.reload()
-    },3000);
+    },500);
 	}
 	render(){
 		return (<div>

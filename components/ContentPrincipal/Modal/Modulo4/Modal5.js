@@ -17,7 +17,6 @@ export default class Modal5 extends React.Component {
 		this.props.onHide.call(null,'modulo4/7')
 	}
 	render(){
-	let mod=1;
 			return	<Modal {...this.props}>
 				<Modal.Header closeButton>
 					<Modal.Title><Label bsStyle='success'>Micropropagaci&oacute;n in vitro</Label></Modal.Title>
@@ -33,7 +32,7 @@ export default class Modal5 extends React.Component {
 					<Col xs={12} sm={12} md={12} lg={12}>
 						<center><p className="txt-parrafo">Los meristemos generalmente se encuentran ubicados en el ápice del tallo, meristemo apical del tallo (MAT),  o, la raíz, meristemo apical de la raíz (MAR). Existen, también, los meristemos axilares (MA) o intercalares (MI), que se encuentran en la posición nodal o entrenudos. Estos tejidos (MAT, MAR y MA) poseen mayor totipotencia, elevadas tasas de división celular (mitosis) por ser puntos de crecimiento e indiferenciación; que fácilmente en un medio de cultivo idóneo pueden generar una nueva planta.</p></center>
 					</Col>
-				</Row>				
+				</Row>
 				</Modal.Body>
 				<Modal.Footer>
 					<button onClick={this.onClose.bind(this)}>Cerrar</button>

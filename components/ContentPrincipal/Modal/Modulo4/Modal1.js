@@ -17,7 +17,6 @@ export default class Modal1 extends React.Component {
 		this.props.onHide.call(null,'modulo4/1')
 	}
 	render(){
-	let mod=1;
 			return	<Modal {...this.props}>
 				<Modal.Header closeButton>
 					<Modal.Title><Label bsStyle='success'>Introducción! </Label></Modal.Title>

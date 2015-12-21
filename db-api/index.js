@@ -5,7 +5,6 @@
 import contenido from './ContentHeader';
 import modulos from './ContentModulos';
 import creditos from './ContentCreditos';
-import modulo1 from './ContentModulo1';
 import modulo2 from './ContentModulo2';
 import modulo3 from './ContentModulo3';
 import modulo4 from './ContentModulo4';
@@ -20,14 +19,14 @@ export default {
     find: function(callback) {
       setTimeout(() => {
         callback(contenido);
-      }, 1000);
+      }, 500);
     }
   },
   modulos: {
     find: function(callback) {
       setTimeout(() => {
         callback(modulos);
-      }, 1000);
+      }, 500);
     }
   },
   creditos: {
@@ -35,67 +34,60 @@ export default {
         callback(creditos);
     }
   },
-  modulo1: {
-    find: function(callback) {
-      setTimeout(() => {
-        callback(modulo1);
-      }, 3000);
-    }
-  },
   intomod2: {
     find: function(callback) {
       setTimeout(() => {
         callback(intomod2);
-      }, 3000);
+      }, 500);
     }
   },
   modulo2: {
     find: function(callback) {
       setTimeout(() => {
         callback(modulo2);
-      }, 3000);
+      }, 500);
     }
   },
   intomod3: {
     find: function(callback) {
       setTimeout(() => {
         callback(intomod3);
-      }, 3000);
+      }, 500);
     }
   },
   modulo3: {
     find: function(callback) {
       setTimeout(() => {
         callback(modulo3);
-      }, 3000);
+      }, 500);
     }
   },
   intomod4: {
     find: function(callback) {
       setTimeout(() => {
         callback(intomod4);
-      }, 3000);
+      }, 500);
     }
   },
   modulo4:{
     find: function(callback){
       setTimeout(()=> {
         callback(modulo4);
-      },3000);
+      },500);
     }
   },
   intomod5: {
     find: function(callback) {
       setTimeout(() => {
         callback(intomod5);
-      }, 3000);
+      }, 500);
     }
   },
   modulo5:{
     find: function(callback){
       setTimeout(()=> {
         callback(modulo5);
-      },3000);
+      },500);
     }
   }
 }

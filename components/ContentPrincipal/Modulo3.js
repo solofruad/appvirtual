@@ -4,7 +4,6 @@
  */
 
 import React from 'react';
-import Header from './Header';
 import Modulos from './Modulos';
 import $ from 'jquery';
 import {Modal} from 'react-bootstrap';

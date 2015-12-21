@@ -29,7 +29,7 @@ export default class Modal2 extends React.Component {
 					</Col>
 				</Row>
         <Row>
-          <Col xs={12} sm={12} md={12} lg={12}>            
+          <Col xs={12} sm={12} md={12} lg={12}>
             <p className="txt-parrafo">Los macronutrientes son los elementos que necesita la planta en mayor concentración. Estos se caracterizan en primarios (N, P y K) y secundarios (S, Ca y Mg); el C, H y O los obtiene del agua y del aire y fuente de carbono. Los nutrientes que necesita la planta, en mayor cantidad, son brindados por el stock 1 y 2 preparados a 50x y 333x respectivamente.</p>
           </Col>
         </Row>

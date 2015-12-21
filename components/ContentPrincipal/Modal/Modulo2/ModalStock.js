@@ -16,8 +16,7 @@ export default class ModalStock extends React.Component {
 	onClose(ev){
 		this.props.onHide.call(null,'modalStock')
 	}
-	render(){
-	let mod=1;
+	render(){	
 			return	<Modal {...this.props} bsSize="large">
 				<Modal.Header closeButton>
 					<Modal.Title><Label bsStyle='success'>Introducción! </Label>ELABORACIÓN DE STOCKS</Modal.Title>

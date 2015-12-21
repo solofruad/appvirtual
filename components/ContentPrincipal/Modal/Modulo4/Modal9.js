@@ -17,7 +17,6 @@ export default class Modal9 extends React.Component {
 		this.props.onHide.call(null,'modulo4/11')
 	}
 	render(){
-	let mod=1;
 			return	<Modal {...this.props} bsSize="large">
 				<Modal.Header closeButton>
 					<Modal.Title><Label bsStyle='success'>Micropropagaci&oacute;n in vitro</Label></Modal.Title>

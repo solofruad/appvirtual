@@ -4,7 +4,6 @@
 
 import React from 'react';
 import Creditos from './Creditos';
-import $ from 'jquery';
 
 export default class ContentCreditos extends React.Component {
 	constructor(props){

@@ -5,7 +5,6 @@
 import React from 'react';
 import {Grid} from 'react-bootstrap';
 import {Row} from 'react-bootstrap';
-import {Col} from 'react-bootstrap';
 import ModulosUnit from './ModulosUnit';
 var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
 

@@ -13,17 +13,24 @@ const app = express();
 //
 app.use('/public', express.static(__dirname+ '/public'));
 
-
+// Rutas de cabecera
 app.get('/dirhead', (req, res) => {
   dbapi.contenido.find((contenido) => {
     res.json(contenido);
   });
 });
 
+// Ruta para petición ajax de archivo json de contenido de modulos de la pagina principal
 app.get('/dirmod', (req, res) => {
 	dbapi.modulos.find((modulos) => {
   		res.json(modulos);
   	});
+});
+
+app.get('/dircred', (req, res) => {
+  dbapi.creditos.find((creditos) => {
+    res.json(creditos);
+  });
 });
 
 app.get('/dirintomod2', (req, res) => {
@@ -31,7 +38,6 @@ app.get('/dirintomod2', (req, res) => {
       res.json(intomod2);
     });
 });
-
 
 app.get('/dirmod2', (req, res) => {
   dbapi.modulo2.find((modulo2) => {
@@ -67,16 +73,6 @@ app.get('/dirintomod5', (req, res) => {
 app.get('/dirmod5', (req, res) => {
   dbapi.modulo5.find((modulo5) => {
       res.json(modulo5);
-    });
-});
-app.get('/dircred', (req, res) => {
-	dbapi.creditos.find((creditos) => {
-  		res.json(creditos);
-  	});
-});
-app.get('/dirmod1', (req, res) => {
-  dbapi.modulo1.find((modulo1) => {
-      res.json(modulo1);
     });
 });
 

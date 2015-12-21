@@ -8,7 +8,6 @@ import {Modal} from 'react-bootstrap';
 import {Col} from 'react-bootstrap';
 import {Row} from 'react-bootstrap';
 
-
 export default class Modal1 extends React.Component {
 	constructor(props){
 		super(props);
@@ -23,7 +22,6 @@ export default class Modal1 extends React.Component {
 		this.props.open.call(null,'modalStock')
 	}
 	render(){
-	let mod=1;
 			return	<Modal {...this.props} bsSize="large">
 				<Modal.Header closeButton>
 					<Modal.Title><Label bsStyle='success'>Introducción! </Label></Modal.Title>

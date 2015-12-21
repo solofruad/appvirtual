@@ -14,42 +14,41 @@ import Ivernadero from './Ivernadero';
 import ModalInfo from './Modal/ModalInfo';
 
 var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
-var componente = null;
 
 export default class Modulo1Content extends React.Component {
 	constructor(props){
-		super(props);			
+		super(props);
 		this.state = { mounted:false };
     }
     getInitialState() {
       return { mounted: false };
-    }    
+    }
     componentDidMount(){
       this.setState({ mounted: true });
     }
-	recargar(){		
-    	location.reload()	    		    
-	}	
+	recargar(){
+    	location.reload()
+	}
 	componentWillMount(){
       this.getComponent();
     }
- 
+
 	componentDidUpdate(prevProps){
       let oldSrc = prevProps.params.src;
       let newSrc = this.props.params.src;
       if (newSrc != oldSrc){
   			this.getComponent();
-        	this.recargar();              
+        	this.recargar();
           }
     }
 
     getComponent(){
-		this.setState({ mounted: false });      	      
-      	this.setState({ mounted: true});      	
+		this.setState({ mounted: false });
+      	this.setState({ mounted: true});
     }
 
-	render(){		
-		var src = this.props.params.src;	
+	render(){
+		var src = this.props.params.src;
         var child = null;
          if(this.state.mounted){
          	if(src=="1"){
@@ -73,7 +72,7 @@ export default class Modulo1Content extends React.Component {
          	if (src=="7") {
          		child = <div id="page" ><Ivernadero /><ModalInfo view="ivernadero"/></div>;
          	}
-         }	
+         }
          else{
          	child = <div className="spinner">
               <div className="rect1"></div>
@@ -88,8 +87,6 @@ export default class Modulo1Content extends React.Component {
                      {child}
              </ReactCSSTransitionGroup>
          </div>
-         )		
+         )
 	}
 }
-
-

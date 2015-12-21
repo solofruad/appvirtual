@@ -3,10 +3,8 @@
  */
 
 import React from 'react';
-import {Row} from 'react-bootstrap';
 import {Col} from 'react-bootstrap';
 import { Link } from 'react-router';
-import { MediaQuery} from 'react-responsive';
 
 export default class ModulosUnit extends React.Component {
 	constructor(props){
