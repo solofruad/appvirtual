@@ -3,7 +3,6 @@
  */
 
 import React from 'react';
-import $ from 'jquery';
 import {Link} from 'react-router';
 
 export default class Modulo1 extends React.Component {
