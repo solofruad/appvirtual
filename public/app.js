@@ -632,7 +632,7 @@ module.exports = exports["default"];
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
-    value: true
+  value: true
 });
 
 var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
@@ -664,102 +664,102 @@ var _jquery2 = _interopRequireDefault(_jquery);
 var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
 
 var IndexMod = (function (_React$Component) {
-    _inherits(IndexMod, _React$Component);
+  _inherits(IndexMod, _React$Component);
 
-    function IndexMod(props) {
-        _classCallCheck(this, IndexMod);
+  function IndexMod(props) {
+    _classCallCheck(this, IndexMod);
 
-        _get(Object.getPrototypeOf(IndexMod.prototype), 'constructor', this).call(this, props);
-        this.state = { componente: [], mounted: false };
+    _get(Object.getPrototypeOf(IndexMod.prototype), 'constructor', this).call(this, props);
+    this.state = { componente: [], mounted: false };
+  }
+
+  _createClass(IndexMod, [{
+    key: 'getInitialState',
+    value: function getInitialState() {
+      return { mounted: false };
     }
+  }, {
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this.setState({ mounted: true });
+    }
+  }, {
+    key: 'componentWillMount',
+    value: function componentWillMount() {
+      this.getJson();
+    }
+  }, {
+    key: 'componentDidUpdate',
+    value: function componentDidUpdate(prevProps) {
+      var oldSrc = prevProps.params.src;
+      var newSrc = this.props.params.src;
+      if (newSrc !== oldSrc) {
+        this.getJson();
+      }
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      // allows us to ignore an inflight request in scenario 4
+      this.state = { componente: [] };
+    }
+  }, {
+    key: 'getJson',
+    value: function getJson() {
+      var _this = this;
 
-    _createClass(IndexMod, [{
-        key: 'getInitialState',
-        value: function getInitialState() {
-            return { mounted: false };
-        }
-    }, {
-        key: 'componentDidMount',
-        value: function componentDidMount() {
-            this.setState({ mounted: true });
-        }
-    }, {
-        key: 'componentWillMount',
-        value: function componentWillMount() {
-            this.getJson();
-        }
-    }, {
-        key: 'componentDidUpdate',
-        value: function componentDidUpdate(prevProps) {
-            var oldSrc = prevProps.params.src;
-            var newSrc = this.props.params.src;
-            if (newSrc !== oldSrc) {
-                this.getJson();
-            }
-        }
-    }, {
-        key: 'componentWillUnmount',
-        value: function componentWillUnmount() {
-            // allows us to ignore an inflight request in scenario 4
-            this.state = { componente: [] };
-        }
-    }, {
-        key: 'getJson',
-        value: function getJson() {
-            var _this = this;
+      this.setState({ mounted: false });
+      var src = this.props.params.src;
+      if (src == 2) {
+        _jquery2['default'].get('/dirintomod2', function (intomod2) {
+          _this.setState({ componente: intomod2, mounted: true });
+        });
+      }
+      if (src == 3) {
+        _jquery2['default'].get('/dirintomod3', function (intomod3) {
+          _this.setState({ componente: intomod3, mounted: true });
+        });
+      }
+      if (src == 4) {
+        _jquery2['default'].get('/dirintomod4', function (intomod4) {
+          _this.setState({ componente: intomod4, mounted: true });
+        });
+      }
+      if (src == 5) {
+        _jquery2['default'].get('/dirintomod5', function (intomod5) {
+          _this.setState({ componente: intomod5, mounted: true });
+        });
+      }
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      if (this.state.componente.length) {
+        var child = this.state.mounted ? _react2['default'].createElement(_Into2['default'], { componente: this.state.componente }) : null;
+        return _react2['default'].createElement(
+          'div',
+          null,
+          _react2['default'].createElement(
+            ReactCSSTransitionGroup,
+            { transitionName: 'example', transitionAppear: true, transitionAppearTimeout: 300, transitionEnterTimeout: 500, transitionLeaveTimeout: 300 },
+            child
+          )
+        );
+      } else {
+        return _react2['default'].createElement(
+          'div',
+          { className: 'spinner' },
+          _react2['default'].createElement('div', { className: 'rect1' }),
+          _react2['default'].createElement('div', { className: 'rect2' }),
+          _react2['default'].createElement('div', { className: 'rect3' }),
+          _react2['default'].createElement('div', { className: 'rect4' }),
+          _react2['default'].createElement('div', { className: 'rect5' })
+        );
+      }
+    }
+  }]);
 
-            this.setState({ mounted: false });
-            var src = this.props.params.src;
-            if (src == 2) {
-                _jquery2['default'].get('/dirintomod2', function (intomod2) {
-                    _this.setState({ componente: intomod2, mounted: true });
-                });
-            }
-            if (src == 3) {
-                _jquery2['default'].get('/dirintomod3', function (intomod3) {
-                    _this.setState({ componente: intomod3, mounted: true });
-                });
-            }
-            if (src == 4) {
-                _jquery2['default'].get('/dirintomod4', function (intomod4) {
-                    _this.setState({ componente: intomod4, mounted: true });
-                });
-            }
-            if (src == 5) {
-                _jquery2['default'].get('/dirintomod5', function (intomod5) {
-                    _this.setState({ componente: intomod5, mounted: true });
-                });
-            }
-        }
-    }, {
-        key: 'render',
-        value: function render() {
-            if (this.state.componente.length) {
-                var child = this.state.mounted ? _react2['default'].createElement(_Into2['default'], { componente: this.state.componente }) : null;
-                return _react2['default'].createElement(
-                    'div',
-                    null,
-                    _react2['default'].createElement(
-                        ReactCSSTransitionGroup,
-                        { transitionName: 'example', transitionAppear: true, transitionAppearTimeout: 300, transitionEnterTimeout: 500, transitionLeaveTimeout: 300 },
-                        child
-                    )
-                );
-            } else {
-                return _react2['default'].createElement(
-                    'div',
-                    { className: 'spinner' },
-                    _react2['default'].createElement('div', { className: 'rect1' }),
-                    _react2['default'].createElement('div', { className: 'rect2' }),
-                    _react2['default'].createElement('div', { className: 'rect3' }),
-                    _react2['default'].createElement('div', { className: 'rect4' }),
-                    _react2['default'].createElement('div', { className: 'rect5' })
-                );
-            }
-        }
-    }]);
-
-    return IndexMod;
+  return IndexMod;
 })(_react2['default'].Component);
 
 exports['default'] = IndexMod;
@@ -8838,7 +8838,7 @@ var Microbiologia = (function (_React$Component) {
 				_react2["default"].createElement(
 					"map",
 					{ id: "testmap", name: "testmap" },
-					_react2["default"].createElement("area", { shape: "rect", coords: "3343,72,3520,380", href: "javascript:document.location.replace(\"/#/modulo1/1\");document.location.reload();", alt: "vers la salle de formation" }),
+					_react2["default"].createElement("area", { shape: "rect", coords: "3343,72,3520,380", href: "/#/modulo1/1", alt: "vers la salle de formation" }),
 					_react2["default"].createElement("area", { shape: "rect", coords: "783,270,895,370", href: "javascript:openAgitadoraDialog();", alt: "Plancha calentadora-agitadora" }),
 					_react2["default"].createElement("area", { shape: "rect", coords: "2155,270,2290,370", href: "javascript:openMicropipetasDialog();", alt: "Micropipetas" })
 				)
@@ -9542,7 +9542,6 @@ var Modulo1 = (function (_React$Component) {
 	_createClass(Modulo1, [{
 		key: 'render',
 		value: function render() {
-
 			return _react2['default'].createElement(
 				'div',
 				null,
@@ -9550,12 +9549,12 @@ var Modulo1 = (function (_React$Component) {
 				_react2['default'].createElement(
 					'map',
 					{ id: 'testmap', name: 'testmap' },
-					_react2['default'].createElement('area', { shape: 'rect', coords: '2990,80,3180,380', href: 'javascript:document.location.replace("/#/modulo1/2");document.location.reload();', id: 'relo', alt: 'Sala de Microbiologia' }),
+					_react2['default'].createElement('area', { shape: 'rect', coords: '2990,80,3180,380', href: '/#/modulo1/2', id: 'relo', alt: 'Sala de Microbiologia', onClick: this.onTarget }),
 					_react2['default'].createElement('area', { shape: 'rect', coords: '2470,80,2660,380', id: 'area-sala-siembra', href: 'javascript:openFirstDialog();', alt: 'Sala de Siembra' }),
 					_react2['default'].createElement('area', { shape: 'rect', coords: '1875,114,2065,380', href: 'javascript:openSecondDialog();', alt: 'Sala de Crecimiento' }),
-					_react2['default'].createElement('area', { shape: 'rect', coords: '1355,80,1480,380', href: 'javascript:document.location.replace("/#/modulo1/5");document.location.reload();', alt: 'Aula de clase' }),
-					_react2['default'].createElement('area', { shape: 'rect', coords: '1050,80,1190,380', href: 'javascript:document.location.replace("/#/modulo1/4");document.location.reload();', alt: 'Sala de Preparación de Medios' }),
-					_react2['default'].createElement('area', { shape: 'rect', coords: '380,80,880,380', href: 'javascript:document.location.replace("/#/modulo1/3");document.location.reload();', alt: 'Sala de Vidreria y Reactivos' })
+					_react2['default'].createElement('area', { shape: 'rect', coords: '1355,80,1480,380', href: '/#/modulo1/5', alt: 'Aula de clase' }),
+					_react2['default'].createElement('area', { shape: 'rect', coords: '1050,80,1190,380', href: '/#/modulo1/4', alt: 'Sala de Preparación de Medios' }),
+					_react2['default'].createElement('area', { shape: 'rect', coords: '380,80,880,380', href: '/#/modulo1/3', alt: 'Sala de Vidreria y Reactivos' })
 				)
 			);
 		}
@@ -9575,7 +9574,7 @@ module.exports = exports['default'];
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
-	value: true
+  value: true
 });
 
 var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
@@ -9628,84 +9627,147 @@ var _ModalModalInfo = require('./Modal/ModalInfo');
 
 var _ModalModalInfo2 = _interopRequireDefault(_ModalModalInfo);
 
+var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
+var componente = null;
+
 var Modulo1Content = (function (_React$Component) {
-	_inherits(Modulo1Content, _React$Component);
+  _inherits(Modulo1Content, _React$Component);
 
-	function Modulo1Content(props) {
-		_classCallCheck(this, Modulo1Content);
+  function Modulo1Content(props) {
+    _classCallCheck(this, Modulo1Content);
 
-		_get(Object.getPrototypeOf(Modulo1Content.prototype), 'constructor', this).call(this, props);
-	}
+    _get(Object.getPrototypeOf(Modulo1Content.prototype), 'constructor', this).call(this, props);
+    this.state = { mounted: false };
+  }
 
-	_createClass(Modulo1Content, [{
-		key: 'render',
-		value: function render() {
-			if (this.props.params.src == "1") {
-				return _react2['default'].createElement(
-					'div',
-					{ id: 'page' },
-					_react2['default'].createElement(_Modulo12['default'], null),
-					_react2['default'].createElement(_ModalModalInfo2['default'], { view: 'index' })
-				);
-			}
-			if (this.props.params.src == "2") {
-				return _react2['default'].createElement(
-					'div',
-					{ id: 'page' },
-					_react2['default'].createElement(_Microbiologia2['default'], null),
-					_react2['default'].createElement(_ModalModalInfo2['default'], { view: 'microbiologia' })
-				);
-			}
-			if (this.props.params.src == "3") {
-				return _react2['default'].createElement(
-					'div',
-					{ id: 'page' },
-					_react2['default'].createElement(_VidreriaReactivos2['default'], null),
-					_react2['default'].createElement(_ModalModalInfo2['default'], { view: 'vidrieria-reactivos' })
-				);
-			}
-			if (this.props.params.src == "4") {
-				return _react2['default'].createElement(
-					'div',
-					{ id: 'page' },
-					_react2['default'].createElement(_PreparacionMedios2['default'], null),
-					_react2['default'].createElement(_ModalModalInfo2['default'], { view: 'preparacion-medios' })
-				);
-			}
-			if (this.props.params.src == "5") {
-				return _react2['default'].createElement(
-					'div',
-					{ id: 'page' },
-					_react2['default'].createElement(_AulaClase2['default'], null),
-					_react2['default'].createElement(_ModalModalInfo2['default'], { view: 'aula-clase' })
-				);
-			}
-			if (this.props.params.src == "6") {
-				return _react2['default'].createElement(
-					'div',
-					{ id: 'page' },
-					_react2['default'].createElement(_LavadoDestilacion2['default'], null),
-					_react2['default'].createElement(_ModalModalInfo2['default'], { view: 'lavado-destilacion' })
-				);
-			}
-			if (this.props.params.src == "7") {
-				return _react2['default'].createElement(
-					'div',
-					{ id: 'page' },
-					_react2['default'].createElement(_Ivernadero2['default'], null),
-					_react2['default'].createElement(_ModalModalInfo2['default'], { view: 'ivernadero' })
-				);
-			}
-		}
-	}]);
+  _createClass(Modulo1Content, [{
+    key: 'getInitialState',
+    value: function getInitialState() {
+      return { mounted: false };
+    }
+  }, {
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this.setState({ mounted: true });
+    }
+  }, {
+    key: 'recargar',
+    value: function recargar() {
+      location.reload();
+    }
+  }, {
+    key: 'componentWillMount',
+    value: function componentWillMount() {
+      this.getComponent();
+    }
+  }, {
+    key: 'componentDidUpdate',
+    value: function componentDidUpdate(prevProps) {
+      var oldSrc = prevProps.params.src;
+      var newSrc = this.props.params.src;
+      if (newSrc != oldSrc) {
+        this.getComponent();
+        this.recargar();
+      }
+    }
+  }, {
+    key: 'getComponent',
+    value: function getComponent() {
+      this.setState({ mounted: false });
+      this.setState({ mounted: true });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var src = this.props.params.src;
+      var child = null;
+      if (this.state.mounted) {
+        if (src == "1") {
+          child = _react2['default'].createElement(
+            'div',
+            { id: 'page' },
+            _react2['default'].createElement(_Modulo12['default'], null),
+            _react2['default'].createElement(_ModalModalInfo2['default'], { view: 'index' })
+          );
+        }
+        if (src == "2") {
+          child = _react2['default'].createElement(
+            'div',
+            { id: 'page' },
+            _react2['default'].createElement(_Microbiologia2['default'], null),
+            _react2['default'].createElement(_ModalModalInfo2['default'], { view: 'microbiologia' })
+          );
+        }
+        if (src == "3") {
+          child = _react2['default'].createElement(
+            'div',
+            { id: 'page' },
+            _react2['default'].createElement(_VidreriaReactivos2['default'], null),
+            _react2['default'].createElement(_ModalModalInfo2['default'], { view: 'vidrieria-reactivos' })
+          );
+        }
+        if (src == "4") {
+          child = _react2['default'].createElement(
+            'div',
+            { id: 'page' },
+            _react2['default'].createElement(_PreparacionMedios2['default'], null),
+            _react2['default'].createElement(_ModalModalInfo2['default'], { view: 'preparacion-medios' })
+          );
+        }
+        if (src == "5") {
+          child = _react2['default'].createElement(
+            'div',
+            { id: 'page' },
+            _react2['default'].createElement(_AulaClase2['default'], null),
+            _react2['default'].createElement(_ModalModalInfo2['default'], { view: 'aula-clase' })
+          );
+        }
+        if (src == "6") {
+          child = _react2['default'].createElement(
+            'div',
+            { id: 'page' },
+            _react2['default'].createElement(_LavadoDestilacion2['default'], null),
+            _react2['default'].createElement(_ModalModalInfo2['default'], { view: 'lavado-destilacion' })
+          );
+        }
+        if (src == "7") {
+          child = _react2['default'].createElement(
+            'div',
+            { id: 'page' },
+            _react2['default'].createElement(_Ivernadero2['default'], null),
+            _react2['default'].createElement(_ModalModalInfo2['default'], { view: 'ivernadero' })
+          );
+        }
+      } else {
+        child = _react2['default'].createElement(
+          'div',
+          { className: 'spinner' },
+          _react2['default'].createElement('div', { className: 'rect1' }),
+          _react2['default'].createElement('div', { className: 'rect2' }),
+          _react2['default'].createElement('div', { className: 'rect3' }),
+          _react2['default'].createElement('div', { className: 'rect4' }),
+          _react2['default'].createElement('div', { className: 'rect5' })
+        );
+      }
+      return _react2['default'].createElement(
+        'div',
+        null,
+        _react2['default'].createElement(
+          ReactCSSTransitionGroup,
+          { transitionName: 'example', transitionAppear: true, transitionAppearTimeout: 300, transitionEnterTimeout: 5000, transitionLeaveTimeout: 300 },
+          child
+        )
+      );
+    }
+  }]);
 
-	return Modulo1Content;
+  return Modulo1Content;
 })(_react2['default'].Component);
 
 exports['default'] = Modulo1Content;
 module.exports = exports['default'];
 
-},{"./AulaClase":43,"./Ivernadero":44,"./LavadoDestilacion":45,"./Microbiologia":46,"./Modal/ModalInfo":47,"./Modulo1":48,"./PreparacionMedios":50,"./VidreriaReactivos":51,"jquery":80,"react":539}],50:[function(require,module,exports){
+},{"./AulaClase":43,"./Ivernadero":44,"./LavadoDestilacion":45,"./Microbiologia":46,"./Modal/ModalInfo":47,"./Modulo1":48,"./PreparacionMedios":50,"./VidreriaReactivos":51,"jquery":80,"react":539,"react-addons-css-transition-group":81}],50:[function(require,module,exports){
 /**
  * Modules Dependencies
  */
