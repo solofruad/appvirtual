@@ -8664,9 +8664,9 @@ var AulaClase = (function (_React$Component) {
 				_react2["default"].createElement(
 					"map",
 					{ id: "testmap", name: "testmap" },
-					_react2["default"].createElement("area", { shape: "rect", coords: "2830,130,3010,480", href: "javascript:document.location.replace(\"/#/modulo1/7\");document.location.reload();", alt: "Ivernadero" }),
-					_react2["default"].createElement("area", { shape: "rect", coords: "3300,130,3560,480", href: "javascript:document.location.replace(\"/#/modulo1/6\");document.location.reload();", alt: "Area de Lavado y destilacion" }),
-					_react2["default"].createElement("area", { shape: "rect", coords: "3890,130,4030,480", href: "javascript:document.location.replace(\"/#/modulo1/1\");document.location.reload();", alt: "Corredor" })
+					_react2["default"].createElement("area", { shape: "rect", coords: "2830,130,3010,480", href: "/#/modulo1/7", alt: "Ivernadero" }),
+					_react2["default"].createElement("area", { shape: "rect", coords: "3300,130,3560,480", href: "/#/modulo1/6", alt: "Area de Lavado y destilacion" }),
+					_react2["default"].createElement("area", { shape: "rect", coords: "3890,130,4030,480", href: "/#/modulo1/1", alt: "Corredor" })
 				)
 			);
 		}
@@ -8723,7 +8723,7 @@ var Ivernadero = (function (_React$Component) {
 					"map",
 					{ id: "testmap", name: "testmap" },
 					_react2["default"].createElement("area", { shape: "rect", coords: "875,80,1150,420", href: "javascript:openIvernaderoDialog();", alt: "Invernadero" }),
-					_react2["default"].createElement("area", { shape: "rect", coords: "2810,120,3230,420", href: "javascript:document.location.replace(\"/#/modulo1/5\");document.location.reload();", alt: "Aula de clase" })
+					_react2["default"].createElement("area", { shape: "rect", coords: "2810,120,3230,420", href: "/#/modulo1/5", alt: "Aula de clase" })
 				)
 			);
 		}
@@ -8779,7 +8779,7 @@ var LavadoDestilacion = (function (_React$Component) {
 				_react2["default"].createElement(
 					"map",
 					{ id: "testmap", name: "testmap" },
-					_react2["default"].createElement("area", { shape: "rect", coords: "1400,120,2200,420", href: "javascript:document.location.replace(\"/#/modulo1/5\");document.location.reload();", alt: "Aula de clase" }),
+					_react2["default"].createElement("area", { shape: "rect", coords: "1400,120,2200,420", href: "/#/modulo1/5", alt: "Aula de clase" }),
 					_react2["default"].createElement("area", { shape: "rect", coords: "3323,140,3570,490", href: "javascript:openAutoclaveDialog();", alt: "Autoclave" }),
 					_react2["default"].createElement("area", { shape: "rect", coords: "4200,245,4280,380", href: "javascript:openDestiladorDialog();", alt: "Destilador" }),
 					_react2["default"].createElement("area", { shape: "rect", coords: "4780,250,4890,430", href: "javascript:openAguaDialog();", alt: "Envase con Agua Destilada" })
@@ -9813,7 +9813,7 @@ var PreparacionMedios = (function (_React$Component) {
 					{ id: "testmap", name: "testmap" },
 					_react2["default"].createElement("area", { shape: "rect", coords: "1910,250,2040,390", href: "javascript:openEstereoDialog();", alt: "ESTÉREO MICROSCOPIO" }),
 					_react2["default"].createElement("area", { shape: "rect", coords: "2290,250,2400,390", href: "javascript:openAsasDialog();", alt: "ESTERILIZADOR DE ASAS" }),
-					_react2["default"].createElement("area", { shape: "rect", coords: "350,120,550,420", href: "javascript:document.location.replace(\"/#/modulo1/1\");document.location.reload();", alt: "Sala 4" })
+					_react2["default"].createElement("area", { shape: "rect", coords: "350,120,550,420", href: "/#/modulo1/1", alt: "Sala 4" })
 				)
 			);
 		}
@@ -9872,7 +9872,7 @@ var VidreriaReactivos = (function (_React$Component) {
 					_react2["default"].createElement("area", { shape: "rect", coords: "2820,235,2950,420", href: "javascript:openBalanzaDialog();", alt: "Balanza Analitica" }),
 					_react2["default"].createElement("area", { shape: "rect", coords: "3030,320,3180,400", href: "javascript:openStocksDialog();", alt: "Utencilios para preparación de Stocks" }),
 					_react2["default"].createElement("area", { shape: "rect", coords: "3220,220,3370,360", href: "javascript:openPhDialog();", alt: "pH Metro" }),
-					_react2["default"].createElement("area", { shape: "rect", coords: "830,120,1070,420", href: "javascript:document.location.replace(\"/#/modulo1/1\");document.location.reload();", alt: "Laboratorio" })
+					_react2["default"].createElement("area", { shape: "rect", coords: "830,120,1070,420", href: "/#/modulo1/1", alt: "Laboratorio" })
 				)
 			);
 		}
