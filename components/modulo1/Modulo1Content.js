@@ -40,56 +40,59 @@ export default class Modulo1Content extends React.Component {
     getInitialState() {
       return { mounted: false, crecimiento: false, siembra: false, micropipeta: false, plancha: false, balanza: false, utencilios: false, phmetro: false, estereo: false, estirilizacion:false, envase:false, destilador:false, autoclave:false, ivernadero:false };
     }
-		open(mod){
-			if(mod=='crecimiento') { this.setState({crecimiento: true}); }
-			else if(mod=='siembra') {this.setState({siembra: true});}
-			else if(mod=='micropipeta') {this.setState({micropipeta: true});}
-			else if(mod=='plancha') {this.setState({plancha: true});}
-			else if(mod=='balanza') {this.setState({balanza: true});}
-			else if(mod=='utencilios') {this.setState({utencilios: true});}
-			else if(mod=='phmetro') {this.setState({phmetro: true});}
-			else if(mod=='estereo') {this.setState({estereo: true});}
-			else if(mod=='estirilizacion') {this.setState({estirilizacion: true});}
-			else if(mod=='envase') {this.setState({envase: true});}
-			else if(mod=='destilador') {this.setState({destilador: true});}
-			else if(mod=='autoclave') {this.setState({autoclave: true});}
-			else if(mod=='ivernadero') {this.setState({ivernadero: true});}
-			else {return false;}
-		}
-		close(mod){
-			if(mod=='') {this.setState({m1show: false});}
-			else if(mod=='') {this.setState({m2show: false});}
-			else if(mod=='') {this.setState({m3show: false});}
-			else if(mod=='') {this.setState({m4show: false});}
-			else if(mod=='') {this.setState({m5show: false});}
-			else if(mod=='') {this.setState({m6show: false});}
-			else if(mod=='') {this.setState({m7show: false});}
-			else if(mod=='') {this.setState({m8show: false});}
-			else if(mod=='modalMs') {this.setState({msshow: false});}
-			else if(mod=='modalStock') {this.setState({stockshow: false});}
-			else {return false;	}
-		}
+	open(mod){
+		if(mod=='crecimiento') { this.setState({crecimiento: true}); }
+		else if(mod=='siembra') {this.setState({siembra: true});}
+		else if(mod=='micropipeta') {this.setState({micropipeta: true});}
+		else if(mod=='plancha') {this.setState({plancha: true});}
+		else if(mod=='balanza') {this.setState({balanza: true});}
+		else if(mod=='utencilios') {this.setState({utencilios: true});}
+		else if(mod=='phmetro') {this.setState({phmetro: true});}
+		else if(mod=='estereo') {this.setState({estereo: true});}
+		else if(mod=='estirilizacion') {this.setState({estirilizacion: true});}
+		else if(mod=='envase') {this.setState({envase: true});}
+		else if(mod=='destilador') {this.setState({destilador: true});}
+		else if(mod=='autoclave') {this.setState({autoclave: true});}
+		else if(mod=='ivernadero') {this.setState({ivernadero: true});}
+		else {return false;}
+	}
+	close(mod){
+		if(mod=='crecimiento') { this.setState({crecimiento: false}); }
+		else if(mod=='siembra') {this.setState({siembra: false});}
+		else if(mod=='micropipeta') {this.setState({micropipeta: false});}
+		else if(mod=='plancha') {this.setState({plancha: false});}
+		else if(mod=='balanza') {this.setState({balanza: false});}
+		else if(mod=='utencilios') {this.setState({utencilios: false});}
+		else if(mod=='phmetro') {this.setState({phmetro: false});}
+		else if(mod=='estereo') {this.setState({estereo: false});}
+		else if(mod=='estirilizacion') {this.setState({estirilizacion: false});}
+		else if(mod=='envase') {this.setState({envase: false});}
+		else if(mod=='destilador') {this.setState({destilador: false});}
+		else if(mod=='autoclave') {this.setState({autoclave: false});}
+		else if(mod=='ivernadero') {this.setState({ivernadero: false});}
+		else {return false;}
+	}
     componentDidMount(){
-      this.setState({ mounted: true });
+      this.setState({ mounted: false });
     }
-		recargar(){
-	    	location.reload()
-		}
-		componentWillMount(){
+	recargar(){
+    	location.reload()
+	}
+	componentWillMount(){
       this.getComponent();
     }
 
-		componentDidUpdate(prevProps){
+	componentDidUpdate(prevProps){
       let oldSrc = prevProps.params.src;
       let newSrc = this.props.params.src;
       if (newSrc != oldSrc){
-  			this.getComponent();
+		this.getComponent();
       	this.recargar();
       }
     }
 
     getComponent(){
-			this.setState({ mounted: false });
+		this.setState({ mounted: false });
     	this.setState({ mounted: true});
     }
 
@@ -129,9 +132,22 @@ export default class Modulo1Content extends React.Component {
             </div>;
          }
          return (<div>
-             <ReactCSSTransitionGroup transitionName="example" transitionAppear={true} transitionAppearTimeout={300} transitionEnterTimeout={5000} transitionLeaveTimeout={300}>
-                     {child}
-             </ReactCSSTransitionGroup>
+         	<ReactCSSTransitionGroup transitionName="example" transitionAppear={true} transitionAppearTimeout={300} transitionEnterTimeout={5000} transitionLeaveTimeout={300}>
+				{child}
+         	</ReactCSSTransitionGroup>
+         	<ModalCrecimiento show={this.state.crecimiento} onHide={this.close} open={this.open}/>
+			<ModalSiembra show={this.state.siembra} onHide={this.close} />
+			<ModalMicropipetas show={this.state.micropipeta} onHide={this.close} />
+			<ModalPlancha show={this.state.plancha} onHide={this.close} />
+			<ModalBalanza show={this.state.balanza} onHide={this.close} />
+			<ModalUtencilios show={this.state.utencilios} onHide={this.close} />
+			<ModalPhmetro show={this.state.phmetro} onHide={this.close} />
+			<ModalEstereo show={this.state.estereo} onHide={this.close} />
+			<ModalEstirilizacion show={this.state.estirilizacion} onHide={this.close} />
+			<ModalEnvase show={this.state.envase} onHide={this.close} />
+			<ModalDestilador show={this.state.destilador} onHide={this.close} />
+			<ModalAutoclave show={this.state.autoclave} onHide={this.close} />
+			<ModalIvernadero show={this.state.ivernadero} onHide={this.close} />
          </div>
          )
 	}
