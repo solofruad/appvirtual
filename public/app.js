@@ -8126,7 +8126,7 @@ var Modal4 = (function (_React$Component) {
             _react2['default'].createElement(
               _reactBootstrap.Col,
               { xs: 12, sm: 12, md: 5, lg: 5 },
-              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo3/agua.jpg', alt: 'Medio de cultivo' })
+              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo6/modal4a.jpg', alt: 'Medio de cultivo' })
             )
           ),
           _react2['default'].createElement('hr', { className: 'line-divider' }),
@@ -8136,7 +8136,7 @@ var Modal4 = (function (_React$Component) {
             _react2['default'].createElement(
               _reactBootstrap.Col,
               { xs: 12, sm: 12, md: 5, lg: 5 },
-              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo3/stocks.jpg', alt: 'Medio de cultivo' })
+              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo6/modal4b.jpg', alt: 'Medio de cultivo' })
             ),
             _react2['default'].createElement(
               _reactBootstrap.Col,
@@ -8190,7 +8190,7 @@ var Modal4 = (function (_React$Component) {
             _react2['default'].createElement(
               _reactBootstrap.Col,
               { xs: 12, sm: 12, md: 5, lg: 5 },
-              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo3/fitohormonas.jpg', alt: 'Medio de cultivo' })
+              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo6/modal4c.png', alt: 'Medio de cultivo' })
             )
           ),
           _react2['default'].createElement(
@@ -8236,7 +8236,7 @@ var Modal4 = (function (_React$Component) {
             _react2['default'].createElement(
               _reactBootstrap.Col,
               { xs: 12, sm: 12, md: 5, lg: 5 },
-              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo3/carbono.jpg', alt: 'Medio de cultivo' })
+              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo6/modal4d.jpg', alt: 'Medio de cultivo' })
             ),
             _react2['default'].createElement(
               _reactBootstrap.Col,
@@ -8307,7 +8307,7 @@ var Modal4 = (function (_React$Component) {
             _react2['default'].createElement(
               _reactBootstrap.Col,
               { xs: 12, sm: 12, md: 5, lg: 5 },
-              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo3/gelificante.jpg', alt: 'Medio de cultivo' })
+              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo6/modal4e.jpg', alt: 'Medio de cultivo' })
             )
           ),
           _react2['default'].createElement('hr', { className: 'line-divider' })
