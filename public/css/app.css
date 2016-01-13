@@ -46,7 +46,7 @@ table {
 *{
 	box-sizing: border-box;
 }
-button {
+button, a.boton {
 	border: 0px;
 	padding: 8px 10px;
 	margin: 5px 0px !important;
@@ -65,8 +65,9 @@ button {
 	     -o-transition: 0.15s background ease;
 	        transition: 0.15s background ease;
 }
-	button:hover {
+	button:hover, a.boton:hover {
 		background: #91cd85;
+		text-decoration: none;
 	}
 .PrincipalHeader{
 	height:100%;
@@ -788,7 +789,38 @@ font-size:0.8em;
     max-height: 47.5rem;
     overflow-y: auto;
 }
-
+.avg-titulo-modal{
+	display: inline-block;
+	margin-right:1%;
+}
+.avg-margin-bottom{
+	margin-bottom: 1%;
+}
+.avg-alt-img{
+	position: absolute;
+	z-index: 10;
+	font-size: 1.5em;
+	border-radius: 0;
+}
+.avg-width-55{
+	width:55% !important;
+	left:22%;
+}
+.avg-width-27{
+	width:27% !important;
+	left:35%;
+}
+.avg-width-50{
+	width:50% !important;
+	left:25%;
+}
+.relative{
+	position: relative;
+}
+.justify{
+	text-align: justify;
+}
+/* ---------------------------------------------- import styles ---------------------------------------------------*/
 .lista {
     counter-reset: li;
     list-style: none;

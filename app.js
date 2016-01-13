@@ -14,6 +14,7 @@ import Modulo2 from './components/ContentPrincipal/Modulo2';
 import Modulo3 from './components/ContentPrincipal/Modulo3';
 import Modulo4 from './components/ContentPrincipal/Modulo4';
 import Modulo5 from './components/ContentPrincipal/Modulo5';
+import Modulo6 from './components/ContentPrincipal/Modulo6';
 import ContentCreditos from './components/ContentCreditos/ContentCreditos';
 
 let RouteHandler = Router.RouteHandler;
@@ -32,6 +33,7 @@ let routes = <Route component={Menu} path='/'>
 		<Route path="modulo3" component={Modulo3} />
 		<Route path="modulo4" component={Modulo4} />
 		<Route path="modulo5" component={Modulo5} />
+		<Route path="modulo6" component={Modulo6} />
 	</Route>
 
 render(<Router history={history}>{routes}</Router>, document.getElementById('container'));

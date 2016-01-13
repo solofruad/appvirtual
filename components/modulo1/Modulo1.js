@@ -9,6 +9,9 @@ export default class Modulo1 extends React.Component {
 	constructor(props){
 		super(props);
 	}
+	onClick(ev){
+		this.props.open.call(null,'crecimiento')
+	}
 	render(){
 		return <div>
 			<img src="public/img/modulo1/1.jpg" className="advancedpanorama" useMap="testmap" alt="Laboratorio de Biotecnología" />
