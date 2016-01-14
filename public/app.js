@@ -7719,8 +7719,8 @@ module.exports = exports['default'];
 
 },{"react":533,"react-bootstrap":172}],38:[function(require,module,exports){
 /**
- * Modules Dependencies
- */
+* Modules Dependencies
+*/
 
 'use strict';
 
@@ -7806,24 +7806,7 @@ var Modal2 = (function (_React$Component) {
                 'p',
                 { className: 'txt-parrafo' },
                 'Un meristemo es una estructura compuesta por células no diferenciadas y totipotentes en constante y rápida división celular. Se presenta con células pequeñas, de pared celular delgada, de forma poliédrica, en las cuales el núcleo ocupa la mayor parte  del volumen celular y se caracteriza por la presencia de abundantes y pequeñas vacuolas.'
-              )
-            ),
-            _react2['default'].createElement(
-              _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 6, lg: 6 },
-              _react2['default'].createElement(
-                'center',
-                null,
-                _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo6/modal2.jpg', alt: 'Medio de cultivo' })
-              )
-            )
-          ),
-          _react2['default'].createElement(
-            _reactBootstrap.Row,
-            null,
-            _react2['default'].createElement(
-              _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 12, lg: 12 },
+              ),
               _react2['default'].createElement(
                 'p',
                 { className: 'txt-parrafo' },
@@ -7841,7 +7824,21 @@ var Modal2 = (function (_React$Component) {
                 ),
                 ', responsables del engrosamiento de los tallos y las raíces debido a divisiones celulares que ocurren en el cambium vascular.'
               )
+            ),
+            _react2['default'].createElement(
+              _reactBootstrap.Col,
+              { xs: 12, sm: 12, md: 6, lg: 6 },
+              _react2['default'].createElement(
+                'center',
+                null,
+                _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo6/modal2.gif', alt: 'Medio de cultivo' })
+              )
             )
+          ),
+          _react2['default'].createElement(
+            _reactBootstrap.Row,
+            null,
+            _react2['default'].createElement(_reactBootstrap.Col, { xs: 12, sm: 12, md: 12, lg: 12 })
           )
         ),
         _react2['default'].createElement(
@@ -7955,35 +7952,32 @@ var Modal3 = (function (_React$Component) {
             null,
             _react2['default'].createElement(
               _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 12, lg: 12 },
-              _react2['default'].createElement(
-                'p',
-                { className: 'txt-parrafo' },
-                'Los análisis histológicos permiten diferenciar un meristemo de un ápice. Según Roca (1980) un meristemo apical está conformado por el tejido joven mas próximo al primordio (domo meristemático) foliar del tallo con tamaño menor que 0.1-0.3 mm, mientras que un ápice esta formado por el meristemo apical acompañado de varios primordios. Ambas partes se encuentran localizadas tanto en las yemas apicales como en las laterales cuyas células se diferencian hasta formar los tejidos  que conforman el cuerpo de la planta (soma). Estas estructuras presentan una alta organización; por tanto, mantienen la estabilidad genética.'
-              )
-            )
-          ),
-          _react2['default'].createElement(
-            _reactBootstrap.Row,
-            null,
-            _react2['default'].createElement(
-              _reactBootstrap.Col,
               { xs: 12, sm: 12, md: 6, lg: 6 },
               _react2['default'].createElement(
-                'p',
-                { className: 'txt-parrafo' },
-                'El desarrollo de la yema apical ejerce un efecto de control sobre las yemas basales, lo cual evita su desarrollo. Este fenómeno se conoce como dominancia apical y se debe a la acción de AIA sintetizado en las yemas apicales que se distribuye en forma basipetala y causa un estado de dormancia en las yemas laterales. No obstante, esta acción puede ser eliminada por la aplicación exógena de citoquininas o mediante la poda de las yemas apicales.'
+                'center',
+                null,
+                _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo6/modal3.png', alt: 'Medio de cultivo' })
               )
             ),
             _react2['default'].createElement(
               _reactBootstrap.Col,
               { xs: 12, sm: 12, md: 6, lg: 6 },
               _react2['default'].createElement(
-                'center',
-                null,
-                _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo6/modal3.jpg', alt: 'Medio de cultivo' })
+                'p',
+                { className: 'txt-parrafo' },
+                'Los análisis histológicos permiten diferenciar un meristemo de un ápice. Según Roca (1980) un meristemo apical está conformado por el tejido joven mas próximo al primordio (domo meristemático) foliar del tallo con tamaño menor que 0.1-0.3 mm, mientras que un ápice esta formado por el meristemo apical acompañado de varios primordios. Ambas partes se encuentran localizadas tanto en las yemas apicales como en las laterales cuyas células se diferencian hasta formar los tejidos  que conforman el cuerpo de la planta (soma). Estas estructuras presentan una alta organización; por tanto, mantienen la estabilidad genética.'
+              ),
+              _react2['default'].createElement(
+                'p',
+                { className: 'txt-parrafo' },
+                'El desarrollo de la yema apical ejerce un efecto de control sobre las yemas basales, lo cual evita su desarrollo. Este fenómeno se conoce como dominancia apical y se debe a la acción de AIA sintetizado en las yemas apicales que se distribuye en forma basipetala y causa un estado de dormancia en las yemas laterales. No obstante, esta acción puede ser eliminada por la aplicación exógena de citoquininas o mediante la poda de las yemas apicales.'
               )
             )
+          ),
+          _react2['default'].createElement(
+            _reactBootstrap.Row,
+            null,
+            _react2['default'].createElement(_reactBootstrap.Col, { xs: 12, sm: 12, md: 6, lg: 6 })
           )
         ),
         _react2['default'].createElement(
