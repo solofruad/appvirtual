@@ -39,7 +39,7 @@ export default[
 		modulo: 7,
 		titulo: 'Modulo 7. Preparación de Medios',
 		descripcion: 'Elaboración de Medios.',
-		url: 'Inicio'
+		url: 'modulo/7'
 	},
 	{
 		modulo: 8,

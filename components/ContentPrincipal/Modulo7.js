@@ -7,14 +7,14 @@ import React from 'react';
 import Modulos from './Modulos';
 import $ from 'jquery';
 import {Modal} from 'react-bootstrap';
-import Modal1 from './Modal/Modulo6/Modal1';
-import Modal2 from './Modal/Modulo6/Modal2';
-import Modal3 from './Modal/Modulo6/Modal3';
-import Modal4 from './Modal/Modulo6/Modal4';
-import Modal5 from './Modal/Modulo6/Modal5';
+import Modal1 from './Modal/Modulo7/Modal1';
+import Modal2 from './Modal/Modulo7/Modal2';
+import Modal3 from './Modal/Modulo7/Modal3';
+import Modal4 from './Modal/Modulo7/Modal4';
+import Modal5 from './Modal/Modulo7/Modal5';
 
 
-export default class Modulo6 extends React.Component {
+export default class Modulo7 extends React.Component {
 	constructor(props){
 		super(props);
 		this.state = { modulos: [], m1show: false, m2show: false, m3show: false, m4show: false,  m5show: false};
@@ -25,24 +25,24 @@ export default class Modulo6 extends React.Component {
 		return { m1show: false, m2show: false, m3show: false, m4show: false,  m5show: false};
 	}
 	open(mod){
-		if(mod=='modulo6/1') { this.setState({m1show: true}); }
-		else if(mod=='modulo6/2') {this.setState({m2show: true});}
-		else if(mod=='modulo6/3') {this.setState({m3show: true});}
-		else if(mod=='modulo6/7') {this.setState({m4show: true});}
-		else if(mod=='modulo6/8') {this.setState({m5show: true});}
+		if(mod=='modulo7/1') { this.setState({m1show: true}); }
+		else if(mod=='modulo7/2') {this.setState({m2show: true});}
+		else if(mod=='modulo7/5') {this.setState({m3show: true});}
+		else if(mod=='modulo7/7') {this.setState({m4show: true});}
+		else if(mod=='modulo7/8') {this.setState({m5show: true});}
 		else {return false;}
 	}
 	close(mod){
-		if(mod=='modulo6/1') {this.setState({m1show: false});}
-		else if(mod=='modulo6/2') {this.setState({m2show: false});}
-		else if(mod=='modulo6/3') {this.setState({m3show: false});}
-		else if(mod=='modulo6/7') {this.setState({m4show: false});}
-		else if(mod=='modulo6/8') {this.setState({m5show: false});}
+		if(mod=='modulo7/1') {this.setState({m1show: false});}
+		else if(mod=='modulo7/2') {this.setState({m2show: false});}
+		else if(mod=='modulo7/5') {this.setState({m3show: false});}
+		else if(mod=='modulo7/7') {this.setState({m4show: false});}
+		else if(mod=='modulo7/8') {this.setState({m5show: false});}
 		else {return false;	}
 	}
 	componentWillMount(){
-    	$.get('/dirmod6', (modulo6) => {
-      		this.setState({ modulos:  modulo6});
+    	$.get('/dirmod7', (modulo7) => {
+      		this.setState({ modulos:  modulo7});
     	});
 	}
 	render(){

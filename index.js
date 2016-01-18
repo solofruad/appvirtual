@@ -85,6 +85,16 @@ app.get('/dirmod6', (req, res) => {
       res.json(modulo6);
     });
 });
+app.get('/dirintomod7', (req, res) => {
+  dbapi.intomod7.find((intomod7) => {
+      res.json(intomod7);
+    });
+});
+app.get('/dirmod7', (req, res) => {
+  dbapi.modulo7.find((modulo7) => {
+      res.json(modulo7);
+    });
+});
 
 app.get('/',(req,res) => {
 	res.sendFile(__dirname+'/index.html');

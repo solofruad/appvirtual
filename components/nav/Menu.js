@@ -44,9 +44,11 @@ export default class Menu extends React.Component {
 				  		<li eventKey={2.4}><Link to={`modulo/${4}`}>Modulo 4</Link></li>
 				  		<li eventKey={2.5}><Link to={`modulo/${5}`}>Modulo 5</Link></li>
 				  		<li eventKey={2.6}><Link to={`modulo/${6}`}>Modulo 6</Link></li>
+				  		<li eventKey={2.7}><Link to={`modulo/${7}`}>Modulo 7</Link></li>
 			          <MenuItem divider />
-								<li eventKey={2.7}><Link to={`/creditos`}>Simulación 1</Link></li>
-								<li eventKey={2.8}><Link to={`/creditos`}>Simulación 2</Link></li>
+								<li eventKey={2.8}><Link to={`/creditos`}>Simulación 1</Link></li>
+								<li eventKey={2.9}><Link to={`/creditos`}>Simulación 2</Link></li>
+								<li eventKey={2.10}><Link to={`/creditos`}>Simulación 3</Link></li>
 			        </NavDropdown>
 			      </Nav>
 			      <Nav pullRight>

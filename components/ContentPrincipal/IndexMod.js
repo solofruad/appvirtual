@@ -62,6 +62,11 @@ export default class IndexMod extends React.Component {
             this.setState({ componente:  intomod6, mounted: true});
         });
       }
+      if(src==7){
+        $.get('/dirintomod7', (intomod7) => {
+            this.setState({ componente:  intomod7, mounted: true});
+        });
+      }
     }
     render(){
         if (this.state.componente.length){

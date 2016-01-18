@@ -10,11 +10,13 @@ import modulo3 from './ContentModulo3';
 import modulo4 from './ContentModulo4';
 import modulo5 from './ContentModulo5';
 import modulo6 from './ContentModulo6';
+import modulo7 from './ContentModulo7';
 import intomod2 from './ContentIntoMod2';
 import intomod3 from './ContentIntoMod3';
 import intomod4 from './ContentIntoMod4';
 import intomod5 from './ContentIntoMod5';
 import intomod6 from './ContentIntoMod6';
+import intomod7 from './ContentIntoMod7';
 
 export default {
   contenido: {
@@ -103,6 +105,20 @@ export default {
     find: function(callback){
       setTimeout(()=> {
         callback(modulo6);
+      },500);
+    }
+  },
+  intomod7: {
+    find: function(callback) {
+      setTimeout(() => {
+        callback(intomod7);
+      }, 500);
+    }
+  },
+  modulo7:{
+    find: function(callback){
+      setTimeout(()=> {
+        callback(modulo7);
       },500);
     }
   }
