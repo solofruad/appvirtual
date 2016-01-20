@@ -24,91 +24,34 @@ export default class Modal2 extends React.Component {
       <Modal.Body>
 				<Row>
           <Col xs={12} sm={12} md={12} lg={12} className="txt-center">
-            <h1><b>Establecimiento ex vitro</b></h1>
-            <p>En esta etapa se saca la planta del frasco a un ambiente favorable para su buen desarrollo. Los siguientes pasos son los que se deben tener en cuenta para el establecimiento de las plantas a condiciones naturales:</p>
+            <h1><b>Aplicaciones de la técnica del cultivo de embriones cigóticos</b></h1>
+            <p>La técnica de rescate y cultivo de embriones es utilizada principalmente para:</p>
+						<ol className="lista">
+              <li>Recuperar embriones híbridos provenientes de cruces interespecificos e intergenericos.</li>
+              <li>Romper la dormancia  de semillas con largos periodos de latencia.</li>
+              <li>Acortar el ciclo de mejoramiento de especies con semillas de periodos largos de latencia.</li>              
+            </ol>
           </Col>
         </Row>
         <hr className="line-divider"></hr>
-        <Row>
+				<Row>
           <Col xs={12} sm={12} md={7} lg={7}>
-            <div className="txt-vertical-center"><p className="title-list-modal"><b>Escoger la vitroplanta  que ya tenga el tamaño ideal: </b><span>cuando toca la tapa del frasco. </span></p><p className="txt-into"><span className="capitalLetter"><i className="fa fa-chevron-right"></i></span>Ocurre, generalmente, después de entre un mes y dos de estar subcultivada y al presentar de 5 a 8 nudos.</p></div>
+						<div className="txt-vertical-center"><h2><b>Recuperación de híbridos de cruces interespecíficos o intergenéricos.</b></h2> <p className="txt-parrafo">Una de las metas de un programa de mejoramiento genético vegetal mediante cruces interespecíficos o intergenéricos es transferir una característica (genes) de importancia agronómica y económica de un material silvestre (o lejano) a un material cultivado. Uno de los principales obstáculos de esta estrategia de mejoramiento es el aborto de las semillas híbridas debido a factores de incompatibilidad. Este problema puede ser superado en forma  parcial extrayendo y cultivando el embrión de la semilla en fases tempranas para prevenir el aborto y lograr recuperar el híbrido.</p></div>
           </Col>
           <Col xs={12} sm={12} md={5} lg={5}>
-            <img className="img-modal-show" src="public/img/modulo5/modal2a.jpg" alt="Vitroplanta lista para etapa ex vitro."/>
+            <img className="img-modal-show" src="public/img/modulo7/modal5a.jpg" alt="Medio de cultivo"/>
+          </Col>
+        </Row>
+				<hr className="line-divider"></hr>
+        <Row>
+          <Col xs={12} sm={12} md={5} lg={5}>
+						<img className="img-modal-show" src="public/img/modulo7/modal5b.jpg" alt="Medio de cultivo"/>
+          </Col>
+          <Col xs={12} sm={12} md={7} lg={7}>
+						<div className="txt-vertical-center"><h2><b>Acortamiento del ciclo de mejoramiento de especies con semillas de latencia larga.</b></h2><p className="txt-parrafo">Las semillas de algunas especies vegetales presentan largos periodos de latencia, lo cual se debe a la presencia de sustancias inhibidoras de la germinación en el endospermo, o a características físicas de la cubierta que protege el embrión y que actúa como barrera al ingreso de agua y oxigeno el interior de las semillas. Este obstáculo se puede obviar mediante el aislamiento y cultivo de los embriones para acelerar la germinación y lograr la producción de plántulas para el programa de mejoramiento.</p></div>
           </Col>
         </Row>
         <hr className="line-divider"></hr>
-        <Row>
-          <Col xs={12} sm={12} md={5} lg={5}>
-            <img className="img-modal-show" src="public/img/modulo5/modal2b.jpg" alt="Vitroplantas semidestapadas para aclimatazción."/>
-          </Col>
-          <Col xs={12} sm={12} md={7} lg={7}>
-            <div className="txt-vertical-center"><p className="title-list-modal"><b>Se puede dejar los tarros semi-destapados hasta cuatro días, </b><span>fuera del cuarto de crecimiento.</span></p><p className="txt-into"><span className="capitalLetter"><i className="fa fa-chevron-right"></i></span>Con una leve radiación solar de 7am a 9 am y de 3pm a 5 pm.</p></div>
-          </Col>
-        </Row>
-        <hr className="line-divider"></hr>
-        <Row>
-          <Col xs={12} sm={12} md={7} lg={7}>
-            <div className="txt-vertical-center"><p className="title-list-modal"><b>Luego de la anterior, se hace la extracción. </b><span>Se quita el vinipel y la tapa.</span></p><p className="txt-into"><span className="capitalLetter"><i className="fa fa-chevron-right"></i></span>Se golpea suavemente la base del tarro y delicadamente se saca la planta del frasco. Utilizando agua, se retirara los residuos del gel. </p></div>
-          </Col>
-          <Col xs={12} sm={12} md={5} lg={5}>
-            <img className="img-modal-show" src="public/img/modulo5/modal2c.jpg" alt="Extracción de planta (M. esculenta) del frasco."/>
-          </Col>
-        </Row>
-        <hr className="line-divider"></hr>
-        <Row>
-          <Col xs={12} sm={12} md={5} lg={5}>
-            <img className="img-modal-show" src="public/img/modulo5/modal2d.jpg" alt="Salida de la planta del frasco."/>
-          </Col>
-          <Col xs={12} sm={12} md={7} lg={7}>
-            <div className="txt-vertical-center"><p className="title-list-modal"><b>Se lava las raíces con abundante agua, </b><span>se quita las hojas basales o “bajeras”.</span></p></div>
-          </Col>
-        </Row>
-        <hr className="line-divider"></hr>
-        <Row>
-          <Col xs={12} sm={12} md={7} lg={7}>
-            <div className="txt-vertical-center"><p className="title-list-modal"><b>Sembrar en sustrato (1:1 Aserrín y humus solido) esterilizado. </b><span>También se puede utilizar en la misma proporción cascarilla.</span></p></div>
-          </Col>
-          <Col xs={12} sm={12} md={5} lg={5}>
-            <img className="img-modal-show" src="public/img/modulo5/modal2e.jpg" alt="Siembra de planta (M. esculenta) en sustrato estéril"/>
-          </Col>
-        </Row>
-        <hr className="line-divider"></hr>
-        <Row>
-          <Col xs={12} sm={12} md={5} lg={5}>
-            <img className="img-modal-show" src="public/img/modulo5/modal2f.jpg" alt="Cámara humedad para la planta (M. esculenta)."/>
-          </Col>
-          <Col xs={12} sm={12} md={7} lg={7}>
-            <div className="txt-vertical-center">
-              <p className="title-list-modal"><b>Poner vaso con perforaciones en la base durante dos semanas </b><span>para que la planta genere un microclima</span></p><p className="txt-into"><span className="capitalLetter"><i className="fa fa-chevron-right"></i></span>que le permita regular el intercambio gaseoso, temperatura y luminosidad en menor grado.</p>
-            </div>
-          </Col>
-        </Row>
-        <Row>
-          <Col xs={12} sm={12} md={12} lg={12}>
-              <p className="txt-parrafo">En la segunda semana se levanta de un lado para dejarlo en diagonal y permitir que aumente un poco la salida y entrada de gases. Se sugiere irrigar 20ml de agua día de por medio y un palo de paleta rotulado con el genotipo de planta y la fecha de transplante.</p>
-              <p className="txt-parrafo">Se coloca la planta en radiación solar, durante la primera semana, de 7 am a 10 am y de 2 pm a 5 pm, sin exposición directa al sol (polisombra 50%). En la segunda,  se puede exponer durante todo el día, sin exposición directa al sol (polisombra 50%).</p>            
-          </Col>
-        </Row>
-        <hr className="line-divider"></hr>
-        <Row>
-          <Col xs={12} sm={12} md={7} lg={7}>
-            <div className="txt-vertical-center"><p className="title-list-modal"><b>Dos semanas después del transplante se retira el vaso </b><span>y se mantiene 6 semanas más.</span></p><p className="txt-into"><span className="capitalLetter"><i className="fa fa-chevron-right"></i></span>Aunque el sustrato contiene nutrientes se recomienda realizar una fertilización edáfica o foliar semanal.</p></div>
-          </Col>
-          <Col xs={12} sm={12} md={5} lg={5}>
-            <img className="img-modal-show" src="public/img/modulo5/modal2g.jpg" alt="Crecimiento de planta obtenida in vitro."/>
-          </Col>
-        </Row>
-        <hr className="line-divider"></hr>
-        <Row>
-          <Col xs={12} sm={12} md={5} lg={5}>
-            <img className="img-modal-show" src="public/img/modulo5/modal2h.jpg" alt="Planta (M. esculenta) para sembrar a campo obtenida por cultivo de tejidos."/>
-          </Col>
-          <Col xs={12} sm={12} md={7} lg={7}>
-            <div className="txt-vertical-center"><p className="txt-into"><span className="capitalLetter"><i className="fa fa-chevron-right"></i></span>A la 8 semana, la planta puede salir a campo o, coger otra vía, para aumentar la producción del material a través de miniestacas.</p></div>
-          </Col>
-        </Row>
-        <hr className="line-divider"></hr>        
       </Modal.Body>
       <Modal.Footer>
         <button onClick={this.onClose.bind(this)}>Cerrar</button>

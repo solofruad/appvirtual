@@ -22,14 +22,19 @@ export default class Modal2 extends React.Component {
         <Modal.Title><h4><Label bsStyle='success'>Eventos importantes en el desarrollo de esta técnica</Label></h4></Modal.Title>
       </Modal.Header>
       <Modal.Body>
+				<Row>
+					<Col xs={12} sm={12} md={12} lg={12} className="txt-center">
+						<h1><b>Eventos importantes en el desarrollo de esta técnica.</b></h1><br/>
+					</Col>
+				</Row>
         <Row>
-          <Col xs={12} sm={12} md={6} lg={6}>
-            <h1><b>Méristemos</b></h1><br/>
-            <p className="txt-parrafo">Un meristemo es una estructura compuesta por células no diferenciadas y totipotentes en constante y rápida división celular. Se presenta con células pequeñas, de pared celular delgada, de forma poliédrica, en las cuales el núcleo ocupa la mayor parte  del volumen celular y se caracteriza por la presencia de abundantes y pequeñas vacuolas.</p>
-						<p className="txt-parrafo">Los meristemos son  tejidos totipotentes que se multiplican en forma activa y neoforman tejidos diferenciados y células meristemáticas nuevas. Son responsables del crecimiento de las plantas y se reconocen dos tipos: <b>meristemos primarios,</b> responsables del crecimiento longitudinal de la planta y se encuentran localizados en los extremos del tallo, la raíz y las yemas; y <b>meristemos secundarios</b>, responsables del engrosamiento de los tallos y las raíces debido a divisiones celulares que ocurren en el cambium vascular.</p>
+          <Col xs={12} sm={12} md={12} lg={12}>
+            <p className="txt-parrafo">El desarrollo de la técnica de rescate y cultivo de embriones se caracteriza por la ocurrencia de varios eventos importantes. En 1940 Hanning(citado por Litz,1993) realizo por primera vez un cultivo in vitro de embriones cigóticos maduros de plantas. Posteriormente, en 1924, Dietrich (citado por Pierik, 1990) realizo estudios para determinar si era posible regenerar plantas a partir de embriones sin que estos hubiesen completado su periodo de dormancia. Van Overbeek et al., (1941) demostraron que el agua de coco estimula el desarrollo de embriones de datura, lo que contribuyó al desarrollo de las investigaciones sobre cultivo in vitro de embriones para reducir el ciclo de mejoramiento genético en Iris. Estos eventos marcaron el inicio de la aplicación, asociándola a esquemas de cruces interespecíficos e intergenéricos.</p>
           </Col>
-          <Col xs={12} sm={12} md={6} lg={6}>
-            <center><img className="img-modal-show" src="public/img/modulo6/modal2.gif" alt="Medio de cultivo"/></center>
+				</Row>
+				<Row>
+          <Col xs={12} sm={12} md={12} lg={12}>
+            <center><img className="img-modal-show" src="public/img/modulo7/modal2.jpg" alt="Medio de cultivo"/></center>
           </Col>
         </Row>
         <Row>

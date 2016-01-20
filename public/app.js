@@ -8968,7 +8968,7 @@ var Modal2 = (function (_React$Component) {
               _react2['default'].createElement(
                 _reactBootstrap.Label,
                 { bsStyle: 'success' },
-                'Cultivo in vitro de meristemos y ápices'
+                'Eventos importantes en el desarrollo de esta técnica'
               )
             )
           )
@@ -8981,47 +8981,42 @@ var Modal2 = (function (_React$Component) {
             null,
             _react2['default'].createElement(
               _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 6, lg: 6 },
+              { xs: 12, sm: 12, md: 12, lg: 12, className: 'txt-center' },
               _react2['default'].createElement(
                 'h1',
                 null,
                 _react2['default'].createElement(
                   'b',
                   null,
-                  'Méristemos'
+                  'Eventos importantes en el desarrollo de esta técnica.'
                 )
               ),
-              _react2['default'].createElement('br', null),
-              _react2['default'].createElement(
-                'p',
-                { className: 'txt-parrafo' },
-                'Un meristemo es una estructura compuesta por células no diferenciadas y totipotentes en constante y rápida división celular. Se presenta con células pequeñas, de pared celular delgada, de forma poliédrica, en las cuales el núcleo ocupa la mayor parte  del volumen celular y se caracteriza por la presencia de abundantes y pequeñas vacuolas.'
-              ),
-              _react2['default'].createElement(
-                'p',
-                { className: 'txt-parrafo' },
-                'Los meristemos son  tejidos totipotentes que se multiplican en forma activa y neoforman tejidos diferenciados y células meristemáticas nuevas. Son responsables del crecimiento de las plantas y se reconocen dos tipos: ',
-                _react2['default'].createElement(
-                  'b',
-                  null,
-                  'meristemos primarios,'
-                ),
-                ' responsables del crecimiento longitudinal de la planta y se encuentran localizados en los extremos del tallo, la raíz y las yemas; y ',
-                _react2['default'].createElement(
-                  'b',
-                  null,
-                  'meristemos secundarios'
-                ),
-                ', responsables del engrosamiento de los tallos y las raíces debido a divisiones celulares que ocurren en el cambium vascular.'
-              )
-            ),
+              _react2['default'].createElement('br', null)
+            )
+          ),
+          _react2['default'].createElement(
+            _reactBootstrap.Row,
+            null,
             _react2['default'].createElement(
               _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 6, lg: 6 },
+              { xs: 12, sm: 12, md: 12, lg: 12 },
+              _react2['default'].createElement(
+                'p',
+                { className: 'txt-parrafo' },
+                'El desarrollo de la técnica de rescate y cultivo de embriones se caracteriza por la ocurrencia de varios eventos importantes. En 1940 Hanning(citado por Litz,1993) realizo por primera vez un cultivo in vitro de embriones cigóticos maduros de plantas. Posteriormente, en 1924, Dietrich (citado por Pierik, 1990) realizo estudios para determinar si era posible regenerar plantas a partir de embriones sin que estos hubiesen completado su periodo de dormancia. Van Overbeek et al., (1941) demostraron que el agua de coco estimula el desarrollo de embriones de datura, lo que contribuyó al desarrollo de las investigaciones sobre cultivo in vitro de embriones para reducir el ciclo de mejoramiento genético en Iris. Estos eventos marcaron el inicio de la aplicación, asociándola a esquemas de cruces interespecíficos e intergenéricos.'
+              )
+            )
+          ),
+          _react2['default'].createElement(
+            _reactBootstrap.Row,
+            null,
+            _react2['default'].createElement(
+              _reactBootstrap.Col,
+              { xs: 12, sm: 12, md: 12, lg: 12 },
               _react2['default'].createElement(
                 'center',
                 null,
-                _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo6/modal2.gif', alt: 'Medio de cultivo' })
+                _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo7/modal2.jpg', alt: 'Medio de cultivo' })
               )
             )
           ),
@@ -9111,7 +9106,7 @@ var Modal3 = (function (_React$Component) {
               _react2['default'].createElement(
                 _reactBootstrap.Label,
                 { bsStyle: 'success' },
-                'Cultivo in vitro de meristemos y ápices'
+                'Rescate y cultivo de embriones cigóticos'
               )
             )
           )
@@ -9131,10 +9126,9 @@ var Modal3 = (function (_React$Component) {
                 _react2['default'].createElement(
                   'b',
                   null,
-                  'Ápices'
+                  'Factores que afectan el cultivo in vitro de embriones cigóticos.'
                 )
-              ),
-              _react2['default'].createElement('br', null)
+              )
             )
           ),
           _react2['default'].createElement(
@@ -9142,32 +9136,49 @@ var Modal3 = (function (_React$Component) {
             null,
             _react2['default'].createElement(
               _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 6, lg: 6 },
+              { xs: 12, sm: 12, md: 7, lg: 7 },
               _react2['default'].createElement(
-                'center',
-                null,
-                _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo6/modal3.png', alt: 'Medio de cultivo' })
+                'div',
+                { className: 'txt-vertical-center' },
+                _react2['default'].createElement(
+                  'p',
+                  { className: 'txt-parrafo' },
+                  'El cultivo de embriones inmaduros utiliza semillas sin madurar como fuente de explante. Con esta técnica se evita el aborto temprano del embrión logrando la regeneración de una planta viable, generalmente en cruces distantes. No obstante, la disección del embrión inmaduros resulta difícil por su escaso desarrollo, el riesgo de lesionarlo y la complejidad del medio de cultivo para continuar el crecimiento de embriones en estados inmaduros. Por otro lado, el cultivo de embriones maduros, provenientes de semillas igualmente maduras, presenta menos problemas durante la disección del embrión, y el medio para su cultivo es mucho mas simple ya que se solidifica con agar y solo contiene sales minerales y sacarosa como fuente de energía.'
+                )
               )
             ),
             _react2['default'].createElement(
               _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 6, lg: 6 },
-              _react2['default'].createElement(
-                'p',
-                { className: 'txt-parrafo' },
-                'Los análisis histológicos permiten diferenciar un meristemo de un ápice. Según Roca (1980) un meristemo apical está conformado por el tejido joven mas próximo al primordio (domo meristemático) foliar del tallo con tamaño menor que 0.1-0.3 mm, mientras que un ápice esta formado por el meristemo apical acompañado de varios primordios. Ambas partes se encuentran localizadas tanto en las yemas apicales como en las laterales cuyas células se diferencian hasta formar los tejidos  que conforman el cuerpo de la planta (soma). Estas estructuras presentan una alta organización; por tanto, mantienen la estabilidad genética.'
-              ),
-              _react2['default'].createElement(
-                'p',
-                { className: 'txt-parrafo' },
-                'El desarrollo de la yema apical ejerce un efecto de control sobre las yemas basales, lo cual evita su desarrollo. Este fenómeno se conoce como dominancia apical y se debe a la acción de AIA sintetizado en las yemas apicales que se distribuye en forma basipetala y causa un estado de dormancia en las yemas laterales. No obstante, esta acción puede ser eliminada por la aplicación exógena de citoquininas o mediante la poda de las yemas apicales.'
-              )
+              { xs: 12, sm: 12, md: 5, lg: 5 },
+              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo7/modal3a.jpg', alt: 'Factores que afectan el cultivo in vitro' })
             )
           ),
           _react2['default'].createElement(
             _reactBootstrap.Row,
             null,
-            _react2['default'].createElement(_reactBootstrap.Col, { xs: 12, sm: 12, md: 6, lg: 6 })
+            _react2['default'].createElement(
+              _reactBootstrap.Col,
+              { xs: 12, sm: 12, md: 5, lg: 5 },
+              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo7/modal3b.jpg', alt: 'Factores que afectan el cultivo in vitro' })
+            ),
+            _react2['default'].createElement(
+              _reactBootstrap.Col,
+              { xs: 12, sm: 12, md: 7, lg: 7 },
+              _react2['default'].createElement(
+                'div',
+                { className: 'txt-vertical-center' },
+                _react2['default'].createElement(
+                  'p',
+                  { className: 'txt-parrafo' },
+                  'Generalmente los embriones cultivados in vitro tienen una germinación precoz, debido a la ausencia de inhibidores presentes en el endospermo y al aumento del potencial osmótico que experimenta el embrión en este tipo de cultivo.'
+                ),
+                _react2['default'].createElement(
+                  'p',
+                  { className: 'txt-parrafo' },
+                  'Litz (1993) y Picca y Cardone (2004) consideran que los factores críticos que afectan el cultivo in vitro de embriones son el medio de cultivo, la os molaridad y los reguladores de crecimiento.  Para el buen desarrollo de un embrión, principalmente en estados inmaduros, la os molaridad es importante. Los azucares adicionados al medio no solo sirven de fuente de energía sino, además, para regular la presión osmótica en el medio requerida en cada etapa del desarrollo del embrión. A  medida que este crece debe ser transferido a medios con reducción progresiva de los niveles de sacarosa.'
+                )
+              )
+            )
           )
         ),
         _react2['default'].createElement(
@@ -9250,7 +9261,7 @@ var Modal4 = (function (_React$Component) {
               _react2['default'].createElement(
                 _reactBootstrap.Label,
                 { bsStyle: 'success' },
-                'Cultivo in vitro de meristemos y ápices'
+                'Rescate y cultivo de embriones cigóticos'
               )
             )
           )
@@ -9270,57 +9281,18 @@ var Modal4 = (function (_React$Component) {
                 _react2['default'].createElement(
                   'b',
                   null,
-                  'Aplicaciones del cultivo in vitro de meristemos y ápices.'
+                  'Reguladores del crecimiento.'
                 )
-              ),
-              _react2['default'].createElement(
-                'p',
-                null,
-                'Algunas de las aplicaciones de mayor uso del cultivo de meristemos y ápices incluyen : (1) la micropropagación; (2) la erradicación de patógenos, especialmente de origen viral; (3) la conservación de germoplasma in vitro; (4) el intercambio de germoplasma. '
               )
             )
           ),
-          _react2['default'].createElement('hr', { className: 'line-divider' }),
-          _react2['default'].createElement(
-            _reactBootstrap.Row,
-            null,
-            _react2['default'].createElement(
-              _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 7, lg: 7 },
-              _react2['default'].createElement(
-                'div',
-                { className: 'txt-vertical-center' },
-                _react2['default'].createElement(
-                  'h2',
-                  null,
-                  _react2['default'].createElement(
-                    'b',
-                    null,
-                    'La micropropagación. '
-                  )
-                ),
-                ' ',
-                _react2['default'].createElement(
-                  'p',
-                  { className: 'txt-parrafo' },
-                  'a propagación in vitro o micropropagación se realiza a través de subcultivos continuos, obtenidos a partir de ciclos previos de crecimiento in vitro. El tejido objeto de  propagación puede ser obtenido mediante el desarrollo de yemas axilares, inducción de yemas o brotes adventicios, y por embriogénesis somática.'
-                )
-              )
-            ),
-            _react2['default'].createElement(
-              _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 5, lg: 5 },
-              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo6/modal4a.jpg', alt: 'Medio de cultivo' })
-            )
-          ),
-          _react2['default'].createElement('hr', { className: 'line-divider' }),
           _react2['default'].createElement(
             _reactBootstrap.Row,
             null,
             _react2['default'].createElement(
               _reactBootstrap.Col,
               { xs: 12, sm: 12, md: 5, lg: 5 },
-              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo6/modal4b.jpg', alt: 'Medio de cultivo' })
+              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo7/modal4a.jpg', alt: 'Reguladores del crecimiento' })
             ),
             _react2['default'].createElement(
               _reactBootstrap.Col,
@@ -9329,118 +9301,21 @@ var Modal4 = (function (_React$Component) {
                 'div',
                 { className: 'txt-vertical-center' },
                 _react2['default'].createElement(
-                  'h2',
-                  null,
+                  'p',
+                  { className: 'txt-parrafo' },
+                  'El desarrollo del embrión en la planta presenta dos fases: ',
                   _react2['default'].createElement(
                     'b',
                     null,
-                    'Inducción de yemas o brotes de adventicios. '
-                  )
-                ),
-                _react2['default'].createElement(
-                  'p',
-                  { className: 'txt-parrafo' },
-                  ' es el procedimiento mediante el cual un tejido adventicio (yema o brote) forma un novo en un área o tejido diferente al que normalmente lo forma. En condiciones in vitro es posible inducir un brote o yema a partir de un segmento de tallo, hoja, raíz, entre otras estructuras, donde no existen zonas meristemáticas. El subcultivo in vitro, realizado periódicamente a partir de estructuras adventicias, puede, teóricamente, producir plántulas en forma indefinida.'
-                )
-              )
-            )
-          ),
-          _react2['default'].createElement('hr', { className: 'line-divider' }),
-          _react2['default'].createElement(
-            _reactBootstrap.Row,
-            null,
-            _react2['default'].createElement(
-              _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 7, lg: 7 },
-              _react2['default'].createElement(
-                'div',
-                { className: 'txt-vertical-center' },
-                _react2['default'].createElement(
-                  'h2',
-                  null,
+                    'la heterotrófica,'
+                  ),
+                  ' en la cual los embriones inmaduros, también denominados pro-embriones, dependen de los nutrientes presentes en el endospermo; y la ',
                   _react2['default'].createElement(
                     'b',
                     null,
-                    'Embriogénesis somática.'
-                  )
-                ),
-                _react2['default'].createElement(
-                  'p',
-                  { className: 'txt-parrafo' },
-                  ' es aquella ruta de regeneración celular que posibilita la formación de un embrión a partir de células somáticas (2n) y no como producto de la fusión de gametos (n). Esta es la vía teórica más rápida para propagar en forma masiva plantas; ya que por este medio se puede producir miles de embriones somáticos a partir de un tejido somático (predeterminado) o suspensión celular. Durante este proceso una sola Célula es capaz de dividirse y diferenciarse hasta neoformar un embrión somático el cual, posteriormente, puede originar una planta completa.'
-                )
-              )
-            ),
-            _react2['default'].createElement(
-              _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 5, lg: 5 },
-              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo6/modal4c.png', alt: 'Medio de cultivo' })
-            )
-          ),
-          _react2['default'].createElement(
-            _reactBootstrap.Row,
-            null,
-            _react2['default'].createElement(
-              _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 12, lg: 12 },
-              _react2['default'].createElement(
-                'div',
-                { className: 'txt-vertical-center' },
-                _react2['default'].createElement(
-                  'p',
-                  { className: 'txt-parrafo' },
-                  'La principal ventaja de este proceso es la producción de un gran número de plantas (de alta escala) con bajo costo, en comparación con los métodos antes descritos; no obstante, su principal desventaja es la baja conversión de embrión a panta y la alta dependencia de ocurrencia o inducción de la ruta asociada con la especie vegetal utilizada y la posibilidad de ocurrencia de variación somaclonal.'
-                )
-              )
-            )
-          ),
-          _react2['default'].createElement('hr', { className: 'line-divider' }),
-          _react2['default'].createElement(
-            _reactBootstrap.Row,
-            null,
-            _react2['default'].createElement(
-              _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 12, lg: 12, className: 'txt-center' },
-              _react2['default'].createElement(
-                'p',
-                null,
-                _react2['default'].createElement(
-                  'span',
-                  { className: 'capitalLetter' },
-                  _react2['default'].createElement('i', { className: 'fa fa-chevron-right' })
-                ),
-                'La propagación de un material mediante cultivo in vitro de meristemos y ápices se puede realizar siguiendo las etapas: (1) establecimiento del cultivo, (2) desarrollo y multiplicación celular, (3) enraizamiento del explante en condiciones in vitro o ex vitro, y (4) transferencia a condiciones ex vitro.'
-              )
-            )
-          ),
-          _react2['default'].createElement('hr', { className: 'line-divider' }),
-          _react2['default'].createElement(
-            _reactBootstrap.Row,
-            null,
-            _react2['default'].createElement(
-              _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 5, lg: 5 },
-              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo6/modal4d.jpg', alt: 'Medio de cultivo' })
-            ),
-            _react2['default'].createElement(
-              _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 7, lg: 7 },
-              _react2['default'].createElement(
-                'div',
-                { className: 'txt-vertical-center' },
-                _react2['default'].createElement(
-                  'h2',
-                  null,
-                  _react2['default'].createElement(
-                    'b',
-                    null,
-                    'La erradicación de patógenos. '
-                  )
-                ),
-                _react2['default'].createElement(
-                  'p',
-                  { className: 'txt-parrafo' },
-                  ' Las plantas en condiciones naturales son susceptibles a ataques de bacterias, hongos, virus y nematodos. Aunque la desinfección de los explantes elimina microorganismos localizados en la superficie de la planta, este tratamiento no permite la eliminación de organismos sistémicos.'
+                    'autotrófica'
+                  ),
+                  ', cuando el embrión maduro es capaz de sintetizar, a partir de sales inorgánicas, las sustancias que necesita para su desarrollo.'
                 )
               )
             )
@@ -9452,49 +9327,12 @@ var Modal4 = (function (_React$Component) {
               _reactBootstrap.Col,
               { xs: 12, sm: 12, md: 12, lg: 12 },
               _react2['default'].createElement(
-                'div',
-                { className: 'txt-vertical-center' },
-                _react2['default'].createElement(
-                  'p',
-                  { className: 'txt-parrafo' },
-                  'El proceso de limpieza interna puede efectuar mediante el cultivo de meristemas (domo meristemático acompañado máximo con 1- 2 primordios) obtenidos a partir de material o tejido infectado (positivo) tratado con termoterapia, quimioterapia, electroterapia o crioterapia. La distribución diferencial o asimétrica de partículas virales a medida que se acerca al tejido meristemático y la poca conexión de esta zona con el tejido desarrollado ofrece la posibilidad de obtener un tejido limpio mediante cultico in vitro.'
-                )
+                'p',
+                { className: 'txt-parrafo' },
+                'Los requerimientos de reguladores de crecimiento han sido un tema ampliamente estudiado, especialmente para el cultivo de embriones heterotróficos. Sharma (1976) concluye que a bajas concentraciones de auxinas se promueve el crecimiento normal del embrión; el ácido giberélico (AG) produce alargamiento, mientras que las cito quininas lo inhiben. Collins y Grosser (1984) observaron que embriones inmaduros de híbridos interespecificos  de Trifolium cultivados inicialmente en un medio con alto contenido de sacarosa, un nivel moderado de auxina y una concentración baja de citoquinina detienen su crecimiento después de una o dos semanas. No obstante reanuda su desarrollo normal cuando es transferido a un medio con baja concentración de sacarosa y auxina y una concentración moderada de citoqunina.'
               )
             )
-          ),
-          _react2['default'].createElement('hr', { className: 'line-divider' }),
-          _react2['default'].createElement(
-            _reactBootstrap.Row,
-            null,
-            _react2['default'].createElement(
-              _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 7, lg: 7 },
-              _react2['default'].createElement(
-                'div',
-                { className: 'txt-vertical-center' },
-                _react2['default'].createElement(
-                  'h2',
-                  null,
-                  _react2['default'].createElement(
-                    'b',
-                    null,
-                    'La conservación de germoplasma in vito.'
-                  )
-                ),
-                _react2['default'].createElement(
-                  'p',
-                  { className: 'txt-parrafo' },
-                  'as técnicas de cultivo in vitro son una alternativa para conservar especies de propagación vegetativa, las cuales en condiciones naturales están expuestas a ataques de patógenos, efectos ambientales y deficiencias de nutrientes. Así mismo, el sistema in vitro garantiza la producción de material libre de patógenos en condiciones reducidas de espacio disponible para programas de intercambio de germoplasma.'
-                )
-              )
-            ),
-            _react2['default'].createElement(
-              _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 5, lg: 5 },
-              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo6/modal4e.jpg', alt: 'Medio de cultivo' })
-            )
-          ),
-          _react2['default'].createElement('hr', { className: 'line-divider' })
+          )
         ),
         _react2['default'].createElement(
           _reactBootstrap.Modal.Footer,
@@ -9596,263 +9434,32 @@ var Modal2 = (function (_React$Component) {
                 _react2['default'].createElement(
                   'b',
                   null,
-                  'Establecimiento ex vitro'
+                  'Aplicaciones de la técnica del cultivo de embriones cigóticos'
                 )
               ),
               _react2['default'].createElement(
                 'p',
                 null,
-                'En esta etapa se saca la planta del frasco a un ambiente favorable para su buen desarrollo. Los siguientes pasos son los que se deben tener en cuenta para el establecimiento de las plantas a condiciones naturales:'
-              )
-            )
-          ),
-          _react2['default'].createElement('hr', { className: 'line-divider' }),
-          _react2['default'].createElement(
-            _reactBootstrap.Row,
-            null,
-            _react2['default'].createElement(
-              _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 7, lg: 7 },
-              _react2['default'].createElement(
-                'div',
-                { className: 'txt-vertical-center' },
-                _react2['default'].createElement(
-                  'p',
-                  { className: 'title-list-modal' },
-                  _react2['default'].createElement(
-                    'b',
-                    null,
-                    'Escoger la vitroplanta  que ya tenga el tamaño ideal: '
-                  ),
-                  _react2['default'].createElement(
-                    'span',
-                    null,
-                    'cuando toca la tapa del frasco. '
-                  )
-                ),
-                _react2['default'].createElement(
-                  'p',
-                  { className: 'txt-into' },
-                  _react2['default'].createElement(
-                    'span',
-                    { className: 'capitalLetter' },
-                    _react2['default'].createElement('i', { className: 'fa fa-chevron-right' })
-                  ),
-                  'Ocurre, generalmente, después de entre un mes y dos de estar subcultivada y al presentar de 5 a 8 nudos.'
-                )
-              )
-            ),
-            _react2['default'].createElement(
-              _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 5, lg: 5 },
-              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo5/modal2a.jpg', alt: 'Vitroplanta lista para etapa ex vitro.' })
-            )
-          ),
-          _react2['default'].createElement('hr', { className: 'line-divider' }),
-          _react2['default'].createElement(
-            _reactBootstrap.Row,
-            null,
-            _react2['default'].createElement(
-              _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 5, lg: 5 },
-              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo5/modal2b.jpg', alt: 'Vitroplantas semidestapadas para aclimatazción.' })
-            ),
-            _react2['default'].createElement(
-              _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 7, lg: 7 },
-              _react2['default'].createElement(
-                'div',
-                { className: 'txt-vertical-center' },
-                _react2['default'].createElement(
-                  'p',
-                  { className: 'title-list-modal' },
-                  _react2['default'].createElement(
-                    'b',
-                    null,
-                    'Se puede dejar los tarros semi-destapados hasta cuatro días, '
-                  ),
-                  _react2['default'].createElement(
-                    'span',
-                    null,
-                    'fuera del cuarto de crecimiento.'
-                  )
-                ),
-                _react2['default'].createElement(
-                  'p',
-                  { className: 'txt-into' },
-                  _react2['default'].createElement(
-                    'span',
-                    { className: 'capitalLetter' },
-                    _react2['default'].createElement('i', { className: 'fa fa-chevron-right' })
-                  ),
-                  'Con una leve radiación solar de 7am a 9 am y de 3pm a 5 pm.'
-                )
-              )
-            )
-          ),
-          _react2['default'].createElement('hr', { className: 'line-divider' }),
-          _react2['default'].createElement(
-            _reactBootstrap.Row,
-            null,
-            _react2['default'].createElement(
-              _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 7, lg: 7 },
-              _react2['default'].createElement(
-                'div',
-                { className: 'txt-vertical-center' },
-                _react2['default'].createElement(
-                  'p',
-                  { className: 'title-list-modal' },
-                  _react2['default'].createElement(
-                    'b',
-                    null,
-                    'Luego de la anterior, se hace la extracción. '
-                  ),
-                  _react2['default'].createElement(
-                    'span',
-                    null,
-                    'Se quita el vinipel y la tapa.'
-                  )
-                ),
-                _react2['default'].createElement(
-                  'p',
-                  { className: 'txt-into' },
-                  _react2['default'].createElement(
-                    'span',
-                    { className: 'capitalLetter' },
-                    _react2['default'].createElement('i', { className: 'fa fa-chevron-right' })
-                  ),
-                  'Se golpea suavemente la base del tarro y delicadamente se saca la planta del frasco. Utilizando agua, se retirara los residuos del gel. '
-                )
-              )
-            ),
-            _react2['default'].createElement(
-              _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 5, lg: 5 },
-              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo5/modal2c.jpg', alt: 'Extracción de planta (M. esculenta) del frasco.' })
-            )
-          ),
-          _react2['default'].createElement('hr', { className: 'line-divider' }),
-          _react2['default'].createElement(
-            _reactBootstrap.Row,
-            null,
-            _react2['default'].createElement(
-              _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 5, lg: 5 },
-              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo5/modal2d.jpg', alt: 'Salida de la planta del frasco.' })
-            ),
-            _react2['default'].createElement(
-              _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 7, lg: 7 },
-              _react2['default'].createElement(
-                'div',
-                { className: 'txt-vertical-center' },
-                _react2['default'].createElement(
-                  'p',
-                  { className: 'title-list-modal' },
-                  _react2['default'].createElement(
-                    'b',
-                    null,
-                    'Se lava las raíces con abundante agua, '
-                  ),
-                  _react2['default'].createElement(
-                    'span',
-                    null,
-                    'se quita las hojas basales o “bajeras”.'
-                  )
-                )
-              )
-            )
-          ),
-          _react2['default'].createElement('hr', { className: 'line-divider' }),
-          _react2['default'].createElement(
-            _reactBootstrap.Row,
-            null,
-            _react2['default'].createElement(
-              _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 7, lg: 7 },
-              _react2['default'].createElement(
-                'div',
-                { className: 'txt-vertical-center' },
-                _react2['default'].createElement(
-                  'p',
-                  { className: 'title-list-modal' },
-                  _react2['default'].createElement(
-                    'b',
-                    null,
-                    'Sembrar en sustrato (1:1 Aserrín y humus solido) esterilizado. '
-                  ),
-                  _react2['default'].createElement(
-                    'span',
-                    null,
-                    'También se puede utilizar en la misma proporción cascarilla.'
-                  )
-                )
-              )
-            ),
-            _react2['default'].createElement(
-              _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 5, lg: 5 },
-              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo5/modal2e.jpg', alt: 'Siembra de planta (M. esculenta) en sustrato estéril' })
-            )
-          ),
-          _react2['default'].createElement('hr', { className: 'line-divider' }),
-          _react2['default'].createElement(
-            _reactBootstrap.Row,
-            null,
-            _react2['default'].createElement(
-              _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 5, lg: 5 },
-              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo5/modal2f.jpg', alt: 'Cámara humedad para la planta (M. esculenta).' })
-            ),
-            _react2['default'].createElement(
-              _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 7, lg: 7 },
-              _react2['default'].createElement(
-                'div',
-                { className: 'txt-vertical-center' },
-                _react2['default'].createElement(
-                  'p',
-                  { className: 'title-list-modal' },
-                  _react2['default'].createElement(
-                    'b',
-                    null,
-                    'Poner vaso con perforaciones en la base durante dos semanas '
-                  ),
-                  _react2['default'].createElement(
-                    'span',
-                    null,
-                    'para que la planta genere un microclima'
-                  )
-                ),
-                _react2['default'].createElement(
-                  'p',
-                  { className: 'txt-into' },
-                  _react2['default'].createElement(
-                    'span',
-                    { className: 'capitalLetter' },
-                    _react2['default'].createElement('i', { className: 'fa fa-chevron-right' })
-                  ),
-                  'que le permita regular el intercambio gaseoso, temperatura y luminosidad en menor grado.'
-                )
-              )
-            )
-          ),
-          _react2['default'].createElement(
-            _reactBootstrap.Row,
-            null,
-            _react2['default'].createElement(
-              _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 12, lg: 12 },
-              _react2['default'].createElement(
-                'p',
-                { className: 'txt-parrafo' },
-                'En la segunda semana se levanta de un lado para dejarlo en diagonal y permitir que aumente un poco la salida y entrada de gases. Se sugiere irrigar 20ml de agua día de por medio y un palo de paleta rotulado con el genotipo de planta y la fecha de transplante.'
+                'La técnica de rescate y cultivo de embriones es utilizada principalmente para:'
               ),
               _react2['default'].createElement(
-                'p',
-                { className: 'txt-parrafo' },
-                'Se coloca la planta en radiación solar, durante la primera semana, de 7 am a 10 am y de 2 pm a 5 pm, sin exposición directa al sol (polisombra 50%). En la segunda,  se puede exponer durante todo el día, sin exposición directa al sol (polisombra 50%).'
+                'ol',
+                { className: 'lista' },
+                _react2['default'].createElement(
+                  'li',
+                  null,
+                  'Recuperar embriones híbridos provenientes de cruces interespecificos e intergenericos.'
+                ),
+                _react2['default'].createElement(
+                  'li',
+                  null,
+                  'Romper la dormancia  de semillas con largos periodos de latencia.'
+                ),
+                _react2['default'].createElement(
+                  'li',
+                  null,
+                  'Acortar el ciclo de mejoramiento de especies con semillas de periodos largos de latencia.'
+                )
               )
             )
           ),
@@ -9867,35 +9474,26 @@ var Modal2 = (function (_React$Component) {
                 'div',
                 { className: 'txt-vertical-center' },
                 _react2['default'].createElement(
-                  'p',
-                  { className: 'title-list-modal' },
+                  'h2',
+                  null,
                   _react2['default'].createElement(
                     'b',
                     null,
-                    'Dos semanas después del transplante se retira el vaso '
-                  ),
-                  _react2['default'].createElement(
-                    'span',
-                    null,
-                    'y se mantiene 6 semanas más.'
+                    'Recuperación de híbridos de cruces interespecíficos o intergenéricos.'
                   )
                 ),
+                ' ',
                 _react2['default'].createElement(
                   'p',
-                  { className: 'txt-into' },
-                  _react2['default'].createElement(
-                    'span',
-                    { className: 'capitalLetter' },
-                    _react2['default'].createElement('i', { className: 'fa fa-chevron-right' })
-                  ),
-                  'Aunque el sustrato contiene nutrientes se recomienda realizar una fertilización edáfica o foliar semanal.'
+                  { className: 'txt-parrafo' },
+                  'Una de las metas de un programa de mejoramiento genético vegetal mediante cruces interespecíficos o intergenéricos es transferir una característica (genes) de importancia agronómica y económica de un material silvestre (o lejano) a un material cultivado. Uno de los principales obstáculos de esta estrategia de mejoramiento es el aborto de las semillas híbridas debido a factores de incompatibilidad. Este problema puede ser superado en forma  parcial extrayendo y cultivando el embrión de la semilla en fases tempranas para prevenir el aborto y lograr recuperar el híbrido.'
                 )
               )
             ),
             _react2['default'].createElement(
               _reactBootstrap.Col,
               { xs: 12, sm: 12, md: 5, lg: 5 },
-              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo5/modal2g.jpg', alt: 'Crecimiento de planta obtenida in vitro.' })
+              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo7/modal5a.jpg', alt: 'Medio de cultivo' })
             )
           ),
           _react2['default'].createElement('hr', { className: 'line-divider' }),
@@ -9905,7 +9503,7 @@ var Modal2 = (function (_React$Component) {
             _react2['default'].createElement(
               _reactBootstrap.Col,
               { xs: 12, sm: 12, md: 5, lg: 5 },
-              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo5/modal2h.jpg', alt: 'Planta (M. esculenta) para sembrar a campo obtenida por cultivo de tejidos.' })
+              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo7/modal5b.jpg', alt: 'Medio de cultivo' })
             ),
             _react2['default'].createElement(
               _reactBootstrap.Col,
@@ -9914,14 +9512,18 @@ var Modal2 = (function (_React$Component) {
                 'div',
                 { className: 'txt-vertical-center' },
                 _react2['default'].createElement(
-                  'p',
-                  { className: 'txt-into' },
+                  'h2',
+                  null,
                   _react2['default'].createElement(
-                    'span',
-                    { className: 'capitalLetter' },
-                    _react2['default'].createElement('i', { className: 'fa fa-chevron-right' })
-                  ),
-                  'A la 8 semana, la planta puede salir a campo o, coger otra vía, para aumentar la producción del material a través de miniestacas.'
+                    'b',
+                    null,
+                    'Acortamiento del ciclo de mejoramiento de especies con semillas de latencia larga.'
+                  )
+                ),
+                _react2['default'].createElement(
+                  'p',
+                  { className: 'txt-parrafo' },
+                  'Las semillas de algunas especies vegetales presentan largos periodos de latencia, lo cual se debe a la presencia de sustancias inhibidoras de la germinación en el endospermo, o a características físicas de la cubierta que protege el embrión y que actúa como barrera al ingreso de agua y oxigeno el interior de las semillas. Este obstáculo se puede obviar mediante el aislamiento y cultivo de los embriones para acelerar la germinación y lograr la producción de plántulas para el programa de mejoramiento.'
                 )
               )
             )
