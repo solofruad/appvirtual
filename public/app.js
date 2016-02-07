@@ -980,7 +980,7 @@ var Modal1 = (function (_React$Component) {
 							_react2['default'].createElement(
 								'center',
 								null,
-								_react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo1/maquina_6.jpg', alt: 'Sala de siembra' })
+								_react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo2/modal1.jpg', alt: 'Sala de siembra' })
 							),
 							_react2['default'].createElement('br', null),
 							_react2['default'].createElement('br', null)
@@ -1418,7 +1418,7 @@ var Modal2 = (function (_React$Component) {
               _react2['default'].createElement(
                 'center',
                 null,
-                _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo1/maquina_6.jpg', alt: 'Sala de siembra' })
+                _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo2/modal2.jpg', alt: 'Sala de siembra' })
               ),
               _react2['default'].createElement('br', null),
               _react2['default'].createElement('br', null)
@@ -2024,6 +2024,8 @@ Object.defineProperty(exports, '__esModule', {
 	value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
 var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
@@ -2059,7 +2061,7 @@ var Modal4 = (function (_React$Component) {
 		value: function render() {
 			return _react2['default'].createElement(
 				_reactBootstrap.Modal,
-				this.props,
+				_extends({}, this.props, { bsSize: 'large' }),
 				_react2['default'].createElement(
 					_reactBootstrap.Modal.Header,
 					{ closeButton: true },
@@ -2085,141 +2087,137 @@ var Modal4 = (function (_React$Component) {
 						null,
 						_react2['default'].createElement(
 							_reactBootstrap.Col,
-							{ xs: 12, sm: 12, md: 12, lg: 12, className: 'txt-center' },
+							{ xs: 12, sm: 12, md: 6, lg: 6 },
 							_react2['default'].createElement(
-								'h1',
+								_reactBootstrap.Row,
 								null,
 								_react2['default'].createElement(
-									'b',
-									null,
-									'Vitaminas'
-								)
-							),
-							_react2['default'].createElement(
-								'span',
-								null,
-								'(Stock 6)'
-							),
-							_react2['default'].createElement('br', null)
-						)
-					),
-					_react2['default'].createElement(
-						_reactBootstrap.Row,
-						null,
-						_react2['default'].createElement(
-							_reactBootstrap.Col,
-							{ xs: 12, sm: 12, md: 12, lg: 12 },
-							_react2['default'].createElement(
-								'p',
-								{ className: 'txt-parrafo' },
-								'Generalmente, en el cultivo de tejidos se usa vitaminas del complejo B, principalmente necesita de la vitamina B1 o Tiamina. Designado aquí como stock 6. Éste se puede preparar a una concentración de 50X.'
-							)
-						)
-					),
-					_react2['default'].createElement(
-						_reactBootstrap.Row,
-						null,
-						_react2['default'].createElement(
-							_reactBootstrap.Col,
-							{ xs: 12, sm: 12, md: 12, lg: 12 },
-							_react2['default'].createElement(
-								_reactBootstrap.Table,
-								{ responsive: true, striped: true, bordered: true, condensed: true, hover: true },
-								_react2['default'].createElement(
-									'thead',
-									null,
+									_reactBootstrap.Col,
+									{ xs: 12, sm: 12, md: 12, lg: 12, className: 'txt-center' },
 									_react2['default'].createElement(
-										'tr',
+										'h1',
 										null,
 										_react2['default'].createElement(
-											'th',
-											{ colSpan: '4' },
-											_react2['default'].createElement(
-												'center',
-												null,
-												'Vitamina B1 de Stock 6'
-											)
+											'b',
+											null,
+											'Vitaminas'
 										)
 									),
 									_react2['default'].createElement(
-										'tr',
+										'span',
 										null,
-										_react2['default'].createElement(
-											'th',
-											null,
-											_react2['default'].createElement(
-												'b',
-												null,
-												'NÚMERO STOCK'
-											)
-										),
-										_react2['default'].createElement(
-											'th',
-											null,
-											_react2['default'].createElement(
-												'b',
-												null,
-												'COMPUESTO'
-											)
-										),
-										_react2['default'].createElement(
-											'th',
-											null,
-											_react2['default'].createElement(
-												'b',
-												null,
-												'CANTIDAD (gr)'
-											)
-										),
-										_react2['default'].createElement(
-											'th',
-											null,
-											_react2['default'].createElement(
-												'b',
-												null,
-												'AGUA DESTILADA'
-											)
-										)
-									)
-								),
+										'(Stock 6)'
+									),
+									_react2['default'].createElement('br', null)
+								)
+							),
+							_react2['default'].createElement(
+								_reactBootstrap.Row,
+								null,
 								_react2['default'].createElement(
-									'tbody',
-									null,
+									_reactBootstrap.Col,
+									{ xs: 12, sm: 12, md: 12, lg: 12 },
 									_react2['default'].createElement(
-										'tr',
-										null,
+										'p',
+										{ className: 'txt-parrafo' },
+										'Generalmente, en el cultivo de tejidos se usa vitaminas del complejo B, principalmente necesita de la vitamina B1 o Tiamina. Designado aquí como stock 6. Éste se puede preparar a una concentración de 50X.'
+									),
+									_react2['default'].createElement(
+										_reactBootstrap.Table,
+										{ responsive: true, striped: true, bordered: true, condensed: true, hover: true },
 										_react2['default'].createElement(
-											'td',
+											'thead',
 											null,
-											'6'
+											_react2['default'].createElement(
+												'tr',
+												null,
+												_react2['default'].createElement(
+													'th',
+													{ colSpan: '4' },
+													_react2['default'].createElement(
+														'center',
+														null,
+														'Vitamina B1 de Stock 6'
+													)
+												)
+											),
+											_react2['default'].createElement(
+												'tr',
+												null,
+												_react2['default'].createElement(
+													'th',
+													null,
+													_react2['default'].createElement(
+														'b',
+														null,
+														'NÚMERO STOCK'
+													)
+												),
+												_react2['default'].createElement(
+													'th',
+													null,
+													_react2['default'].createElement(
+														'b',
+														null,
+														'COMPUESTO'
+													)
+												),
+												_react2['default'].createElement(
+													'th',
+													null,
+													_react2['default'].createElement(
+														'b',
+														null,
+														'CANTIDAD (gr)'
+													)
+												),
+												_react2['default'].createElement(
+													'th',
+													null,
+													_react2['default'].createElement(
+														'b',
+														null,
+														'AGUA DESTILADA'
+													)
+												)
+											)
 										),
 										_react2['default'].createElement(
-											'td',
+											'tbody',
 											null,
-											'Vitamina B1'
-										),
-										_react2['default'].createElement(
-											'td',
-											null,
-											'0,0005'
-										),
-										_react2['default'].createElement(
-											'td',
-											null,
-											'100 ml'
+											_react2['default'].createElement(
+												'tr',
+												null,
+												_react2['default'].createElement(
+													'td',
+													null,
+													'6'
+												),
+												_react2['default'].createElement(
+													'td',
+													null,
+													'Vitamina B1'
+												),
+												_react2['default'].createElement(
+													'td',
+													null,
+													'0,0005'
+												),
+												_react2['default'].createElement(
+													'td',
+													null,
+													'100 ml'
+												)
+											)
 										)
 									)
 								)
 							)
-						)
-					),
-					_react2['default'].createElement(
-						_reactBootstrap.Row,
-						null,
+						),
 						_react2['default'].createElement(
 							_reactBootstrap.Col,
-							{ xs: 12, sm: 12, md: 12, lg: 12 },
-							_react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo1/maquina_6.jpg', alt: 'Sala de siembra' })
+							{ xs: 12, sm: 12, md: 6, lg: 6, className: 'txt-center' },
+							_react2['default'].createElement('img', { className: 'img-modal-show2', src: 'public/img/modulo2/modal4.jpg', alt: 'Sala de siembra' })
 						)
 					)
 				),
@@ -2444,7 +2442,7 @@ var Modal5 = (function (_React$Component) {
 						_react2['default'].createElement(
 							_reactBootstrap.Col,
 							{ xs: 12, sm: 12, md: 5, lg: 5 },
-							_react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo1/maquina_6.jpg', alt: 'Sala de siembra' })
+							_react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo2/modal5.jpg' })
 						)
 					)
 				),

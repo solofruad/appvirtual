@@ -41,7 +41,7 @@ export default class Modal1 extends React.Component {
 						</center>
 					</Col>
 					<Col xs={12} sm={12} md={6} lg={6}>
-						<br /><center><img className="img-modal-show" src="public/img/modulo1/maquina_6.jpg" alt="Sala de siembra"/></center><br /><br />
+						<br /><center><img className="img-modal-show" src="public/img/modulo2/modal1.jpg" alt="Sala de siembra"/></center><br /><br />
 					</Col>
 				</Row>
 				<Row>
