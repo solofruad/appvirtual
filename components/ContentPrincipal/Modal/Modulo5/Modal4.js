@@ -14,7 +14,7 @@ export default class Modal4 extends React.Component {
     super(props);
   }
   onClose(ev){
-    this.props.onHide.call(null,'modulo5/7')
+    this.props.onHide.call(null,'modulo5/8')
   }
   render(){
       return  <Modal {...this.props} bsSize="large">
@@ -55,7 +55,7 @@ export default class Modal4 extends React.Component {
             <img className="img-modal-show" src="public/img/modulo5/modal4c.jpg" alt="Planta  (M. esculenta) generada a través de miniestacas."/>
           </Col>
         </Row>
-        <hr className="line-divider"></hr>        
+        <hr className="line-divider"></hr>
       </Modal.Body>
       <Modal.Footer>
         <button onClick={this.onClose.bind(this)}>Cerrar</button>

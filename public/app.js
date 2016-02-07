@@ -4561,7 +4561,7 @@ var Modal2 = (function (_React$Component) {
               _react2['default'].createElement(
                 _reactBootstrap.Label,
                 { bsStyle: 'success' },
-                'Elaboración'
+                'PREPARACIÓN DE MEDIOS DE CULTIVO'
               )
             )
           )
@@ -7270,7 +7270,7 @@ var Modal3 = (function (_React$Component) {
   _createClass(Modal3, [{
     key: 'onClose',
     value: function onClose(ev) {
-      this.props.onHide.call(null, 'modulo5/4');
+      this.props.onHide.call(null, 'modulo5/7');
     }
   }, {
     key: 'render',
@@ -7399,7 +7399,7 @@ var Modal4 = (function (_React$Component) {
   _createClass(Modal4, [{
     key: 'onClose',
     value: function onClose(ev) {
-      this.props.onHide.call(null, 'modulo5/7');
+      this.props.onHide.call(null, 'modulo5/8');
     }
   }, {
     key: 'render',
@@ -9414,7 +9414,7 @@ var Modal2 = (function (_React$Component) {
               _react2['default'].createElement(
                 _reactBootstrap.Label,
                 { bsStyle: 'success' },
-                'Etapa Ex Vitro'
+                'Rescate y cultivo de embriones cigóticos'
               )
             )
           )
@@ -10147,9 +10147,9 @@ var Modulo5 = (function (_React$Component) {
 				this.setState({ m1show: true });
 			} else if (mod == 'modulo5/2') {
 				this.setState({ m2show: true });
-			} else if (mod == 'modulo5/4') {
-				this.setState({ m3show: true });
 			} else if (mod == 'modulo5/7') {
+				this.setState({ m3show: true });
+			} else if (mod == 'modulo5/8') {
 				this.setState({ m4show: true });
 			} else {
 				return false;
@@ -10162,9 +10162,9 @@ var Modulo5 = (function (_React$Component) {
 				this.setState({ m1show: false });
 			} else if (mod == 'modulo5/2') {
 				this.setState({ m2show: false });
-			} else if (mod == 'modulo5/4') {
-				this.setState({ m3show: false });
 			} else if (mod == 'modulo5/7') {
+				this.setState({ m3show: false });
+			} else if (mod == 'modulo5/8') {
 				this.setState({ m4show: false });
 			} else {
 				return false;
@@ -10641,6 +10641,13 @@ var ModulosUnit = (function (_React$Component) {
 			this.props.open.call(null, this.props.modulo);
 		}
 	}, {
+		key: 'recargar',
+		value: function recargar() {
+			setTimeout(function () {
+				location.reload();
+			}, 500);
+		}
+	}, {
 		key: 'componentWillMount',
 		value: function componentWillMount() {
 			if ("ontouchstart" in window || navigator.msMaxTouchPoints) {
@@ -10733,35 +10740,68 @@ var ModulosUnit = (function (_React$Component) {
 						);
 					}
 				} else {
-					return _react2['default'].createElement(
-						_reactBootstrap.Col,
-						{ xs: 6, sm: 6, md: 3, lg: 3, className: 'img-modulo' },
-						_react2['default'].createElement(
-							_reactRouter.Link,
-							{ to: this.props.url, params: { src: this.props.modulo }, className: 'mod' },
-							_react2['default'].createElement('img', { src: urlImg, alt: this.props.titulo, className: 'img_contenido' }),
-							titulo,
+					/*modulos index*/
+					if (this.props.modulo == 1) {
+						return _react2['default'].createElement(
+							_reactBootstrap.Col,
+							{ xs: 6, sm: 6, md: 3, lg: 3, className: 'img-modulo' },
 							_react2['default'].createElement(
-								'div',
-								{ className: 'info-image' },
+								_reactRouter.Link,
+								{ to: this.props.url, params: { src: this.props.modulo }, className: 'mod', onClick: this.recargar },
+								_react2['default'].createElement('img', { src: urlImg, alt: this.props.titulo, className: 'img_contenido' }),
+								titulo,
 								_react2['default'].createElement(
 									'div',
-									{ className: 'center-vertically' },
+									{ className: 'info-image' },
 									_react2['default'].createElement(
-										'p',
-										null,
-										this.props.descripcion
-									),
-									_react2['default'].createElement(
-										'h3',
-										null,
-										this.props.titulo
-									),
-									_react2['default'].createElement('div', null)
+										'div',
+										{ className: 'center-vertically' },
+										_react2['default'].createElement(
+											'p',
+											null,
+											this.props.descripcion
+										),
+										_react2['default'].createElement(
+											'h3',
+											null,
+											this.props.titulo
+										),
+										_react2['default'].createElement('div', null)
+									)
 								)
 							)
-						)
-					);
+						);
+					} else {
+						return _react2['default'].createElement(
+							_reactBootstrap.Col,
+							{ xs: 6, sm: 6, md: 3, lg: 3, className: 'img-modulo' },
+							_react2['default'].createElement(
+								_reactRouter.Link,
+								{ to: this.props.url, params: { src: this.props.modulo }, className: 'mod' },
+								_react2['default'].createElement('img', { src: urlImg, alt: this.props.titulo, className: 'img_contenido' }),
+								titulo,
+								_react2['default'].createElement(
+									'div',
+									{ className: 'info-image' },
+									_react2['default'].createElement(
+										'div',
+										{ className: 'center-vertically' },
+										_react2['default'].createElement(
+											'p',
+											null,
+											this.props.descripcion
+										),
+										_react2['default'].createElement(
+											'h3',
+											null,
+											this.props.titulo
+										),
+										_react2['default'].createElement('div', null)
+									)
+								)
+							)
+						);
+					}
 				}
 			}
 		}
@@ -12751,6 +12791,10 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouter = require('react-router');
 
+var _jquery = require('jquery');
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
 var Modulo1 = (function (_React$Component) {
 	_inherits(Modulo1, _React$Component);
 
@@ -12771,7 +12815,7 @@ var Modulo1 = (function (_React$Component) {
 			return _react2['default'].createElement(
 				'div',
 				null,
-				_react2['default'].createElement('img', { src: 'public/img/modulo1/1.jpg', className: 'advancedpanorama', useMap: 'testmap', alt: 'Laboratorio de Biotecnología' }),
+				_react2['default'].createElement('img', { src: 'public/img/modulo1/1.jpg', ref: 'advancedpanorama', className: 'advancedpanorama', useMap: 'testmap', alt: 'Laboratorio de Biotecnología' }),
 				_react2['default'].createElement(
 					'map',
 					{ id: 'testmap', name: 'testmap' },
@@ -12792,7 +12836,7 @@ var Modulo1 = (function (_React$Component) {
 exports['default'] = Modulo1;
 module.exports = exports['default'];
 
-},{"react":539,"react-router":371}],74:[function(require,module,exports){
+},{"jquery":105,"react":539,"react-router":371}],74:[function(require,module,exports){
 /**
 * Modules Dependencies
 */
@@ -13384,7 +13428,12 @@ var Menu = (function (_React$Component) {
 									_react2['default'].createElement(
 										_reactRouter.Link,
 										{ to: '/modulo1/' + 1, onClick: this.recargar },
-										'Modulo 1'
+										_react2['default'].createElement(
+											'b',
+											null,
+											'Modulo 1. '
+										),
+										'Conociendo el laboratorio'
 									)
 								),
 								_react2['default'].createElement(
@@ -13393,7 +13442,12 @@ var Menu = (function (_React$Component) {
 									_react2['default'].createElement(
 										_reactRouter.Link,
 										{ to: 'modulo/' + 2 },
-										'Modulo 2'
+										_react2['default'].createElement(
+											'b',
+											null,
+											'Modulo 2. '
+										),
+										'Preparación de Stocks'
 									)
 								),
 								_react2['default'].createElement(
@@ -13402,7 +13456,12 @@ var Menu = (function (_React$Component) {
 									_react2['default'].createElement(
 										_reactRouter.Link,
 										{ to: 'modulo/' + 3 },
-										'Modulo 3'
+										_react2['default'].createElement(
+											'b',
+											null,
+											'Modulo 3. '
+										),
+										'Preparación de Medios de Cultivo'
 									)
 								),
 								_react2['default'].createElement(
@@ -13411,7 +13470,12 @@ var Menu = (function (_React$Component) {
 									_react2['default'].createElement(
 										_reactRouter.Link,
 										{ to: 'modulo/' + 4 },
-										'Modulo 4'
+										_react2['default'].createElement(
+											'b',
+											null,
+											'Modulo 4. '
+										),
+										'Micropropagación in vitro'
 									)
 								),
 								_react2['default'].createElement(
@@ -13420,7 +13484,12 @@ var Menu = (function (_React$Component) {
 									_react2['default'].createElement(
 										_reactRouter.Link,
 										{ to: 'modulo/' + 5 },
-										'Modulo 5'
+										_react2['default'].createElement(
+											'b',
+											null,
+											'Modulo 5. '
+										),
+										'Etapa ex vitro'
 									)
 								),
 								_react2['default'].createElement(
@@ -13429,7 +13498,12 @@ var Menu = (function (_React$Component) {
 									_react2['default'].createElement(
 										_reactRouter.Link,
 										{ to: 'modulo/' + 6 },
-										'Modulo 6'
+										_react2['default'].createElement(
+											'b',
+											null,
+											'Modulo 6. '
+										),
+										'Cultivo in vitro de meristemos y ápices'
 									)
 								),
 								_react2['default'].createElement(
@@ -13438,7 +13512,12 @@ var Menu = (function (_React$Component) {
 									_react2['default'].createElement(
 										_reactRouter.Link,
 										{ to: 'modulo/' + 7 },
-										'Modulo 7'
+										_react2['default'].createElement(
+											'b',
+											null,
+											'Modulo 7. '
+										),
+										'Rescate y cultivo de embriones cigótico'
 									)
 								),
 								_react2['default'].createElement(_reactBootstrap.MenuItem, { divider: true }),

@@ -14,9 +14,9 @@ export default class Modal3 extends React.Component {
 		super(props);
 	}
 	onClose(ev){
-		this.props.onHide.call(null,'modulo5/4')
+		this.props.onHide.call(null,'modulo5/7')
 	}
-	
+
   render(){
       return  <Modal {...this.props}>
         <Modal.Header closeButton>
@@ -33,7 +33,7 @@ export default class Modal3 extends React.Component {
           <Col xs={12} sm={12} md={12} lg={12}>
             <center><p className="txt-parrafo"><span className="capitalLetter"><i className="fa fa-angle-double-right"></i></span>Para este propósito, después de la aclimatación de las vitroplantas se realizan cortes diagonales uninodales. Es aconsejable que la planta no presente total lignificación en el tallo, en busca que la brotación y enraizamiento sea más rápido.</p></center>
           </Col>
-        </Row>        
+        </Row>
         </Modal.Body>
         <Modal.Footer>
           <button onClick={this.onClose.bind(this)}>Cerrar</button>

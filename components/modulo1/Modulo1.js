@@ -4,6 +4,7 @@
 
 import React from 'react';
 import {Link} from 'react-router';
+import $ from 'jquery';
 
 export default class Modulo1 extends React.Component {
 	constructor(props){
@@ -14,7 +15,7 @@ export default class Modulo1 extends React.Component {
 	}
 	render(){
 		return <div>
-			<img src="public/img/modulo1/1.jpg" className="advancedpanorama" useMap="testmap" alt="Laboratorio de Biotecnología" />
+			<img src="public/img/modulo1/1.jpg" ref="advancedpanorama" className="advancedpanorama" useMap="testmap" alt="Laboratorio de Biotecnología" />
 			<map id="testmap" name="testmap">
 				<area shape="rect" coords="2990,80,3180,380" href="/#/modulo1/2" id="relo" alt="Sala de Microbiologia"></area>
 				<area shape="rect" coords="2470,80,2660,380" id="area-sala-siembra" href="javascript:openFirstDialog();" alt="Sala de Siembra"  />

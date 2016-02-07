@@ -157,10 +157,10 @@ export default class ModalInfo extends React.Component {
 				<div>
 					<button	className="boton-info" onClick={this.open.bind(this)}>
 	          		Información de la Sala &nbsp;<i className="fa fa-info-circle"></i>
-	        		</button>
-	        		<a className="pull-right btn-app" href='javascript:document.location.replace("/#/modulo1/1");document.location.reload();'><i className="fa fa-arrow-circle-o-left"></i></a>
-        		</div>
-			        <Modal show={this.state.showModal} onHide={this.close.bind(this)}>
+      		</button>
+      		<a className="pull-right btn-app" href='javascript:document.location.replace("/#/modulo1/1");document.location.reload();'><i className="fa fa-arrow-circle-o-left"></i></a>
+    		</div>
+	        <Modal show={this.state.showModal} onHide={this.close.bind(this)}>
 						<Modal.Header closeButton>
 							<Modal.Title>CTVirtual <Label bsStyle='success'>AULA DE CLASE</Label></Modal.Title>
 						</Modal.Header>

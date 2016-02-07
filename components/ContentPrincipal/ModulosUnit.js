@@ -14,6 +14,11 @@ export default class ModulosUnit extends React.Component {
 	onClick(ev){
 		this.props.open.call(null,this.props.modulo)
 	}
+	recargar(){
+		setTimeout(()=>{
+			location.reload()
+		},500);
+	}
 	componentWillMount(){
 		if ("ontouchstart" in window || navigator.msMaxTouchPoints)
 			 {
@@ -71,20 +76,37 @@ export default class ModulosUnit extends React.Component {
 					</Col>
 				}
 			}
-			else{
-				return <Col xs={6} sm={6} md={3} lg={3} className="img-modulo">
-					<Link to={this.props.url} params={{ src: this.props.modulo }} className="mod">
-							<img src={urlImg} alt={this.props.titulo} className="img_contenido" />
-							{ titulo  }
-							<div className="info-image">
-								<div className="center-vertically">
-									<p>{this.props.descripcion}</p>
-									<h3>{this.props.titulo}</h3>
-									<div></div>
+			else{ /*modulos index*/
+				if(this.props.modulo == 1){
+					return <Col xs={6} sm={6} md={3} lg={3} className="img-modulo">
+						<Link to={this.props.url} params={{ src: this.props.modulo }} className="mod" onClick={this.recargar}>
+								<img src={urlImg} alt={this.props.titulo} className="img_contenido" />
+								{ titulo  }
+								<div className="info-image">
+									<div className="center-vertically">
+										<p>{this.props.descripcion}</p>
+										<h3>{this.props.titulo}</h3>
+										<div></div>
+									</div>
 								</div>
-							</div>
-					</Link>
-				</Col>
+						</Link>
+					</Col>
+				}
+				else{
+					return <Col xs={6} sm={6} md={3} lg={3} className="img-modulo">
+						<Link to={this.props.url} params={{ src: this.props.modulo }} className="mod">
+								<img src={urlImg} alt={this.props.titulo} className="img_contenido" />
+								{ titulo  }
+								<div className="info-image">
+									<div className="center-vertically">
+										<p>{this.props.descripcion}</p>
+										<h3>{this.props.titulo}</h3>
+										<div></div>
+									</div>
+								</div>
+						</Link>
+					</Col>
+				}
 			}
 		}
 	}

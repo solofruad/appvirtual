@@ -19,7 +19,7 @@ export default class Modal2 extends React.Component {
 	render(){
 			return	<Modal {...this.props} bsSize="large">
       <Modal.Header closeButton>
-        <Modal.Title><h4><Label bsStyle='success'>Etapa Ex Vitro</Label></h4></Modal.Title>
+        <Modal.Title><h4><Label bsStyle='success'>Rescate y cultivo de embriones cigóticos</Label></h4></Modal.Title>
       </Modal.Header>
       <Modal.Body>
 				<Row>
@@ -29,7 +29,7 @@ export default class Modal2 extends React.Component {
 						<ol className="lista">
               <li>Recuperar embriones híbridos provenientes de cruces interespecificos e intergenericos.</li>
               <li>Romper la dormancia  de semillas con largos periodos de latencia.</li>
-              <li>Acortar el ciclo de mejoramiento de especies con semillas de periodos largos de latencia.</li>              
+              <li>Acortar el ciclo de mejoramiento de especies con semillas de periodos largos de latencia.</li>
             </ol>
           </Col>
         </Row>

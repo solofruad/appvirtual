@@ -25,15 +25,15 @@ export default class Modulo5 extends React.Component {
 	open(mod){
 		if(mod=='modulo5/1') { this.setState({m1show: true}); }
 		else if(mod=='modulo5/2') {this.setState({m2show: true});}
-		else if(mod=='modulo5/4') {this.setState({m3show: true});}
-		else if(mod=='modulo5/7') {this.setState({m4show: true});}
+		else if(mod=='modulo5/7') {this.setState({m3show: true});}
+		else if(mod=='modulo5/8') {this.setState({m4show: true});}
 		else {return false;}
 	}
 	close(mod){
 		if(mod=='modulo5/1') {this.setState({m1show: false});}
 		else if(mod=='modulo5/2') {this.setState({m2show: false});}
-		else if(mod=='modulo5/4') {this.setState({m3show: false});}
-		else if(mod=='modulo5/7') {this.setState({m4show: false});}
+		else if(mod=='modulo5/7') {this.setState({m3show: false});}
+		else if(mod=='modulo5/8') {this.setState({m4show: false});}
 		else {return false;	}
 	}
 	componentWillMount(){
