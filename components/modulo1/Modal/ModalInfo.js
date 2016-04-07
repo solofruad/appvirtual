@@ -46,9 +46,12 @@ export default class ModalInfo extends React.Component {
 		}
 		if(this.props.view=="microbiologia")		{
 			return <div>
-				<button	className="boton-info"onClick={this.open.bind(this)}>
-		          Información de la Sala &nbsp;<i className="fa fa-info-circle"></i>
-		        </button>
+				<div>
+					<button	className="boton-info" onClick={this.open.bind(this)}>
+	          			Información de la Sala &nbsp;<i className="fa fa-info-circle"></i>
+	      			</button>
+	      			<a className="pull-right btn-app" href='javascript:document.location.replace("/#/modulo1/1");document.location.reload();'><i className="fa fa-arrow-circle-o-left"></i></a>
+	    		</div>
 		        <Modal show={this.state.showModal} onHide={this.close.bind(this)} bsSize="lg" >
 					<Modal.Header closeButton>
 						<Modal.Title>CTVirtual <Label bsStyle='success'>SALÓN DE BIOLOGÍA MOLECULAR</Label></Modal.Title>
@@ -77,9 +80,12 @@ export default class ModalInfo extends React.Component {
 		}
 		if(this.props.view=="vidrieria-reactivos"){
 			return <div>
-				<button	className="boton-info"onClick={this.open.bind(this)}>
-		          Información de la Sala &nbsp;<i className="fa fa-info-circle"></i>
-		        </button>
+				<div>
+					<button	className="boton-info" onClick={this.open.bind(this)}>
+	          			Información de la Sala &nbsp;<i className="fa fa-info-circle"></i>
+	      			</button>
+	      			<a className="pull-right btn-app" href='javascript:document.location.replace("/#/modulo1/1");document.location.reload();'><i className="fa fa-arrow-circle-o-left"></i></a>
+	    		</div>
 		        <Modal show={this.state.showModal} onHide={this.close.bind(this)}>
 					<Modal.Header closeButton>
 						<Modal.Title>CTVirtual <Label bsStyle='success'>CUARTO DE VIDRERIA Y REACTIVOS</Label></Modal.Title>
@@ -119,9 +125,12 @@ export default class ModalInfo extends React.Component {
 		}
 		if(this.props.view=="preparacion-medios"){
 			return <div>
-				<button	className="boton-info"onClick={this.open.bind(this)}>
-		          Información de la Sala &nbsp;<i className="fa fa-info-circle"></i>
-		        </button>
+				<div>
+					<button	className="boton-info" onClick={this.open.bind(this)}>
+	          			Información de la Sala &nbsp;<i className="fa fa-info-circle"></i>
+	      			</button>
+	      			<a className="pull-right btn-app" href='javascript:document.location.replace("/#/modulo1/1");document.location.reload();'><i className="fa fa-arrow-circle-o-left"></i></a>
+	    		</div>
 		        <Modal show={this.state.showModal} onHide={this.close.bind(this)}>
 					<Modal.Header closeButton>
 						<Modal.Title>CTVirtual <Label bsStyle='success'>CUARTO DE PREPARACIÓN DE MEDIOS</Label></Modal.Title>
@@ -153,10 +162,10 @@ export default class ModalInfo extends React.Component {
 			return <div>
 				<div>
 					<button	className="boton-info" onClick={this.open.bind(this)}>
-	          		Información de la Sala &nbsp;<i className="fa fa-info-circle"></i>
-      		</button>
-      		<a className="pull-right btn-app" href='javascript:document.location.replace("/#/modulo1/1");document.location.reload();'><i className="fa fa-arrow-circle-o-left"></i></a>
-    		</div>
+	          			Información de la Sala &nbsp;<i className="fa fa-info-circle"></i>
+	      			</button>
+	      			<a className="pull-right btn-app" href='javascript:document.location.replace("/#/modulo1/1");document.location.reload();'><i className="fa fa-arrow-circle-o-left"></i></a>
+	    		</div>
 	        <Modal show={this.state.showModal} onHide={this.close.bind(this)}>
 						<Modal.Header closeButton>
 							<Modal.Title>CTVirtual <Label bsStyle='success'>AULA DE CLASE</Label></Modal.Title>
@@ -175,9 +184,12 @@ export default class ModalInfo extends React.Component {
 		}
 		if(this.props.view=="lavado-destilacion"){
 			return <div>
-				<button	className="boton-info"onClick={this.open.bind(this)}>
-		          Información de la Sala &nbsp;<i className="fa fa-info-circle"></i>
-		        </button>
+				<div>
+					<button	className="boton-info" onClick={this.open.bind(this)}>
+	          			Información de la Sala &nbsp;<i className="fa fa-info-circle"></i>
+	      			</button>
+	      			<a className="pull-right btn-app" href='javascript:document.location.replace("/#/modulo1/5" );document.location.reload();'><i className="fa fa-arrow-circle-o-left"></i></a>
+	    		</div>
 		        <Modal show={this.state.showModal} onHide={this.close.bind(this)}>
 					<Modal.Header closeButton>
 						<Modal.Title>CTVirtual <Label bsStyle='success'>Lavado, destilación y estirilización</Label></Modal.Title>
@@ -194,9 +206,12 @@ export default class ModalInfo extends React.Component {
 		}
 		if(this.props.view=="ivernadero"){
 			return <div>
-				<button	className="boton-info"onClick={this.open.bind(this)}>
-		          Información de la Sala &nbsp;<i className="fa fa-info-circle"></i>
-		        </button>
+				<div>
+					<button	className="boton-info" onClick={this.open.bind(this)}>
+	          			Información de la Sala &nbsp;<i className="fa fa-info-circle"></i>
+	      			</button>
+	      			<a className="pull-right btn-app" href='javascript:document.location.replace("/#/modulo1/5");document.location.reload();'><i className="fa fa-arrow-circle-o-left"></i></a>
+	    		</div>
 		        <Modal show={this.state.showModal} onHide={this.close.bind(this)}>
 					<Modal.Header closeButton>
 						<Modal.Title>CTVirtual <Label bsStyle='success'>IVERNADERO</Label></Modal.Title>

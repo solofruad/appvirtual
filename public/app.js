@@ -11513,10 +11513,19 @@ var ModalInfo = (function (_React$Component) {
 					'div',
 					null,
 					_react2['default'].createElement(
-						'button',
-						{ className: 'boton-info', onClick: this.open.bind(this) },
-						'Información de la Sala  ',
-						_react2['default'].createElement('i', { className: 'fa fa-info-circle' })
+						'div',
+						null,
+						_react2['default'].createElement(
+							'button',
+							{ className: 'boton-info', onClick: this.open.bind(this) },
+							'Información de la Sala  ',
+							_react2['default'].createElement('i', { className: 'fa fa-info-circle' })
+						),
+						_react2['default'].createElement(
+							'a',
+							{ className: 'pull-right btn-app', href: 'javascript:document.location.replace("/#/modulo1/1");document.location.reload();' },
+							_react2['default'].createElement('i', { className: 'fa fa-arrow-circle-o-left' })
+						)
 					),
 					_react2['default'].createElement(
 						_reactBootstrap.Modal,
@@ -11608,10 +11617,19 @@ var ModalInfo = (function (_React$Component) {
 					'div',
 					null,
 					_react2['default'].createElement(
-						'button',
-						{ className: 'boton-info', onClick: this.open.bind(this) },
-						'Información de la Sala  ',
-						_react2['default'].createElement('i', { className: 'fa fa-info-circle' })
+						'div',
+						null,
+						_react2['default'].createElement(
+							'button',
+							{ className: 'boton-info', onClick: this.open.bind(this) },
+							'Información de la Sala  ',
+							_react2['default'].createElement('i', { className: 'fa fa-info-circle' })
+						),
+						_react2['default'].createElement(
+							'a',
+							{ className: 'pull-right btn-app', href: 'javascript:document.location.replace("/#/modulo1/1");document.location.reload();' },
+							_react2['default'].createElement('i', { className: 'fa fa-arrow-circle-o-left' })
+						)
 					),
 					_react2['default'].createElement(
 						_reactBootstrap.Modal,
@@ -11767,10 +11785,19 @@ var ModalInfo = (function (_React$Component) {
 					'div',
 					null,
 					_react2['default'].createElement(
-						'button',
-						{ className: 'boton-info', onClick: this.open.bind(this) },
-						'Información de la Sala  ',
-						_react2['default'].createElement('i', { className: 'fa fa-info-circle' })
+						'div',
+						null,
+						_react2['default'].createElement(
+							'button',
+							{ className: 'boton-info', onClick: this.open.bind(this) },
+							'Información de la Sala  ',
+							_react2['default'].createElement('i', { className: 'fa fa-info-circle' })
+						),
+						_react2['default'].createElement(
+							'a',
+							{ className: 'pull-right btn-app', href: 'javascript:document.location.replace("/#/modulo1/1");document.location.reload();' },
+							_react2['default'].createElement('i', { className: 'fa fa-arrow-circle-o-left' })
+						)
 					),
 					_react2['default'].createElement(
 						_reactBootstrap.Modal,
@@ -11912,10 +11939,19 @@ var ModalInfo = (function (_React$Component) {
 					'div',
 					null,
 					_react2['default'].createElement(
-						'button',
-						{ className: 'boton-info', onClick: this.open.bind(this) },
-						'Información de la Sala  ',
-						_react2['default'].createElement('i', { className: 'fa fa-info-circle' })
+						'div',
+						null,
+						_react2['default'].createElement(
+							'button',
+							{ className: 'boton-info', onClick: this.open.bind(this) },
+							'Información de la Sala  ',
+							_react2['default'].createElement('i', { className: 'fa fa-info-circle' })
+						),
+						_react2['default'].createElement(
+							'a',
+							{ className: 'pull-right btn-app', href: 'javascript:document.location.replace("/#/modulo1/5" );document.location.reload();' },
+							_react2['default'].createElement('i', { className: 'fa fa-arrow-circle-o-left' })
+						)
 					),
 					_react2['default'].createElement(
 						_reactBootstrap.Modal,
@@ -11965,10 +12001,19 @@ var ModalInfo = (function (_React$Component) {
 					'div',
 					null,
 					_react2['default'].createElement(
-						'button',
-						{ className: 'boton-info', onClick: this.open.bind(this) },
-						'Información de la Sala  ',
-						_react2['default'].createElement('i', { className: 'fa fa-info-circle' })
+						'div',
+						null,
+						_react2['default'].createElement(
+							'button',
+							{ className: 'boton-info', onClick: this.open.bind(this) },
+							'Información de la Sala  ',
+							_react2['default'].createElement('i', { className: 'fa fa-info-circle' })
+						),
+						_react2['default'].createElement(
+							'a',
+							{ className: 'pull-right btn-app', href: 'javascript:document.location.replace("/#/modulo1/5");document.location.reload();' },
+							_react2['default'].createElement('i', { className: 'fa fa-arrow-circle-o-left' })
+						)
 					),
 					_react2['default'].createElement(
 						_reactBootstrap.Modal,
