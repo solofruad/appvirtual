@@ -17,7 +17,7 @@ export default class Header extends React.Component {
 		{
 			this.props.headers.map((content) => {
 				if(content.id==1){
-					return <div className="PrincipalHeader-top">
+					return <div key={content.id} className="PrincipalHeader-top">
 						<div className="PrincipalHeader-top-tittle">
 							<span>LABORATORIO VIRTUAL</span>
 							<div></div>

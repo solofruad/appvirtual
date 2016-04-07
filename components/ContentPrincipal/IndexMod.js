@@ -13,10 +13,7 @@ export default class IndexMod extends React.Component {
     constructor(props){
         super(props);
         this.state = { componente: [], mounted:false };
-    }
-    getInitialState() {
-      return { mounted: false };
-    }
+    }    
     componentDidMount(){
       this.setState({ mounted: true });
     }

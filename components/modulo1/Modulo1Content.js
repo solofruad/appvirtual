@@ -37,9 +37,7 @@ export default class Modulo1Content extends React.Component {
 		super(props);
 		this.state = { mounted:false};    
   }
-  getInitialState() {
-    return { mounted: false};
-  }
+  
   componentDidMount(){
     this.setState({ mounted: true });
   }

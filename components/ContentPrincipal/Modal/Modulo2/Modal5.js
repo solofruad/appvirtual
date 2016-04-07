@@ -19,7 +19,7 @@ export default class Modal5 extends React.Component {
 	render(){
 			return	<Modal {...this.props}>
       <Modal.Header closeButton>
-        <Modal.Title><h4><Label bsStyle='success'>Elaboración</Label></h4></Modal.Title>
+        <Modal.Title><Label bsStyle='success'>Elaboración</Label></Modal.Title>
       </Modal.Header>
       <Modal.Body>
 				<Row>

@@ -6,6 +6,7 @@ import React from 'react';
 import $ from 'jquery';
 import Simulaciones from './Simulaciones';
 import Simulacion1 from '../ContentPrincipal/Modal/Modulo2/Modal8';
+import uid from 'uid';
 
 export default class ContentSimulaciones extends React.Component {
 	constructor(props){

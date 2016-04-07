@@ -15,9 +15,6 @@ export default class ModalInfo extends React.Component {
 		this.open = this.open.bind(this);
 		this.close = this.close.bind(this);
 	}
-	getInitialState(){
-		return { showModal: false };
-	}
 	close(){
 		this.setState({ showModal: false });
 	}

@@ -19,7 +19,7 @@ export default class Modal2 extends React.Component {
 	render(){
 			return	<Modal {...this.props} bsSize="large">
       <Modal.Header closeButton>
-        <Modal.Title><h4><Label bsStyle='success'>micropropagaci&oacute;n in vitro</Label></h4></Modal.Title>
+        <Modal.Title><Label bsStyle='success'>micropropagaci&oacute;n in vitro</Label></Modal.Title>
       </Modal.Header>
       <Modal.Body>
 				<Row>

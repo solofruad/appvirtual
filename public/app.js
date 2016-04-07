@@ -204,6 +204,10 @@ var _CreditosUnit = require('./CreditosUnit');
 
 var _CreditosUnit2 = _interopRequireDefault(_CreditosUnit);
 
+var _uid = require('uid');
+
+var _uid2 = _interopRequireDefault(_uid);
+
 var Creditos = (function (_React$Component) {
 	_inherits(Creditos, _React$Component);
 
@@ -224,6 +228,7 @@ var Creditos = (function (_React$Component) {
 					{ className: 'contentPrincipal' },
 					this.props.creditos.map(function (content) {
 						return _react2['default'].createElement(_CreditosUnit2['default'], {
+							key: (0, _uid2['default'])(10),
 							id: content.id,
 							rol: content.rol,
 							nombre: content.nombre,
@@ -241,7 +246,7 @@ var Creditos = (function (_React$Component) {
 exports['default'] = Creditos;
 module.exports = exports['default'];
 
-},{"./CreditosUnit":4,"react":543,"react-bootstrap":182}],4:[function(require,module,exports){
+},{"./CreditosUnit":4,"react":543,"react-bootstrap":182,"uid":544}],4:[function(require,module,exports){
 /**
  * Modules Dependencies
  */
@@ -477,7 +482,7 @@ var Header = (function (_React$Component) {
 					if (content.id == 1) {
 						return _react2["default"].createElement(
 							"div",
-							{ className: "PrincipalHeader-top" },
+							{ key: content.id, className: "PrincipalHeader-top" },
 							_react2["default"].createElement(
 								"div",
 								{ className: "PrincipalHeader-top-tittle" },
@@ -544,7 +549,7 @@ module.exports = exports["default"];
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
-  value: true
+    value: true
 });
 
 var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
@@ -576,112 +581,107 @@ var _jquery2 = _interopRequireDefault(_jquery);
 var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
 
 var IndexMod = (function (_React$Component) {
-  _inherits(IndexMod, _React$Component);
+    _inherits(IndexMod, _React$Component);
 
-  function IndexMod(props) {
-    _classCallCheck(this, IndexMod);
+    function IndexMod(props) {
+        _classCallCheck(this, IndexMod);
 
-    _get(Object.getPrototypeOf(IndexMod.prototype), 'constructor', this).call(this, props);
-    this.state = { componente: [], mounted: false };
-  }
+        _get(Object.getPrototypeOf(IndexMod.prototype), 'constructor', this).call(this, props);
+        this.state = { componente: [], mounted: false };
+    }
 
-  _createClass(IndexMod, [{
-    key: 'getInitialState',
-    value: function getInitialState() {
-      return { mounted: false };
-    }
-  }, {
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      this.setState({ mounted: true });
-    }
-  }, {
-    key: 'componentWillMount',
-    value: function componentWillMount() {
-      this.getJson();
-    }
-  }, {
-    key: 'componentDidUpdate',
-    value: function componentDidUpdate(prevProps) {
-      var oldSrc = prevProps.params.src;
-      var newSrc = this.props.params.src;
-      if (newSrc !== oldSrc) {
-        this.getJson();
-      }
-    }
-  }, {
-    key: 'componentWillUnmount',
-    value: function componentWillUnmount() {
-      // allows us to ignore an inflight request in scenario 4
-      this.state = { componente: [] };
-    }
-  }, {
-    key: 'getJson',
-    value: function getJson() {
-      var _this = this;
+    _createClass(IndexMod, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            this.setState({ mounted: true });
+        }
+    }, {
+        key: 'componentWillMount',
+        value: function componentWillMount() {
+            this.getJson();
+        }
+    }, {
+        key: 'componentDidUpdate',
+        value: function componentDidUpdate(prevProps) {
+            var oldSrc = prevProps.params.src;
+            var newSrc = this.props.params.src;
+            if (newSrc !== oldSrc) {
+                this.getJson();
+            }
+        }
+    }, {
+        key: 'componentWillUnmount',
+        value: function componentWillUnmount() {
+            // allows us to ignore an inflight request in scenario 4
+            this.state = { componente: [] };
+        }
+    }, {
+        key: 'getJson',
+        value: function getJson() {
+            var _this = this;
 
-      this.setState({ mounted: false });
-      var src = this.props.params.src;
-      if (src == 2) {
-        _jquery2['default'].get('/dirintomod2', function (intomod2) {
-          _this.setState({ componente: intomod2, mounted: true });
-        });
-      }
-      if (src == 3) {
-        _jquery2['default'].get('/dirintomod3', function (intomod3) {
-          _this.setState({ componente: intomod3, mounted: true });
-        });
-      }
-      if (src == 4) {
-        _jquery2['default'].get('/dirintomod4', function (intomod4) {
-          _this.setState({ componente: intomod4, mounted: true });
-        });
-      }
-      if (src == 5) {
-        _jquery2['default'].get('/dirintomod5', function (intomod5) {
-          _this.setState({ componente: intomod5, mounted: true });
-        });
-      }
-      if (src == 6) {
-        _jquery2['default'].get('/dirintomod6', function (intomod6) {
-          _this.setState({ componente: intomod6, mounted: true });
-        });
-      }
-      if (src == 7) {
-        _jquery2['default'].get('/dirintomod7', function (intomod7) {
-          _this.setState({ componente: intomod7, mounted: true });
-        });
-      }
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      if (this.state.componente.length) {
-        var child = this.state.mounted ? _react2['default'].createElement(_Into2['default'], { componente: this.state.componente }) : null;
-        return _react2['default'].createElement(
-          'div',
-          null,
-          _react2['default'].createElement(
-            ReactCSSTransitionGroup,
-            { transitionName: 'example', transitionAppear: true, transitionAppearTimeout: 300, transitionEnterTimeout: 500, transitionLeaveTimeout: 300 },
-            child
-          )
-        );
-      } else {
-        return _react2['default'].createElement(
-          'div',
-          { className: 'spinner' },
-          _react2['default'].createElement('div', { className: 'rect1' }),
-          _react2['default'].createElement('div', { className: 'rect2' }),
-          _react2['default'].createElement('div', { className: 'rect3' }),
-          _react2['default'].createElement('div', { className: 'rect4' }),
-          _react2['default'].createElement('div', { className: 'rect5' })
-        );
-      }
-    }
-  }]);
+            this.setState({ mounted: false });
+            var src = this.props.params.src;
+            if (src == 2) {
+                _jquery2['default'].get('/dirintomod2', function (intomod2) {
+                    _this.setState({ componente: intomod2, mounted: true });
+                });
+            }
+            if (src == 3) {
+                _jquery2['default'].get('/dirintomod3', function (intomod3) {
+                    _this.setState({ componente: intomod3, mounted: true });
+                });
+            }
+            if (src == 4) {
+                _jquery2['default'].get('/dirintomod4', function (intomod4) {
+                    _this.setState({ componente: intomod4, mounted: true });
+                });
+            }
+            if (src == 5) {
+                _jquery2['default'].get('/dirintomod5', function (intomod5) {
+                    _this.setState({ componente: intomod5, mounted: true });
+                });
+            }
+            if (src == 6) {
+                _jquery2['default'].get('/dirintomod6', function (intomod6) {
+                    _this.setState({ componente: intomod6, mounted: true });
+                });
+            }
+            if (src == 7) {
+                _jquery2['default'].get('/dirintomod7', function (intomod7) {
+                    _this.setState({ componente: intomod7, mounted: true });
+                });
+            }
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            if (this.state.componente.length) {
+                var child = this.state.mounted ? _react2['default'].createElement(_Into2['default'], { componente: this.state.componente }) : null;
+                return _react2['default'].createElement(
+                    'div',
+                    null,
+                    _react2['default'].createElement(
+                        ReactCSSTransitionGroup,
+                        { transitionName: 'example', transitionAppear: true, transitionAppearTimeout: 300, transitionEnterTimeout: 500, transitionLeaveTimeout: 300 },
+                        child
+                    )
+                );
+            } else {
+                return _react2['default'].createElement(
+                    'div',
+                    { className: 'spinner' },
+                    _react2['default'].createElement('div', { className: 'rect1' }),
+                    _react2['default'].createElement('div', { className: 'rect2' }),
+                    _react2['default'].createElement('div', { className: 'rect3' }),
+                    _react2['default'].createElement('div', { className: 'rect4' }),
+                    _react2['default'].createElement('div', { className: 'rect5' })
+                );
+            }
+        }
+    }]);
 
-  return IndexMod;
+    return IndexMod;
 })(_react2['default'].Component);
 
 exports['default'] = IndexMod;
@@ -1146,13 +1146,9 @@ var Modal2 = (function (_React$Component) {
             _reactBootstrap.Modal.Title,
             null,
             _react2['default'].createElement(
-              'h4',
-              null,
-              _react2['default'].createElement(
-                _reactBootstrap.Label,
-                { bsStyle: 'success' },
-                'Elaboración'
-              )
+              _reactBootstrap.Label,
+              { bsStyle: 'success' },
+              'Elaboración'
             )
           )
         ),
@@ -1562,13 +1558,9 @@ var Modal3 = (function (_React$Component) {
             _reactBootstrap.Modal.Title,
             null,
             _react2['default'].createElement(
-              'h4',
-              null,
-              _react2['default'].createElement(
-                _reactBootstrap.Label,
-                { bsStyle: 'success' },
-                'Elaboración'
-              )
+              _reactBootstrap.Label,
+              { bsStyle: 'success' },
+              'Elaboración'
             )
           )
         ),
@@ -2131,13 +2123,9 @@ var Modal4 = (function (_React$Component) {
 						_reactBootstrap.Modal.Title,
 						null,
 						_react2['default'].createElement(
-							'h4',
-							null,
-							_react2['default'].createElement(
-								_reactBootstrap.Label,
-								{ bsStyle: 'success' },
-								'Elaboración'
-							)
+							_reactBootstrap.Label,
+							{ bsStyle: 'success' },
+							'Elaboración'
 						)
 					)
 				),
@@ -2356,13 +2344,9 @@ var Modal5 = (function (_React$Component) {
 						_reactBootstrap.Modal.Title,
 						null,
 						_react2['default'].createElement(
-							'h4',
-							null,
-							_react2['default'].createElement(
-								_reactBootstrap.Label,
-								{ bsStyle: 'success' },
-								'Elaboración'
-							)
+							_reactBootstrap.Label,
+							{ bsStyle: 'success' },
+							'Elaboración'
 						)
 					)
 				),
@@ -2583,13 +2567,9 @@ var Modal6 = (function (_React$Component) {
             _reactBootstrap.Modal.Title,
             null,
             _react2['default'].createElement(
-              'h4',
-              null,
-              _react2['default'].createElement(
-                _reactBootstrap.Label,
-                { bsStyle: 'success' },
-                'Elaboración'
-              )
+              _reactBootstrap.Label,
+              { bsStyle: 'success' },
+              'Elaboración'
             )
           )
         ),
@@ -2990,13 +2970,9 @@ var Modal7 = (function (_React$Component) {
 						_reactBootstrap.Modal.Title,
 						null,
 						_react2['default'].createElement(
-							'h4',
-							null,
-							_react2['default'].createElement(
-								_reactBootstrap.Label,
-								{ bsStyle: 'success' },
-								'Elaboración'
-							)
+							_reactBootstrap.Label,
+							{ bsStyle: 'success' },
+							'Elaboración'
 						)
 					)
 				),
@@ -4461,25 +4437,21 @@ var Modal1 = (function (_React$Component) {
 							_reactBootstrap.Col,
 							{ xs: 12, sm: 12, md: 12, lg: 12 },
 							_react2['default'].createElement(
-								'center',
-								null,
+								'p',
+								{ className: 'txt-parrafo' },
+								'Las plantas necesitan un soporte para su desarrollo radicular y sostenimiento: nutrientes, vitaminas, fuente de carbono y reguladores de crecimiento para un  efectivo establecimiento ',
 								_react2['default'].createElement(
-									'p',
-									{ className: 'txt-parrafo' },
-									'Las plantas necesitan un soporte para su desarrollo radicular y sostenimiento: nutrientes, vitaminas, fuente de carbono y reguladores de crecimiento para un  efectivo establecimiento ',
-									_react2['default'].createElement(
-										'i',
-										null,
-										'in vitro'
-									),
-									'  y para su posterior adaptación ',
-									_react2['default'].createElement(
-										'i',
-										null,
-										'ex vitro'
-									),
-									'.  El medio de cultivo debe cumplir requisitos estandarizados para que la producción de vitroplantas no presente ninguna complicación.'
-								)
+									'i',
+									null,
+									'in vitro'
+								),
+								'  y para su posterior adaptación ',
+								_react2['default'].createElement(
+									'i',
+									null,
+									'ex vitro'
+								),
+								'.  El medio de cultivo debe cumplir requisitos estandarizados para que la producción de vitroplantas no presente ninguna complicación.'
 							)
 						)
 					),
@@ -4492,18 +4464,14 @@ var Modal1 = (function (_React$Component) {
 							{ xs: 12, sm: 12, md: 12, lg: 12 },
 							_react2['default'].createElement(
 								'p',
-								null,
+								{ className: 'txt-center' },
+								'En este capitulo podrás encontrar lo necesario para continuar con el aprendizaje de ',
 								_react2['default'].createElement(
-									'center',
-									null,
-									'En este capitulo podrás encontrar lo necesario para continuar con el aprendizaje de ',
-									_react2['default'].createElement(
-										'span',
-										{ className: 'txt-green' },
-										'cultivo de tejidos vegetales'
-									),
-									', recuerda tienes al final un ejercicio práctico para que interactues y refuerces aún más en la preparación en un laboratorio. '
-								)
+									'span',
+									{ className: 'txt-green' },
+									'cultivo de tejidos vegetales'
+								),
+								', recuerda tienes al final un ejercicio práctico para que interactues y refuerces aún más en la preparación en un laboratorio. '
 							),
 							_react2['default'].createElement(
 								'center',
@@ -4604,13 +4572,9 @@ var Modal2 = (function (_React$Component) {
             _reactBootstrap.Modal.Title,
             null,
             _react2['default'].createElement(
-              'h4',
-              null,
-              _react2['default'].createElement(
-                _reactBootstrap.Label,
-                { bsStyle: 'success' },
-                'PREPARACIÓN DE MEDIOS DE CULTIVO'
-              )
+              _reactBootstrap.Label,
+              { bsStyle: 'success' },
+              'PREPARACIÓN DE MEDIOS DE CULTIVO'
             )
           )
         ),
@@ -4746,13 +4710,9 @@ var Modal3 = (function (_React$Component) {
                         _reactBootstrap.Modal.Title,
                         null,
                         _react2['default'].createElement(
-                            'h4',
-                            null,
-                            _react2['default'].createElement(
-                                _reactBootstrap.Label,
-                                { bsStyle: 'success' },
-                                'Componentes'
-                            )
+                            _reactBootstrap.Label,
+                            { bsStyle: 'success' },
+                            'Componentes'
                         )
                     )
                 ),
@@ -5113,15 +5073,11 @@ var Modal4 = (function (_React$Component) {
             _reactBootstrap.Modal.Title,
             null,
             _react2['default'].createElement(
-              'h4',
-              null,
-              _react2['default'].createElement(
-                _reactBootstrap.Label,
-                { bsStyle: 'success' },
-                'Elaboración'
-              ),
-              ' Vitaminas'
-            )
+              _reactBootstrap.Label,
+              { bsStyle: 'success' },
+              'Ejercicio'
+            ),
+            'Preparación de medios'
           )
         ),
         _react2['default'].createElement(
@@ -5134,114 +5090,12 @@ var Modal4 = (function (_React$Component) {
               _reactBootstrap.Col,
               { xs: 12, sm: 12, md: 12, lg: 12 },
               _react2['default'].createElement(
-                'h5',
+                'h1',
                 null,
                 _react2['default'].createElement(
                   'b',
                   null,
-                  'Elaboración de stocks 6'
-                )
-              ),
-              _react2['default'].createElement(
-                'p',
-                { className: 'txt-parrafo' },
-                'Generalmente, en el cultivo de tejidos se usa vitaminas del complejo B, principalmente necesita de la vitamina B1 o Tiamina. Designado aquí como stock 6. Éste se puede preparar a una concentración de 50X.'
-              )
-            )
-          ),
-          _react2['default'].createElement(
-            _reactBootstrap.Row,
-            null,
-            _react2['default'].createElement(
-              _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 12, lg: 12 },
-              _react2['default'].createElement(
-                _reactBootstrap.Table,
-                { responsive: true, striped: true, bordered: true, condensed: true, hover: true },
-                _react2['default'].createElement(
-                  'thead',
-                  null,
-                  _react2['default'].createElement(
-                    'tr',
-                    null,
-                    _react2['default'].createElement(
-                      'th',
-                      { colSpan: '4' },
-                      _react2['default'].createElement(
-                        'center',
-                        null,
-                        'Vitamina B1 de Stock 6'
-                      )
-                    )
-                  ),
-                  _react2['default'].createElement(
-                    'tr',
-                    null,
-                    _react2['default'].createElement(
-                      'th',
-                      null,
-                      _react2['default'].createElement(
-                        'b',
-                        null,
-                        'NÚMERO STOCK'
-                      )
-                    ),
-                    _react2['default'].createElement(
-                      'th',
-                      null,
-                      _react2['default'].createElement(
-                        'b',
-                        null,
-                        'COMPUESTO'
-                      )
-                    ),
-                    _react2['default'].createElement(
-                      'th',
-                      null,
-                      _react2['default'].createElement(
-                        'b',
-                        null,
-                        'CANTIDAD (gr)'
-                      )
-                    ),
-                    _react2['default'].createElement(
-                      'th',
-                      null,
-                      _react2['default'].createElement(
-                        'b',
-                        null,
-                        'AGUA DESTILADA'
-                      )
-                    )
-                  )
-                ),
-                _react2['default'].createElement(
-                  'tbody',
-                  null,
-                  _react2['default'].createElement(
-                    'tr',
-                    null,
-                    _react2['default'].createElement(
-                      'td',
-                      null,
-                      '6'
-                    ),
-                    _react2['default'].createElement(
-                      'td',
-                      null,
-                      'Vitamina B1'
-                    ),
-                    _react2['default'].createElement(
-                      'td',
-                      null,
-                      '0,0005'
-                    ),
-                    _react2['default'].createElement(
-                      'td',
-                      null,
-                      '100 ml'
-                    )
-                  )
+                  'Simulación en contrucción'
                 )
               )
             )
@@ -5251,8 +5105,8 @@ var Modal4 = (function (_React$Component) {
             null,
             _react2['default'].createElement(
               _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 12, lg: 12 },
-              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo1/maquina_6.jpg', alt: 'Sala de siembra' })
+              { xs: 12, sm: 12, md: 6, lg: 6 },
+              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/icon-128.png' })
             )
           )
         ),
@@ -5389,16 +5243,12 @@ var Modal1 = (function (_React$Component) {
 							{ xs: 12, sm: 12, md: 12, lg: 12 },
 							_react2['default'].createElement(
 								'p',
-								null,
+								{ className: 'txt-center' },
+								'En este capitulo podrás encontrar lo necesario para continuar con el aprendizaje de ',
 								_react2['default'].createElement(
-									'center',
-									null,
-									'En este capitulo podrás encontrar lo necesario para continuar con el aprendizaje de ',
-									_react2['default'].createElement(
-										'span',
-										{ className: 'txt-green' },
-										'cultivo de tejidos vegetales.'
-									)
+									'span',
+									{ className: 'txt-green' },
+									'cultivo de tejidos vegetales.'
 								)
 							)
 						)
@@ -5479,13 +5329,9 @@ var Modal2 = (function (_React$Component) {
             _reactBootstrap.Modal.Title,
             null,
             _react2['default'].createElement(
-              'h4',
-              null,
-              _react2['default'].createElement(
-                _reactBootstrap.Label,
-                { bsStyle: 'success' },
-                'micropropagación in vitro'
-              )
+              _reactBootstrap.Label,
+              { bsStyle: 'success' },
+              'micropropagación in vitro'
             )
           )
         ),
@@ -5617,13 +5463,9 @@ var Modal3 = (function (_React$Component) {
 						_reactBootstrap.Modal.Title,
 						null,
 						_react2['default'].createElement(
-							'h4',
-							null,
-							_react2['default'].createElement(
-								_reactBootstrap.Label,
-								{ bsStyle: 'success' },
-								'micropropagación in vitro'
-							)
+							_reactBootstrap.Label,
+							{ bsStyle: 'success' },
+							'micropropagación in vitro'
 						)
 					)
 				),
@@ -5853,13 +5695,9 @@ var Modal4 = (function (_React$Component) {
             _reactBootstrap.Modal.Title,
             null,
             _react2['default'].createElement(
-              'h4',
-              null,
-              _react2['default'].createElement(
-                _reactBootstrap.Label,
-                { bsStyle: 'success' },
-                'Micropropagación in vitro'
-              )
+              _reactBootstrap.Label,
+              { bsStyle: 'success' },
+              'Micropropagación in vitro'
             )
           )
         ),
@@ -6138,13 +5976,9 @@ var Modal6 = (function (_React$Component) {
             _reactBootstrap.Modal.Title,
             null,
             _react2['default'].createElement(
-              'h4',
-              null,
-              _react2['default'].createElement(
-                _reactBootstrap.Label,
-                { bsStyle: 'success' },
-                'Micropropagación in vitro'
-              )
+              _reactBootstrap.Label,
+              { bsStyle: 'success' },
+              'Micropropagación in vitro'
             )
           )
         ),
@@ -6355,13 +6189,9 @@ var Modal7 = (function (_React$Component) {
             _reactBootstrap.Modal.Title,
             null,
             _react2['default'].createElement(
-              'h4',
-              null,
-              _react2['default'].createElement(
-                _reactBootstrap.Label,
-                { bsStyle: 'success' },
-                'Micropropagación in vitro'
-              )
+              _reactBootstrap.Label,
+              { bsStyle: 'success' },
+              'Micropropagación in vitro'
             )
           )
         ),
@@ -6488,13 +6318,9 @@ var Modal8 = (function (_React$Component) {
             _reactBootstrap.Modal.Title,
             null,
             _react2['default'].createElement(
-              'h4',
-              null,
-              _react2['default'].createElement(
-                _reactBootstrap.Label,
-                { bsStyle: 'success' },
-                'Micropropagación in vitro'
-              )
+              _reactBootstrap.Label,
+              { bsStyle: 'success' },
+              'Micropropagación in vitro'
             )
           )
         ),
@@ -6903,13 +6729,9 @@ var Modal2 = (function (_React$Component) {
             _reactBootstrap.Modal.Title,
             null,
             _react2['default'].createElement(
-              'h4',
-              null,
-              _react2['default'].createElement(
-                _reactBootstrap.Label,
-                { bsStyle: 'success' },
-                'Etapa Ex Vitro'
-              )
+              _reactBootstrap.Label,
+              { bsStyle: 'success' },
+              'Etapa Ex Vitro'
             )
           )
         ),
@@ -7462,13 +7284,9 @@ var Modal4 = (function (_React$Component) {
             _reactBootstrap.Modal.Title,
             null,
             _react2['default'].createElement(
-              'h4',
-              null,
-              _react2['default'].createElement(
-                _reactBootstrap.Label,
-                { bsStyle: 'success' },
-                'Etapa Ex Vitro'
-              )
+              _reactBootstrap.Label,
+              { bsStyle: 'success' },
+              'Etapa Ex Vitro'
             )
           )
         ),
@@ -7831,13 +7649,9 @@ var Modal2 = (function (_React$Component) {
             _reactBootstrap.Modal.Title,
             null,
             _react2['default'].createElement(
-              'h4',
-              null,
-              _react2['default'].createElement(
-                _reactBootstrap.Label,
-                { bsStyle: 'success' },
-                'Cultivo in vitro de meristemos y ápices'
-              )
+              _reactBootstrap.Label,
+              { bsStyle: 'success' },
+              'Cultivo in vitro de meristemos y ápices'
             )
           )
         ),
@@ -7974,13 +7788,9 @@ var Modal3 = (function (_React$Component) {
             _reactBootstrap.Modal.Title,
             null,
             _react2['default'].createElement(
-              'h4',
-              null,
-              _react2['default'].createElement(
-                _reactBootstrap.Label,
-                { bsStyle: 'success' },
-                'Cultivo in vitro de meristemos y ápices'
-              )
+              _reactBootstrap.Label,
+              { bsStyle: 'success' },
+              'Cultivo in vitro de meristemos y ápices'
             )
           )
         ),
@@ -8113,13 +7923,9 @@ var Modal4 = (function (_React$Component) {
             _reactBootstrap.Modal.Title,
             null,
             _react2['default'].createElement(
-              'h4',
-              null,
-              _react2['default'].createElement(
-                _reactBootstrap.Label,
-                { bsStyle: 'success' },
-                'Cultivo in vitro de meristemos y ápices'
-              )
+              _reactBootstrap.Label,
+              { bsStyle: 'success' },
+              'Cultivo in vitro de meristemos y ápices'
             )
           )
         ),
@@ -8394,8 +8200,6 @@ Object.defineProperty(exports, '__esModule', {
   value: true
 });
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
 var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
@@ -8431,7 +8235,7 @@ var Modal2 = (function (_React$Component) {
     value: function render() {
       return _react2['default'].createElement(
         _reactBootstrap.Modal,
-        _extends({}, this.props, { bsSize: 'large' }),
+        this.props,
         _react2['default'].createElement(
           _reactBootstrap.Modal.Header,
           { closeButton: true },
@@ -8439,13 +8243,9 @@ var Modal2 = (function (_React$Component) {
             _reactBootstrap.Modal.Title,
             null,
             _react2['default'].createElement(
-              'h4',
-              null,
-              _react2['default'].createElement(
-                _reactBootstrap.Label,
-                { bsStyle: 'success' },
-                'Etapa Ex Vitro'
-              )
+              _reactBootstrap.Label,
+              { bsStyle: 'success' },
+              'Etapa Ex Vitro'
             )
           )
         ),
@@ -8457,251 +8257,14 @@ var Modal2 = (function (_React$Component) {
             null,
             _react2['default'].createElement(
               _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 12, lg: 12, className: 'txt-center' },
+              { xs: 12, sm: 12, md: 12, lg: 12 },
               _react2['default'].createElement(
                 'h1',
                 null,
                 _react2['default'].createElement(
                   'b',
                   null,
-                  'Establecimiento ex vitro'
-                )
-              ),
-              _react2['default'].createElement(
-                'p',
-                null,
-                'En esta etapa se saca la planta del frasco a un ambiente favorable para su buen desarrollo. Los siguientes pasos son los que se deben tener en cuenta para el establecimiento de las plantas a condiciones naturales:'
-              )
-            )
-          ),
-          _react2['default'].createElement('hr', { className: 'line-divider' }),
-          _react2['default'].createElement(
-            _reactBootstrap.Row,
-            null,
-            _react2['default'].createElement(
-              _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 7, lg: 7 },
-              _react2['default'].createElement(
-                'div',
-                { className: 'txt-vertical-center' },
-                _react2['default'].createElement(
-                  'p',
-                  { className: 'title-list-modal' },
-                  _react2['default'].createElement(
-                    'b',
-                    null,
-                    'Escoger la vitroplanta  que ya tenga el tamaño ideal: '
-                  ),
-                  _react2['default'].createElement(
-                    'span',
-                    null,
-                    'cuando toca la tapa del frasco. '
-                  )
-                ),
-                _react2['default'].createElement(
-                  'p',
-                  { className: 'txt-into' },
-                  _react2['default'].createElement(
-                    'span',
-                    { className: 'capitalLetter' },
-                    _react2['default'].createElement('i', { className: 'fa fa-chevron-right' })
-                  ),
-                  'Ocurre, generalmente, después de entre un mes y dos de estar subcultivada y al presentar de 5 a 8 nudos.'
-                )
-              )
-            ),
-            _react2['default'].createElement(
-              _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 5, lg: 5 },
-              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo5/modal2a.jpg', alt: 'Vitroplanta lista para etapa ex vitro.' })
-            )
-          ),
-          _react2['default'].createElement('hr', { className: 'line-divider' }),
-          _react2['default'].createElement(
-            _reactBootstrap.Row,
-            null,
-            _react2['default'].createElement(
-              _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 5, lg: 5 },
-              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo5/modal2b.jpg', alt: 'Vitroplantas semidestapadas para aclimatazción.' })
-            ),
-            _react2['default'].createElement(
-              _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 7, lg: 7 },
-              _react2['default'].createElement(
-                'div',
-                { className: 'txt-vertical-center' },
-                _react2['default'].createElement(
-                  'p',
-                  { className: 'title-list-modal' },
-                  _react2['default'].createElement(
-                    'b',
-                    null,
-                    'Se puede dejar los tarros semi-destapados hasta cuatro días, '
-                  ),
-                  _react2['default'].createElement(
-                    'span',
-                    null,
-                    'fuera del cuarto de crecimiento.'
-                  )
-                ),
-                _react2['default'].createElement(
-                  'p',
-                  { className: 'txt-into' },
-                  _react2['default'].createElement(
-                    'span',
-                    { className: 'capitalLetter' },
-                    _react2['default'].createElement('i', { className: 'fa fa-chevron-right' })
-                  ),
-                  'Con una leve radiación solar de 7am a 9 am y de 3pm a 5 pm.'
-                )
-              )
-            )
-          ),
-          _react2['default'].createElement('hr', { className: 'line-divider' }),
-          _react2['default'].createElement(
-            _reactBootstrap.Row,
-            null,
-            _react2['default'].createElement(
-              _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 7, lg: 7 },
-              _react2['default'].createElement(
-                'div',
-                { className: 'txt-vertical-center' },
-                _react2['default'].createElement(
-                  'p',
-                  { className: 'title-list-modal' },
-                  _react2['default'].createElement(
-                    'b',
-                    null,
-                    'Luego de la anterior, se hace la extracción. '
-                  ),
-                  _react2['default'].createElement(
-                    'span',
-                    null,
-                    'Se quita el vinipel y la tapa.'
-                  )
-                ),
-                _react2['default'].createElement(
-                  'p',
-                  { className: 'txt-into' },
-                  _react2['default'].createElement(
-                    'span',
-                    { className: 'capitalLetter' },
-                    _react2['default'].createElement('i', { className: 'fa fa-chevron-right' })
-                  ),
-                  'Se golpea suavemente la base del tarro y delicadamente se saca la planta del frasco. Utilizando agua, se retirara los residuos del gel. '
-                )
-              )
-            ),
-            _react2['default'].createElement(
-              _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 5, lg: 5 },
-              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo5/modal2c.jpg', alt: 'Extracción de planta (M. esculenta) del frasco.' })
-            )
-          ),
-          _react2['default'].createElement('hr', { className: 'line-divider' }),
-          _react2['default'].createElement(
-            _reactBootstrap.Row,
-            null,
-            _react2['default'].createElement(
-              _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 5, lg: 5 },
-              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo5/modal2d.jpg', alt: 'Salida de la planta del frasco.' })
-            ),
-            _react2['default'].createElement(
-              _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 7, lg: 7 },
-              _react2['default'].createElement(
-                'div',
-                { className: 'txt-vertical-center' },
-                _react2['default'].createElement(
-                  'p',
-                  { className: 'title-list-modal' },
-                  _react2['default'].createElement(
-                    'b',
-                    null,
-                    'Se lava las raíces con abundante agua, '
-                  ),
-                  _react2['default'].createElement(
-                    'span',
-                    null,
-                    'se quita las hojas basales o “bajeras”.'
-                  )
-                )
-              )
-            )
-          ),
-          _react2['default'].createElement('hr', { className: 'line-divider' }),
-          _react2['default'].createElement(
-            _reactBootstrap.Row,
-            null,
-            _react2['default'].createElement(
-              _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 7, lg: 7 },
-              _react2['default'].createElement(
-                'div',
-                { className: 'txt-vertical-center' },
-                _react2['default'].createElement(
-                  'p',
-                  { className: 'title-list-modal' },
-                  _react2['default'].createElement(
-                    'b',
-                    null,
-                    'Sembrar en sustrato (1:1 Aserrín y humus solido) esterilizado. '
-                  ),
-                  _react2['default'].createElement(
-                    'span',
-                    null,
-                    'También se puede utilizar en la misma proporción cascarilla.'
-                  )
-                )
-              )
-            ),
-            _react2['default'].createElement(
-              _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 5, lg: 5 },
-              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo5/modal2e.jpg', alt: 'Siembra de planta (M. esculenta) en sustrato estéril' })
-            )
-          ),
-          _react2['default'].createElement('hr', { className: 'line-divider' }),
-          _react2['default'].createElement(
-            _reactBootstrap.Row,
-            null,
-            _react2['default'].createElement(
-              _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 5, lg: 5 },
-              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo5/modal2f.jpg', alt: 'Cámara humedad para la planta (M. esculenta).' })
-            ),
-            _react2['default'].createElement(
-              _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 7, lg: 7 },
-              _react2['default'].createElement(
-                'div',
-                { className: 'txt-vertical-center' },
-                _react2['default'].createElement(
-                  'p',
-                  { className: 'title-list-modal' },
-                  _react2['default'].createElement(
-                    'b',
-                    null,
-                    'Poner vaso con perforaciones en la base durante dos semanas '
-                  ),
-                  _react2['default'].createElement(
-                    'span',
-                    null,
-                    'para que la planta genere un microclima'
-                  )
-                ),
-                _react2['default'].createElement(
-                  'p',
-                  { className: 'txt-into' },
-                  _react2['default'].createElement(
-                    'span',
-                    { className: 'capitalLetter' },
-                    _react2['default'].createElement('i', { className: 'fa fa-chevron-right' })
-                  ),
-                  'que le permita regular el intercambio gaseoso, temperatura y luminosidad en menor grado.'
+                  'Simulación en contrucción'
                 )
               )
             )
@@ -8711,90 +8274,10 @@ var Modal2 = (function (_React$Component) {
             null,
             _react2['default'].createElement(
               _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 12, lg: 12 },
-              _react2['default'].createElement(
-                'p',
-                { className: 'txt-parrafo' },
-                'En la segunda semana se levanta de un lado para dejarlo en diagonal y permitir que aumente un poco la salida y entrada de gases. Se sugiere irrigar 20ml de agua día de por medio y un palo de paleta rotulado con el genotipo de planta y la fecha de transplante.'
-              ),
-              _react2['default'].createElement(
-                'p',
-                { className: 'txt-parrafo' },
-                'Se coloca la planta en radiación solar, durante la primera semana, de 7 am a 10 am y de 2 pm a 5 pm, sin exposición directa al sol (polisombra 50%). En la segunda,  se puede exponer durante todo el día, sin exposición directa al sol (polisombra 50%).'
-              )
+              { xs: 12, sm: 12, md: 6, lg: 6 },
+              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/icon-128.png' })
             )
-          ),
-          _react2['default'].createElement('hr', { className: 'line-divider' }),
-          _react2['default'].createElement(
-            _reactBootstrap.Row,
-            null,
-            _react2['default'].createElement(
-              _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 7, lg: 7 },
-              _react2['default'].createElement(
-                'div',
-                { className: 'txt-vertical-center' },
-                _react2['default'].createElement(
-                  'p',
-                  { className: 'title-list-modal' },
-                  _react2['default'].createElement(
-                    'b',
-                    null,
-                    'Dos semanas después del transplante se retira el vaso '
-                  ),
-                  _react2['default'].createElement(
-                    'span',
-                    null,
-                    'y se mantiene 6 semanas más.'
-                  )
-                ),
-                _react2['default'].createElement(
-                  'p',
-                  { className: 'txt-into' },
-                  _react2['default'].createElement(
-                    'span',
-                    { className: 'capitalLetter' },
-                    _react2['default'].createElement('i', { className: 'fa fa-chevron-right' })
-                  ),
-                  'Aunque el sustrato contiene nutrientes se recomienda realizar una fertilización edáfica o foliar semanal.'
-                )
-              )
-            ),
-            _react2['default'].createElement(
-              _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 5, lg: 5 },
-              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo5/modal2g.jpg', alt: 'Crecimiento de planta obtenida in vitro.' })
-            )
-          ),
-          _react2['default'].createElement('hr', { className: 'line-divider' }),
-          _react2['default'].createElement(
-            _reactBootstrap.Row,
-            null,
-            _react2['default'].createElement(
-              _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 5, lg: 5 },
-              _react2['default'].createElement('img', { className: 'img-modal-show', src: 'public/img/modulo5/modal2h.jpg', alt: 'Planta (M. esculenta) para sembrar a campo obtenida por cultivo de tejidos.' })
-            ),
-            _react2['default'].createElement(
-              _reactBootstrap.Col,
-              { xs: 12, sm: 12, md: 7, lg: 7 },
-              _react2['default'].createElement(
-                'div',
-                { className: 'txt-vertical-center' },
-                _react2['default'].createElement(
-                  'p',
-                  { className: 'txt-into' },
-                  _react2['default'].createElement(
-                    'span',
-                    { className: 'capitalLetter' },
-                    _react2['default'].createElement('i', { className: 'fa fa-chevron-right' })
-                  ),
-                  'A la 8 semana, la planta puede salir a campo o, coger otra vía, para aumentar la producción del material a través de miniestacas.'
-                )
-              )
-            )
-          ),
-          _react2['default'].createElement('hr', { className: 'line-divider' })
+          )
         ),
         _react2['default'].createElement(
           _reactBootstrap.Modal.Footer,
@@ -9011,13 +8494,9 @@ var Modal2 = (function (_React$Component) {
             _reactBootstrap.Modal.Title,
             null,
             _react2['default'].createElement(
-              'h4',
-              null,
-              _react2['default'].createElement(
-                _reactBootstrap.Label,
-                { bsStyle: 'success' },
-                'Eventos importantes en el desarrollo de esta técnica'
-              )
+              _reactBootstrap.Label,
+              { bsStyle: 'success' },
+              'Eventos importantes en el desarrollo de esta técnica'
             )
           )
         ),
@@ -9149,13 +8628,9 @@ var Modal3 = (function (_React$Component) {
             _reactBootstrap.Modal.Title,
             null,
             _react2['default'].createElement(
-              'h4',
-              null,
-              _react2['default'].createElement(
-                _reactBootstrap.Label,
-                { bsStyle: 'success' },
-                'Rescate y cultivo de embriones cigóticos'
-              )
+              _reactBootstrap.Label,
+              { bsStyle: 'success' },
+              'Rescate y cultivo de embriones cigóticos'
             )
           )
         ),
@@ -9304,13 +8779,9 @@ var Modal4 = (function (_React$Component) {
             _reactBootstrap.Modal.Title,
             null,
             _react2['default'].createElement(
-              'h4',
-              null,
-              _react2['default'].createElement(
-                _reactBootstrap.Label,
-                { bsStyle: 'success' },
-                'Rescate y cultivo de embriones cigóticos'
-              )
+              _reactBootstrap.Label,
+              { bsStyle: 'success' },
+              'Rescate y cultivo de embriones cigóticos'
             )
           )
         ),
@@ -9457,13 +8928,9 @@ var Modal2 = (function (_React$Component) {
             _reactBootstrap.Modal.Title,
             null,
             _react2['default'].createElement(
-              'h4',
-              null,
-              _react2['default'].createElement(
-                _reactBootstrap.Label,
-                { bsStyle: 'success' },
-                'Rescate y cultivo de embriones cigóticos'
-              )
+              _reactBootstrap.Label,
+              { bsStyle: 'success' },
+              'Rescate y cultivo de embriones cigóticos'
             )
           )
         ),
@@ -9686,11 +9153,6 @@ var Modulo2 = (function (_React$Component) {
 	}
 
 	_createClass(Modulo2, [{
-		key: 'getInitialState',
-		value: function getInitialState() {
-			return { m1show: false, m2show: false, m3show: false, m4show: false, m5show: false, m6show: false, m7show: false, m8show: false, msshow: false, stockshow: false };
-		}
-	}, {
 		key: 'open',
 		value: function open(mod) {
 			if (mod == 'modulo2/1') {
@@ -9857,11 +9319,6 @@ var Modulo3 = (function (_React$Component) {
 	}
 
 	_createClass(Modulo3, [{
-		key: 'getInitialState',
-		value: function getInitialState() {
-			return { m1show: false, m2show: false, m3show: false, m4show: false };
-		}
-	}, {
 		key: 'open',
 		value: function open(mod) {
 			if (mod == 'modulo3/2') {
@@ -10018,11 +9475,6 @@ var Modulo4 = (function (_React$Component) {
 	}
 
 	_createClass(Modulo4, [{
-		key: 'getInitialState',
-		value: function getInitialState() {
-			return { m1show: false, m2show: false, m3show: false, m4show: false, m5show: false, m6show: false, m7show: false, m8show: false, m9show: false };
-		}
-	}, {
 		key: 'open',
 		value: function open(mod) {
 			if (mod == 'modulo4/1') {
@@ -10184,11 +9636,6 @@ var Modulo5 = (function (_React$Component) {
 	}
 
 	_createClass(Modulo5, [{
-		key: 'getInitialState',
-		value: function getInitialState() {
-			return { m1show: false, m2show: false, m3show: false, m4show: false };
-		}
-	}, {
 		key: 'open',
 		value: function open(mod) {
 			if (mod == 'modulo5/1') {
@@ -10329,11 +9776,6 @@ var Modulo6 = (function (_React$Component) {
 	}
 
 	_createClass(Modulo6, [{
-		key: 'getInitialState',
-		value: function getInitialState() {
-			return { m1show: false, m2show: false, m3show: false, m4show: false, m5show: false };
-		}
-	}, {
 		key: 'open',
 		value: function open(mod) {
 			if (mod == 'modulo6/1') {
@@ -10479,11 +9921,6 @@ var Modulo7 = (function (_React$Component) {
 	}
 
 	_createClass(Modulo7, [{
-		key: 'getInitialState',
-		value: function getInitialState() {
-			return { m1show: false, m2show: false, m3show: false, m4show: false, m5show: false };
-		}
-	}, {
 		key: 'open',
 		value: function open(mod) {
 			if (mod == 'modulo7/1') {
@@ -10898,6 +10335,10 @@ var _ContentPrincipalModalModulo2Modal8 = require('../ContentPrincipal/Modal/Mod
 
 var _ContentPrincipalModalModulo2Modal82 = _interopRequireDefault(_ContentPrincipalModalModulo2Modal8);
 
+var _uid = require('uid');
+
+var _uid2 = _interopRequireDefault(_uid);
+
 var ContentSimulaciones = (function (_React$Component) {
 	_inherits(ContentSimulaciones, _React$Component);
 
@@ -10967,7 +10408,7 @@ var ContentSimulaciones = (function (_React$Component) {
 exports['default'] = ContentSimulaciones;
 module.exports = exports['default'];
 
-},{"../ContentPrincipal/Modal/Modulo2/Modal8":18,"./Simulaciones":57,"jquery":109,"react":543}],57:[function(require,module,exports){
+},{"../ContentPrincipal/Modal/Modulo2/Modal8":18,"./Simulaciones":57,"jquery":109,"react":543,"uid":544}],57:[function(require,module,exports){
 /**
  * Modules Dependencies
  */
@@ -10993,6 +10434,10 @@ var _react = require('react');
 var _react2 = _interopRequireDefault(_react);
 
 var _reactBootstrap = require('react-bootstrap');
+
+var _uid = require('uid');
+
+var _uid2 = _interopRequireDefault(_uid);
 
 var _SimulacionesUnit = require('./SimulacionesUnit');
 
@@ -11020,6 +10465,7 @@ var Simulaciones = (function (_React$Component) {
 					{ className: 'contentPrincipal' },
 					this.props.simulaciones.map(function (content) {
 						return _react2['default'].createElement(_SimulacionesUnit2['default'], {
+							key: (0, _uid2['default'])(10),
 							id: content.id,
 							nombre: content.nombre,
 							url: content.url,
@@ -11038,7 +10484,7 @@ var Simulaciones = (function (_React$Component) {
 exports['default'] = Simulaciones;
 module.exports = exports['default'];
 
-},{"./SimulacionesUnit":58,"react":543,"react-bootstrap":182}],58:[function(require,module,exports){
+},{"./SimulacionesUnit":58,"react":543,"react-bootstrap":182,"uid":544}],58:[function(require,module,exports){
 /**
  * Modules Dependencies
  */
@@ -11984,11 +11430,6 @@ var ModalInfo = (function (_React$Component) {
 	}
 
 	_createClass(ModalInfo, [{
-		key: 'getInitialState',
-		value: function getInitialState() {
-			return { showModal: false };
-		}
-	}, {
 		key: 'close',
 		value: function close() {
 			this.setState({ showModal: false });
@@ -13284,11 +12725,6 @@ var Modulo1Content = (function (_React$Component) {
   }
 
   _createClass(Modulo1Content, [{
-    key: 'getInitialState',
-    value: function getInitialState() {
-      return { mounted: false };
-    }
-  }, {
     key: 'componentDidMount',
     value: function componentDidMount() {
       this.setState({ mounted: true });
@@ -63113,4 +62549,23 @@ module.exports = warning;
 
 module.exports = require('./lib/React');
 
-},{"./lib/React":405}]},{},[1]);
+},{"./lib/React":405}],544:[function(require,module,exports){
+/**
+ * Export `uid`
+ */
+
+module.exports = uid;
+
+/**
+ * Create a `uid`
+ *
+ * @param {String} len
+ * @return {String} uid
+ */
+
+function uid(len) {
+  len = len || 7;
+  return Math.random().toString(35).substr(2, len);
+}
+
+},{}]},{},[1]);

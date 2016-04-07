@@ -19,45 +19,19 @@ export default class Modal4 extends React.Component {
   render(){
       return  <Modal {...this.props}>
       <Modal.Header closeButton>
-        <Modal.Title><h4><Label bsStyle='success'>Elaboración</Label> Vitaminas</h4></Modal.Title>
+        <Modal.Title><Label bsStyle='success'>Ejercicio</Label>Preparación de medios</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <Row>
           <Col xs={12} sm={12} md={12} lg={12}>
-            <h5><b>Elaboración de stocks 6</b></h5>
-            <p className="txt-parrafo">Generalmente, en el cultivo de tejidos se usa vitaminas del complejo B, principalmente necesita de la vitamina B1 o Tiamina. Designado aquí como stock 6. Éste se puede preparar a una concentración de 50X.</p>
+            <h1><b>Simulación en contrucción</b></h1>            
           </Col>
         </Row>
         <Row>
-          <Col xs={12} sm={12} md={12} lg={12}>
-            <Table responsive striped bordered condensed hover>
-              <thead>
-                <tr>
-                  <th colSpan="4"><center>Vitamina B1 de Stock 6</center></th>
-                </tr>
-                <tr>
-                  <th><b>NÚMERO STOCK</b></th>
-                  <th><b>COMPUESTO</b></th>
-                  <th><b>CANTIDAD (gr)</b></th>
-                  <th><b>AGUA DESTILADA</b></th>
-                </tr>
-              </thead>
-              <tbody>
-                  <tr>
-                    <td>6</td>
-                    <td>Vitamina B1</td>
-                    <td>0,0005</td>
-                    <td>100 ml</td>
-                  </tr>
-              </tbody>
-            </Table>
+          <Col xs={12} sm={12} md={6} lg={6}>
+            <img className="img-modal-show" src="public/img/icon-128.png" />
           </Col>
-        </Row>
-        <Row>
-          <Col xs={12} sm={12} md={12} lg={12}>
-            <img className="img-modal-show" src="public/img/modulo1/maquina_6.jpg" alt="Sala de siembra"/>
-          </Col>
-        </Row>
+        </Row>              
       </Modal.Body>
       <Modal.Footer>
         <button onClick={this.onClose.bind(this)}>Cerrar</button>

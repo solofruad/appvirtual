@@ -19,7 +19,7 @@ export default class Modal4 extends React.Component {
   render(){
       return  <Modal {...this.props} bsSize="large">
       <Modal.Header closeButton>
-        <Modal.Title><h4><Label bsStyle='success'>Cultivo in vitro de meristemos y ápices</Label></h4></Modal.Title>
+        <Modal.Title><Label bsStyle='success'>Cultivo in vitro de meristemos y ápices</Label></Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <Row>

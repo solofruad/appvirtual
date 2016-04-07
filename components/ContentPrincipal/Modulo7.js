@@ -20,10 +20,7 @@ export default class Modulo7 extends React.Component {
 		this.state = { modulos: [], m1show: false, m2show: false, m3show: false, m4show: false,  m5show: false};
 		this.open = this.open.bind(this);
 		this.close = this.close.bind(this);
-	}
-	getInitialState(){
-		return { m1show: false, m2show: false, m3show: false, m4show: false,  m5show: false};
-	}
+	}	
 	open(mod){
 		if(mod=='modulo7/1') { this.setState({m1show: true}); }
 		else if(mod=='modulo7/2') {this.setState({m2show: true});}

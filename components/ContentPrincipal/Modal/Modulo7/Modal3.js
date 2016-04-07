@@ -20,7 +20,7 @@ export default class Modal3 extends React.Component {
 	render(){
       return  <Modal {...this.props} bsSize="large">
       <Modal.Header closeButton>
-        <Modal.Title><h4><Label bsStyle='success'>Rescate y cultivo de embriones cigóticos</Label></h4></Modal.Title>
+        <Modal.Title><Label bsStyle='success'>Rescate y cultivo de embriones cigóticos</Label></Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <Row>

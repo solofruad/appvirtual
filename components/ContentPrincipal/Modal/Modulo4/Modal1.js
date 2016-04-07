@@ -35,7 +35,7 @@ export default class Modal1 extends React.Component {
 				</Row><br />
 				<Row>
 					<Col xs={12} sm={12} md={12} lg={12}>
-						<p><center>En este capitulo podrás encontrar lo necesario para continuar con el aprendizaje de <span className="txt-green">cultivo de tejidos vegetales.</span></center></p>
+						<p className="txt-center">En este capitulo podrás encontrar lo necesario para continuar con el aprendizaje de <span className="txt-green">cultivo de tejidos vegetales.</span></p>
 					</Col>
 				</Row>
 				</Modal.Body>
