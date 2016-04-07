@@ -17,6 +17,7 @@ import Modulo5 from './components/ContentPrincipal/Modulo5';
 import Modulo6 from './components/ContentPrincipal/Modulo6';
 import Modulo7 from './components/ContentPrincipal/Modulo7';
 import ContentCreditos from './components/ContentCreditos/ContentCreditos';
+import ContentSimulaciones from './components/ContentSimulaciones/ContentSimulaciones';
 
 let RouteHandler = Router.RouteHandler;
 
@@ -27,6 +28,7 @@ let history = createHashHistory({
 let routes = <Route component={Menu} path='/'>
 		<IndexRoute component={ContentPrincipal} />
 		<Route path="creditos" component={ContentCreditos} />
+		<Route path="simulaciones" component={ContentSimulaciones} />
 		<Route path="contentPrincipal" component={ContentPrincipal} />
 		<Route path="modulo1/:src" component={Modulo1Content} />
 		<Route path="modulo/:src" component={IndexMod} />

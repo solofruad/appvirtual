@@ -46,9 +46,7 @@ export default class Menu extends React.Component {
 				  		<li eventKey={2.6}><Link to={`modulo/${6}`}><b>Modulo 6. </b>Cultivo in vitro de meristemos y ápices</Link></li>
 				  		<li eventKey={2.7}><Link to={`modulo/${7}`}><b>Modulo 7. </b>Rescate y cultivo de embriones cigótico</Link></li>
 			          <MenuItem divider />
-								<li eventKey={2.8}><Link to={`/creditos`}>Simulación 1</Link></li>
-								<li eventKey={2.9}><Link to={`/creditos`}>Simulación 2</Link></li>
-								<li eventKey={2.10}><Link to={`/creditos`}>Simulación 3</Link></li>
+								<li eventKey={2.8}><Link to={`/simulaciones`}>Simulaciones</Link></li>								
 			        </NavDropdown>
 			      </Nav>
 			      <Nav pullRight>

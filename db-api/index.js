@@ -5,6 +5,7 @@
 import contenido from './ContentHeader';
 import modulos from './ContentModulos';
 import creditos from './ContentCreditos';
+import simulaciones from './ContentSimulaciones';
 import modulo2 from './ContentModulo2';
 import modulo3 from './ContentModulo3';
 import modulo4 from './ContentModulo4';
@@ -36,6 +37,11 @@ export default {
   creditos: {
     find: function(callback) {
         callback(creditos);
+    }
+  },
+  simulaciones: {
+    find: function(callback) {
+        callback(simulaciones);
     }
   },
   intomod2: {

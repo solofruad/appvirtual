@@ -45,6 +45,6 @@ export default[
 		modulo: 8,
 		titulo: 'Practica con las simulaciones',
 		descripcion: 'Encuentra aqui todas las simulaciones que podrás encontrar a lo largo de los capitulos de aprendizaje.',
-		url: 'Inicio'
+		url: 'simulaciones'
 	}
 ];

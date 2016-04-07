@@ -33,6 +33,12 @@ app.get('/dircred', (req, res) => {
   });
 });
 
+app.get('/dirsimulaciones', (req, res) => {
+  dbapi.simulaciones.find((simulaciones) => {
+    res.json(simulaciones);
+  });
+});
+
 app.get('/dirintomod2', (req, res) => {
   dbapi.intomod2.find((intomod2) => {
       res.json(intomod2);

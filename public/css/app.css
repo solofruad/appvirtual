@@ -46,6 +46,10 @@ table {
 *{
 	box-sizing: border-box;
 }
+iframe{
+	height: 100%;
+	width: 100%;
+}
 button, a.boton {
 	border: 0px;
 	padding: 8px 10px;
@@ -276,6 +280,12 @@ a#modulos:hover{
 	position: relative;
 	float: left;
 	overflow: hidden;
+}
+.mod-simulaciones{
+	color:black;
+}
+.mod-simulaciones:hover{
+	text-decoration: none;
 }
 .mod:hover .info-image{
 	display:block;
